@@ -1,1 +1,6 @@
 theme: jekyll-theme-minimal
+
+deploy:
+  type: git
+  repository: https://github.com/tb314888536/Chasing1874.github.io.git
+  branch: master
