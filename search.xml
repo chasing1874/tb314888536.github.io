@@ -277,6 +277,8 @@
     <content><![CDATA[<h1 id="物理层基本概念"><a href="#物理层基本概念" class="headerlink" title="物理层基本概念"></a>物理层基本概念</h1><h3 id="物理层基本概念-1"><a href="#物理层基本概念-1" class="headerlink" title="物理层基本概念"></a>物理层基本概念</h3><blockquote>
 <p>物理层解决如何在连接各种计算机的传输媒体上<strong>传输数据比特流</strong>，而不是指具体的传输媒体。</p>
 </blockquote>
+<a id="more"></a>
+
 <p>主要任务：确定与传输媒体接口有关的一些特性 —— 定义标准</p>
 <ol>
 <li><strong>机械特性</strong>：定义物理连接的特性，规定物理连接时所采用的规格、接口形状、引线数目、引脚数量和排列情况</li>
