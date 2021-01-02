@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-flash.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"github.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="1.1.1 概念、组成、功能和分类">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计算机网络第一章">
+<meta property="og:url" content="https://github.com/tb314888536/2021/01/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%AC%E4%B8%80%E7%AB%A0/index.html">
+<meta property="og:site_name" content="Chasing1874">
+<meta property="og:description" content="1.1.1 概念、组成、功能和分类">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101194117425.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101195109924.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101195439213.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101195516966.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101200543997.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101200906350.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101201354323.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101201707066.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101202304640.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101202849818.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101203049556.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101203146929.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101203242040.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101203457764.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101203743153.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101204321769.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101213808016.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101204558820.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101205417032.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101205747080.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101205937471.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101210111104.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101211403455.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101213733835.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101212032611.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101212350890.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101213648823.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101213028676.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101213225550.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101213405540.png">
+<meta property="article:published_time" content="2021-01-02T02:37:42.000Z">
+<meta property="article:modified_time" content="2021-01-02T02:58:32.329Z">
+<meta property="article:author" content="xiaojiang">
+<meta property="article:tag" content="share">
+<meta property="article:tag" content="notes">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101194117425.png">
+
+<link rel="canonical" href="https://github.com/tb314888536/2021/01/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%AC%E4%B8%80%E7%AB%A0/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>计算机网络第一章 | Chasing1874</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+    <a href="https://github.com/tb314888536" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Chasing1874</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://github.com/tb314888536/2021/01/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%AC%E4%B8%80%E7%AB%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/dog.gif">
+      <meta itemprop="name" content="xiaojiang">
+      <meta itemprop="description" content="情人若寂寥地出生在1874">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Chasing1874">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          计算机网络第一章
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-01-02 10:37:42 / Modified: 10:58:32" itemprop="dateCreated datePublished" datetime="2021-01-02T10:37:42+08:00">2021-01-02</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" itemprop="url" rel="index"><span itemprop="name">计算机网络</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine: </span>
+    
+    <a title="valine" href="/2021/01/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%AC%E4%B8%80%E7%AB%A0/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/01/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%AC%E4%B8%80%E7%AB%A0/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="1-1-1-概念、组成、功能和分类"><a href="#1-1-1-概念、组成、功能和分类" class="headerlink" title="1.1.1 概念、组成、功能和分类"></a>1.1.1 概念、组成、功能和分类</h1><a id="more"></a>
+
+<h3 id="计算机网络的概念"><a href="#计算机网络的概念" class="headerlink" title="计算机网络的概念"></a>计算机网络的概念</h3><blockquote>
+<p>是一个将分散的、具有独立功能的计算机系统，通过通信设备与线路连接起来，由功能完善的软件实现 资源共享和信息传递的系统</p>
+</blockquote>
+<p>计算机网络是互联的、自治的计算机集合</p>
+<ul>
+<li><p>互联 – 互联互通  通信链路</p>
+</li>
+<li><p>自治 – 无主从关系</p>
+</li>
+</ul>
+<h3 id="计算机网络的功能"><a href="#计算机网络的功能" class="headerlink" title="计算机网络的功能"></a>计算机网络的功能</h3><ol>
+<li><p>数据通信（连通性）</p>
+</li>
+<li><p>资源共享：硬件、软件、数据</p>
+</li>
+<li><p>分布式处理：多台计算机共同承担同一任务不同步分（Hadoop平台）</p>
+</li>
+<li><p>提高可靠性（替代机）</p>
+</li>
+<li><p>负载均衡（各计算机之间更亲密）</p>
+</li>
+</ol>
+<h3 id="计算机网络的组成"><a href="#计算机网络的组成" class="headerlink" title="计算机网络的组成"></a>计算机网络的组成</h3><h5 id="1、组成部分"><a href="#1、组成部分" class="headerlink" title="1、组成部分"></a>1、组成部分</h5><p>硬件、软件、协议</p>
+<h5 id="2、工作方式"><a href="#2、工作方式" class="headerlink" title="2、工作方式"></a>2、工作方式</h5><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101194117425.png" alt="image-20210101194117425"></p>
+<h5 id="3、功能组成"><a href="#3、功能组成" class="headerlink" title="3、功能组成"></a>3、功能组成</h5><ul>
+<li><p>通信子网：实现数据通信</p>
+</li>
+<li><p>资源子网：实现资源共享、数据处理</p>
+</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101195109924.png" alt="image-20210101195109924"></p>
+<h3 id="计算机网络的分类"><a href="#计算机网络的分类" class="headerlink" title="计算机网络的分类"></a>计算机网络的分类</h3><h5 id="1-按分布范围分"><a href="#1-按分布范围分" class="headerlink" title="1.按分布范围分"></a>1.按分布范围分</h5><p>广域网WAN、城域网MAN、局域网WAN、个人区域网PAN</p>
+<h5 id="2、按使用者分"><a href="#2、按使用者分" class="headerlink" title="2、按使用者分"></a>2、按使用者分</h5><p>公用网、专用网</p>
+<h5 id="3、按交换技术分"><a href="#3、按交换技术分" class="headerlink" title="3、按交换技术分"></a>3、按交换技术分</h5><p>电路交换 、报文交换、分组交换</p>
+<h5 id="4、按拓扑类型分"><a href="#4、按拓扑类型分" class="headerlink" title="4、按拓扑类型分"></a>4、按拓扑类型分</h5><p>总线型、星型、环型、网状型</p>
+<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101195439213.png" alt="image-20210101195439213"></p>
+<h3 id="脑图"><a href="#脑图" class="headerlink" title="脑图"></a>脑图</h3><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101195516966.png" alt="image-20210101195516966"></p>
+<h1 id="1-1-2-标准化工作及相关组织"><a href="#1-1-2-标准化工作及相关组织" class="headerlink" title="1.1.2 标准化工作及相关组织"></a>1.1.2 标准化工作及相关组织</h1><h3 id="标准化工作"><a href="#标准化工作" class="headerlink" title="标准化工作"></a>标准化工作</h3><blockquote>
+<p>为实现不同厂商硬件软件的相互联通</p>
+</blockquote>
+<h5 id="标准的分类"><a href="#标准的分类" class="headerlink" title="标准的分类"></a>标准的分类</h5><ul>
+<li><p>法定标准：由权威机构制定的正式的、合法的标准  OSI</p>
+</li>
+<li><p>事实标准：某些公式产品占据了主流  TCP/IP</p>
+</li>
+</ul>
+<h5 id="RFC-Request-For-Comments-–-因特网标准的形式"><a href="#RFC-Request-For-Comments-–-因特网标准的形式" class="headerlink" title="RFC(Request For Comments)  – 因特网标准的形式"></a>RFC(Request For Comments)  – 因特网标准的形式</h5><p>RFC上升为因特网正式标准：</p>
+<ol>
+<li><p>因特网草案：非RFC</p>
+</li>
+<li><p>建议标准：成为RFC</p>
+</li>
+<li><p>草案标准</p>
+</li>
+<li><p>因特网标准</p>
+</li>
+</ol>
+<h5 id="标准化工作的相关组织"><a href="#标准化工作的相关组织" class="headerlink" title="标准化工作的相关组织"></a>标准化工作的相关组织</h5><ul>
+<li>国际标准化组织ISO  （OSI参考模型、HDLC协议）</li>
+<li>国际电信联盟    （制定通信规则）</li>
+<li>国际电气电子工程师协会IEEE  （学术机构、5G、IEEE802系列标准）</li>
+<li>Internet工程任务组IETF （负责因特网相关标准的制定，RFCxxxx）</li>
+</ul>
+<h5 id="脑图-1"><a href="#脑图-1" class="headerlink" title="脑图"></a>脑图</h5><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101200543997.png" alt="image-20210101200543997"></p>
+<h1 id="1-1-3-速率相关的性能指标"><a href="#1-1-3-速率相关的性能指标" class="headerlink" title="1.1.3 速率相关的性能指标"></a>1.1.3 速率相关的性能指标</h1><h3 id="速率"><a href="#速率" class="headerlink" title="速率"></a>速率</h3><blockquote>
+<p>速率即==数据率==或者称==数据传输率==或==比特率==</p>
+</blockquote>
+<p>连接再计算机网络上的主机在数字信道上传输数据位数的速率</p>
+<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101200906350.png" alt="image-20210101200906350"></p>
+<h3 id="带宽"><a href="#带宽" class="headerlink" title="带宽"></a>带宽</h3><ol>
+<li><p>原本指某个信号具有的频带宽度，即最高频率与最低频率之差，单位赫兹</p>
+</li>
+<li><p>计算机网络中，带宽用来表示网络的通信线路传送数据的能力，单位时间从网络某一点到另一个点能通过的==最高数据率==。</p>
+</li>
+</ol>
+<p>==网络所支持的最高速度==</p>
+<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101201354323.png" alt="image-20210101201354323"></p>
+<h3 id="吞吐量"><a href="#吞吐量" class="headerlink" title="吞吐量"></a>吞吐量</h3><blockquote>
+<p>==单位时间==通过==某个网络（信道、接口）==数据量。</p>
+</blockquote>
+<p>吞吐量受网络带宽或网络的额定速率的限制。</p>
+<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101201707066.png" alt="image-20210101201707066"></p>
+<h1 id="1-1-4-时延、时延带宽积、RTT和利用率"><a href="#1-1-4-时延、时延带宽积、RTT和利用率" class="headerlink" title="1.1.4 时延、时延带宽积、RTT和利用率"></a>1.1.4 时延、时延带宽积、RTT和利用率</h1><h3 id="时延"><a href="#时延" class="headerlink" title="时延"></a>时延</h3><blockquote>
+<p>数据（报文、分组、比特流）从网络（或链路）的一端传送到另一端所需的时间。==延迟==或==迟延==。单位s。</p>
+</blockquote>
+<p>发送时延（传输时延）、传播时延、排队时延、处理时延</p>
+<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101202304640.png" alt="image-20210101202304640"></p>
+<h3 id="时延带宽积"><a href="#时延带宽积" class="headerlink" title="时延带宽积"></a>时延带宽积</h3><blockquote>
+<p>时延带宽积又称为以==比特为单位的链路长度==，某段链路有多少比特（容量）</p>
+</blockquote>
+<p>时延带宽积 = 传播时延 x 带宽</p>
+<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101202849818.png" alt="image-20210101202849818"></p>
+<h3 id="往返时延RTT"><a href="#往返时延RTT" class="headerlink" title="往返时延RTT"></a>往返时延RTT</h3><blockquote>
+<p>从发送方发送数据开始，到发送方收到的接收方的确认（接收方收到数据后立即发送确认）总共经历的时延。</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101203049556.png" alt="image-20210101203049556"></p>
+<h3 id="利用率"><a href="#利用率" class="headerlink" title="利用率"></a>利用率</h3><ol>
+<li><p>信道利用率</p>
+</li>
+<li><p>网络利用率</p>
+</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101203146929.png" alt="image-20210101203146929"></p>
+<h3 id="脑图-2"><a href="#脑图-2" class="headerlink" title="脑图"></a>脑图</h3><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101203242040.png" alt="image-20210101203242040"></p>
+<h1 id="1-2-1-分层结构、协议、接口、服务"><a href="#1-2-1-分层结构、协议、接口、服务" class="headerlink" title="1.2.1 分层结构、协议、接口、服务"></a>1.2.1 分层结构、协议、接口、服务</h1><h3 id="为什么要分层"><a href="#为什么要分层" class="headerlink" title="为什么要分层"></a>为什么要分层</h3><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101203457764.png" alt="image-20210101203457764"></p>
+<h3 id="怎么分层"><a href="#怎么分层" class="headerlink" title="怎么分层"></a>怎么分层</h3><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101203743153.png" alt="image-20210101203743153"></p>
+<h3 id="分层结构"><a href="#分层结构" class="headerlink" title="分层结构"></a>分层结构</h3><ol>
+<li><p>实体：n层实体。对等实体</p>
+</li>
+<li><p>协议：为==对等实体==数据交换建立的标准</p>
+</li>
+</ol>
+<ul>
+<li>语法：格式</li>
+<li>语义：功能</li>
+<li>同步：顺序</li>
+</ul>
+<ol start="3">
+<li><p>接口（访问服务点SAP）：上层使用下层服务的入口</p>
+</li>
+<li><p>服务：下为相邻上提供功能调用</p>
+</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101204321769.png" alt="image-20210101204321769"></p>
+<h3 id="概念总结"><a href="#概念总结" class="headerlink" title="概念总结"></a>概念总结</h3><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101213808016.png" alt="image-20210101213808016"></p>
+<h3 id="脑图-3"><a href="#脑图-3" class="headerlink" title="脑图"></a>脑图</h3><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101204558820.png" alt="image-20210101204558820"></p>
+<h1 id="1-2-2-OSI参考模型"><a href="#1-2-2-OSI参考模型" class="headerlink" title="1.2.2 OSI参考模型"></a>1.2.2 OSI参考模型</h1><h3 id="计算机网络分层结构"><a href="#计算机网络分层结构" class="headerlink" title="计算机网络分层结构"></a>计算机网络分层结构</h3><ol>
+<li>7层OSI参考模型（法定标准）</li>
+<li>4层TCP/IP参考模型（事实标准）</li>
+<li>5层的体系结构</li>
+</ol>
+<h3 id="ISO-OSI参考模型"><a href="#ISO-OSI参考模型" class="headerlink" title="ISO/OSI参考模型"></a>ISO/OSI参考模型</h3><h5 id="七层结构"><a href="#七层结构" class="headerlink" title="七层结构"></a>七层结构</h5><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101205417032.png" alt="image-20210101205417032"></p>
+<h5 id="解释通信过程"><a href="#解释通信过程" class="headerlink" title="解释通信过程"></a>解释通信过程</h5><p>A给B写信，经过邮局</p>
+<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101205747080.png" alt="image-20210101205747080"></p>
+<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101205937471.png" alt="image-20210101205937471"></p>
+<h3 id="OSI各层"><a href="#OSI各层" class="headerlink" title="OSI各层"></a>OSI各层</h3><h5 id="应用层"><a href="#应用层" class="headerlink" title="应用层"></a>应用层</h5><blockquote>
+<p>所有能和用户交互产生网络流量的程序</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101210111104.png" alt="image-20210101210111104"></p>
+<h5 id="表示层"><a href="#表示层" class="headerlink" title="表示层"></a>表示层</h5><blockquote>
+<p>用于处理在两个通信系统中交换信息的表示方式（语义和语法）</p>
+</blockquote>
+<ol>
+<li>数据格式变换（二进制转换）</li>
+<li>数据加密解密（聊天记录）</li>
+<li>数据压缩和恢复（视频）</li>
+</ol>
+<h5 id="会话层"><a href="#会话层" class="headerlink" title="会话层"></a>会话层</h5><blockquote>
+<p>向表示层实体/用户进程提供==建立连接==并在连接上==有序==地传输数据。这是会话，也是==建立同步==。</p>
+</blockquote>
+<ol>
+<li>建立、管理、终止会话</li>
+<li>使用校验点可使会话在通信失效时从==校验点/同步点==继续恢复通信，实现数据同步。（文件传输中断）</li>
+</ol>
+<h5 id="传输层"><a href="#传输层" class="headerlink" title="传输层"></a>传输层</h5><blockquote>
+<p>负责主机中==两个进程==的通信，即==端到端==的通信。传输单位：报文段、数据报。</p>
+</blockquote>
+<ol>
+<li>可靠传输、不可靠传输</li>
+<li>差错传输</li>
+<li>流量控制</li>
+<li>复用分用<ul>
+<li>复用：多个应用层可同时使用下面运输层的服务（QQ、微信同时发消息）</li>
+<li>分用：运输层把收到的信息分别交付给上面应用层的进程（收消息）</li>
+</ul>
+</li>
+</ol>
+<p>==可差留用==</p>
+<h5 id="网络层"><a href="#网络层" class="headerlink" title="网络层"></a>网络层</h5><blockquote>
+<p>把==分组==从源端传到目的端，为分组交换网上的不同主机提供通信服务。传输单位：数据报（分组的集合）</p>
+</blockquote>
+<ol>
+<li><p>路由选择（最佳路径）</p>
+</li>
+<li><p>流量控制</p>
+</li>
+<li><p>差错控制</p>
+</li>
+<li><p>拥塞控制</p>
+<p>若所有结点都来不及接受分组，而要丢弃大量分组的话，网络就处于==拥塞==状态。因此要采取一定措施，缓解这种拥塞。</p>
+<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101211403455.png" alt="image-20210101211403455"></p>
+</li>
+</ol>
+<h5 id="数据链路层"><a href="#数据链路层" class="headerlink" title="数据链路层"></a>数据链路层</h5><blockquote>
+<p>把网络层传下来的数据报==组装成帧==。传输单位：帧</p>
+</blockquote>
+<ol>
+<li><p>成帧(定义帧的开始和结束)</p>
+</li>
+<li><p>差错控制（帧错+位错）</p>
+</li>
+<li><p>流量控制</p>
+</li>
+<li><p>访问（介入）控制 （控制对信道的访问）</p>
+<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101213733835.png" alt="image-20210101213733835"></p>
+</li>
+</ol>
+<h5 id="物理层"><a href="#物理层" class="headerlink" title="物理层"></a>物理层</h5><blockquote>
+<p>在==物理媒体==上实现比特流的==透明传输==。传输单位：比特</p>
+</blockquote>
+<p>透明传输：不管所传数据是什么样的的比特组合，都可在链路上传送</p>
+<ol>
+<li>定义接口特性</li>
+<li>定义传输模式<ul>
+<li>单工</li>
+<li>半双工（对讲机）</li>
+<li>双工</li>
+</ul>
+</li>
+<li>定义传输速率</li>
+<li>比特同步</li>
+<li>比特编码</li>
+</ol>
+<h3 id="脑图-4"><a href="#脑图-4" class="headerlink" title="脑图"></a>脑图</h3><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101212032611.png" alt="image-20210101212032611"></p>
+<h1 id="1-2-4-TCP-IP-参考模型和5层参考模型"><a href="#1-2-4-TCP-IP-参考模型和5层参考模型" class="headerlink" title="1.2.4 TCP/IP 参考模型和5层参考模型"></a>1.2.4 TCP/IP 参考模型和5层参考模型</h1><h3 id="OSI参考模型和TCP-IP参考模型"><a href="#OSI参考模型和TCP-IP参考模型" class="headerlink" title="OSI参考模型和TCP/IP参考模型"></a>OSI参考模型和TCP/IP参考模型</h3><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101212350890.png" alt="image-20210101212350890"></p>
+<h3 id="OSI参考模型和TCP-IP参考模型异同"><a href="#OSI参考模型和TCP-IP参考模型异同" class="headerlink" title="OSI参考模型和TCP/IP参考模型异同"></a>OSI参考模型和TCP/IP参考模型异同</h3><h5 id="相同点："><a href="#相同点：" class="headerlink" title="相同点："></a>相同点：</h5><ol>
+<li>都分层</li>
+<li>基于独立的协议栈的概念</li>
+<li>可以实现异构网络互联（不同厂商）</li>
+</ol>
+<h5 id="不同点："><a href="#不同点：" class="headerlink" title="不同点："></a>不同点：</h5><ol>
+<li>OSI定义三点：<ul>
+<li>服务</li>
+<li>协议</li>
+<li>接口</li>
+</ul>
+</li>
+<li>OSI先出现，参考模型先于协议发明，不偏向特定协议</li>
+<li>TCP/IP设计之初就考虑到异构网互联问题，将IP作为重要层次</li>
+<li><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101213648823.png" alt="image-20210101213648823"></li>
+</ol>
+<h3 id="5层参考模型"><a href="#5层参考模型" class="headerlink" title="5层参考模型"></a>5层参考模型</h3><h5 id="模型图"><a href="#模型图" class="headerlink" title="模型图"></a>模型图</h5><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101213028676.png" alt="image-20210101213028676"></p>
+<h5 id="数据封装与解封装"><a href="#数据封装与解封装" class="headerlink" title="数据封装与解封装"></a>数据封装与解封装</h5><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101213225550.png" alt="image-20210101213225550"></p>
+<h1 id="1-3-第一章知识总结"><a href="#1-3-第一章知识总结" class="headerlink" title="1.3 第一章知识总结"></a>1.3 第一章知识总结</h1><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101213405540.png" alt="image-20210101213405540"></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/share/" rel="tag"># share</a>
+              <a href="/tags/notes/" rel="tag"># notes</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/12/05/hello-world/" rel="prev" title="Hello World">
+      <i class="fa fa-chevron-left"></i> Hello World
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-1-1-%E6%A6%82%E5%BF%B5%E3%80%81%E7%BB%84%E6%88%90%E3%80%81%E5%8A%9F%E8%83%BD%E5%92%8C%E5%88%86%E7%B1%BB"><span class="nav-number">1.</span> <span class="nav-text">1.1.1 概念、组成、功能和分类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-number">1.0.1.</span> <span class="nav-text">计算机网络的概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9A%84%E5%8A%9F%E8%83%BD"><span class="nav-number">1.0.2.</span> <span class="nav-text">计算机网络的功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9A%84%E7%BB%84%E6%88%90"><span class="nav-number">1.0.3.</span> <span class="nav-text">计算机网络的组成</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1%E3%80%81%E7%BB%84%E6%88%90%E9%83%A8%E5%88%86"><span class="nav-number">1.0.3.0.1.</span> <span class="nav-text">1、组成部分</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2%E3%80%81%E5%B7%A5%E4%BD%9C%E6%96%B9%E5%BC%8F"><span class="nav-number">1.0.3.0.2.</span> <span class="nav-text">2、工作方式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3%E3%80%81%E5%8A%9F%E8%83%BD%E7%BB%84%E6%88%90"><span class="nav-number">1.0.3.0.3.</span> <span class="nav-text">3、功能组成</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9A%84%E5%88%86%E7%B1%BB"><span class="nav-number">1.0.4.</span> <span class="nav-text">计算机网络的分类</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E6%8C%89%E5%88%86%E5%B8%83%E8%8C%83%E5%9B%B4%E5%88%86"><span class="nav-number">1.0.4.0.1.</span> <span class="nav-text">1.按分布范围分</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2%E3%80%81%E6%8C%89%E4%BD%BF%E7%94%A8%E8%80%85%E5%88%86"><span class="nav-number">1.0.4.0.2.</span> <span class="nav-text">2、按使用者分</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3%E3%80%81%E6%8C%89%E4%BA%A4%E6%8D%A2%E6%8A%80%E6%9C%AF%E5%88%86"><span class="nav-number">1.0.4.0.3.</span> <span class="nav-text">3、按交换技术分</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4%E3%80%81%E6%8C%89%E6%8B%93%E6%89%91%E7%B1%BB%E5%9E%8B%E5%88%86"><span class="nav-number">1.0.4.0.4.</span> <span class="nav-text">4、按拓扑类型分</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%84%91%E5%9B%BE"><span class="nav-number">1.0.5.</span> <span class="nav-text">脑图</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-1-2-%E6%A0%87%E5%87%86%E5%8C%96%E5%B7%A5%E4%BD%9C%E5%8F%8A%E7%9B%B8%E5%85%B3%E7%BB%84%E7%BB%87"><span class="nav-number">2.</span> <span class="nav-text">1.1.2 标准化工作及相关组织</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%87%E5%87%86%E5%8C%96%E5%B7%A5%E4%BD%9C"><span class="nav-number">2.0.1.</span> <span class="nav-text">标准化工作</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%A0%87%E5%87%86%E7%9A%84%E5%88%86%E7%B1%BB"><span class="nav-number">2.0.1.0.1.</span> <span class="nav-text">标准的分类</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#RFC-Request-For-Comments-%E2%80%93-%E5%9B%A0%E7%89%B9%E7%BD%91%E6%A0%87%E5%87%86%E7%9A%84%E5%BD%A2%E5%BC%8F"><span class="nav-number">2.0.1.0.2.</span> <span class="nav-text">RFC(Request For Comments)  – 因特网标准的形式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%A0%87%E5%87%86%E5%8C%96%E5%B7%A5%E4%BD%9C%E7%9A%84%E7%9B%B8%E5%85%B3%E7%BB%84%E7%BB%87"><span class="nav-number">2.0.1.0.3.</span> <span class="nav-text">标准化工作的相关组织</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%84%91%E5%9B%BE-1"><span class="nav-number">2.0.1.0.4.</span> <span class="nav-text">脑图</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-1-3-%E9%80%9F%E7%8E%87%E7%9B%B8%E5%85%B3%E7%9A%84%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87"><span class="nav-number">3.</span> <span class="nav-text">1.1.3 速率相关的性能指标</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%9F%E7%8E%87"><span class="nav-number">3.0.1.</span> <span class="nav-text">速率</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%A6%E5%AE%BD"><span class="nav-number">3.0.2.</span> <span class="nav-text">带宽</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%9E%E5%90%90%E9%87%8F"><span class="nav-number">3.0.3.</span> <span class="nav-text">吞吐量</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-1-4-%E6%97%B6%E5%BB%B6%E3%80%81%E6%97%B6%E5%BB%B6%E5%B8%A6%E5%AE%BD%E7%A7%AF%E3%80%81RTT%E5%92%8C%E5%88%A9%E7%94%A8%E7%8E%87"><span class="nav-number">4.</span> <span class="nav-text">1.1.4 时延、时延带宽积、RTT和利用率</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%B6%E5%BB%B6"><span class="nav-number">4.0.1.</span> <span class="nav-text">时延</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%B6%E5%BB%B6%E5%B8%A6%E5%AE%BD%E7%A7%AF"><span class="nav-number">4.0.2.</span> <span class="nav-text">时延带宽积</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%80%E8%BF%94%E6%97%B6%E5%BB%B6RTT"><span class="nav-number">4.0.3.</span> <span class="nav-text">往返时延RTT</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A9%E7%94%A8%E7%8E%87"><span class="nav-number">4.0.4.</span> <span class="nav-text">利用率</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%84%91%E5%9B%BE-2"><span class="nav-number">4.0.5.</span> <span class="nav-text">脑图</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-2-1-%E5%88%86%E5%B1%82%E7%BB%93%E6%9E%84%E3%80%81%E5%8D%8F%E8%AE%AE%E3%80%81%E6%8E%A5%E5%8F%A3%E3%80%81%E6%9C%8D%E5%8A%A1"><span class="nav-number">5.</span> <span class="nav-text">1.2.1 分层结构、协议、接口、服务</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%88%86%E5%B1%82"><span class="nav-number">5.0.1.</span> <span class="nav-text">为什么要分层</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%8E%E4%B9%88%E5%88%86%E5%B1%82"><span class="nav-number">5.0.2.</span> <span class="nav-text">怎么分层</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E5%B1%82%E7%BB%93%E6%9E%84"><span class="nav-number">5.0.3.</span> <span class="nav-text">分层结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A6%82%E5%BF%B5%E6%80%BB%E7%BB%93"><span class="nav-number">5.0.4.</span> <span class="nav-text">概念总结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%84%91%E5%9B%BE-3"><span class="nav-number">5.0.5.</span> <span class="nav-text">脑图</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-2-2-OSI%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B"><span class="nav-number">6.</span> <span class="nav-text">1.2.2 OSI参考模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%88%86%E5%B1%82%E7%BB%93%E6%9E%84"><span class="nav-number">6.0.1.</span> <span class="nav-text">计算机网络分层结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ISO-OSI%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B"><span class="nav-number">6.0.2.</span> <span class="nav-text">ISO&#x2F;OSI参考模型</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%B8%83%E5%B1%82%E7%BB%93%E6%9E%84"><span class="nav-number">6.0.2.0.1.</span> <span class="nav-text">七层结构</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%A7%A3%E9%87%8A%E9%80%9A%E4%BF%A1%E8%BF%87%E7%A8%8B"><span class="nav-number">6.0.2.0.2.</span> <span class="nav-text">解释通信过程</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#OSI%E5%90%84%E5%B1%82"><span class="nav-number">6.0.3.</span> <span class="nav-text">OSI各层</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E5%B1%82"><span class="nav-number">6.0.3.0.1.</span> <span class="nav-text">应用层</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%A1%A8%E7%A4%BA%E5%B1%82"><span class="nav-number">6.0.3.0.2.</span> <span class="nav-text">表示层</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BC%9A%E8%AF%9D%E5%B1%82"><span class="nav-number">6.0.3.0.3.</span> <span class="nav-text">会话层</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BC%A0%E8%BE%93%E5%B1%82"><span class="nav-number">6.0.3.0.4.</span> <span class="nav-text">传输层</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E5%B1%82"><span class="nav-number">6.0.3.0.5.</span> <span class="nav-text">网络层</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82"><span class="nav-number">6.0.3.0.6.</span> <span class="nav-text">数据链路层</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%89%A9%E7%90%86%E5%B1%82"><span class="nav-number">6.0.3.0.7.</span> <span class="nav-text">物理层</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%84%91%E5%9B%BE-4"><span class="nav-number">6.0.4.</span> <span class="nav-text">脑图</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-2-4-TCP-IP-%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B%E5%92%8C5%E5%B1%82%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B"><span class="nav-number">7.</span> <span class="nav-text">1.2.4 TCP&#x2F;IP 参考模型和5层参考模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#OSI%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B%E5%92%8CTCP-IP%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B"><span class="nav-number">7.0.1.</span> <span class="nav-text">OSI参考模型和TCP&#x2F;IP参考模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#OSI%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B%E5%92%8CTCP-IP%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B%E5%BC%82%E5%90%8C"><span class="nav-number">7.0.2.</span> <span class="nav-text">OSI参考模型和TCP&#x2F;IP参考模型异同</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%9B%B8%E5%90%8C%E7%82%B9%EF%BC%9A"><span class="nav-number">7.0.2.0.1.</span> <span class="nav-text">相同点：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%B8%8D%E5%90%8C%E7%82%B9%EF%BC%9A"><span class="nav-number">7.0.2.0.2.</span> <span class="nav-text">不同点：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5%E5%B1%82%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B"><span class="nav-number">7.0.3.</span> <span class="nav-text">5层参考模型</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%A8%A1%E5%9E%8B%E5%9B%BE"><span class="nav-number">7.0.3.0.1.</span> <span class="nav-text">模型图</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%B0%81%E8%A3%85%E4%B8%8E%E8%A7%A3%E5%B0%81%E8%A3%85"><span class="nav-number">7.0.3.0.2.</span> <span class="nav-text">数据封装与解封装</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-3-%E7%AC%AC%E4%B8%80%E7%AB%A0%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93"><span class="nav-number">8.</span> <span class="nav-text">1.3 第一章知识总结</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="xiaojiang"
+      src="/images/dog.gif">
+  <p class="site-author-name" itemprop="name">xiaojiang</p>
+  <div class="site-description" itemprop="description">情人若寂寥地出生在1874</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/tb314888536" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;tb314888536"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/5657039564/profile?topnav=1&wvr=6&is_all=1" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;5657039564&#x2F;profile?topnav&#x3D;1&amp;wvr&#x3D;6&amp;is_all&#x3D;1" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="http://tb314888536.github.io/" title="http:&#x2F;&#x2F;tb314888536.github.io" rel="noopener" target="_blank">xiaojiang</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">xiaojiang</span>
+</div>
+
+<!--
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div> -->
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : '6F8lOUx5UYCdE2ruhWxBdb6y-gzGzoHsz',
+      appKey     : '0PBn6i4P1ChGQzlVFkV3O5zt',
+      placeholder: "Just go go",
+      avatar     : 'wavatar',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+</body>
+</html>
