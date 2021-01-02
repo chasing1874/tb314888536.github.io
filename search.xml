@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title></title>
+    <url>/2021/01/02/%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%B8%89%E7%AB%A0--%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2020/12/05/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. <a id="more"></a>Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -19,7 +24,7 @@
 ]]></content>
   </entry>
   <entry>
-    <title>计算机网络第一章</title>
+    <title>计网第一章--概述</title>
     <url>/2021/01/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%AC%E4%B8%80%E7%AB%A0/</url>
     <content><![CDATA[<h1 id="1-1-1-概念、组成、功能和分类"><a href="#1-1-1-概念、组成、功能和分类" class="headerlink" title="1.1.1 概念、组成、功能和分类"></a>1.1.1 概念、组成、功能和分类</h1><a id="more"></a>
 
@@ -267,7 +272,7 @@
       </tags>
   </entry>
   <entry>
-    <title></title>
+    <title>计网第二章--物理层</title>
     <url>/2021/01/02/%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%BA%8C%E7%AB%A0--%E7%89%A9%E7%90%86%E5%B1%82/</url>
     <content><![CDATA[<h1 id="物理层基本概念"><a href="#物理层基本概念" class="headerlink" title="物理层基本概念"></a>物理层基本概念</h1><h3 id="物理层基本概念-1"><a href="#物理层基本概念-1" class="headerlink" title="物理层基本概念"></a>物理层基本概念</h3><blockquote>
 <p>物理层解决如何在连接各种计算机的传输媒体上<strong>传输数据比特流</strong>，而不是指具体的传输媒体。</p>
@@ -521,5 +526,12 @@
 <h3 id="集线器（多口中继器）"><a href="#集线器（多口中继器）" class="headerlink" title="集线器（多口中继器）"></a>集线器（多口中继器）</h3><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102205012908.png" alt="image-20210102205012908"></p>
 <h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102204904877.png"></p>
 ]]></content>
+      <categories>
+        <category>计算机网络</category>
+      </categories>
+      <tags>
+        <tag>share</tag>
+        <tag>notes</tag>
+      </tags>
   </entry>
 </search>
