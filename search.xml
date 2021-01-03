@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title></title>
-    <url>/2021/01/02/%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%B8%89%E7%AB%A0--%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>Hello World</title>
     <url>/2020/12/05/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. <a id="more"></a>Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -527,6 +522,177 @@
 <h1 id="物理层设备"><a href="#物理层设备" class="headerlink" title="物理层设备"></a>物理层设备</h1><h3 id="中继器"><a href="#中继器" class="headerlink" title="中继器"></a>中继器</h3><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102203530197.png" alt="image-20210102203530197"></p>
 <h3 id="集线器（多口中继器）"><a href="#集线器（多口中继器）" class="headerlink" title="集线器（多口中继器）"></a>集线器（多口中继器）</h3><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102205012908.png" alt="image-20210102205012908"></p>
 <h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102204904877.png"></p>
+]]></content>
+      <categories>
+        <category>计算机网络</category>
+      </categories>
+      <tags>
+        <tag>share</tag>
+        <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>计网第三章--数据链路层</title>
+    <url>/2021/01/02/%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%B8%89%E7%AB%A0--%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/</url>
+    <content><![CDATA[<a id="more"></a>
+
+
+
+<h1 id="数据链路层功能概述"><a href="#数据链路层功能概述" class="headerlink" title="数据链路层功能概述"></a>数据链路层功能概述</h1><h2 id="数据链路层的研究思想"><a href="#数据链路层的研究思想" class="headerlink" title="数据链路层的研究思想"></a>数据链路层的研究思想</h2><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210103093907401.png" alt="image-20210103093907401"></p>
+<h2 id="数据链路层基本概念"><a href="#数据链路层基本概念" class="headerlink" title="数据链路层基本概念"></a>数据链路层基本概念</h2><ul>
+<li><strong>结点</strong>：主机、路由器</li>
+<li><strong>链路</strong>：网络中两个结点之间的<strong>物理通道</strong>，链路的传输介质主要有双绞线、光纤和微波。<ul>
+<li>有线链路</li>
+<li>无线链路</li>
+</ul>
+</li>
+<li><strong>数据链路</strong>：网络中两个结点之间的<strong>逻辑通道</strong>，吧实现控制数据传输<strong>协议</strong>的硬件和软件加到链路上就构成数据链路。</li>
+<li><strong>帧</strong>：链路层的协议数据单元，封装网络层数据报</li>
+</ul>
+<blockquote>
+<p><strong>数据链路层</strong>负责通过一条链路从一个结点向另一个物理链路直接相连的相邻结点传送数据报。</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210103094412651.png" alt="image-20210103094412651"></p>
+<h2 id="数据链路层功能概述-1"><a href="#数据链路层功能概述-1" class="headerlink" title="数据链路层功能概述"></a>数据链路层功能概述</h2><blockquote>
+<p>数据链路层在物理层提供服务的基础上<strong>向网络层提供服务</strong>，其最基本的服务是将源自网络层来的数据可靠地传输到相邻节点的目标机网络层。</p>
+<p>主要作用是<strong>加强物理层传输原始比特流的功能</strong>，将物理层提供的可能出错的物理连接改造成为<strong>逻辑上无差错的数据链路</strong>，使之对网络层表现为一条无差错的链路。</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210103094900498.png" alt="image-20210103094900498"></p>
+<h3 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h3><ol>
+<li><h4 id="为网络层提供服务"><a href="#为网络层提供服务" class="headerlink" title="为网络层提供服务"></a>为网络层提供服务</h4><ul>
+<li>无确定无连接服务</li>
+<li>有确认无连接服务</li>
+<li>有确认面向连接服务（有连接一定有确认）</li>
+</ul>
+</li>
+<li><h4 id="链路管理"><a href="#链路管理" class="headerlink" title="链路管理"></a>链路管理</h4><p>连接的建立、维持、释放</p>
+</li>
+<li><h4 id="组帧"><a href="#组帧" class="headerlink" title="组帧"></a>组帧</h4></li>
+<li><h4 id="流量控制"><a href="#流量控制" class="headerlink" title="流量控制"></a>流量控制</h4><p>限制发送方</p>
+</li>
+<li><h4 id="差错控制"><a href="#差错控制" class="headerlink" title="差错控制"></a>差错控制</h4><ul>
+<li>帧错</li>
+<li>位错</li>
+</ul>
+</li>
+</ol>
+<h1 id="封装成帧和透明传输"><a href="#封装成帧和透明传输" class="headerlink" title="封装成帧和透明传输"></a>封装成帧和透明传输</h1><h2 id="封装成帧"><a href="#封装成帧" class="headerlink" title="封装成帧"></a>封装成帧</h2><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210103095352283.png" alt="image-20210103095352283"></p>
+<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210103095829243.png" alt="image-20210103095829243"></p>
+<blockquote>
+<p><strong>封装成帧</strong>就是在一段数据的前后部分添加首部和尾部，这样就构成了一个帧。接收端在收到物理层上交的比特流后，就能根据首部和尾部的标记，从收到的比特流中识别帧的开始和结束。</p>
+</blockquote>
+<h3 id="帧同步"><a href="#帧同步" class="headerlink" title="帧同步"></a>帧同步</h3><blockquote>
+<p>接收方应当能从接收到的二进制比特流中区分出帧的起始和终止。</p>
+</blockquote>
+<h3 id="透明传输"><a href="#透明传输" class="headerlink" title="透明传输"></a>透明传输</h3><blockquote>
+<p>指不管所传数据是什么，都能在链路上传送。因此，链路层看不见有什么妨碍数据传输的东西。</p>
+</blockquote>
+<h3 id="组帧的四种方法"><a href="#组帧的四种方法" class="headerlink" title="组帧的四种方法"></a>组帧的四种方法</h3><ol>
+<li><h4 id="字符计数法"><a href="#字符计数法" class="headerlink" title="字符计数法"></a>字符计数法</h4><blockquote>
+<p>帧首部使用一个计数字段（第一个字节，八位）来标明帧内字符数。</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210103100209625.png" alt="image-20210103100209625"></p>
+</li>
+</ol>
+<ol start="2">
+<li><h4 id="字符填充法"><a href="#字符填充法" class="headerlink" title="字符填充法"></a>字符填充法</h4><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210103100720451.png" alt="image-20210103100720451"></p>
+<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210103100854477.png" alt="image-20210103100854477"></p>
+<p>转义字符：ESC</p>
+</li>
+</ol>
+<ol start="3">
+<li><h4 id="零比特填充法"><a href="#零比特填充法" class="headerlink" title="零比特填充法"></a>零比特填充法</h4><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210103101313644.png" alt="image-20210103101313644"></p>
+</li>
+<li><h4 id="违规编码法"><a href="#违规编码法" class="headerlink" title="违规编码法"></a>违规编码法</h4><blockquote>
+<p>用不会用到的来定义帧的起始和终止</p>
+</blockquote>
+<p>![image-20210103101442664](/Users/fine/Library/Application Support/typora-user-images/image-20210103101442664.png)</p>
+</li>
+</ol>
+<h1 id="差错控制-1"><a href="#差错控制-1" class="headerlink" title="差错控制"></a>差错控制</h1><h2 id="差错从何而来"><a href="#差错从何而来" class="headerlink" title="差错从何而来"></a>差错从何而来</h2><blockquote>
+<p>总的来说，传输中的差说都是由于噪声引起的。</p>
+</blockquote>
+<ul>
+<li><p>全局性</p>
+<ul>
+<li>由于线路本身电气特性所产生的<strong>随机噪声</strong>（热噪声），是信道固有的，随机存在的。</li>
+<li>解决方法：提高信噪比来减少或避免干扰。（对传感器下手）</li>
+</ul>
+</li>
+<li><p>局部性</p>
+<ul>
+<li>外界特定的短暂原因所造成的<strong>冲击噪声</strong>，是产生差错的主要原因</li>
+</ul>
+</li>
+</ul>
+<h3 id="差错"><a href="#差错" class="headerlink" title="差错"></a>差错</h3><ul>
+<li><p>位错</p>
+<ul>
+<li>比特位出错，1变0，0变1</li>
+</ul>
+</li>
+<li><p>帧错</p>
+<ul>
+<li>丢失</li>
+<li>重复</li>
+<li>失序</li>
+</ul>
+</li>
+</ul>
+<h2 id="数据链路层的差错控制"><a href="#数据链路层的差错控制" class="headerlink" title="数据链路层的差错控制"></a>数据链路层的差错控制</h2><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210103113618826.png" alt="image-20210103113618826"></p>
+<h3 id="差错控制-2"><a href="#差错控制-2" class="headerlink" title="差错控制"></a>差错控制</h3><ol>
+<li><h4 id="检错编码"><a href="#检错编码" class="headerlink" title="检错编码"></a>检错编码</h4><ul>
+<li><h5 id="奇偶校验码"><a href="#奇偶校验码" class="headerlink" title="奇偶校验码"></a>奇偶校验码</h5><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210103114551360.png" alt="image-20210103114551360"></p>
+</li>
+<li><h5 id="循环冗余码CRC"><a href="#循环冗余码CRC" class="headerlink" title="循环冗余码CRC"></a>循环冗余码CRC</h5><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210103115046030.png" alt="image-20210103115046030"></p>
+<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210103115205370.png" alt="image-20210103115205370"></p>
+<blockquote>
+<p>在数据链路层仅仅使用循环冗余检验CRC差错检测技术，只能做到对帧的无差错接受，即『凡是接收端数据链路层接受的帧，我们都能以非常接近于1的概念认为这些帧在传输过程中没有产生差错』。接收端丢弃的帧虽然曾收到了，但最终因为有差错被丢弃。</p>
+<p>凡是接收端数据链路层接受的帧均无差错。</p>
+</blockquote>
+<p><strong>可靠传输</strong>：数据链路层发送端发送什么，接收端就接受什么</p>
+<p>链路层使用CRC检验，能够实现无比特差错的传输，但这不是可靠传输，因为没有对丢弃的数据做处理，丢失了这部分数据。</p>
+</li>
+</ul>
+</li>
+<li><h4 id="纠错编码"><a href="#纠错编码" class="headerlink" title="纠错编码"></a>纠错编码</h4><ul>
+<li><h5 id="海明码"><a href="#海明码" class="headerlink" title="海明码"></a>海明码</h5><blockquote>
+<p>发现双比特错，纠正单比特错</p>
+<p>工作原理：动一发而牵全身，多个校验码，且每个都可校验多处位置，导致一个位置可能被好几个校验码控制</p>
+</blockquote>
+<ul>
+<li><p>工作流程</p>
+<ol>
+<li><p>确定校验码位数r</p>
+<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210103120936405.png" alt="image-20210103120936405"></p>
+</li>
+<li><p>确定校验码和数据的位置</p>
+<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210103121045253.png" alt="image-20210103121045253"></p>
+</li>
+<li><p>求出校验码的值</p>
+<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210103121335654.png" alt="image-20210103121335654"></p>
+</li>
+<li><p>检错并纠错</p>
+<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210103121555914.png" alt="image-20210103121555914"></p>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="编码VS编码"><a href="#编码VS编码" class="headerlink" title="编码VS编码"></a>编码VS编码</h3><p>数据链路层和物理层的数据编码与调制不同。</p>
+<p><strong>物理层编码：</strong></p>
+<pre><code>- 针对单个比特
+- 解决传输工程中比特同步问题（曼切斯特编码）</code></pre>
+<p><strong>数据链路层编码</strong>：</p>
+<ul>
+<li>针对一组比特</li>
+<li>通过冗余码的技术实现一组二进制比特串在传输过程中是否出现了差错</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210103114134503.png" alt="image-20210103114134503"></p>
+<h2 id="脑图"><a href="#脑图" class="headerlink" title="脑图"></a>脑图</h2><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210103121621528.png" alt="image-20210103121621528"></p>
 ]]></content>
       <categories>
         <category>计算机网络</category>
