@@ -19,6 +19,299 @@
 ]]></content>
   </entry>
   <entry>
+    <title>计网第三章--数据链路层</title>
+    <url>/2021/01/02/%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%B8%89%E7%AB%A0--%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/</url>
+    <content><![CDATA[<p>链路层的功能、链路层的两种信道、局域网、广域网、链路层的设备…</p>
+<a id="more"></a>
+
+
+
+
+
+<h1 id="数据链路层功能概述"><a href="#数据链路层功能概述" class="headerlink" title="数据链路层功能概述"></a>数据链路层功能概述</h1><h2 id="数据链路层的研究思想"><a href="#数据链路层的研究思想" class="headerlink" title="数据链路层的研究思想"></a>数据链路层的研究思想</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210103093907401.png" alt="image-20210103093907401"></p>
+<h2 id="数据链路层基本概念"><a href="#数据链路层基本概念" class="headerlink" title="数据链路层基本概念"></a>数据链路层基本概念</h2><ul>
+<li><strong>结点</strong>：主机、路由器</li>
+<li><strong>链路</strong>：网络中两个结点之间的<strong>物理通道</strong>，链路的传输介质主要有双绞线、光纤和微波。<ul>
+<li>有线链路</li>
+<li>无线链路</li>
+</ul>
+</li>
+<li><strong>数据链路</strong>：网络中两个结点之间的<strong>逻辑通道</strong>，吧实现控制数据传输<strong>协议</strong>的硬件和软件加到链路上就构成数据链路。</li>
+<li><strong>帧</strong>：链路层的协议数据单元，封装网络层数据报</li>
+</ul>
+<blockquote>
+<p><strong>数据链路层</strong>负责通过一条链路从一个结点向另一个物理链路直接相连的相邻结点传送数据报。</p>
+</blockquote>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210103094412651.png" alt="image-20210103094412651"></p>
+<h2 id="数据链路层功能概述-1"><a href="#数据链路层功能概述-1" class="headerlink" title="数据链路层功能概述"></a>数据链路层功能概述</h2><blockquote>
+<p>数据链路层在物理层提供服务的基础上<strong>向网络层提供服务</strong>，其最基本的服务是将源自网络层来的数据可靠地传输到相邻节点的目标机网络层。</p>
+<p>主要作用是<strong>加强物理层传输原始比特流的功能</strong>，将物理层提供的可能出错的物理连接改造成为<strong>逻辑上无差错的数据链路</strong>，使之对网络层表现为一条无差错的链路。</p>
+</blockquote>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210103094900498.png" alt="image-20210103094900498"></p>
+<h3 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h3><ol>
+<li><h4 id="为网络层提供服务"><a href="#为网络层提供服务" class="headerlink" title="为网络层提供服务"></a>为网络层提供服务</h4><ul>
+<li>无确定无连接服务</li>
+<li>有确认无连接服务</li>
+<li>有确认面向连接服务（有连接一定有确认）</li>
+</ul>
+</li>
+<li><h4 id="链路管理"><a href="#链路管理" class="headerlink" title="链路管理"></a>链路管理</h4><p>连接的建立、维持、释放</p>
+</li>
+<li><h4 id="组帧"><a href="#组帧" class="headerlink" title="组帧"></a>组帧</h4></li>
+<li><h4 id="流量控制"><a href="#流量控制" class="headerlink" title="流量控制"></a>流量控制</h4><p>限制发送方</p>
+</li>
+<li><h4 id="差错控制"><a href="#差错控制" class="headerlink" title="差错控制"></a>差错控制</h4><ul>
+<li>帧错</li>
+<li>位错</li>
+</ul>
+</li>
+</ol>
+<h1 id="封装成帧和透明传输"><a href="#封装成帧和透明传输" class="headerlink" title="封装成帧和透明传输"></a>封装成帧和透明传输</h1><h2 id="封装成帧"><a href="#封装成帧" class="headerlink" title="封装成帧"></a>封装成帧</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210103095352283.png" alt="image-20210103095352283"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210103095829243.png" alt="image-20210103095829243"></p>
+<blockquote>
+<p><strong>封装成帧</strong>就是在一段数据的前后部分添加首部和尾部，这样就构成了一个帧。接收端在收到物理层上交的比特流后，就能根据首部和尾部的标记，从收到的比特流中识别帧的开始和结束。</p>
+</blockquote>
+<h3 id="帧同步"><a href="#帧同步" class="headerlink" title="帧同步"></a>帧同步</h3><blockquote>
+<p>接收方应当能从接收到的二进制比特流中区分出帧的起始和终止。</p>
+</blockquote>
+<h3 id="透明传输"><a href="#透明传输" class="headerlink" title="透明传输"></a>透明传输</h3><blockquote>
+<p>指不管所传数据是什么，都能在链路上传送。因此，链路层看不见有什么妨碍数据传输的东西。</p>
+</blockquote>
+<h3 id="组帧的四种方法"><a href="#组帧的四种方法" class="headerlink" title="组帧的四种方法"></a>组帧的四种方法</h3><ol>
+<li><h4 id="字符计数法"><a href="#字符计数法" class="headerlink" title="字符计数法"></a>字符计数法</h4><blockquote>
+<p>帧首部使用一个计数字段（第一个字节，八位）来标明帧内字符数。</p>
+</blockquote>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210103100209625.png" alt="image-20210103100209625"></p>
+</li>
+</ol>
+<ol start="2">
+<li><h4 id="字符填充法"><a href="#字符填充法" class="headerlink" title="字符填充法"></a>字符填充法</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210103100720451.png" alt="image-20210103100720451"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210103100854477.png" alt="image-20210103100854477"></p>
+<p>转义字符：ESC</p>
+</li>
+</ol>
+<ol start="3">
+<li><h4 id="零比特填充法"><a href="#零比特填充法" class="headerlink" title="零比特填充法"></a>零比特填充法</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210103101313644.png" alt="image-20210103101313644"></p>
+</li>
+<li><h4 id="违规编码法"><a href="#违规编码法" class="headerlink" title="违规编码法"></a>违规编码法</h4><blockquote>
+<p>用不会用到的来定义帧的起始和终止</p>
+</blockquote>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210103101442664.png" alt="image-20210103101442664"></p>
+</li>
+</ol>
+<h1 id="差错控制-1"><a href="#差错控制-1" class="headerlink" title="差错控制"></a>差错控制</h1><h2 id="差错从何而来"><a href="#差错从何而来" class="headerlink" title="差错从何而来"></a>差错从何而来</h2><blockquote>
+<p>总的来说，传输中的差说都是由于噪声引起的。</p>
+</blockquote>
+<ul>
+<li><p>全局性</p>
+<ul>
+<li>由于线路本身电气特性所产生的<strong>随机噪声</strong>（热噪声），是信道固有的，随机存在的。</li>
+<li>解决方法：提高信噪比来减少或避免干扰。（对传感器下手）</li>
+</ul>
+</li>
+<li><p>局部性</p>
+<ul>
+<li>外界特定的短暂原因所造成的<strong>冲击噪声</strong>，是产生差错的主要原因</li>
+</ul>
+</li>
+</ul>
+<h3 id="差错"><a href="#差错" class="headerlink" title="差错"></a>差错</h3><ul>
+<li><p>位错</p>
+<ul>
+<li>比特位出错，1变0，0变1</li>
+</ul>
+</li>
+<li><p>帧错</p>
+<ul>
+<li>丢失</li>
+<li>重复</li>
+<li>失序</li>
+</ul>
+</li>
+</ul>
+<h2 id="数据链路层的差错控制"><a href="#数据链路层的差错控制" class="headerlink" title="数据链路层的差错控制"></a>数据链路层的差错控制</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210103113618826.png" alt="image-20210103113618826"></p>
+<h3 id="差错控制-2"><a href="#差错控制-2" class="headerlink" title="差错控制"></a>差错控制</h3><ol>
+<li><h4 id="检错编码"><a href="#检错编码" class="headerlink" title="检错编码"></a>检错编码</h4><ul>
+<li><h5 id="奇偶校验码"><a href="#奇偶校验码" class="headerlink" title="奇偶校验码"></a>奇偶校验码</h5><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210103114551360.png" alt="image-20210103114551360"></p>
+</li>
+<li><h5 id="循环冗余码CRC"><a href="#循环冗余码CRC" class="headerlink" title="循环冗余码CRC"></a>循环冗余码CRC</h5><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210103115046030.png" alt="image-20210103115046030"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210103115205370.png" alt="image-20210103115205370"></p>
+<blockquote>
+<p>在数据链路层仅仅使用循环冗余检验CRC差错检测技术，只能做到对帧的无差错接受，即『凡是接收端数据链路层接受的帧，我们都能以非常接近于1的概念认为这些帧在传输过程中没有产生差错』。接收端丢弃的帧虽然曾收到了，但最终因为有差错被丢弃。</p>
+<p>凡是接收端数据链路层接受的帧均无差错。</p>
+</blockquote>
+<p><strong>可靠传输</strong>：数据链路层发送端发送什么，接收端就接受什么</p>
+<p>链路层使用CRC检验，能够实现无比特差错的传输，但这不是可靠传输，因为没有对丢弃的数据做处理，丢失了这部分数据。</p>
+</li>
+</ul>
+</li>
+<li><h4 id="纠错编码"><a href="#纠错编码" class="headerlink" title="纠错编码"></a>纠错编码</h4><ul>
+<li><h5 id="海明码"><a href="#海明码" class="headerlink" title="海明码"></a>海明码</h5><blockquote>
+<p>发现双比特错，纠正单比特错</p>
+<p>工作原理：动一发而牵全身，多个校验码，且每个都可校验多处位置，导致一个位置可能被好几个校验码控制</p>
+</blockquote>
+<ul>
+<li><p>工作流程</p>
+<ol>
+<li><p>确定校验码位数r</p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210103120936405.png" alt="image-20210103120936405"></p>
+</li>
+<li><p>确定校验码和数据的位置</p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210103121045253.png" alt="image-20210103121045253"></p>
+</li>
+<li><p>求出校验码的值</p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210103121335654.png" alt="image-20210103121335654"></p>
+</li>
+<li><p>检错并纠错</p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210103121555914.png" alt="image-20210103121555914"></p>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="编码VS编码"><a href="#编码VS编码" class="headerlink" title="编码VS编码"></a>编码VS编码</h3><p>数据链路层和物理层的数据编码与调制不同。</p>
+<p><strong>物理层编码：</strong></p>
+<pre><code>- 针对单个比特
+- 解决传输工程中比特同步问题（曼切斯特编码）</code></pre>
+<p><strong>数据链路层编码</strong>：</p>
+<ul>
+<li>针对一组比特</li>
+<li>通过冗余码的技术实现一组二进制比特串在传输过程中是否出现了差错</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210103114134503.png" alt="image-20210103114134503"></p>
+<h2 id="脑图"><a href="#脑图" class="headerlink" title="脑图"></a>脑图</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210103121621528.png" alt="image-20210103121621528"></p>
+<h1 id="流量控制与可靠传输机制"><a href="#流量控制与可靠传输机制" class="headerlink" title="流量控制与可靠传输机制"></a>流量控制与可靠传输机制</h1><h2 id="数据链路层的流量控制"><a href="#数据链路层的流量控制" class="headerlink" title="数据链路层的流量控制"></a>数据链路层的流量控制</h2><blockquote>
+<p><strong>较高的发送速度</strong>和<strong>较低的接受能力</strong>的不匹配，会造成传输出错，因此流量控制也是数据链路层的一项重要工作。</p>
+<p>数据链路层的流量控制是点对点，传输层的流量控制是端到端</p>
+</blockquote>
+<ul>
+<li>数据链路层流量控制手段：接收方收不下就不回复确认</li>
+<li>传输层流量控制手段：接收端给发送端一个窗口公告</li>
+</ul>
+<h2 id="流量控制的方法"><a href="#流量控制的方法" class="headerlink" title="流量控制的方法"></a>流量控制的方法</h2><ol>
+<li><p><strong>停止等待协议</strong></p>
+<blockquote>
+<p>每发送完一个帧就停止发送，等待对方的确认，在收到确认后再发送下一个帧。</p>
+</blockquote>
+<p>发送窗口=1，接收窗口=1</p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210103171943641.png" alt="image-20210103171943641"></p>
+</li>
+<li><p><strong>滑动窗口协议</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210103172147264.png" alt="image-20210103172147264"></p>
+<ul>
+<li><p>后退N帧协议（GBN）</p>
+<p>发送窗口&gt;1，接收窗口=1</p>
+</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li><p>选择重传协议（SR）</p>
+<p>发送窗口&gt;1，接收窗口&gt;1</p>
+</li>
+</ul>
+<h2 id="可靠传输、滑动窗口、流量控制"><a href="#可靠传输、滑动窗口、流量控制" class="headerlink" title="可靠传输、滑动窗口、流量控制"></a>可靠传输、滑动窗口、流量控制</h2><ul>
+<li>可靠传输：发送端发啥，接收端收啥</li>
+<li>流量控制：控制发送速率，使接收方有足够的缓冲空间来接收每一个帧</li>
+<li>滑动窗口解决：<ul>
+<li>流量控制（收不下就不给确认，想发也发不了）</li>
+<li>可靠传输：发送方自动重传</li>
+</ul>
+</li>
+</ul>
+<h2 id="脑图-1"><a href="#脑图-1" class="headerlink" title="脑图"></a>脑图</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210103172645307.png" alt="image-20210103172645307"></p>
+<h1 id="停止-等待协议"><a href="#停止-等待协议" class="headerlink" title="停止-等待协议"></a>停止-等待协议</h1><ul>
+<li><p><strong>为什么要有停止等待协议</strong></p>
+<p>除了比特出差错，底层信道返回出现丢包问题。为了实现流量控制。</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>研究停等协议的前提</strong></p>
+<p>停等协议，每发送完一个分组就停止发送，等待对方确认，在收到确认后再发送下一个分组。</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>停等协议有几种应用情况</strong></p>
+<ul>
+<li>无差错情况</li>
+<li>有差错情况</li>
+</ul>
+</li>
+</ul>
+<h2 id="无差错情况"><a href="#无差错情况" class="headerlink" title="无差错情况"></a>无差错情况</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210103174138329.png" alt="image-20210103174138329"></p>
+<h2 id="有差错情况"><a href="#有差错情况" class="headerlink" title="有差错情况"></a>有差错情况</h2><ol>
+<li><h3 id="数据帧丢失或者检测到帧出错"><a href="#数据帧丢失或者检测到帧出错" class="headerlink" title="数据帧丢失或者检测到帧出错"></a>数据帧丢失或者检测到帧出错</h3><ul>
+<li>发完一个帧后，要保留它的副本</li>
+<li>数据帧和确认帧必须编号，可以检查重复</li>
+<li>超时计时器：每次发送一个帧就启动一个计时器</li>
+<li>超时计时器设置的重传时间应当比帧传输的平均RTT更长一些</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210103174611629.png" alt="image-20210103174611629"></p>
+</li>
+<li><h3 id="ACK丢失"><a href="#ACK丢失" class="headerlink" title="ACK丢失"></a>ACK丢失</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210103174738486.png" alt="image-20210103174738486"></p>
+</li>
+<li><h3 id="ACK迟到"><a href="#ACK迟到" class="headerlink" title="ACK迟到"></a>ACK迟到</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210103174910824.png" alt="image-20210103174910824"></p>
+</li>
+</ol>
+<h2 id="停等协议性能分析"><a href="#停等协议性能分析" class="headerlink" title="停等协议性能分析"></a>停等协议性能分析</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210103175056362.png" alt="image-20210103175056362"></p>
+<h2 id="信道利用率"><a href="#信道利用率" class="headerlink" title="信道利用率"></a>信道利用率</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210103175242049.png" alt="image-20210103175242049"></p>
+<h2 id="脑图-2"><a href="#脑图-2" class="headerlink" title="脑图"></a>脑图</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210103175308542.png" alt="image-20210103175308542"></p>
+<h1 id="后退N帧协议（GBN）"><a href="#后退N帧协议（GBN）" class="headerlink" title="后退N帧协议（GBN）"></a>后退N帧协议（GBN）</h1><h2 id="停等协议的弊端"><a href="#停等协议的弊端" class="headerlink" title="停等协议的弊端"></a>停等协议的弊端</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210103180040238.png" alt="image-20210103180040238"></p>
+<h2 id="后退N帧协议中的滑动窗口"><a href="#后退N帧协议中的滑动窗口" class="headerlink" title="后退N帧协议中的滑动窗口"></a>后退N帧协议中的滑动窗口</h2><ul>
+<li>发送窗口：发送方维持一组连续的允许发送的帧的序号</li>
+<li>接受窗口：接收方维持一组连续的允许接受帧的序号</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210103180633204.png" alt="image-20210103180633204"></p>
+<h2 id="GBN发送方必须响应的三件事"><a href="#GBN发送方必须响应的三件事" class="headerlink" title="GBN发送方必须响应的三件事"></a>GBN发送方必须响应的三件事</h2><ol>
+<li><h3 id="上层的调用"><a href="#上层的调用" class="headerlink" title="上层的调用"></a>上层的调用</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210103181029392.png" alt="image-20210103181029392"></p>
+</li>
+</ol>
+<ol start="2">
+<li><h3 id="收到了一个ACK"><a href="#收到了一个ACK" class="headerlink" title="收到了一个ACK"></a>收到了一个ACK</h3><blockquote>
+<p>GBN协议中，对n号帧的确认采用<strong>累计确认</strong>的方式，标明接收方已经收到n号帧和它之前的全部帧。</p>
+</blockquote>
+</li>
+</ol>
+<ol start="3">
+<li><h3 id="超时事件"><a href="#超时事件" class="headerlink" title="超时事件"></a>超时事件</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210103181054356.png" alt="image-20210103181054356"></p>
+</li>
+</ol>
+<h2 id="GBN接收方要做的事"><a href="#GBN接收方要做的事" class="headerlink" title="GBN接收方要做的事"></a>GBN接收方要做的事</h2><ul>
+<li>如果正确收到n帧号，并且按序，那么接收方为n帧发送一个ACK，并该帧中的数据部分交付给上层。</li>
+<li>其余情况都丢弃帧，并为最近按序接受的帧重新发送ACK。接收方无需缓存任何失序帧，只需要维护一个信息：expectedseqnum（下一个按序接受的帧序号）</li>
+</ul>
+<h2 id="运行中的GBN"><a href="#运行中的GBN" class="headerlink" title="运行中的GBN"></a>运行中的GBN</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210103181819264.png" alt="image-20210103181819264"></p>
+<ul>
+<li>等到一个ACK，滑动窗口会后移，然后发送端发送下一帧</li>
+<li>发归发，帧号不满足接收端的exceptedseqnum，不收，不发ACK</li>
+<li>等不到ACKn，出现超时，发送超时帧之后所有帧</li>
+</ul>
+<h2 id="滑动窗口长度"><a href="#滑动窗口长度" class="headerlink" title="滑动窗口长度"></a>滑动窗口长度</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210103182212542.png" alt="image-20210103182212542"></p>
+<h2 id="GBN协议重点总结"><a href="#GBN协议重点总结" class="headerlink" title="GBN协议重点总结"></a>GBN协议重点总结</h2><ol>
+<li>累计确认（偶尔捎带确认）</li>
+<li>接收方只按序接受帧，不按序无情丢弃</li>
+<li>确认序列号最大的、按序到达的帧</li>
+<li>发送窗口最大为 $2^n - 1$ ，接受窗口大小为1</li>
+</ol>
+<h2 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210103182823204.png" alt="image-20210103182823204"></p>
+<h2 id="GBN协议性能分析"><a href="#GBN协议性能分析" class="headerlink" title="GBN协议性能分析"></a>GBN协议性能分析</h2><ul>
+<li>因连续发送数据帧而提高了信道利用率</li>
+<li>在重传时必须把原来已经正确传送的数据帧重传，使传送效率降低</li>
+</ul>
+<h2 id="脑图-3"><a href="#脑图-3" class="headerlink" title="脑图"></a>脑图</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210103183008068.png" alt="image-20210103183008068"></p>
+]]></content>
+      <categories>
+        <category>计算机网络</category>
+      </categories>
+      <tags>
+        <tag>share</tag>
+        <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>计网第一章--概述</title>
     <url>/2021/01/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%AC%E4%B8%80%E7%AB%A0/</url>
     <content><![CDATA[<h1 id="1-1-1-概念、组成、功能和分类"><a href="#1-1-1-概念、组成、功能和分类" class="headerlink" title="1.1.1 概念、组成、功能和分类"></a>1.1.1 概念、组成、功能和分类</h1><a id="more"></a>
@@ -257,175 +550,6 @@
 <h3 id="5层参考模型"><a href="#5层参考模型" class="headerlink" title="5层参考模型"></a>5层参考模型</h3><h5 id="模型图"><a href="#模型图" class="headerlink" title="模型图"></a>模型图</h5><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101213028676.png" alt="image-20210101213028676"></p>
 <h5 id="数据封装与解封装"><a href="#数据封装与解封装" class="headerlink" title="数据封装与解封装"></a>数据封装与解封装</h5><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101213225550.png" alt="image-20210101213225550"></p>
 <h1 id="1-3-第一章知识总结"><a href="#1-3-第一章知识总结" class="headerlink" title="1.3 第一章知识总结"></a>1.3 第一章知识总结</h1><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101213405540.png" alt="image-20210101213405540"></p>
-]]></content>
-      <categories>
-        <category>计算机网络</category>
-      </categories>
-      <tags>
-        <tag>share</tag>
-        <tag>notes</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>计网第三章--数据链路层</title>
-    <url>/2021/01/02/%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%B8%89%E7%AB%A0--%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/</url>
-    <content><![CDATA[<h1 id="数据链路层功能概述"><a href="#数据链路层功能概述" class="headerlink" title="数据链路层功能概述"></a>数据链路层功能概述</h1><a id="more"></a>
-
-<h2 id="数据链路层的研究思想"><a href="#数据链路层的研究思想" class="headerlink" title="数据链路层的研究思想"></a>数据链路层的研究思想</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210103093907401.png" alt="image-20210103093907401"></p>
-<h2 id="数据链路层基本概念"><a href="#数据链路层基本概念" class="headerlink" title="数据链路层基本概念"></a>数据链路层基本概念</h2><ul>
-<li><strong>结点</strong>：主机、路由器</li>
-<li><strong>链路</strong>：网络中两个结点之间的<strong>物理通道</strong>，链路的传输介质主要有双绞线、光纤和微波。<ul>
-<li>有线链路</li>
-<li>无线链路</li>
-</ul>
-</li>
-<li><strong>数据链路</strong>：网络中两个结点之间的<strong>逻辑通道</strong>，吧实现控制数据传输<strong>协议</strong>的硬件和软件加到链路上就构成数据链路。</li>
-<li><strong>帧</strong>：链路层的协议数据单元，封装网络层数据报</li>
-</ul>
-<blockquote>
-<p><strong>数据链路层</strong>负责通过一条链路从一个结点向另一个物理链路直接相连的相邻结点传送数据报。</p>
-</blockquote>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210103094412651.png" alt="image-20210103094412651"></p>
-<h2 id="数据链路层功能概述-1"><a href="#数据链路层功能概述-1" class="headerlink" title="数据链路层功能概述"></a>数据链路层功能概述</h2><blockquote>
-<p>数据链路层在物理层提供服务的基础上<strong>向网络层提供服务</strong>，其最基本的服务是将源自网络层来的数据可靠地传输到相邻节点的目标机网络层。</p>
-<p>主要作用是<strong>加强物理层传输原始比特流的功能</strong>，将物理层提供的可能出错的物理连接改造成为<strong>逻辑上无差错的数据链路</strong>，使之对网络层表现为一条无差错的链路。</p>
-</blockquote>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210103094900498.png" alt="image-20210103094900498"></p>
-<h3 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h3><ol>
-<li><h4 id="为网络层提供服务"><a href="#为网络层提供服务" class="headerlink" title="为网络层提供服务"></a>为网络层提供服务</h4><ul>
-<li>无确定无连接服务</li>
-<li>有确认无连接服务</li>
-<li>有确认面向连接服务（有连接一定有确认）</li>
-</ul>
-</li>
-<li><h4 id="链路管理"><a href="#链路管理" class="headerlink" title="链路管理"></a>链路管理</h4><p>连接的建立、维持、释放</p>
-</li>
-<li><h4 id="组帧"><a href="#组帧" class="headerlink" title="组帧"></a>组帧</h4></li>
-<li><h4 id="流量控制"><a href="#流量控制" class="headerlink" title="流量控制"></a>流量控制</h4><p>限制发送方</p>
-</li>
-<li><h4 id="差错控制"><a href="#差错控制" class="headerlink" title="差错控制"></a>差错控制</h4><ul>
-<li>帧错</li>
-<li>位错</li>
-</ul>
-</li>
-</ol>
-<h1 id="封装成帧和透明传输"><a href="#封装成帧和透明传输" class="headerlink" title="封装成帧和透明传输"></a>封装成帧和透明传输</h1><h2 id="封装成帧"><a href="#封装成帧" class="headerlink" title="封装成帧"></a>封装成帧</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210103095352283.png" alt="image-20210103095352283"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210103095829243.png" alt="image-20210103095829243"></p>
-<blockquote>
-<p><strong>封装成帧</strong>就是在一段数据的前后部分添加首部和尾部，这样就构成了一个帧。接收端在收到物理层上交的比特流后，就能根据首部和尾部的标记，从收到的比特流中识别帧的开始和结束。</p>
-</blockquote>
-<h3 id="帧同步"><a href="#帧同步" class="headerlink" title="帧同步"></a>帧同步</h3><blockquote>
-<p>接收方应当能从接收到的二进制比特流中区分出帧的起始和终止。</p>
-</blockquote>
-<h3 id="透明传输"><a href="#透明传输" class="headerlink" title="透明传输"></a>透明传输</h3><blockquote>
-<p>指不管所传数据是什么，都能在链路上传送。因此，链路层看不见有什么妨碍数据传输的东西。</p>
-</blockquote>
-<h3 id="组帧的四种方法"><a href="#组帧的四种方法" class="headerlink" title="组帧的四种方法"></a>组帧的四种方法</h3><ol>
-<li><h4 id="字符计数法"><a href="#字符计数法" class="headerlink" title="字符计数法"></a>字符计数法</h4><blockquote>
-<p>帧首部使用一个计数字段（第一个字节，八位）来标明帧内字符数。</p>
-</blockquote>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210103100209625.png" alt="image-20210103100209625"></p>
-</li>
-</ol>
-<ol start="2">
-<li><h4 id="字符填充法"><a href="#字符填充法" class="headerlink" title="字符填充法"></a>字符填充法</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210103100720451.png" alt="image-20210103100720451"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210103100854477.png" alt="image-20210103100854477"></p>
-<p>转义字符：ESC</p>
-</li>
-</ol>
-<ol start="3">
-<li><h4 id="零比特填充法"><a href="#零比特填充法" class="headerlink" title="零比特填充法"></a>零比特填充法</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210103101313644.png" alt="image-20210103101313644"></p>
-</li>
-<li><h4 id="违规编码法"><a href="#违规编码法" class="headerlink" title="违规编码法"></a>违规编码法</h4><blockquote>
-<p>用不会用到的来定义帧的起始和终止</p>
-</blockquote>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210103101442664.png" alt="image-20210103101442664"></p>
-</li>
-</ol>
-<h1 id="差错控制-1"><a href="#差错控制-1" class="headerlink" title="差错控制"></a>差错控制</h1><h2 id="差错从何而来"><a href="#差错从何而来" class="headerlink" title="差错从何而来"></a>差错从何而来</h2><blockquote>
-<p>总的来说，传输中的差说都是由于噪声引起的。</p>
-</blockquote>
-<ul>
-<li><p>全局性</p>
-<ul>
-<li>由于线路本身电气特性所产生的<strong>随机噪声</strong>（热噪声），是信道固有的，随机存在的。</li>
-<li>解决方法：提高信噪比来减少或避免干扰。（对传感器下手）</li>
-</ul>
-</li>
-<li><p>局部性</p>
-<ul>
-<li>外界特定的短暂原因所造成的<strong>冲击噪声</strong>，是产生差错的主要原因</li>
-</ul>
-</li>
-</ul>
-<h3 id="差错"><a href="#差错" class="headerlink" title="差错"></a>差错</h3><ul>
-<li><p>位错</p>
-<ul>
-<li>比特位出错，1变0，0变1</li>
-</ul>
-</li>
-<li><p>帧错</p>
-<ul>
-<li>丢失</li>
-<li>重复</li>
-<li>失序</li>
-</ul>
-</li>
-</ul>
-<h2 id="数据链路层的差错控制"><a href="#数据链路层的差错控制" class="headerlink" title="数据链路层的差错控制"></a>数据链路层的差错控制</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210103113618826.png" alt="image-20210103113618826"></p>
-<h3 id="差错控制-2"><a href="#差错控制-2" class="headerlink" title="差错控制"></a>差错控制</h3><ol>
-<li><h4 id="检错编码"><a href="#检错编码" class="headerlink" title="检错编码"></a>检错编码</h4><ul>
-<li><h5 id="奇偶校验码"><a href="#奇偶校验码" class="headerlink" title="奇偶校验码"></a>奇偶校验码</h5><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210103114551360.png" alt="image-20210103114551360"></p>
-</li>
-<li><h5 id="循环冗余码CRC"><a href="#循环冗余码CRC" class="headerlink" title="循环冗余码CRC"></a>循环冗余码CRC</h5><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210103115046030.png" alt="image-20210103115046030"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210103115205370.png" alt="image-20210103115205370"></p>
-<blockquote>
-<p>在数据链路层仅仅使用循环冗余检验CRC差错检测技术，只能做到对帧的无差错接受，即『凡是接收端数据链路层接受的帧，我们都能以非常接近于1的概念认为这些帧在传输过程中没有产生差错』。接收端丢弃的帧虽然曾收到了，但最终因为有差错被丢弃。</p>
-<p>凡是接收端数据链路层接受的帧均无差错。</p>
-</blockquote>
-<p><strong>可靠传输</strong>：数据链路层发送端发送什么，接收端就接受什么</p>
-<p>链路层使用CRC检验，能够实现无比特差错的传输，但这不是可靠传输，因为没有对丢弃的数据做处理，丢失了这部分数据。</p>
-</li>
-</ul>
-</li>
-<li><h4 id="纠错编码"><a href="#纠错编码" class="headerlink" title="纠错编码"></a>纠错编码</h4><ul>
-<li><h5 id="海明码"><a href="#海明码" class="headerlink" title="海明码"></a>海明码</h5><blockquote>
-<p>发现双比特错，纠正单比特错</p>
-<p>工作原理：动一发而牵全身，多个校验码，且每个都可校验多处位置，导致一个位置可能被好几个校验码控制</p>
-</blockquote>
-<ul>
-<li><p>工作流程</p>
-<ol>
-<li><p>确定校验码位数r</p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210103120936405.png" alt="image-20210103120936405"></p>
-</li>
-<li><p>确定校验码和数据的位置</p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210103121045253.png" alt="image-20210103121045253"></p>
-</li>
-<li><p>求出校验码的值</p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210103121335654.png" alt="image-20210103121335654"></p>
-</li>
-<li><p>检错并纠错</p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210103121555914.png" alt="image-20210103121555914"></p>
-</li>
-</ol>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-<h3 id="编码VS编码"><a href="#编码VS编码" class="headerlink" title="编码VS编码"></a>编码VS编码</h3><p>数据链路层和物理层的数据编码与调制不同。</p>
-<p><strong>物理层编码：</strong></p>
-<pre><code>- 针对单个比特
-- 解决传输工程中比特同步问题（曼切斯特编码）</code></pre>
-<p><strong>数据链路层编码</strong>：</p>
-<ul>
-<li>针对一组比特</li>
-<li>通过冗余码的技术实现一组二进制比特串在传输过程中是否出现了差错</li>
-</ul>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210103114134503.png" alt="image-20210103114134503"></p>
-<h2 id="脑图"><a href="#脑图" class="headerlink" title="脑图"></a>脑图</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210103121621528.png" alt="image-20210103121621528"></p>
 ]]></content>
       <categories>
         <category>计算机网络</category>
