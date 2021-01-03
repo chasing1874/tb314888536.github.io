@@ -19,6 +19,254 @@
 ]]></content>
   </entry>
   <entry>
+    <title>计网第一章--概述</title>
+    <url>/2021/01/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%AC%E4%B8%80%E7%AB%A0/</url>
+    <content><![CDATA[<h1 id="1-1-1-概念、组成、功能和分类"><a href="#1-1-1-概念、组成、功能和分类" class="headerlink" title="1.1.1 概念、组成、功能和分类"></a>1.1.1 概念、组成、功能和分类</h1><a id="more"></a>
+
+<h3 id="计算机网络的概念"><a href="#计算机网络的概念" class="headerlink" title="计算机网络的概念"></a>计算机网络的概念</h3><blockquote>
+<p>是一个将分散的、具有独立功能的计算机系统，通过通信设备与线路连接起来，由功能完善的软件实现 资源共享和信息传递的系统</p>
+</blockquote>
+<p>计算机网络是互联的、自治的计算机集合</p>
+<ul>
+<li><p>互联 – 互联互通  通信链路</p>
+</li>
+<li><p>自治 – 无主从关系</p>
+</li>
+</ul>
+<h3 id="计算机网络的功能"><a href="#计算机网络的功能" class="headerlink" title="计算机网络的功能"></a>计算机网络的功能</h3><ol>
+<li><p>数据通信（连通性）</p>
+</li>
+<li><p>资源共享：硬件、软件、数据</p>
+</li>
+<li><p>分布式处理：多台计算机共同承担同一任务不同步分（Hadoop平台）</p>
+</li>
+<li><p>提高可靠性（替代机）</p>
+</li>
+<li><p>负载均衡（各计算机之间更亲密）</p>
+</li>
+</ol>
+<h3 id="计算机网络的组成"><a href="#计算机网络的组成" class="headerlink" title="计算机网络的组成"></a>计算机网络的组成</h3><h5 id="1、组成部分"><a href="#1、组成部分" class="headerlink" title="1、组成部分"></a>1、组成部分</h5><p>硬件、软件、协议</p>
+<h5 id="2、工作方式"><a href="#2、工作方式" class="headerlink" title="2、工作方式"></a>2、工作方式</h5><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101194117425.png" alt="image-20210101194117425"></p>
+<h5 id="3、功能组成"><a href="#3、功能组成" class="headerlink" title="3、功能组成"></a>3、功能组成</h5><ul>
+<li><p>通信子网：实现数据通信</p>
+</li>
+<li><p>资源子网：实现资源共享、数据处理</p>
+</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101195109924.png" alt="image-20210101195109924"></p>
+<h3 id="计算机网络的分类"><a href="#计算机网络的分类" class="headerlink" title="计算机网络的分类"></a>计算机网络的分类</h3><h5 id="1-按分布范围分"><a href="#1-按分布范围分" class="headerlink" title="1.按分布范围分"></a>1.按分布范围分</h5><p>广域网WAN、城域网MAN、局域网WAN、个人区域网PAN</p>
+<h5 id="2、按使用者分"><a href="#2、按使用者分" class="headerlink" title="2、按使用者分"></a>2、按使用者分</h5><p>公用网、专用网</p>
+<h5 id="3、按交换技术分"><a href="#3、按交换技术分" class="headerlink" title="3、按交换技术分"></a>3、按交换技术分</h5><p>电路交换 、报文交换、分组交换</p>
+<h5 id="4、按拓扑类型分"><a href="#4、按拓扑类型分" class="headerlink" title="4、按拓扑类型分"></a>4、按拓扑类型分</h5><p>总线型、星型、环型、网状型</p>
+<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101195439213.png" alt="image-20210101195439213"></p>
+<h3 id="脑图"><a href="#脑图" class="headerlink" title="脑图"></a>脑图</h3><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101195516966.png" alt="image-20210101195516966"></p>
+<h1 id="1-1-2-标准化工作及相关组织"><a href="#1-1-2-标准化工作及相关组织" class="headerlink" title="1.1.2 标准化工作及相关组织"></a>1.1.2 标准化工作及相关组织</h1><h3 id="标准化工作"><a href="#标准化工作" class="headerlink" title="标准化工作"></a>标准化工作</h3><blockquote>
+<p>为实现不同厂商硬件软件的相互联通</p>
+</blockquote>
+<h5 id="标准的分类"><a href="#标准的分类" class="headerlink" title="标准的分类"></a>标准的分类</h5><ul>
+<li><p>法定标准：由权威机构制定的正式的、合法的标准  OSI</p>
+</li>
+<li><p>事实标准：某些公式产品占据了主流  TCP/IP</p>
+</li>
+</ul>
+<h5 id="RFC-Request-For-Comments-–-因特网标准的形式"><a href="#RFC-Request-For-Comments-–-因特网标准的形式" class="headerlink" title="RFC(Request For Comments)  – 因特网标准的形式"></a>RFC(Request For Comments)  – 因特网标准的形式</h5><p>RFC上升为因特网正式标准：</p>
+<ol>
+<li><p>因特网草案：非RFC</p>
+</li>
+<li><p>建议标准：成为RFC</p>
+</li>
+<li><p>草案标准</p>
+</li>
+<li><p>因特网标准</p>
+</li>
+</ol>
+<h5 id="标准化工作的相关组织"><a href="#标准化工作的相关组织" class="headerlink" title="标准化工作的相关组织"></a>标准化工作的相关组织</h5><ul>
+<li>国际标准化组织ISO  （OSI参考模型、HDLC协议）</li>
+<li>国际电信联盟    （制定通信规则）</li>
+<li>国际电气电子工程师协会IEEE  （学术机构、5G、IEEE802系列标准）</li>
+<li>Internet工程任务组IETF （负责因特网相关标准的制定，RFCxxxx）</li>
+</ul>
+<h5 id="脑图-1"><a href="#脑图-1" class="headerlink" title="脑图"></a>脑图</h5><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101200543997.png" alt="image-20210101200543997"></p>
+<h1 id="1-1-3-速率相关的性能指标"><a href="#1-1-3-速率相关的性能指标" class="headerlink" title="1.1.3 速率相关的性能指标"></a>1.1.3 速率相关的性能指标</h1><h3 id="速率"><a href="#速率" class="headerlink" title="速率"></a>速率</h3><blockquote>
+<p>速率即==数据率==或者称==数据传输率==或==比特率==</p>
+</blockquote>
+<p>连接再计算机网络上的主机在数字信道上传输数据位数的速率</p>
+<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101200906350.png" alt="image-20210101200906350"></p>
+<h3 id="带宽"><a href="#带宽" class="headerlink" title="带宽"></a>带宽</h3><ol>
+<li><p>原本指某个信号具有的频带宽度，即最高频率与最低频率之差，单位赫兹</p>
+</li>
+<li><p>计算机网络中，带宽用来表示网络的通信线路传送数据的能力，单位时间从网络某一点到另一个点能通过的==最高数据率==。</p>
+</li>
+</ol>
+<p>==网络所支持的最高速度==</p>
+<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101201354323.png" alt="image-20210101201354323"></p>
+<h3 id="吞吐量"><a href="#吞吐量" class="headerlink" title="吞吐量"></a>吞吐量</h3><blockquote>
+<p>==单位时间==通过==某个网络（信道、接口）==数据量。</p>
+</blockquote>
+<p>吞吐量受网络带宽或网络的额定速率的限制。</p>
+<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101201707066.png" alt="image-20210101201707066"></p>
+<h1 id="1-1-4-时延、时延带宽积、RTT和利用率"><a href="#1-1-4-时延、时延带宽积、RTT和利用率" class="headerlink" title="1.1.4 时延、时延带宽积、RTT和利用率"></a>1.1.4 时延、时延带宽积、RTT和利用率</h1><h3 id="时延"><a href="#时延" class="headerlink" title="时延"></a>时延</h3><blockquote>
+<p>数据（报文、分组、比特流）从网络（或链路）的一端传送到另一端所需的时间。==延迟==或==迟延==。单位s。</p>
+</blockquote>
+<p>发送时延（传输时延）、传播时延、排队时延、处理时延</p>
+<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101202304640.png" alt="image-20210101202304640"></p>
+<h3 id="时延带宽积"><a href="#时延带宽积" class="headerlink" title="时延带宽积"></a>时延带宽积</h3><blockquote>
+<p>时延带宽积又称为以==比特为单位的链路长度==，某段链路有多少比特（容量）</p>
+</blockquote>
+<p>时延带宽积 = 传播时延 x 带宽</p>
+<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101202849818.png" alt="image-20210101202849818"></p>
+<h3 id="往返时延RTT"><a href="#往返时延RTT" class="headerlink" title="往返时延RTT"></a>往返时延RTT</h3><blockquote>
+<p>从发送方发送数据开始，到发送方收到的接收方的确认（接收方收到数据后立即发送确认）总共经历的时延。</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101203049556.png" alt="image-20210101203049556"></p>
+<h3 id="利用率"><a href="#利用率" class="headerlink" title="利用率"></a>利用率</h3><ol>
+<li><p>信道利用率</p>
+</li>
+<li><p>网络利用率</p>
+</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101203146929.png" alt="image-20210101203146929"></p>
+<h3 id="脑图-2"><a href="#脑图-2" class="headerlink" title="脑图"></a>脑图</h3><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101203242040.png" alt="image-20210101203242040"></p>
+<h1 id="1-2-1-分层结构、协议、接口、服务"><a href="#1-2-1-分层结构、协议、接口、服务" class="headerlink" title="1.2.1 分层结构、协议、接口、服务"></a>1.2.1 分层结构、协议、接口、服务</h1><h3 id="为什么要分层"><a href="#为什么要分层" class="headerlink" title="为什么要分层"></a>为什么要分层</h3><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101203457764.png" alt="image-20210101203457764"></p>
+<h3 id="怎么分层"><a href="#怎么分层" class="headerlink" title="怎么分层"></a>怎么分层</h3><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101203743153.png" alt="image-20210101203743153"></p>
+<h3 id="分层结构"><a href="#分层结构" class="headerlink" title="分层结构"></a>分层结构</h3><ol>
+<li><p>实体：n层实体。对等实体</p>
+</li>
+<li><p>协议：为==对等实体==数据交换建立的标准</p>
+</li>
+</ol>
+<ul>
+<li>语法：格式</li>
+<li>语义：功能</li>
+<li>同步：顺序</li>
+</ul>
+<ol start="3">
+<li><p>接口（访问服务点SAP）：上层使用下层服务的入口</p>
+</li>
+<li><p>服务：下为相邻上提供功能调用</p>
+</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101204321769.png" alt="image-20210101204321769"></p>
+<h3 id="概念总结"><a href="#概念总结" class="headerlink" title="概念总结"></a>概念总结</h3><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101213808016.png" alt="image-20210101213808016"></p>
+<h3 id="脑图-3"><a href="#脑图-3" class="headerlink" title="脑图"></a>脑图</h3><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101204558820.png" alt="image-20210101204558820"></p>
+<h1 id="1-2-2-OSI参考模型"><a href="#1-2-2-OSI参考模型" class="headerlink" title="1.2.2 OSI参考模型"></a>1.2.2 OSI参考模型</h1><h3 id="计算机网络分层结构"><a href="#计算机网络分层结构" class="headerlink" title="计算机网络分层结构"></a>计算机网络分层结构</h3><ol>
+<li>7层OSI参考模型（法定标准）</li>
+<li>4层TCP/IP参考模型（事实标准）</li>
+<li>5层的体系结构</li>
+</ol>
+<h3 id="ISO-OSI参考模型"><a href="#ISO-OSI参考模型" class="headerlink" title="ISO/OSI参考模型"></a>ISO/OSI参考模型</h3><h5 id="七层结构"><a href="#七层结构" class="headerlink" title="七层结构"></a>七层结构</h5><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101205417032.png" alt="image-20210101205417032"></p>
+<h5 id="解释通信过程"><a href="#解释通信过程" class="headerlink" title="解释通信过程"></a>解释通信过程</h5><p>A给B写信，经过邮局</p>
+<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101205747080.png" alt="image-20210101205747080"></p>
+<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101205937471.png" alt="image-20210101205937471"></p>
+<h3 id="OSI各层"><a href="#OSI各层" class="headerlink" title="OSI各层"></a>OSI各层</h3><h5 id="应用层"><a href="#应用层" class="headerlink" title="应用层"></a>应用层</h5><blockquote>
+<p>所有能和用户交互产生网络流量的程序</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101210111104.png" alt="image-20210101210111104"></p>
+<h5 id="表示层"><a href="#表示层" class="headerlink" title="表示层"></a>表示层</h5><blockquote>
+<p>用于处理在两个通信系统中交换信息的表示方式（语义和语法）</p>
+</blockquote>
+<ol>
+<li>数据格式变换（二进制转换）</li>
+<li>数据加密解密（聊天记录）</li>
+<li>数据压缩和恢复（视频）</li>
+</ol>
+<h5 id="会话层"><a href="#会话层" class="headerlink" title="会话层"></a>会话层</h5><blockquote>
+<p>向表示层实体/用户进程提供==建立连接==并在连接上==有序==地传输数据。这是会话，也是==建立同步==。</p>
+</blockquote>
+<ol>
+<li>建立、管理、终止会话</li>
+<li>使用校验点可使会话在通信失效时从==校验点/同步点==继续恢复通信，实现数据同步。（文件传输中断）</li>
+</ol>
+<h5 id="传输层"><a href="#传输层" class="headerlink" title="传输层"></a>传输层</h5><blockquote>
+<p>负责主机中==两个进程==的通信，即==端到端==的通信。传输单位：报文段、数据报。</p>
+</blockquote>
+<ol>
+<li>可靠传输、不可靠传输</li>
+<li>差错传输</li>
+<li>流量控制</li>
+<li>复用分用<ul>
+<li>复用：多个应用层可同时使用下面运输层的服务（QQ、微信同时发消息）</li>
+<li>分用：运输层把收到的信息分别交付给上面应用层的进程（收消息）</li>
+</ul>
+</li>
+</ol>
+<p>==可差留用==</p>
+<h5 id="网络层"><a href="#网络层" class="headerlink" title="网络层"></a>网络层</h5><blockquote>
+<p>把==分组==从源端传到目的端，为分组交换网上的不同主机提供通信服务。传输单位：数据报（分组的集合）</p>
+</blockquote>
+<ol>
+<li><p>路由选择（最佳路径）</p>
+</li>
+<li><p>流量控制</p>
+</li>
+<li><p>差错控制</p>
+</li>
+<li><p>拥塞控制</p>
+<p>若所有结点都来不及接受分组，而要丢弃大量分组的话，网络就处于==拥塞==状态。因此要采取一定措施，缓解这种拥塞。</p>
+<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101211403455.png" alt="image-20210101211403455"></p>
+</li>
+</ol>
+<h5 id="数据链路层"><a href="#数据链路层" class="headerlink" title="数据链路层"></a>数据链路层</h5><blockquote>
+<p>把网络层传下来的数据报==组装成帧==。传输单位：帧</p>
+</blockquote>
+<ol>
+<li><p>成帧(定义帧的开始和结束)</p>
+</li>
+<li><p>差错控制（帧错+位错）</p>
+</li>
+<li><p>流量控制</p>
+</li>
+<li><p>访问（介入）控制 （控制对信道的访问）</p>
+<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101213733835.png" alt="image-20210101213733835"></p>
+</li>
+</ol>
+<h5 id="物理层"><a href="#物理层" class="headerlink" title="物理层"></a>物理层</h5><blockquote>
+<p>在==物理媒体==上实现比特流的==透明传输==。传输单位：比特</p>
+</blockquote>
+<p>透明传输：不管所传数据是什么样的的比特组合，都可在链路上传送</p>
+<ol>
+<li>定义接口特性</li>
+<li>定义传输模式<ul>
+<li>单工</li>
+<li>半双工（对讲机）</li>
+<li>双工</li>
+</ul>
+</li>
+<li>定义传输速率</li>
+<li>比特同步</li>
+<li>比特编码</li>
+</ol>
+<h3 id="脑图-4"><a href="#脑图-4" class="headerlink" title="脑图"></a>脑图</h3><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101212032611.png" alt="image-20210101212032611"></p>
+<h1 id="1-2-4-TCP-IP-参考模型和5层参考模型"><a href="#1-2-4-TCP-IP-参考模型和5层参考模型" class="headerlink" title="1.2.4 TCP/IP 参考模型和5层参考模型"></a>1.2.4 TCP/IP 参考模型和5层参考模型</h1><h3 id="OSI参考模型和TCP-IP参考模型"><a href="#OSI参考模型和TCP-IP参考模型" class="headerlink" title="OSI参考模型和TCP/IP参考模型"></a>OSI参考模型和TCP/IP参考模型</h3><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101212350890.png" alt="image-20210101212350890"></p>
+<h3 id="OSI参考模型和TCP-IP参考模型异同"><a href="#OSI参考模型和TCP-IP参考模型异同" class="headerlink" title="OSI参考模型和TCP/IP参考模型异同"></a>OSI参考模型和TCP/IP参考模型异同</h3><h5 id="相同点："><a href="#相同点：" class="headerlink" title="相同点："></a>相同点：</h5><ol>
+<li>都分层</li>
+<li>基于独立的协议栈的概念</li>
+<li>可以实现异构网络互联（不同厂商）</li>
+</ol>
+<h5 id="不同点："><a href="#不同点：" class="headerlink" title="不同点："></a>不同点：</h5><ol>
+<li>OSI定义三点：<ul>
+<li>服务</li>
+<li>协议</li>
+<li>接口</li>
+</ul>
+</li>
+<li>OSI先出现，参考模型先于协议发明，不偏向特定协议</li>
+<li>TCP/IP设计之初就考虑到异构网互联问题，将IP作为重要层次</li>
+<li><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101213648823.png" alt="image-20210101213648823"></li>
+</ol>
+<h3 id="5层参考模型"><a href="#5层参考模型" class="headerlink" title="5层参考模型"></a>5层参考模型</h3><h5 id="模型图"><a href="#模型图" class="headerlink" title="模型图"></a>模型图</h5><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101213028676.png" alt="image-20210101213028676"></p>
+<h5 id="数据封装与解封装"><a href="#数据封装与解封装" class="headerlink" title="数据封装与解封装"></a>数据封装与解封装</h5><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101213225550.png" alt="image-20210101213225550"></p>
+<h1 id="1-3-第一章知识总结"><a href="#1-3-第一章知识总结" class="headerlink" title="1.3 第一章知识总结"></a>1.3 第一章知识总结</h1><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101213405540.png" alt="image-20210101213405540"></p>
+]]></content>
+      <categories>
+        <category>计算机网络</category>
+      </categories>
+      <tags>
+        <tag>share</tag>
+        <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>计网第三章--数据链路层</title>
     <url>/2021/01/02/%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%B8%89%E7%AB%A0--%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/</url>
     <content><![CDATA[<p>链路层的功能、链路层的两种信道、局域网、广域网、链路层的设备…</p>
@@ -302,254 +550,6 @@
 <li>在重传时必须把原来已经正确传送的数据帧重传，使传送效率降低</li>
 </ul>
 <h2 id="脑图-3"><a href="#脑图-3" class="headerlink" title="脑图"></a>脑图</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210103183008068.png" alt="image-20210103183008068"></p>
-]]></content>
-      <categories>
-        <category>计算机网络</category>
-      </categories>
-      <tags>
-        <tag>share</tag>
-        <tag>notes</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>计网第一章--概述</title>
-    <url>/2021/01/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%AC%E4%B8%80%E7%AB%A0/</url>
-    <content><![CDATA[<h1 id="1-1-1-概念、组成、功能和分类"><a href="#1-1-1-概念、组成、功能和分类" class="headerlink" title="1.1.1 概念、组成、功能和分类"></a>1.1.1 概念、组成、功能和分类</h1><a id="more"></a>
-
-<h3 id="计算机网络的概念"><a href="#计算机网络的概念" class="headerlink" title="计算机网络的概念"></a>计算机网络的概念</h3><blockquote>
-<p>是一个将分散的、具有独立功能的计算机系统，通过通信设备与线路连接起来，由功能完善的软件实现 资源共享和信息传递的系统</p>
-</blockquote>
-<p>计算机网络是互联的、自治的计算机集合</p>
-<ul>
-<li><p>互联 – 互联互通  通信链路</p>
-</li>
-<li><p>自治 – 无主从关系</p>
-</li>
-</ul>
-<h3 id="计算机网络的功能"><a href="#计算机网络的功能" class="headerlink" title="计算机网络的功能"></a>计算机网络的功能</h3><ol>
-<li><p>数据通信（连通性）</p>
-</li>
-<li><p>资源共享：硬件、软件、数据</p>
-</li>
-<li><p>分布式处理：多台计算机共同承担同一任务不同步分（Hadoop平台）</p>
-</li>
-<li><p>提高可靠性（替代机）</p>
-</li>
-<li><p>负载均衡（各计算机之间更亲密）</p>
-</li>
-</ol>
-<h3 id="计算机网络的组成"><a href="#计算机网络的组成" class="headerlink" title="计算机网络的组成"></a>计算机网络的组成</h3><h5 id="1、组成部分"><a href="#1、组成部分" class="headerlink" title="1、组成部分"></a>1、组成部分</h5><p>硬件、软件、协议</p>
-<h5 id="2、工作方式"><a href="#2、工作方式" class="headerlink" title="2、工作方式"></a>2、工作方式</h5><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101194117425.png" alt="image-20210101194117425"></p>
-<h5 id="3、功能组成"><a href="#3、功能组成" class="headerlink" title="3、功能组成"></a>3、功能组成</h5><ul>
-<li><p>通信子网：实现数据通信</p>
-</li>
-<li><p>资源子网：实现资源共享、数据处理</p>
-</li>
-</ul>
-<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101195109924.png" alt="image-20210101195109924"></p>
-<h3 id="计算机网络的分类"><a href="#计算机网络的分类" class="headerlink" title="计算机网络的分类"></a>计算机网络的分类</h3><h5 id="1-按分布范围分"><a href="#1-按分布范围分" class="headerlink" title="1.按分布范围分"></a>1.按分布范围分</h5><p>广域网WAN、城域网MAN、局域网WAN、个人区域网PAN</p>
-<h5 id="2、按使用者分"><a href="#2、按使用者分" class="headerlink" title="2、按使用者分"></a>2、按使用者分</h5><p>公用网、专用网</p>
-<h5 id="3、按交换技术分"><a href="#3、按交换技术分" class="headerlink" title="3、按交换技术分"></a>3、按交换技术分</h5><p>电路交换 、报文交换、分组交换</p>
-<h5 id="4、按拓扑类型分"><a href="#4、按拓扑类型分" class="headerlink" title="4、按拓扑类型分"></a>4、按拓扑类型分</h5><p>总线型、星型、环型、网状型</p>
-<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101195439213.png" alt="image-20210101195439213"></p>
-<h3 id="脑图"><a href="#脑图" class="headerlink" title="脑图"></a>脑图</h3><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101195516966.png" alt="image-20210101195516966"></p>
-<h1 id="1-1-2-标准化工作及相关组织"><a href="#1-1-2-标准化工作及相关组织" class="headerlink" title="1.1.2 标准化工作及相关组织"></a>1.1.2 标准化工作及相关组织</h1><h3 id="标准化工作"><a href="#标准化工作" class="headerlink" title="标准化工作"></a>标准化工作</h3><blockquote>
-<p>为实现不同厂商硬件软件的相互联通</p>
-</blockquote>
-<h5 id="标准的分类"><a href="#标准的分类" class="headerlink" title="标准的分类"></a>标准的分类</h5><ul>
-<li><p>法定标准：由权威机构制定的正式的、合法的标准  OSI</p>
-</li>
-<li><p>事实标准：某些公式产品占据了主流  TCP/IP</p>
-</li>
-</ul>
-<h5 id="RFC-Request-For-Comments-–-因特网标准的形式"><a href="#RFC-Request-For-Comments-–-因特网标准的形式" class="headerlink" title="RFC(Request For Comments)  – 因特网标准的形式"></a>RFC(Request For Comments)  – 因特网标准的形式</h5><p>RFC上升为因特网正式标准：</p>
-<ol>
-<li><p>因特网草案：非RFC</p>
-</li>
-<li><p>建议标准：成为RFC</p>
-</li>
-<li><p>草案标准</p>
-</li>
-<li><p>因特网标准</p>
-</li>
-</ol>
-<h5 id="标准化工作的相关组织"><a href="#标准化工作的相关组织" class="headerlink" title="标准化工作的相关组织"></a>标准化工作的相关组织</h5><ul>
-<li>国际标准化组织ISO  （OSI参考模型、HDLC协议）</li>
-<li>国际电信联盟    （制定通信规则）</li>
-<li>国际电气电子工程师协会IEEE  （学术机构、5G、IEEE802系列标准）</li>
-<li>Internet工程任务组IETF （负责因特网相关标准的制定，RFCxxxx）</li>
-</ul>
-<h5 id="脑图-1"><a href="#脑图-1" class="headerlink" title="脑图"></a>脑图</h5><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101200543997.png" alt="image-20210101200543997"></p>
-<h1 id="1-1-3-速率相关的性能指标"><a href="#1-1-3-速率相关的性能指标" class="headerlink" title="1.1.3 速率相关的性能指标"></a>1.1.3 速率相关的性能指标</h1><h3 id="速率"><a href="#速率" class="headerlink" title="速率"></a>速率</h3><blockquote>
-<p>速率即==数据率==或者称==数据传输率==或==比特率==</p>
-</blockquote>
-<p>连接再计算机网络上的主机在数字信道上传输数据位数的速率</p>
-<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101200906350.png" alt="image-20210101200906350"></p>
-<h3 id="带宽"><a href="#带宽" class="headerlink" title="带宽"></a>带宽</h3><ol>
-<li><p>原本指某个信号具有的频带宽度，即最高频率与最低频率之差，单位赫兹</p>
-</li>
-<li><p>计算机网络中，带宽用来表示网络的通信线路传送数据的能力，单位时间从网络某一点到另一个点能通过的==最高数据率==。</p>
-</li>
-</ol>
-<p>==网络所支持的最高速度==</p>
-<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101201354323.png" alt="image-20210101201354323"></p>
-<h3 id="吞吐量"><a href="#吞吐量" class="headerlink" title="吞吐量"></a>吞吐量</h3><blockquote>
-<p>==单位时间==通过==某个网络（信道、接口）==数据量。</p>
-</blockquote>
-<p>吞吐量受网络带宽或网络的额定速率的限制。</p>
-<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101201707066.png" alt="image-20210101201707066"></p>
-<h1 id="1-1-4-时延、时延带宽积、RTT和利用率"><a href="#1-1-4-时延、时延带宽积、RTT和利用率" class="headerlink" title="1.1.4 时延、时延带宽积、RTT和利用率"></a>1.1.4 时延、时延带宽积、RTT和利用率</h1><h3 id="时延"><a href="#时延" class="headerlink" title="时延"></a>时延</h3><blockquote>
-<p>数据（报文、分组、比特流）从网络（或链路）的一端传送到另一端所需的时间。==延迟==或==迟延==。单位s。</p>
-</blockquote>
-<p>发送时延（传输时延）、传播时延、排队时延、处理时延</p>
-<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101202304640.png" alt="image-20210101202304640"></p>
-<h3 id="时延带宽积"><a href="#时延带宽积" class="headerlink" title="时延带宽积"></a>时延带宽积</h3><blockquote>
-<p>时延带宽积又称为以==比特为单位的链路长度==，某段链路有多少比特（容量）</p>
-</blockquote>
-<p>时延带宽积 = 传播时延 x 带宽</p>
-<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101202849818.png" alt="image-20210101202849818"></p>
-<h3 id="往返时延RTT"><a href="#往返时延RTT" class="headerlink" title="往返时延RTT"></a>往返时延RTT</h3><blockquote>
-<p>从发送方发送数据开始，到发送方收到的接收方的确认（接收方收到数据后立即发送确认）总共经历的时延。</p>
-</blockquote>
-<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101203049556.png" alt="image-20210101203049556"></p>
-<h3 id="利用率"><a href="#利用率" class="headerlink" title="利用率"></a>利用率</h3><ol>
-<li><p>信道利用率</p>
-</li>
-<li><p>网络利用率</p>
-</li>
-</ol>
-<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101203146929.png" alt="image-20210101203146929"></p>
-<h3 id="脑图-2"><a href="#脑图-2" class="headerlink" title="脑图"></a>脑图</h3><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101203242040.png" alt="image-20210101203242040"></p>
-<h1 id="1-2-1-分层结构、协议、接口、服务"><a href="#1-2-1-分层结构、协议、接口、服务" class="headerlink" title="1.2.1 分层结构、协议、接口、服务"></a>1.2.1 分层结构、协议、接口、服务</h1><h3 id="为什么要分层"><a href="#为什么要分层" class="headerlink" title="为什么要分层"></a>为什么要分层</h3><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101203457764.png" alt="image-20210101203457764"></p>
-<h3 id="怎么分层"><a href="#怎么分层" class="headerlink" title="怎么分层"></a>怎么分层</h3><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101203743153.png" alt="image-20210101203743153"></p>
-<h3 id="分层结构"><a href="#分层结构" class="headerlink" title="分层结构"></a>分层结构</h3><ol>
-<li><p>实体：n层实体。对等实体</p>
-</li>
-<li><p>协议：为==对等实体==数据交换建立的标准</p>
-</li>
-</ol>
-<ul>
-<li>语法：格式</li>
-<li>语义：功能</li>
-<li>同步：顺序</li>
-</ul>
-<ol start="3">
-<li><p>接口（访问服务点SAP）：上层使用下层服务的入口</p>
-</li>
-<li><p>服务：下为相邻上提供功能调用</p>
-</li>
-</ol>
-<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101204321769.png" alt="image-20210101204321769"></p>
-<h3 id="概念总结"><a href="#概念总结" class="headerlink" title="概念总结"></a>概念总结</h3><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101213808016.png" alt="image-20210101213808016"></p>
-<h3 id="脑图-3"><a href="#脑图-3" class="headerlink" title="脑图"></a>脑图</h3><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101204558820.png" alt="image-20210101204558820"></p>
-<h1 id="1-2-2-OSI参考模型"><a href="#1-2-2-OSI参考模型" class="headerlink" title="1.2.2 OSI参考模型"></a>1.2.2 OSI参考模型</h1><h3 id="计算机网络分层结构"><a href="#计算机网络分层结构" class="headerlink" title="计算机网络分层结构"></a>计算机网络分层结构</h3><ol>
-<li>7层OSI参考模型（法定标准）</li>
-<li>4层TCP/IP参考模型（事实标准）</li>
-<li>5层的体系结构</li>
-</ol>
-<h3 id="ISO-OSI参考模型"><a href="#ISO-OSI参考模型" class="headerlink" title="ISO/OSI参考模型"></a>ISO/OSI参考模型</h3><h5 id="七层结构"><a href="#七层结构" class="headerlink" title="七层结构"></a>七层结构</h5><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101205417032.png" alt="image-20210101205417032"></p>
-<h5 id="解释通信过程"><a href="#解释通信过程" class="headerlink" title="解释通信过程"></a>解释通信过程</h5><p>A给B写信，经过邮局</p>
-<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101205747080.png" alt="image-20210101205747080"></p>
-<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101205937471.png" alt="image-20210101205937471"></p>
-<h3 id="OSI各层"><a href="#OSI各层" class="headerlink" title="OSI各层"></a>OSI各层</h3><h5 id="应用层"><a href="#应用层" class="headerlink" title="应用层"></a>应用层</h5><blockquote>
-<p>所有能和用户交互产生网络流量的程序</p>
-</blockquote>
-<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101210111104.png" alt="image-20210101210111104"></p>
-<h5 id="表示层"><a href="#表示层" class="headerlink" title="表示层"></a>表示层</h5><blockquote>
-<p>用于处理在两个通信系统中交换信息的表示方式（语义和语法）</p>
-</blockquote>
-<ol>
-<li>数据格式变换（二进制转换）</li>
-<li>数据加密解密（聊天记录）</li>
-<li>数据压缩和恢复（视频）</li>
-</ol>
-<h5 id="会话层"><a href="#会话层" class="headerlink" title="会话层"></a>会话层</h5><blockquote>
-<p>向表示层实体/用户进程提供==建立连接==并在连接上==有序==地传输数据。这是会话，也是==建立同步==。</p>
-</blockquote>
-<ol>
-<li>建立、管理、终止会话</li>
-<li>使用校验点可使会话在通信失效时从==校验点/同步点==继续恢复通信，实现数据同步。（文件传输中断）</li>
-</ol>
-<h5 id="传输层"><a href="#传输层" class="headerlink" title="传输层"></a>传输层</h5><blockquote>
-<p>负责主机中==两个进程==的通信，即==端到端==的通信。传输单位：报文段、数据报。</p>
-</blockquote>
-<ol>
-<li>可靠传输、不可靠传输</li>
-<li>差错传输</li>
-<li>流量控制</li>
-<li>复用分用<ul>
-<li>复用：多个应用层可同时使用下面运输层的服务（QQ、微信同时发消息）</li>
-<li>分用：运输层把收到的信息分别交付给上面应用层的进程（收消息）</li>
-</ul>
-</li>
-</ol>
-<p>==可差留用==</p>
-<h5 id="网络层"><a href="#网络层" class="headerlink" title="网络层"></a>网络层</h5><blockquote>
-<p>把==分组==从源端传到目的端，为分组交换网上的不同主机提供通信服务。传输单位：数据报（分组的集合）</p>
-</blockquote>
-<ol>
-<li><p>路由选择（最佳路径）</p>
-</li>
-<li><p>流量控制</p>
-</li>
-<li><p>差错控制</p>
-</li>
-<li><p>拥塞控制</p>
-<p>若所有结点都来不及接受分组，而要丢弃大量分组的话，网络就处于==拥塞==状态。因此要采取一定措施，缓解这种拥塞。</p>
-<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101211403455.png" alt="image-20210101211403455"></p>
-</li>
-</ol>
-<h5 id="数据链路层"><a href="#数据链路层" class="headerlink" title="数据链路层"></a>数据链路层</h5><blockquote>
-<p>把网络层传下来的数据报==组装成帧==。传输单位：帧</p>
-</blockquote>
-<ol>
-<li><p>成帧(定义帧的开始和结束)</p>
-</li>
-<li><p>差错控制（帧错+位错）</p>
-</li>
-<li><p>流量控制</p>
-</li>
-<li><p>访问（介入）控制 （控制对信道的访问）</p>
-<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101213733835.png" alt="image-20210101213733835"></p>
-</li>
-</ol>
-<h5 id="物理层"><a href="#物理层" class="headerlink" title="物理层"></a>物理层</h5><blockquote>
-<p>在==物理媒体==上实现比特流的==透明传输==。传输单位：比特</p>
-</blockquote>
-<p>透明传输：不管所传数据是什么样的的比特组合，都可在链路上传送</p>
-<ol>
-<li>定义接口特性</li>
-<li>定义传输模式<ul>
-<li>单工</li>
-<li>半双工（对讲机）</li>
-<li>双工</li>
-</ul>
-</li>
-<li>定义传输速率</li>
-<li>比特同步</li>
-<li>比特编码</li>
-</ol>
-<h3 id="脑图-4"><a href="#脑图-4" class="headerlink" title="脑图"></a>脑图</h3><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101212032611.png" alt="image-20210101212032611"></p>
-<h1 id="1-2-4-TCP-IP-参考模型和5层参考模型"><a href="#1-2-4-TCP-IP-参考模型和5层参考模型" class="headerlink" title="1.2.4 TCP/IP 参考模型和5层参考模型"></a>1.2.4 TCP/IP 参考模型和5层参考模型</h1><h3 id="OSI参考模型和TCP-IP参考模型"><a href="#OSI参考模型和TCP-IP参考模型" class="headerlink" title="OSI参考模型和TCP/IP参考模型"></a>OSI参考模型和TCP/IP参考模型</h3><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101212350890.png" alt="image-20210101212350890"></p>
-<h3 id="OSI参考模型和TCP-IP参考模型异同"><a href="#OSI参考模型和TCP-IP参考模型异同" class="headerlink" title="OSI参考模型和TCP/IP参考模型异同"></a>OSI参考模型和TCP/IP参考模型异同</h3><h5 id="相同点："><a href="#相同点：" class="headerlink" title="相同点："></a>相同点：</h5><ol>
-<li>都分层</li>
-<li>基于独立的协议栈的概念</li>
-<li>可以实现异构网络互联（不同厂商）</li>
-</ol>
-<h5 id="不同点："><a href="#不同点：" class="headerlink" title="不同点："></a>不同点：</h5><ol>
-<li>OSI定义三点：<ul>
-<li>服务</li>
-<li>协议</li>
-<li>接口</li>
-</ul>
-</li>
-<li>OSI先出现，参考模型先于协议发明，不偏向特定协议</li>
-<li>TCP/IP设计之初就考虑到异构网互联问题，将IP作为重要层次</li>
-<li><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101213648823.png" alt="image-20210101213648823"></li>
-</ol>
-<h3 id="5层参考模型"><a href="#5层参考模型" class="headerlink" title="5层参考模型"></a>5层参考模型</h3><h5 id="模型图"><a href="#模型图" class="headerlink" title="模型图"></a>模型图</h5><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101213028676.png" alt="image-20210101213028676"></p>
-<h5 id="数据封装与解封装"><a href="#数据封装与解封装" class="headerlink" title="数据封装与解封装"></a>数据封装与解封装</h5><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101213225550.png" alt="image-20210101213225550"></p>
-<h1 id="1-3-第一章知识总结"><a href="#1-3-第一章知识总结" class="headerlink" title="1.3 第一章知识总结"></a>1.3 第一章知识总结</h1><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210101213405540.png" alt="image-20210101213405540"></p>
 ]]></content>
       <categories>
         <category>计算机网络</category>
