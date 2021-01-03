@@ -22,67 +22,67 @@
     var CONFIG = {"hostname":"github.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="物理层基本概念物理层基本概念 物理层解决如何在连接各种计算机的传输媒体上传输数据比特流，而不是指具体的传输媒体。">
+  <meta name="description" content="物理层基本概念、两个定理、三种通信方式、传输介质、物理层设备…">
 <meta property="og:type" content="article">
 <meta property="og:title" content="计网第二章--物理层">
 <meta property="og:url" content="https://github.com/tb314888536/2021/01/02/%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%BA%8C%E7%AB%A0--%E7%89%A9%E7%90%86%E5%B1%82/index.html">
 <meta property="og:site_name" content="Chasing1874">
-<meta property="og:description" content="物理层基本概念物理层基本概念 物理层解决如何在连接各种计算机的传输媒体上传输数据比特流，而不是指具体的传输媒体。">
+<meta property="og:description" content="物理层基本概念、两个定理、三种通信方式、传输介质、物理层设备…">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102162601996.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102162934176.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102163150670.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102163725926.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102173831791.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102163819903.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102164446098.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102164808122.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102173741936.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102165458617.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102165859791.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102165942300.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102170535032.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102170908532.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102171508491.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102171951739.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102172036161.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102173658842.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102172903591.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102172957796.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102173612458.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102173633932.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102174052211.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102174812087.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102175251365.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102175417107.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102174910678.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102175020725.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102175940142.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102175802275.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102180441242.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102194024113.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102200345153.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102200228856.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102200640257.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102200702495.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102201154671.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102201536574.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102201609625.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102201809384.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102202018829.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102202208077.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102202740831.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102203108707.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102203530197.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102205012908.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102204904877.png">
+<meta property="og:image" content="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102162601996.png">
+<meta property="og:image" content="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102162934176.png">
+<meta property="og:image" content="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102163150670.png">
+<meta property="og:image" content="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102163725926.png">
+<meta property="og:image" content="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102173831791.png">
+<meta property="og:image" content="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102163819903.png">
+<meta property="og:image" content="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102164446098.png">
+<meta property="og:image" content="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102164808122.png">
+<meta property="og:image" content="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102173741936.png">
+<meta property="og:image" content="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102165458617.png">
+<meta property="og:image" content="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102165859791.png">
+<meta property="og:image" content="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102165942300.png">
+<meta property="og:image" content="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102170535032.png">
+<meta property="og:image" content="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102170908532.png">
+<meta property="og:image" content="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102171508491.png">
+<meta property="og:image" content="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102171951739.png">
+<meta property="og:image" content="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102172036161.png">
+<meta property="og:image" content="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102173658842.png">
+<meta property="og:image" content="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102172903591.png">
+<meta property="og:image" content="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102172957796.png">
+<meta property="og:image" content="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102173612458.png">
+<meta property="og:image" content="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102173633932.png">
+<meta property="og:image" content="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102174052211.png">
+<meta property="og:image" content="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102174812087.png">
+<meta property="og:image" content="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102175251365.png">
+<meta property="og:image" content="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102175417107.png">
+<meta property="og:image" content="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102174910678.png">
+<meta property="og:image" content="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102175020725.png">
+<meta property="og:image" content="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102175940142.png">
+<meta property="og:image" content="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102175802275.png">
+<meta property="og:image" content="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102180441242.png">
+<meta property="og:image" content="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102194024113.png">
+<meta property="og:image" content="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102200345153.png">
+<meta property="og:image" content="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102200228856.png">
+<meta property="og:image" content="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102200640257.png">
+<meta property="og:image" content="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102200702495.png">
+<meta property="og:image" content="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102201154671.png">
+<meta property="og:image" content="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102201536574.png">
+<meta property="og:image" content="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102201609625.png">
+<meta property="og:image" content="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102201809384.png">
+<meta property="og:image" content="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102202018829.png">
+<meta property="og:image" content="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102202208077.png">
+<meta property="og:image" content="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102202740831.png">
+<meta property="og:image" content="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102203108707.png">
+<meta property="og:image" content="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102203530197.png">
+<meta property="og:image" content="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102205012908.png">
+<meta property="og:image" content="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102204904877.png">
 <meta property="article:published_time" content="2021-01-02T12:57:47.000Z">
-<meta property="article:modified_time" content="2021-01-02T13:36:22.044Z">
+<meta property="article:modified_time" content="2021-01-03T14:34:59.412Z">
 <meta property="article:author" content="xiaojiang">
 <meta property="article:tag" content="share">
 <meta property="article:tag" content="notes">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102162601996.png">
+<meta name="twitter:image" content="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102162601996.png">
 
 <link rel="canonical" href="https://github.com/tb314888536/2021/01/02/%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%BA%8C%E7%AB%A0--%E7%89%A9%E7%90%86%E5%B1%82/">
 
@@ -263,10 +263,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2021-01-02 20:57:47 / Modified: 21:36:22" itemprop="dateCreated datePublished" datetime="2021-01-02T20:57:47+08:00">2021-01-02</time>
+              <time title="Created: 2021-01-02 20:57:47" itemprop="dateCreated datePublished" datetime="2021-01-02T20:57:47+08:00">2021-01-02</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-01-03 22:34:59" itemprop="dateModified" datetime="2021-01-03T22:34:59+08:00">2021-01-03</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -309,11 +315,12 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="物理层基本概念"><a href="#物理层基本概念" class="headerlink" title="物理层基本概念"></a>物理层基本概念</h1><h3 id="物理层基本概念-1"><a href="#物理层基本概念-1" class="headerlink" title="物理层基本概念"></a>物理层基本概念</h3><blockquote>
-<p>物理层解决如何在连接各种计算机的传输媒体上<strong>传输数据比特流</strong>，而不是指具体的传输媒体。</p>
-</blockquote>
+        <p>物理层基本概念、两个定理、三种通信方式、传输介质、物理层设备…</p>
 <a id="more"></a>
 
+<h1 id="物理层基本概念"><a href="#物理层基本概念" class="headerlink" title="物理层基本概念"></a>物理层基本概念</h1><h3 id="物理层基本概念-1"><a href="#物理层基本概念-1" class="headerlink" title="物理层基本概念"></a>物理层基本概念</h3><blockquote>
+<p>物理层解决如何在连接各种计算机的传输媒体上<strong>传输数据比特流</strong>，而不是指具体的传输媒体。</p>
+</blockquote>
 <p>主要任务：确定与传输媒体接口有关的一些特性 —— 定义标准</p>
 <ol>
 <li><strong>机械特性</strong>：定义物理连接的特性，规定物理连接时所采用的规格、接口形状、引线数目、引脚数量和排列情况</li>
@@ -321,7 +328,7 @@
 <li><strong>功能特性</strong>：指明某条线上出现的某一电平表示何种意义，接口部件信号线的用途</li>
 <li><strong>规程特性</strong>：（过程特性）定义各条物理线路的工作规程和时序关系</li>
 </ol>
-<h1 id="数据通信基础知识"><a href="#数据通信基础知识" class="headerlink" title="数据通信基础知识"></a>数据通信基础知识</h1><h3 id="典型的数据通信模型"><a href="#典型的数据通信模型" class="headerlink" title="典型的数据通信模型"></a>典型的数据通信模型</h3><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102162601996.png" alt="image-20210102162601996"></p>
+<h1 id="数据通信基础知识"><a href="#数据通信基础知识" class="headerlink" title="数据通信基础知识"></a>数据通信基础知识</h1><h3 id="典型的数据通信模型"><a href="#典型的数据通信模型" class="headerlink" title="典型的数据通信模型"></a>典型的数据通信模型</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102162601996.png" alt="image-20210102162601996"></p>
 <h3 id="数据通信相关术语"><a href="#数据通信相关术语" class="headerlink" title="数据通信相关术语"></a>数据通信相关术语</h3><blockquote>
 <p>通信的目的是传送消息</p>
 </blockquote>
@@ -332,7 +339,7 @@
 <ul>
 <li>数字信号：代表消息参数取值是离散的</li>
 <li>模拟信号：代表消息的参数取值是连续的</li>
-<li><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102162934176.png" alt="image-20210102162934176"></li>
+<li><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102162934176.png" alt="image-20210102162934176"></li>
 </ul>
 </li>
 <li><p><strong>信源</strong>：产生和发送数据的源头</p>
@@ -340,7 +347,7 @@
 <li><p><strong>信宿</strong>：接受数据的终点</p>
 </li>
 <li><p><strong>信道</strong>：信号的传输媒介。有方向，发送信道，接受信道</p>
-<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102163150670.png" alt="image-20210102163150670"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102163150670.png" alt="image-20210102163150670"></p>
 </li>
 </ul>
 <h3 id="三种通信方式"><a href="#三种通信方式" class="headerlink" title="三种通信方式"></a>三种通信方式</h3><ol>
@@ -350,35 +357,36 @@
 </ol>
 <h3 id="两种数据传输方式"><a href="#两种数据传输方式" class="headerlink" title="两种数据传输方式"></a>两种数据传输方式</h3><ol>
 <li><h5 id="串行传输"><a href="#串行传输" class="headerlink" title="串行传输"></a>串行传输</h5><p>速度慢，费用低，适合远距离</p>
-<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102163725926.png" alt="image-20210102163725926"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102163725926.png" alt="image-20210102163725926"></p>
 </li>
 <li><h5 id="并行传输"><a href="#并行传输" class="headerlink" title="并行传输"></a>并行传输</h5><p>速度快，费用高，适合近距离</p>
-<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102173831791.png" alt="image-20210102173831791"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102173831791.png" alt="image-20210102173831791"></p>
 </li>
 </ol>
-<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102163819903.png" alt="image-20210102163819903"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102163819903.png" alt="image-20210102163819903"></p>
 <h1 id="码元、波特、速率、带宽"><a href="#码元、波特、速率、带宽" class="headerlink" title="码元、波特、速率、带宽"></a>码元、波特、速率、带宽</h1><h3 id="码元"><a href="#码元" class="headerlink" title="码元"></a>码元</h3><blockquote>
 <p>指用一个<strong>固定时长</strong>的信号波形（数字脉冲），代表不同离散值的基本波形，是数值通信中数字信号的计量单位，这个时长内的信号成为<strong>k进制码元</strong>，该时长成为码元宽度。当码元的离散状态有m个时（m&gt;2），码元称为m进制码元</p>
 </blockquote>
 <p>1码元可以携带多个比特的信号量。例如，在使用二进制编码时，只有两个不同的码元，一种代表0状态，另一种代表1状态，一个比特。</p>
-<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102164446098.png" alt="image-20210102164446098"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102164446098.png" alt="image-20210102164446098"></p>
 <h3 id="速率、波特、带宽"><a href="#速率、波特、带宽" class="headerlink" title="速率、波特、带宽"></a>速率、波特、带宽</h3><blockquote>
 <p>速率也叫数据率，是指数据的<strong>传输速率</strong>，表示单位时间内传输的数据量。可以用<strong>码元传输速率</strong>和<strong>信息传输速率</strong>表示。</p>
 </blockquote>
 <ol>
 <li><h5 id="码元传输速率："><a href="#码元传输速率：" class="headerlink" title="码元传输速率："></a>码元传输速率：</h5><p>单位波特</p>
-<h5 id=""><a href="#" class="headerlink" title=""></a><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102164808122.png" alt="image-20210102164808122"></h5></li>
-<li><h5 id="信息传输速率："><a href="#信息传输速率：" class="headerlink" title="信息传输速率："></a>信息传输速率：</h5><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102173741936.png" alt="image-20210102173741936"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102164808122.png" alt="image-20210102164808122"></p>
+</li>
+<li><h5 id="信息传输速率："><a href="#信息传输速率：" class="headerlink" title="信息传输速率："></a>信息传输速率：</h5><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102173741936.png" alt="image-20210102173741936"></p>
 </li>
 </ol>
-<h3 id="练习题"><a href="#练习题" class="headerlink" title="练习题"></a>练习题</h3><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102165458617.png" alt="image-20210102165458617"></p>
+<h3 id="练习题"><a href="#练习题" class="headerlink" title="练习题"></a>练习题</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102165458617.png" alt="image-20210102165458617"></p>
 <p>十六进制能表示多少状态，用以2为底的对数</p>
 <h1 id="奈氏准则和香农定理"><a href="#奈氏准则和香农定理" class="headerlink" title="奈氏准则和香农定理"></a>奈氏准则和香农定理</h1><h3 id="失真"><a href="#失真" class="headerlink" title="失真"></a>失真</h3><h5 id="失真类别"><a href="#失真类别" class="headerlink" title="失真类别"></a>失真类别</h5><ul>
 <li><p>有失真但可识别</p>
-<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102165859791.png" alt="image-20210102165859791"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102165859791.png" alt="image-20210102165859791"></p>
 </li>
 <li><p>失真大无法识别</p>
-<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102165942300.png" alt="image-20210102165942300"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102165942300.png" alt="image-20210102165942300"></p>
 </li>
 </ul>
 <h5 id="影响失真程度的因素"><a href="#影响失真程度的因素" class="headerlink" title="影响失真程度的因素"></a>影响失真程度的因素</h5><ol>
@@ -393,26 +401,26 @@
 <blockquote>
 <p>码间串扰：接收端收到的信号波形失去了码元之间清晰界限的现象</p>
 </blockquote>
-<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102170535032.png" alt="image-20210102170535032"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102170535032.png" alt="image-20210102170535032"></p>
 <h3 id="奈氏准则（奈奎斯特定理）"><a href="#奈氏准则（奈奎斯特定理）" class="headerlink" title="奈氏准则（奈奎斯特定理）"></a>奈氏准则（奈奎斯特定理）</h3><blockquote>
 <p>在理想低通（无噪声、带宽受限），为了避免码间串扰，极限码元传输速率为2w Baud，w是信道带宽，单位Hz</p>
 </blockquote>
-<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102170908532.png" alt="image-20210102170908532"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102170908532.png" alt="image-20210102170908532"></p>
 <h5 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h5><ol>
 <li>任何信道中，<strong>码元传输速率是有上限的</strong>。超过则会出现码间串扰。</li>
 <li>信道的<strong>频带越宽</strong>（即能通过的信号高频分量越多），就可以用更高的速率进行码元的有效传输</li>
 <li>奈氏准则给出了码元传输速率的限制，并没有对信息传输速率给出限制</li>
 <li>要提卡数据的传输速率，就必须设法使每个码元能携带更多个比特的信息量，这就需要采用多元制的调制方法。</li>
 </ol>
-<h5 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h5><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102171508491.png" alt="image-20210102171508491"></p>
+<h5 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h5><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102171508491.png" alt="image-20210102171508491"></p>
 <h3 id="香农定理"><a href="#香农定理" class="headerlink" title="香农定理"></a>香农定理</h3><blockquote>
 <p>香农定理：在带宽受限且有噪声的信道中，为了不产生误差，信息的数据传输速率有上限值。</p>
 </blockquote>
 <blockquote>
 <p><strong>噪声</strong>存在于所有的电子设备和通信信道中。由于噪声随机产生，有时瞬时值很大，因此噪声会使接收端对码元的判决产生错误。但是噪声影响是相对的，信号较强，则影响较小。因此，<strong>信噪比</strong>很重要。</p>
 </blockquote>
-<h5 id="信噪比"><a href="#信噪比" class="headerlink" title="信噪比"></a>信噪比</h5><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102171951739.png" alt="image-20210102171951739"></p>
-<h5 id="香农定理-1"><a href="#香农定理-1" class="headerlink" title="香农定理"></a>香农定理</h5><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102172036161.png" alt="image-20210102172036161"></p>
+<h5 id="信噪比"><a href="#信噪比" class="headerlink" title="信噪比"></a>信噪比</h5><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102171951739.png" alt="image-20210102171951739"></p>
+<h5 id="香农定理-1"><a href="#香农定理-1" class="headerlink" title="香农定理"></a>香农定理</h5><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102172036161.png" alt="image-20210102172036161"></p>
 <h5 id="结论-1"><a href="#结论-1" class="headerlink" title="结论"></a>结论</h5><ol>
 <li>信道的<strong>带宽</strong>或<strong>信噪比</strong>越大，则信息的极限传输速率就越高</li>
 <li>对一定的传输带宽和一定的信噪比，信息传输速率的上限就确定了</li>
@@ -420,19 +428,19 @@
 <li>香农定理得出的是极限信息传输速率，实际信道能达到的传输速率要小很多</li>
 <li>若W和信噪比没有上限（不可能），信道极限速率也无上限</li>
 </ol>
-<h5 id="例题-1"><a href="#例题-1" class="headerlink" title="例题"></a>例题</h5><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102173658842.png" alt="image-20210102173658842"></p>
-<h3 id="『Nice』和『香浓』"><a href="#『Nice』和『香浓』" class="headerlink" title="『Nice』和『香浓』"></a>『Nice』和『香浓』</h3><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102172903591.png" alt="image-20210102172903591"></p>
-<h5 id="例题-2"><a href="#例题-2" class="headerlink" title="例题"></a>例题</h5><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102172957796.png" alt="image-20210102172957796"></p>
+<h5 id="例题-1"><a href="#例题-1" class="headerlink" title="例题"></a>例题</h5><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102173658842.png" alt="image-20210102173658842"></p>
+<h3 id="『Nice』和『香浓』"><a href="#『Nice』和『香浓』" class="headerlink" title="『Nice』和『香浓』"></a>『Nice』和『香浓』</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102172903591.png" alt="image-20210102172903591"></p>
+<h5 id="例题-2"><a href="#例题-2" class="headerlink" title="例题"></a>例题</h5><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102172957796.png" alt="image-20210102172957796"></p>
 <h1 id="编码和调制"><a href="#编码和调制" class="headerlink" title="编码和调制"></a>编码和调制</h1><h3 id="基带信号与宽带信号"><a href="#基带信号与宽带信号" class="headerlink" title="基带信号与宽带信号"></a>基带信号与宽带信号</h3><ul>
 <li><p>基带信号：</p>
 <p>ex：数字信号</p>
 <p>传输距离较近时使用，近距离衰减小，信号内容不易发生改变</p>
-<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102173612458.png" alt="image-20210102173612458"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102173612458.png" alt="image-20210102173612458"></p>
 </li>
 <li><p>宽带信号：</p>
 <p>ex：模拟信号</p>
 <p>传输距离较远时使用</p>
-<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102173633932.png" alt="image-20210102173633932"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102173633932.png" alt="image-20210102173633932"></p>
 </li>
 </ul>
 <h3 id="编码与调制"><a href="#编码与调制" class="headerlink" title="编码与调制"></a>编码与调制</h3><ul>
@@ -443,61 +451,61 @@
 <p>数据 –&gt; 模拟信号</p>
 </li>
 </ul>
-<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102174052211.png" alt="image-20210102174052211"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102174052211.png" alt="image-20210102174052211"></p>
 <h3 id="数字数据编码为数字信号"><a href="#数字数据编码为数字信号" class="headerlink" title="数字数据编码为数字信号"></a>数字数据编码为数字信号</h3><ol>
 <li><p><strong>非归零编码『NRZ』</strong></p>
-<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102174812087.png" alt="image-20210102174812087"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102174812087.png" alt="image-20210102174812087"></p>
 </li>
 <li><p><strong>曼切斯特编码</strong></p>
 <p>一个时间内，两次脉冲</p>
-<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102175251365.png" alt="image-20210102175251365"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102175251365.png" alt="image-20210102175251365"></p>
 </li>
 <li><p><strong>差分曼切斯特编码</strong></p>
 <p>作用于下一个码元</p>
-<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102175417107.png" alt="image-20210102175417107"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102175417107.png" alt="image-20210102175417107"></p>
 </li>
 <li><p>归零编码『RZ』</p>
-<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102174910678.png" alt="image-20210102174910678"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102174910678.png" alt="image-20210102174910678"></p>
 </li>
 <li><p>反向不归零编码『NRZI』</p>
-<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102175020725.png" alt="image-20210102175020725"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102175020725.png" alt="image-20210102175020725"></p>
 </li>
 <li><p>4B/5B编码</p>
 </li>
 </ol>
-<h5 id="示意图"><a href="#示意图" class="headerlink" title="示意图"></a>示意图</h5><p>   <img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102175940142.png" alt="image-20210102175940142"></p>
-<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102175802275.png" alt="image-20210102175802275"></p>
+<h5 id="示意图"><a href="#示意图" class="headerlink" title="示意图"></a>示意图</h5><p>   <img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102175940142.png" alt="image-20210102175940142"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102175802275.png" alt="image-20210102175802275"></p>
 <h3 id="数字数据调制为模拟信号"><a href="#数字数据调制为模拟信号" class="headerlink" title="数字数据调制为模拟信号"></a>数字数据调制为模拟信号</h3><ul>
 <li>调幅（2ASK）</li>
 <li>调频（2FSK）</li>
 <li>调相（2PSK）</li>
 <li>调幅+调相（QAM）</li>
 </ul>
-<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102180441242.png" alt="image-20210102180441242"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102180441242.png" alt="image-20210102180441242"></p>
 <h3 id="模拟数据编码为数字信号"><a href="#模拟数据编码为数字信号" class="headerlink" title="模拟数据编码为数字信号"></a>模拟数据编码为数字信号</h3><blockquote>
 <p>计算机内部处理的是二进制数据，处理的都是<strong>数字音频</strong>，所以需要将模拟音频通过采样、量化转换成有限个数字表示的离散序列，实现音频数字化。</p>
 </blockquote>
 <h5 id="PCM："><a href="#PCM：" class="headerlink" title="PCM："></a>PCM：</h5><ol>
 <li><p>抽样</p>
-<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102194024113.png" alt="image-20210102194024113"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102194024113.png" alt="image-20210102194024113"></p>
 </li>
 <li><p>量化</p>
-<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102200345153.png" alt="image-20210102200345153"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102200345153.png" alt="image-20210102200345153"></p>
 </li>
 <li><p>编码</p>
-<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102200228856.png" alt="image-20210102200228856"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102200228856.png" alt="image-20210102200228856"></p>
 </li>
 </ol>
 <h3 id="模拟信号调制为模拟信号"><a href="#模拟信号调制为模拟信号" class="headerlink" title="模拟信号调制为模拟信号"></a>模拟信号调制为模拟信号</h3><blockquote>
 <p>为了实现传输的有效性，可能需要较高的频率。这种调试方式还可以使用频分复用技术，充分利用带宽资源。在电话机和本地交换机所传输的信号是采用模拟信号传输模拟数据的方式；模拟的声音数据是加载到模拟的载波信号中传输的。</p>
 </blockquote>
-<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102200640257.png" alt="image-20210102200640257"></p>
-<h3 id="脑图"><a href="#脑图" class="headerlink" title="脑图"></a>脑图</h3><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102200702495.png" alt="image-20210102200702495"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102200640257.png" alt="image-20210102200640257"></p>
+<h3 id="脑图"><a href="#脑图" class="headerlink" title="脑图"></a>脑图</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102200702495.png" alt="image-20210102200702495"></p>
 <h1 id="物理层传输介质"><a href="#物理层传输介质" class="headerlink" title="物理层传输介质"></a>物理层传输介质</h1><h3 id="传输介质及分类"><a href="#传输介质及分类" class="headerlink" title="传输介质及分类"></a>传输介质及分类</h3><blockquote>
 <p>传输介质也称传输媒体、传输媒介，它就是数据传输系统中在发送设备和接受设备之间的物理通路。 </p>
 <p>传输媒介并不是物理层。</p>
 </blockquote>
-<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102201154671.png" alt="image-20210102201154671"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102201154671.png" alt="image-20210102201154671"></p>
 <ul>
 <li><p><strong>导向性传输介质</strong>：电磁波被导向沿着固体媒介（铜线、光纤）传播</p>
 </li>
@@ -511,8 +519,8 @@
 </blockquote>
 </li>
 </ol>
-<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102201536574.png"></p>
-<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102201609625.png" alt="image-20210102201609625"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102201536574.png"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102201609625.png" alt="image-20210102201609625"></p>
 <ol start="2">
 <li><h5 id="同轴电缆"><a href="#同轴电缆" class="headerlink" title="同轴电缆"></a>同轴电缆</h5><ul>
 <li>基带同轴电缆</li>
@@ -520,20 +528,20 @@
 </ul>
 </li>
 </ol>
-<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102201809384.png" alt="image-20210102201809384"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102201809384.png" alt="image-20210102201809384"></p>
 <ol start="3">
 <li><h5 id="光纤"><a href="#光纤" class="headerlink" title="光纤"></a>光纤</h5><blockquote>
 <p>传递光脉冲来进行通信。</p>
 <p>光纤通信系统的带宽远远大于目前其他各种传输媒体的带宽。</p>
 </blockquote>
-<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102202018829.png" alt="image-20210102202018829"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102202018829.png" alt="image-20210102202018829"></p>
 </li>
 </ol>
 <ul>
 <li>多模光纤  —— 适合近距离</li>
 <li>单模光纤  —— 适合远距离</li>
 </ul>
-<p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102202208077.png" alt="image-20210102202208077"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102202208077.png" alt="image-20210102202208077"></p>
 <p>特点：</p>
 <ul>
 <li>损耗小</li>
@@ -549,7 +557,7 @@
 </li>
 <li><h5 id="微波"><a href="#微波" class="headerlink" title="微波"></a>微波</h5><ul>
 <li>信号固定方向传播</li>
-<li><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102202740831.png" alt="image-20210102202740831"></li>
+<li><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102202740831.png" alt="image-20210102202740831"></li>
 </ul>
 </li>
 <li><h5 id="红外线、激光"><a href="#红外线、激光" class="headerlink" title="红外线、激光"></a>红外线、激光</h5><ul>
@@ -558,10 +566,10 @@
 </ul>
 </li>
 </ol>
-<h3 id="脑图-1"><a href="#脑图-1" class="headerlink" title="脑图"></a>脑图</h3><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102203108707.png" alt="image-20210102203108707"></p>
-<h1 id="物理层设备"><a href="#物理层设备" class="headerlink" title="物理层设备"></a>物理层设备</h1><h3 id="中继器"><a href="#中继器" class="headerlink" title="中继器"></a>中继器</h3><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102203530197.png" alt="image-20210102203530197"></p>
-<h3 id="集线器（多口中继器）"><a href="#集线器（多口中继器）" class="headerlink" title="集线器（多口中继器）"></a>集线器（多口中继器）</h3><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102205012908.png" alt="image-20210102205012908"></p>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p><img src="https://raw.githubusercontent.com/tb314888536/picture/master/img/image-20210102204904877.png"></p>
+<h3 id="脑图-1"><a href="#脑图-1" class="headerlink" title="脑图"></a>脑图</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102203108707.png" alt="image-20210102203108707"></p>
+<h1 id="物理层设备"><a href="#物理层设备" class="headerlink" title="物理层设备"></a>物理层设备</h1><h3 id="中继器"><a href="#中继器" class="headerlink" title="中继器"></a>中继器</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102203530197.png" alt="image-20210102203530197"></p>
+<h3 id="集线器（多口中继器）"><a href="#集线器（多口中继器）" class="headerlink" title="集线器（多口中继器）"></a>集线器（多口中继器）</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102205012908.png" alt="image-20210102205012908"></p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102204904877.png"></p>
 
     </div>
 
@@ -581,13 +589,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/01/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%AC%E4%B8%80%E7%AB%A0/" rel="prev" title="计网第一章--概述">
-      <i class="fa fa-chevron-left"></i> 计网第一章--概述
+    <a href="/2021/01/02/%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%B8%89%E7%AB%A0--%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/" rel="prev" title="计网第三章--数据链路层">
+      <i class="fa fa-chevron-left"></i> 计网第三章--数据链路层
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2021/01/02/%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%B8%89%E7%AB%A0--%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/" rel="next" title="计网第三章--数据链路层">
-      计网第三章--数据链路层 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -647,7 +652,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%89%A9%E7%90%86%E5%B1%82%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-number">1.</span> <span class="nav-text">物理层基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%A9%E7%90%86%E5%B1%82%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5-1"><span class="nav-number">1.0.1.</span> <span class="nav-text">物理层基本概念</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E9%80%9A%E4%BF%A1%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="nav-number">2.</span> <span class="nav-text">数据通信基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B8%E5%9E%8B%E7%9A%84%E6%95%B0%E6%8D%AE%E9%80%9A%E4%BF%A1%E6%A8%A1%E5%9E%8B"><span class="nav-number">2.0.1.</span> <span class="nav-text">典型的数据通信模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E9%80%9A%E4%BF%A1%E7%9B%B8%E5%85%B3%E6%9C%AF%E8%AF%AD"><span class="nav-number">2.0.2.</span> <span class="nav-text">数据通信相关术语</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E7%A7%8D%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F"><span class="nav-number">2.0.3.</span> <span class="nav-text">三种通信方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%A4%E7%A7%8D%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E6%96%B9%E5%BC%8F"><span class="nav-number">2.0.4.</span> <span class="nav-text">两种数据传输方式</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%B8%B2%E8%A1%8C%E4%BC%A0%E8%BE%93"><span class="nav-number">2.0.4.0.1.</span> <span class="nav-text">串行传输</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%B9%B6%E8%A1%8C%E4%BC%A0%E8%BE%93"><span class="nav-number">2.0.4.0.2.</span> <span class="nav-text">并行传输</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A0%81%E5%85%83%E3%80%81%E6%B3%A2%E7%89%B9%E3%80%81%E9%80%9F%E7%8E%87%E3%80%81%E5%B8%A6%E5%AE%BD"><span class="nav-number">3.</span> <span class="nav-text">码元、波特、速率、带宽</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A0%81%E5%85%83"><span class="nav-number">3.0.1.</span> <span class="nav-text">码元</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%9F%E7%8E%87%E3%80%81%E6%B3%A2%E7%89%B9%E3%80%81%E5%B8%A6%E5%AE%BD"><span class="nav-number">3.0.2.</span> <span class="nav-text">速率、波特、带宽</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%A0%81%E5%85%83%E4%BC%A0%E8%BE%93%E9%80%9F%E7%8E%87%EF%BC%9A"><span class="nav-number">3.0.2.0.1.</span> <span class="nav-text">码元传输速率：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link"><span class="nav-number">3.0.2.0.2.</span> <span class="nav-text"></span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BF%A1%E6%81%AF%E4%BC%A0%E8%BE%93%E9%80%9F%E7%8E%87%EF%BC%9A"><span class="nav-number">3.0.2.0.3.</span> <span class="nav-text">信息传输速率：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%83%E4%B9%A0%E9%A2%98"><span class="nav-number">3.0.3.</span> <span class="nav-text">练习题</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A5%88%E6%B0%8F%E5%87%86%E5%88%99%E5%92%8C%E9%A6%99%E5%86%9C%E5%AE%9A%E7%90%86"><span class="nav-number">4.</span> <span class="nav-text">奈氏准则和香农定理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%B1%E7%9C%9F"><span class="nav-number">4.0.1.</span> <span class="nav-text">失真</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%A4%B1%E7%9C%9F%E7%B1%BB%E5%88%AB"><span class="nav-number">4.0.1.0.1.</span> <span class="nav-text">失真类别</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%BD%B1%E5%93%8D%E5%A4%B1%E7%9C%9F%E7%A8%8B%E5%BA%A6%E7%9A%84%E5%9B%A0%E7%B4%A0"><span class="nav-number">4.0.1.0.2.</span> <span class="nav-text">影响失真程度的因素</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%A4%B1%E7%9C%9F%E7%9A%84%E4%B8%80%E7%A7%8D%E7%8E%B0%E8%B1%A1-%E2%80%94%E2%80%94-%E7%A0%81%E9%97%B4%E4%B8%B2%E6%89%B0"><span class="nav-number">4.0.1.0.3.</span> <span class="nav-text">失真的一种现象 —— 码间串扰</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A5%88%E6%B0%8F%E5%87%86%E5%88%99%EF%BC%88%E5%A5%88%E5%A5%8E%E6%96%AF%E7%89%B9%E5%AE%9A%E7%90%86%EF%BC%89"><span class="nav-number">4.0.2.</span> <span class="nav-text">奈氏准则（奈奎斯特定理）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%BB%93%E8%AE%BA"><span class="nav-number">4.0.2.0.1.</span> <span class="nav-text">结论</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BE%8B%E9%A2%98"><span class="nav-number">4.0.2.0.2.</span> <span class="nav-text">例题</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A6%99%E5%86%9C%E5%AE%9A%E7%90%86"><span class="nav-number">4.0.3.</span> <span class="nav-text">香农定理</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BF%A1%E5%99%AA%E6%AF%94"><span class="nav-number">4.0.3.0.1.</span> <span class="nav-text">信噪比</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%A6%99%E5%86%9C%E5%AE%9A%E7%90%86-1"><span class="nav-number">4.0.3.0.2.</span> <span class="nav-text">香农定理</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%BB%93%E8%AE%BA-1"><span class="nav-number">4.0.3.0.3.</span> <span class="nav-text">结论</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BE%8B%E9%A2%98-1"><span class="nav-number">4.0.3.0.4.</span> <span class="nav-text">例题</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E3%80%8ENice%E3%80%8F%E5%92%8C%E3%80%8E%E9%A6%99%E6%B5%93%E3%80%8F"><span class="nav-number">4.0.4.</span> <span class="nav-text">『Nice』和『香浓』</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BE%8B%E9%A2%98-2"><span class="nav-number">4.0.4.0.1.</span> <span class="nav-text">例题</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BC%96%E7%A0%81%E5%92%8C%E8%B0%83%E5%88%B6"><span class="nav-number">5.</span> <span class="nav-text">编码和调制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E5%B8%A6%E4%BF%A1%E5%8F%B7%E4%B8%8E%E5%AE%BD%E5%B8%A6%E4%BF%A1%E5%8F%B7"><span class="nav-number">5.0.1.</span> <span class="nav-text">基带信号与宽带信号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BC%96%E7%A0%81%E4%B8%8E%E8%B0%83%E5%88%B6"><span class="nav-number">5.0.2.</span> <span class="nav-text">编码与调制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E5%AD%97%E6%95%B0%E6%8D%AE%E7%BC%96%E7%A0%81%E4%B8%BA%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7"><span class="nav-number">5.0.3.</span> <span class="nav-text">数字数据编码为数字信号</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%A4%BA%E6%84%8F%E5%9B%BE"><span class="nav-number">5.0.3.0.1.</span> <span class="nav-text">示意图</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E5%AD%97%E6%95%B0%E6%8D%AE%E8%B0%83%E5%88%B6%E4%B8%BA%E6%A8%A1%E6%8B%9F%E4%BF%A1%E5%8F%B7"><span class="nav-number">5.0.4.</span> <span class="nav-text">数字数据调制为模拟信号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A8%A1%E6%8B%9F%E6%95%B0%E6%8D%AE%E7%BC%96%E7%A0%81%E4%B8%BA%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7"><span class="nav-number">5.0.5.</span> <span class="nav-text">模拟数据编码为数字信号</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#PCM%EF%BC%9A"><span class="nav-number">5.0.5.0.1.</span> <span class="nav-text">PCM：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A8%A1%E6%8B%9F%E4%BF%A1%E5%8F%B7%E8%B0%83%E5%88%B6%E4%B8%BA%E6%A8%A1%E6%8B%9F%E4%BF%A1%E5%8F%B7"><span class="nav-number">5.0.6.</span> <span class="nav-text">模拟信号调制为模拟信号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%84%91%E5%9B%BE"><span class="nav-number">5.0.7.</span> <span class="nav-text">脑图</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%89%A9%E7%90%86%E5%B1%82%E4%BC%A0%E8%BE%93%E4%BB%8B%E8%B4%A8"><span class="nav-number">6.</span> <span class="nav-text">物理层传输介质</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%A0%E8%BE%93%E4%BB%8B%E8%B4%A8%E5%8F%8A%E5%88%86%E7%B1%BB"><span class="nav-number">6.0.1.</span> <span class="nav-text">传输介质及分类</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%8F%8C%E7%BB%9E%E7%BA%BF"><span class="nav-number">6.0.1.0.1.</span> <span class="nav-text">双绞线</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%90%8C%E8%BD%B4%E7%94%B5%E7%BC%86"><span class="nav-number">6.0.1.0.2.</span> <span class="nav-text">同轴电缆</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%85%89%E7%BA%A4"><span class="nav-number">6.0.1.0.3.</span> <span class="nav-text">光纤</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%9E%E5%AF%BC%E5%90%91%E6%80%A7%E4%BC%A0%E8%BE%93%E4%BB%8B%E8%B4%A8"><span class="nav-number">6.0.2.</span> <span class="nav-text">非导向性传输介质</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%97%A0%E7%BA%BF%E7%94%B5%E6%B3%A2"><span class="nav-number">6.0.2.0.1.</span> <span class="nav-text">无线电波</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%BE%AE%E6%B3%A2"><span class="nav-number">6.0.2.0.2.</span> <span class="nav-text">微波</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%BA%A2%E5%A4%96%E7%BA%BF%E3%80%81%E6%BF%80%E5%85%89"><span class="nav-number">6.0.2.0.3.</span> <span class="nav-text">红外线、激光</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%84%91%E5%9B%BE-1"><span class="nav-number">6.0.3.</span> <span class="nav-text">脑图</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%89%A9%E7%90%86%E5%B1%82%E8%AE%BE%E5%A4%87"><span class="nav-number">7.</span> <span class="nav-text">物理层设备</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%AD%E7%BB%A7%E5%99%A8"><span class="nav-number">7.0.1.</span> <span class="nav-text">中继器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9B%86%E7%BA%BF%E5%99%A8%EF%BC%88%E5%A4%9A%E5%8F%A3%E4%B8%AD%E7%BB%A7%E5%99%A8%EF%BC%89"><span class="nav-number">7.0.2.</span> <span class="nav-text">集线器（多口中继器）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">8.</span> <span class="nav-text">总结</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%89%A9%E7%90%86%E5%B1%82%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-number">1.</span> <span class="nav-text">物理层基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%A9%E7%90%86%E5%B1%82%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5-1"><span class="nav-number">1.0.1.</span> <span class="nav-text">物理层基本概念</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E9%80%9A%E4%BF%A1%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="nav-number">2.</span> <span class="nav-text">数据通信基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B8%E5%9E%8B%E7%9A%84%E6%95%B0%E6%8D%AE%E9%80%9A%E4%BF%A1%E6%A8%A1%E5%9E%8B"><span class="nav-number">2.0.1.</span> <span class="nav-text">典型的数据通信模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E9%80%9A%E4%BF%A1%E7%9B%B8%E5%85%B3%E6%9C%AF%E8%AF%AD"><span class="nav-number">2.0.2.</span> <span class="nav-text">数据通信相关术语</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E7%A7%8D%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F"><span class="nav-number">2.0.3.</span> <span class="nav-text">三种通信方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%A4%E7%A7%8D%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E6%96%B9%E5%BC%8F"><span class="nav-number">2.0.4.</span> <span class="nav-text">两种数据传输方式</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%B8%B2%E8%A1%8C%E4%BC%A0%E8%BE%93"><span class="nav-number">2.0.4.0.1.</span> <span class="nav-text">串行传输</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%B9%B6%E8%A1%8C%E4%BC%A0%E8%BE%93"><span class="nav-number">2.0.4.0.2.</span> <span class="nav-text">并行传输</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A0%81%E5%85%83%E3%80%81%E6%B3%A2%E7%89%B9%E3%80%81%E9%80%9F%E7%8E%87%E3%80%81%E5%B8%A6%E5%AE%BD"><span class="nav-number">3.</span> <span class="nav-text">码元、波特、速率、带宽</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A0%81%E5%85%83"><span class="nav-number">3.0.1.</span> <span class="nav-text">码元</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%9F%E7%8E%87%E3%80%81%E6%B3%A2%E7%89%B9%E3%80%81%E5%B8%A6%E5%AE%BD"><span class="nav-number">3.0.2.</span> <span class="nav-text">速率、波特、带宽</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%A0%81%E5%85%83%E4%BC%A0%E8%BE%93%E9%80%9F%E7%8E%87%EF%BC%9A"><span class="nav-number">3.0.2.0.1.</span> <span class="nav-text">码元传输速率：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BF%A1%E6%81%AF%E4%BC%A0%E8%BE%93%E9%80%9F%E7%8E%87%EF%BC%9A"><span class="nav-number">3.0.2.0.2.</span> <span class="nav-text">信息传输速率：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%83%E4%B9%A0%E9%A2%98"><span class="nav-number">3.0.3.</span> <span class="nav-text">练习题</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A5%88%E6%B0%8F%E5%87%86%E5%88%99%E5%92%8C%E9%A6%99%E5%86%9C%E5%AE%9A%E7%90%86"><span class="nav-number">4.</span> <span class="nav-text">奈氏准则和香农定理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%B1%E7%9C%9F"><span class="nav-number">4.0.1.</span> <span class="nav-text">失真</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%A4%B1%E7%9C%9F%E7%B1%BB%E5%88%AB"><span class="nav-number">4.0.1.0.1.</span> <span class="nav-text">失真类别</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%BD%B1%E5%93%8D%E5%A4%B1%E7%9C%9F%E7%A8%8B%E5%BA%A6%E7%9A%84%E5%9B%A0%E7%B4%A0"><span class="nav-number">4.0.1.0.2.</span> <span class="nav-text">影响失真程度的因素</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%A4%B1%E7%9C%9F%E7%9A%84%E4%B8%80%E7%A7%8D%E7%8E%B0%E8%B1%A1-%E2%80%94%E2%80%94-%E7%A0%81%E9%97%B4%E4%B8%B2%E6%89%B0"><span class="nav-number">4.0.1.0.3.</span> <span class="nav-text">失真的一种现象 —— 码间串扰</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A5%88%E6%B0%8F%E5%87%86%E5%88%99%EF%BC%88%E5%A5%88%E5%A5%8E%E6%96%AF%E7%89%B9%E5%AE%9A%E7%90%86%EF%BC%89"><span class="nav-number">4.0.2.</span> <span class="nav-text">奈氏准则（奈奎斯特定理）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%BB%93%E8%AE%BA"><span class="nav-number">4.0.2.0.1.</span> <span class="nav-text">结论</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BE%8B%E9%A2%98"><span class="nav-number">4.0.2.0.2.</span> <span class="nav-text">例题</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A6%99%E5%86%9C%E5%AE%9A%E7%90%86"><span class="nav-number">4.0.3.</span> <span class="nav-text">香农定理</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BF%A1%E5%99%AA%E6%AF%94"><span class="nav-number">4.0.3.0.1.</span> <span class="nav-text">信噪比</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%A6%99%E5%86%9C%E5%AE%9A%E7%90%86-1"><span class="nav-number">4.0.3.0.2.</span> <span class="nav-text">香农定理</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%BB%93%E8%AE%BA-1"><span class="nav-number">4.0.3.0.3.</span> <span class="nav-text">结论</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BE%8B%E9%A2%98-1"><span class="nav-number">4.0.3.0.4.</span> <span class="nav-text">例题</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E3%80%8ENice%E3%80%8F%E5%92%8C%E3%80%8E%E9%A6%99%E6%B5%93%E3%80%8F"><span class="nav-number">4.0.4.</span> <span class="nav-text">『Nice』和『香浓』</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BE%8B%E9%A2%98-2"><span class="nav-number">4.0.4.0.1.</span> <span class="nav-text">例题</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BC%96%E7%A0%81%E5%92%8C%E8%B0%83%E5%88%B6"><span class="nav-number">5.</span> <span class="nav-text">编码和调制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E5%B8%A6%E4%BF%A1%E5%8F%B7%E4%B8%8E%E5%AE%BD%E5%B8%A6%E4%BF%A1%E5%8F%B7"><span class="nav-number">5.0.1.</span> <span class="nav-text">基带信号与宽带信号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BC%96%E7%A0%81%E4%B8%8E%E8%B0%83%E5%88%B6"><span class="nav-number">5.0.2.</span> <span class="nav-text">编码与调制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E5%AD%97%E6%95%B0%E6%8D%AE%E7%BC%96%E7%A0%81%E4%B8%BA%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7"><span class="nav-number">5.0.3.</span> <span class="nav-text">数字数据编码为数字信号</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%A4%BA%E6%84%8F%E5%9B%BE"><span class="nav-number">5.0.3.0.1.</span> <span class="nav-text">示意图</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E5%AD%97%E6%95%B0%E6%8D%AE%E8%B0%83%E5%88%B6%E4%B8%BA%E6%A8%A1%E6%8B%9F%E4%BF%A1%E5%8F%B7"><span class="nav-number">5.0.4.</span> <span class="nav-text">数字数据调制为模拟信号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A8%A1%E6%8B%9F%E6%95%B0%E6%8D%AE%E7%BC%96%E7%A0%81%E4%B8%BA%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7"><span class="nav-number">5.0.5.</span> <span class="nav-text">模拟数据编码为数字信号</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#PCM%EF%BC%9A"><span class="nav-number">5.0.5.0.1.</span> <span class="nav-text">PCM：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A8%A1%E6%8B%9F%E4%BF%A1%E5%8F%B7%E8%B0%83%E5%88%B6%E4%B8%BA%E6%A8%A1%E6%8B%9F%E4%BF%A1%E5%8F%B7"><span class="nav-number">5.0.6.</span> <span class="nav-text">模拟信号调制为模拟信号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%84%91%E5%9B%BE"><span class="nav-number">5.0.7.</span> <span class="nav-text">脑图</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%89%A9%E7%90%86%E5%B1%82%E4%BC%A0%E8%BE%93%E4%BB%8B%E8%B4%A8"><span class="nav-number">6.</span> <span class="nav-text">物理层传输介质</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%A0%E8%BE%93%E4%BB%8B%E8%B4%A8%E5%8F%8A%E5%88%86%E7%B1%BB"><span class="nav-number">6.0.1.</span> <span class="nav-text">传输介质及分类</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%8F%8C%E7%BB%9E%E7%BA%BF"><span class="nav-number">6.0.1.0.1.</span> <span class="nav-text">双绞线</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%90%8C%E8%BD%B4%E7%94%B5%E7%BC%86"><span class="nav-number">6.0.1.0.2.</span> <span class="nav-text">同轴电缆</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%85%89%E7%BA%A4"><span class="nav-number">6.0.1.0.3.</span> <span class="nav-text">光纤</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%9E%E5%AF%BC%E5%90%91%E6%80%A7%E4%BC%A0%E8%BE%93%E4%BB%8B%E8%B4%A8"><span class="nav-number">6.0.2.</span> <span class="nav-text">非导向性传输介质</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%97%A0%E7%BA%BF%E7%94%B5%E6%B3%A2"><span class="nav-number">6.0.2.0.1.</span> <span class="nav-text">无线电波</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%BE%AE%E6%B3%A2"><span class="nav-number">6.0.2.0.2.</span> <span class="nav-text">微波</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%BA%A2%E5%A4%96%E7%BA%BF%E3%80%81%E6%BF%80%E5%85%89"><span class="nav-number">6.0.2.0.3.</span> <span class="nav-text">红外线、激光</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%84%91%E5%9B%BE-1"><span class="nav-number">6.0.3.</span> <span class="nav-text">脑图</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%89%A9%E7%90%86%E5%B1%82%E8%AE%BE%E5%A4%87"><span class="nav-number">7.</span> <span class="nav-text">物理层设备</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%AD%E7%BB%A7%E5%99%A8"><span class="nav-number">7.0.1.</span> <span class="nav-text">中继器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9B%86%E7%BA%BF%E5%99%A8%EF%BC%88%E5%A4%9A%E5%8F%A3%E4%B8%AD%E7%BB%A7%E5%99%A8%EF%BC%89"><span class="nav-number">7.0.2.</span> <span class="nav-text">集线器（多口中继器）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">8.</span> <span class="nav-text">总结</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
