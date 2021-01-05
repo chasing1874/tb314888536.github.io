@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hello World</title>
+    <url>/2020/12/05/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. <a id="more"></a>Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>计网第一章--概述</title>
     <url>/2021/01/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%AC%E4%B8%80%E7%AB%A0/</url>
     <content><![CDATA[<p>计算机网络的概念、组成、功能和分类…</p>
@@ -248,24 +266,6 @@
         <tag>share</tag>
         <tag>notes</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2020/12/05/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. <a id="more"></a>Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
   </entry>
   <entry>
     <title>计网第二章--物理层</title>
@@ -525,6 +525,245 @@
 <h1 id="物理层设备"><a href="#物理层设备" class="headerlink" title="物理层设备"></a>物理层设备</h1><h3 id="中继器"><a href="#中继器" class="headerlink" title="中继器"></a>中继器</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102203530197.png" alt="image-20210102203530197"></p>
 <h3 id="集线器（多口中继器）"><a href="#集线器（多口中继器）" class="headerlink" title="集线器（多口中继器）"></a>集线器（多口中继器）</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102205012908.png" alt="image-20210102205012908"></p>
 <h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102204904877.png"></p>
+]]></content>
+      <categories>
+        <category>计算机网络</category>
+      </categories>
+      <tags>
+        <tag>share</tag>
+        <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>计网第四章</title>
+    <url>/2021/01/05/%E8%AE%A1%E7%BD%91%E7%AC%AC%E5%9B%9B%E7%AB%A0--%E7%BD%91%E7%BB%9C%E5%B1%82/</url>
+    <content><![CDATA[<h1 id="网络层概述"><a href="#网络层概述" class="headerlink" title="网络层概述"></a>网络层概述</h1><blockquote>
+<p>主要任务是把<strong>分组</strong>从源端传到目的端，为分组交换网上的不同主机提供通信服务。</p>
+<p>网络层传输单位：<strong>数据报</strong></p>
+<p>分组把数据报切割。</p>
+</blockquote>
+<h2 id="传输单元名词辨析"><a href="#传输单元名词辨析" class="headerlink" title="传输单元名词辨析"></a>传输单元名词辨析</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210105163927766.png" alt="image-20210105163927766"></p>
+<h2 id="网络层功能："><a href="#网络层功能：" class="headerlink" title="网络层功能："></a>网络层功能：</h2><ol>
+<li><p><strong>路由选择与分组转发</strong></p>
+<p>寻找最佳路径</p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210105153730831.png" alt="image-20210105153730831"></p>
+</li>
+<li><p><strong>异构网络互联</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210105153844848.png" alt="image-20210105153844848"></p>
+</li>
+<li><p><strong>拥塞控制</strong></p>
+<p>所有结点都来不及接受分组，导致大量分组丢弃</p>
+<p>解决方法：</p>
+<ul>
+<li>开环控制（静态）</li>
+<li>闭环控制（动态）</li>
+</ul>
+</li>
+</ol>
+<h2 id="数据交换方式"><a href="#数据交换方式" class="headerlink" title="数据交换方式"></a>数据交换方式</h2><h3 id="为什么要数据交换"><a href="#为什么要数据交换" class="headerlink" title="为什么要数据交换"></a>为什么要数据交换</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210105154138653.png" alt="image-20210105154138653"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210105155214695.png" alt="image-20210105155214695"></p>
+<h3 id="交换方式"><a href="#交换方式" class="headerlink" title="交换方式"></a>交换方式</h3><h4 id="1-电路交换"><a href="#1-电路交换" class="headerlink" title="1. 电路交换"></a>1. 电路交换</h4><ul>
+<li><p>特点</p>
+<ul>
+<li>独占资源</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>例如：电话网络</p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210105160039522.png" alt="image-20210105160039522"></p>
+</li>
+<li><p>电路交换的阶段</p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210105160110880.png" alt="image-20210105160110880"></p>
+</li>
+<li><p>优点</p>
+<ol>
+<li>通信时延小</li>
+<li>有序传输</li>
+<li>没有冲突</li>
+<li>实时性强</li>
+</ol>
+</li>
+<li><p>缺点</p>
+<ol>
+<li>建立连接时间长</li>
+<li>线路独占，使用效率低</li>
+<li>灵活性差</li>
+<li>无差错控制能力</li>
+</ol>
+</li>
+</ul>
+<h4 id="2-报文交换"><a href="#2-报文交换" class="headerlink" title="2. 报文交换"></a>2. 报文交换</h4><blockquote>
+<p>报文：源应用发送的信息整体</p>
+</blockquote>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210105160530729.png" alt="image-20210105160530729"></p>
+<ul>
+<li>优点<ol>
+<li>无需建立连接</li>
+<li>存储转发，动态分配链路</li>
+<li>线路可靠性较高</li>
+<li>线路利用率较高</li>
+<li>多目标服务</li>
+</ol>
+</li>
+<li>缺点<ol>
+<li>有存储转发时延</li>
+<li>报文大小不定，需要网络结点有较大缓存空间</li>
+</ol>
+</li>
+</ul>
+<h4 id="3-分组交换"><a href="#3-分组交换" class="headerlink" title="3. 分组交换"></a>3. 分组交换</h4><blockquote>
+<p>分组：把大的数据块分割成小的数据块</p>
+</blockquote>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210105161011464.png"></p>
+<ul>
+<li><p>优点：</p>
+<ol>
+<li>无需建立连接</li>
+<li>存储转发，动态分配链路</li>
+<li>线路可靠性较高</li>
+<li>线路利用率较高</li>
+</ol>
+</li>
+<li><p>缺点：</p>
+<ol>
+<li>有存储转发时延</li>
+<li>需要传输额外的信息量（分组信息）</li>
+<li>乱序到目的主机时，要对分组重新排序</li>
+</ol>
+</li>
+</ul>
+<h5 id=""><a href="#" class="headerlink" title=""></a></h5><h5 id="数据报方式"><a href="#数据报方式" class="headerlink" title="数据报方式"></a>数据报方式</h5><blockquote>
+<p>为网络层提供<strong>无连接服务</strong></p>
+<p>不事先为分组的传输确定传输路径，每个分组独立确定传输路径，不同分组的传输路径可能不同。</p>
+</blockquote>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210105163216075.png" alt="image-20210105163216075"></p>
+<ul>
+<li>无连接</li>
+<li>每个分组携带<strong>源和目的地址</strong></li>
+<li>路由器根据分组的<em>目的地址</em>转发分组<ul>
+<li>基于路由协议/算法构建<em>转发表</em></li>
+<li>检索转发表</li>
+<li>每个分组独立选路</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210105164730625.png" alt="image-20210105164730625"></p>
+<h5 id="虚电路方式"><a href="#虚电路方式" class="headerlink" title="虚电路方式"></a>虚电路方式</h5><blockquote>
+<p>为网络层提供<strong>连接服务</strong></p>
+<p>首先为分组的传输确定传输路径（建立连接），然后沿该路径（连接）传输系列分组，系列分组路径相同，传输结束后拆除连接。</p>
+</blockquote>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210105163241619.png" alt="image-20210105163241619"></p>
+<blockquote>
+<p><strong>虚电路</strong>将<em>数据报</em>方式和的<em>电路交换</em>方式结合，以发挥两者优点</p>
+</blockquote>
+<p>虚电路：</p>
+<ul>
+<li>一条源主机到目的主机类似于电路的路径（逻辑连接）</li>
+<li>路径上所有结点都要维持这条虚电路的建立</li>
+<li>都维持一张<em>虚电路表</em>，每一项记录了一个打开的虚电路的信息</li>
+</ul>
+<p>通信过程：</p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210105165316215.png" alt="image-20210105165316215"></p>
+<h5 id="数据报-amp-虚电路"><a href="#数据报-amp-虚电路" class="headerlink" title="数据报&amp;虚电路"></a>数据报&amp;虚电路</h5><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210105165457505.png" alt="image-20210105165457505"></p>
+<h4 id="报文交换-amp-分组交换"><a href="#报文交换-amp-分组交换" class="headerlink" title="报文交换&amp;分组交换"></a>报文交换&amp;分组交换</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210105161532189.png" alt="image-20210105161532189"></p>
+<h4 id="三种数据交换方式比较总结"><a href="#三种数据交换方式比较总结" class="headerlink" title="三种数据交换方式比较总结"></a>三种数据交换方式比较总结</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210105161917113.png" alt="image-20210105161917113"></p>
+<ol>
+<li><strong>报文交换</strong>和<strong>分组交换</strong>都采用<em>存储转发</em></li>
+<li>传输数据量大，且传送时间远大于呼叫时，选择<strong>电路交换</strong>。电路交换传输时延最小。</li>
+<li>从信道利用率看，<strong>报文交换</strong>和<strong>分组交换</strong>优于<strong>电路交换</strong>。其中分组交换时延更小</li>
+</ol>
+<h1 id="路由算法"><a href="#路由算法" class="headerlink" title="路由算法"></a>路由算法</h1><h2 id="路由算法-1"><a href="#路由算法-1" class="headerlink" title="路由算法"></a>路由算法</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210105170623003.png" alt="image-20210105170623003"></p>
+<h2 id="路由算法分类"><a href="#路由算法分类" class="headerlink" title="路由算法分类"></a>路由算法分类</h2><ul>
+<li><h3 id="静态路由算法"><a href="#静态路由算法" class="headerlink" title="静态路由算法"></a>静态路由算法</h3><blockquote>
+<p><strong>非自适应路由算法</strong>，管理员手工配置路由信息</p>
+</blockquote>
+<ul>
+<li><p>优点：</p>
+<ul>
+<li>简便、可靠</li>
+<li>在负荷稳定、拓扑变化不大的网络中运行效果很好</li>
+<li>广泛用于高度安全性的军事网络和较小的商业网络</li>
+</ul>
+</li>
+<li><p>缺点：</p>
+<ul>
+<li>路由更新慢</li>
+<li>不适用大型网络</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><h3 id="动态路由算法"><a href="#动态路由算法" class="headerlink" title="动态路由算法"></a>动态路由算法</h3><blockquote>
+<p><strong>自适应路由算法</strong>，路由器彼此交换信息，按照路由算法优化出路由表项</p>
+</blockquote>
+<ul>
+<li>优点：<ul>
+<li>路由更新快</li>
+<li>适用于大型网络</li>
+<li>及时响应链路费用及网络拓扑变化</li>
+</ul>
+</li>
+<li>缺点：<ul>
+<li>算法复杂，增加网络负担</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>  <strong>分类</strong>：</p>
+<ul>
+<li><p>全局性：链路状态路由算法（OSPF）</p>
+<blockquote>
+<p>所有路由器掌握完整的网络拓扑和链路费用信息</p>
+</blockquote>
+</li>
+<li><p>分散性：距离向量路由算法（RIP）</p>
+<blockquote>
+<p>路由器只掌握物理相连的邻居及链路费用</p>
+</blockquote>
+</li>
+</ul>
+<h1 id="分层次的路由选择协议"><a href="#分层次的路由选择协议" class="headerlink" title="分层次的路由选择协议"></a>分层次的路由选择协议</h1><h2 id="原因："><a href="#原因：" class="headerlink" title="原因："></a>原因：</h2><ol>
+<li>因特网规模很大</li>
+<li>很多单位不向让外界知道自己的路由器选择协议，但还想连入互联网</li>
+</ol>
+<h2 id="自治系统AS："><a href="#自治系统AS：" class="headerlink" title="自治系统AS："></a>自治系统AS：</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210105172222420.png" alt="image-20210105172222420"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210105172422404.png" alt="image-20210105172422404"></p>
+<h2 id="路由选择协议分类："><a href="#路由选择协议分类：" class="headerlink" title="路由选择协议分类："></a>路由选择协议分类：</h2><h3 id="内部网关协议IGP（一个AS内使用）"><a href="#内部网关协议IGP（一个AS内使用）" class="headerlink" title="内部网关协议IGP（一个AS内使用）"></a>内部网关协议IGP（一个AS内使用）</h3><h4 id="RIP协议（应用层协议）"><a href="#RIP协议（应用层协议）" class="headerlink" title="RIP协议（应用层协议）"></a>RIP协议（应用层协议）</h4><blockquote>
+<p>RIP是一种分布式的基于<strong>距离向量</strong>的路由选择协议，是因特网的协议标准，最大优点是简单。</p>
+<p>只适用于项<em>小互联网</em></p>
+</blockquote>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210105174043671.png" alt="image-20210105174043671"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210105174350585.png" alt="image-20210105174350585"></p>
+<h5 id="距离向量算法"><a href="#距离向量算法" class="headerlink" title="距离向量算法"></a>距离向量算法</h5><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210105174641396.png" alt="image-20210105174641396"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210105174839849.png" alt="image-20210105174839849"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210105180204071.png" alt="image-20210105180204071"></p>
+<h5 id="RIP协议的报文格式"><a href="#RIP协议的报文格式" class="headerlink" title="RIP协议的报文格式"></a>RIP协议的报文格式</h5><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210105180548481.png" alt="image-20210105180548481"></p>
+<h5 id="RIP故障处理"><a href="#RIP故障处理" class="headerlink" title="RIP故障处理"></a>RIP故障处理</h5><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210105180900305.png" alt="image-20210105180900305"></p>
+<h5 id="RIP脑图"><a href="#RIP脑图" class="headerlink" title="RIP脑图"></a>RIP脑图</h5><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210105180927653.png" alt="image-20210105180927653"></p>
+<h4 id="OSPF协议"><a href="#OSPF协议" class="headerlink" title="OSPF协议"></a>OSPF协议</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210105203912172.png" alt="image-20210105203912172"></p>
+<h5 id="链路状态路由算法"><a href="#链路状态路由算法" class="headerlink" title="链路状态路由算法"></a>链路状态路由算法</h5><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210105204303935.png" alt="image-20210105204303935"></p>
+<h5 id="OSPF的区域"><a href="#OSPF的区域" class="headerlink" title="OSPF的区域"></a>OSPF的区域</h5><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210105204525706.png" alt="image-20210105204525706"></p>
+<h5 id="OSPF分组"><a href="#OSPF分组" class="headerlink" title="OSPF分组"></a>OSPF分组</h5><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210105214821869.png" alt="image-20210105214821869"></p>
+<h5 id="OSPF其他特点"><a href="#OSPF其他特点" class="headerlink" title="OSPF其他特点"></a>OSPF其他特点</h5><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210105215014709.png" alt="image-20210105215014709"></p>
+<h3 id="外部网关协议EGP"><a href="#外部网关协议EGP" class="headerlink" title="外部网关协议EGP"></a>外部网关协议EGP</h3><ul>
+<li>AS之间使用的</li>
+<li>BGP</li>
+</ul>
+<h4 id="BGP协议"><a href="#BGP协议" class="headerlink" title="BGP协议"></a>BGP协议</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210105215633890.png" alt="image-20210105215633890"></p>
+<h5 id="BGP协议交换信息的过程"><a href="#BGP协议交换信息的过程" class="headerlink" title="BGP协议交换信息的过程"></a>BGP协议交换信息的过程</h5><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210105215841220.png" alt="image-20210105215841220"></p>
+<ul>
+<li>边界路由器身兼多职，AS内部协议+AS外部协议</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210105220152970.png" alt="image-20210105220152970"></p>
+<h5 id="BGP协议报文格式"><a href="#BGP协议报文格式" class="headerlink" title="BGP协议报文格式"></a>BGP协议报文格式</h5><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210105220318039.png" alt="image-20210105220318039"></p>
+<h5 id="BGP协议特点"><a href="#BGP协议特点" class="headerlink" title="BGP协议特点"></a>BGP协议特点</h5><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210105220403127.png" alt="image-20210105220403127"></p>
+<h5 id="BGP-4的四种报文"><a href="#BGP-4的四种报文" class="headerlink" title="BGP-4的四种报文"></a>BGP-4的四种报文</h5><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210105220547895.png" alt="image-20210105220547895"></p>
+<h3 id="三种路由协议比较"><a href="#三种路由协议比较" class="headerlink" title="三种路由协议比较"></a>三种路由协议比较</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210105220720993.png" alt="image-20210105220720993"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210105220742246.png" alt="image-20210105220742246"></p>
 ]]></content>
       <categories>
         <category>计算机网络</category>
