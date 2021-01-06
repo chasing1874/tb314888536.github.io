@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hello World</title>
+    <url>/2020/12/05/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. <a id="more"></a>Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>计网第一章--概述</title>
     <url>/2021/01/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%AC%E4%B8%80%E7%AB%A0/</url>
     <content><![CDATA[<p>计算机网络的概念、组成、功能和分类…</p>
@@ -248,24 +266,6 @@
         <tag>share</tag>
         <tag>notes</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2020/12/05/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. <a id="more"></a>Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
   </entry>
   <entry>
     <title>计网第二章--物理层</title>
@@ -863,7 +863,179 @@
 <li>使用相与的操作</li>
 <li>超过分组的TTL生存时间会丢弃</li>
 </ul>
-<h3 id="三、无分类编址CIDR"><a href="#三、无分类编址CIDR" class="headerlink" title="三、无分类编址CIDR"></a>三、无分类编址CIDR</h3>]]></content>
+<h3 id="三、无分类编址CIDR"><a href="#三、无分类编址CIDR" class="headerlink" title="三、无分类编址CIDR"></a>三、无分类编址CIDR</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106154036122.png" alt="image-20210106154036122"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106154210373.png" alt="image-20210106154210373"></p>
+<h4 id="构成超网"><a href="#构成超网" class="headerlink" title="构成超网"></a>构成超网</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106154524023.png" alt="image-20210106154524023"></p>
+<h4 id="最长前缀匹配"><a href="#最长前缀匹配" class="headerlink" title="最长前缀匹配"></a>最长前缀匹配</h4><p>![image-20210106155505326](/Users/fine/Library/Application Support/typora-user-images/image-20210106155505326.png)</p>
+<h4 id="CIDR习题"><a href="#CIDR习题" class="headerlink" title="CIDR习题"></a>CIDR习题</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106155826382.png" alt="image-20210106155826382"></p>
+<ul>
+<li>IP地址：192.168.5.0/24<ul>
+<li>24，说明前3位都是网络前缀，可以看作网络号</li>
+<li>采用定长网络划分，说明将第四位又拿出来划分子网</li>
+</ul>
+</li>
+<li>CIDR不用减去两个子网数目，还是32</li>
+<li>主机个数要 -2，8-2=6，全0代表本机，全1代表广播地址，都不可指派</li>
+</ul>
+<h2 id="ARP协议（网络层协议）"><a href="#ARP协议（网络层协议）" class="headerlink" title="ARP协议（网络层协议）"></a>ARP协议（网络层协议）</h2><h3 id="发送数据的过程"><a href="#发送数据的过程" class="headerlink" title="发送数据的过程"></a>发送数据的过程</h3><ul>
+<li>主机与目的机在一个网段</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106160914080.png" alt="image-20210106160914080"></p>
+<ol>
+<li>若ARP高速缓存中，有目的机IP地址和物理地址的映射，则直接发送</li>
+<li>若没有，主机<strong>广播ARP请求分组</strong>：我是IP1，我要找IP3，我的物理地址是MAC1，IP3的地址是多少。由于全F即全1，为广播分组，所以路由器转发</li>
+<li>当目的机收到这个请求，发现要找IP3，于是<strong>单播ARP响应分组</strong>：我是IP3，我的物理地址是MAC3</li>
+</ol>
+<ul>
+<li>主机与目的机不在一个网段</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106161631930.png" alt="image-20210106161631930"></p>
+<ol>
+<li>主机广播后发现目的机不在，于是去找自己的默认路由，然后让默认路由代替自己完成上诉步骤。</li>
+<li>在路由器那，源IP地址仍然是IP1，物理地址变成了MAC路由器</li>
+</ol>
+<h3 id="ARP协议"><a href="#ARP协议" class="headerlink" title="ARP协议"></a>ARP协议</h3><p>由于在实际网络的链路传送数据帧时，最终必须使用MAC地址。</p>
+<blockquote>
+<p><strong>ARP协议</strong>：完成主机或路由器IP地址到MAC地址的映射。解决下一跳走哪的</p>
+<p>问题。</p>
+</blockquote>
+<ul>
+<li><p>ARP协议使用过程：</p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106162849486.png" alt="image-20210106162849486"></p>
+</li>
+</ul>
+<ul>
+<li><p>ARP协议4种典型情况</p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106162922838.png" alt="image-20210106162922838"></p>
+</li>
+</ul>
+<h3 id="ARP协议例题"><a href="#ARP协议例题" class="headerlink" title="ARP协议例题"></a>ARP协议例题</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106163106855.png" alt="image-20210106163106855"></p>
+<h2 id="DHCP协议（应用层）"><a href="#DHCP协议（应用层）" class="headerlink" title="DHCP协议（应用层）"></a>DHCP协议（应用层）</h2><h3 id="主机如何获得IP地址"><a href="#主机如何获得IP地址" class="headerlink" title="主机如何获得IP地址"></a>主机如何获得IP地址</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106164321947.png" alt="image-20210106164321947"></p>
+<h3 id="DHCP协议"><a href="#DHCP协议" class="headerlink" title="DHCP协议"></a>DHCP协议</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106164711570.png" alt="image-20210106164711570"></p>
+<h2 id="ICMP协议（网络层）"><a href="#ICMP协议（网络层）" class="headerlink" title="ICMP协议（网络层）"></a>ICMP协议（网络层）</h2><h3 id="TCP-IP协议栈-1"><a href="#TCP-IP协议栈-1" class="headerlink" title="TCP/IP协议栈"></a>TCP/IP协议栈</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106164820299.png" alt="image-20210106164820299"></p>
+<h3 id="网际控制报文协议ICMP"><a href="#网际控制报文协议ICMP" class="headerlink" title="网际控制报文协议ICMP"></a>网际控制报文协议ICMP</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106165013626.png" alt="image-20210106165013626"></p>
+<h3 id="ICMP差错报文"><a href="#ICMP差错报文" class="headerlink" title="ICMP差错报文"></a>ICMP差错报文</h3><h4 id="分类："><a href="#分类：" class="headerlink" title="分类："></a>分类：</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106165326147.png" alt="image-20210106165326147"></p>
+<h4 id="ICMP差错报告报文数据字段"><a href="#ICMP差错报告报文数据字段" class="headerlink" title="ICMP差错报告报文数据字段"></a>ICMP差错报告报文数据字段</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106165436242.png" alt="image-20210106165436242"></p>
+<h4 id="不应发送ICMP差错报文的情况"><a href="#不应发送ICMP差错报文的情况" class="headerlink" title="不应发送ICMP差错报文的情况"></a>不应发送ICMP差错报文的情况</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106165610803.png" alt="image-20210106165610803"></p>
+<h3 id="ICMP询问报文"><a href="#ICMP询问报文" class="headerlink" title="ICMP询问报文"></a>ICMP询问报文</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106165722695.png" alt="image-20210106165722695"></p>
+<ul>
+<li>3、4已经没有使用了</li>
+</ul>
+<h3 id="ICMP的应用"><a href="#ICMP的应用" class="headerlink" title="ICMP的应用"></a>ICMP的应用</h3><ul>
+<li><p>PING</p>
+<blockquote>
+<p>测试两个主机之间的连通性，使用了<strong>ICMP回送请求和回答报文</strong></p>
+</blockquote>
+</li>
+<li><p>Traceroute</p>
+<blockquote>
+<p>跟踪一个分组从源点到终点的路径，使用了<strong>ICMP时间超过差错报告报文</strong></p>
+</blockquote>
+</li>
+</ul>
+<h2 id="IPv6"><a href="#IPv6" class="headerlink" title="IPv6"></a>IPv6</h2><h3 id="为什么有IPv6"><a href="#为什么有IPv6" class="headerlink" title="为什么有IPv6"></a>为什么有IPv6</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106170218742.png" alt="image-20210106170218742"></p>
+<h3 id="IPv6数据报格式"><a href="#IPv6数据报格式" class="headerlink" title="IPv6数据报格式"></a>IPv6数据报格式</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106170329453.png" alt="image-20210106170329453"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106170640936.png" alt="image-20210106170640936"></p>
+<h3 id="IPv6和IPv4"><a href="#IPv6和IPv4" class="headerlink" title="IPv6和IPv4"></a>IPv6和IPv4</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106170935513.png" alt="image-20210106170935513"></p>
+<h3 id="IPv6地址表示形式"><a href="#IPv6地址表示形式" class="headerlink" title="IPv6地址表示形式"></a>IPv6地址表示形式</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106171225102.png" alt="image-20210106171225102"></p>
+<h3 id="IPv6基本地址类型"><a href="#IPv6基本地址类型" class="headerlink" title="IPv6基本地址类型"></a>IPv6基本地址类型</h3><ul>
+<li>单播<ul>
+<li>一对一通信</li>
+<li>可做源地址+目的地址</li>
+<li><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106171611145.png" alt="image-20210106171611145"></li>
+</ul>
+</li>
+<li>多播<ul>
+<li>一对多通信</li>
+<li>可做目的地址</li>
+<li><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106171627687.png" alt="image-20210106171627687"></li>
+</ul>
+</li>
+<li>任播<ul>
+<li>一对多中的一个通信</li>
+<li>可做目的地址</li>
+<li><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106171642180.png" alt="image-20210106171642180"></li>
+</ul>
+</li>
+</ul>
+<h3 id="IPv6向IPv4过渡的策略"><a href="#IPv6向IPv4过渡的策略" class="headerlink" title="IPv6向IPv4过渡的策略"></a>IPv6向IPv4过渡的策略</h3><ul>
+<li><p><strong>双栈协议</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106171920372.png" alt="image-20210106171920372"></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>隧道技术</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106172009553.png" alt="image-20210106172009553"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106172025249.png" alt="image-20210106172025249"></p>
+</li>
+</ul>
+<h3 id="IPv6脑图"><a href="#IPv6脑图" class="headerlink" title="IPv6脑图"></a>IPv6脑图</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106172139279.png" alt="image-20210106172139279"></p>
+<h2 id="IP组播"><a href="#IP组播" class="headerlink" title="IP组播"></a>IP组播</h2><h3 id="IP数据报的三种传输方式"><a href="#IP数据报的三种传输方式" class="headerlink" title="IP数据报的三种传输方式"></a>IP数据报的三种传输方式</h3><ul>
+<li><p>单播</p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106172812161.png" alt="image-20210106172812161"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106173105860.png" alt="image-20210106173105860"></p>
+</li>
+</ul>
+<ul>
+<li><p>广播</p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106172832337.png" alt="image-20210106172832337"></p>
+</li>
+</ul>
+<ul>
+<li><p>组播（多播）</p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106172910093.png" alt="image-20210106172910093"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106173241696.png"></p>
+</li>
+</ul>
+<h3 id="IP组播地址"><a href="#IP组播地址" class="headerlink" title="IP组播地址"></a>IP组播地址</h3><blockquote>
+<p>IP组播地址让源设备能够将分组发送给一组设备。属于多播组的设备将被分配<strong>一个组播组IP地址</strong>（一群共同需求主机的相同标识）</p>
+</blockquote>
+<ul>
+<li>源地址总是单播地址</li>
+<li>组播地址只能用作分组的目标地址</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106173832147.png" alt="image-20210106173832147"></p>
+<h3 id="硬件组播"><a href="#硬件组播" class="headerlink" title="硬件组播"></a>硬件组播</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106174150168.png" alt="image-20210106174150168"></p>
+<ul>
+<li>01-00-5E</li>
+</ul>
+<h3 id="因特网范围内组播"><a href="#因特网范围内组播" class="headerlink" title="因特网范围内组播"></a>因特网范围内组播</h3><h4 id="网际组管理协议IGMP协议（网络层）"><a href="#网际组管理协议IGMP协议（网络层）" class="headerlink" title="网际组管理协议IGMP协议（网络层）"></a>网际组管理协议IGMP协议（网络层）</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106174748133.png" alt="image-20210106174748133"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106174722052.png" alt="image-20210106174722052"></p>
+<p>IGMP<strong>工作的两个阶段</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106174950473.png" alt="image-20210106174950473"></p>
+<h4 id="组播路由选择协议"><a href="#组播路由选择协议" class="headerlink" title="组播路由选择协议"></a>组播路由选择协议</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106175118037.png" alt="image-20210106175118037"></p>
+<p>组播路由选择协议常使用的三种算法：</p>
+<ol>
+<li>基于链路状态的路由选择</li>
+<li>基于距离-向量的路由选择</li>
+<li>协议无关的组播（稀疏/密集）</li>
+</ol>
+<h3 id="IP组播脑图"><a href="#IP组播脑图" class="headerlink" title="IP组播脑图"></a>IP组播脑图</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106175325967.png" alt="image-20210106175325967"></p>
+<h2 id="移动IP"><a href="#移动IP" class="headerlink" title="移动IP"></a>移动IP</h2><h3 id="移动IP相关术语"><a href="#移动IP相关术语" class="headerlink" title="移动IP相关术语"></a>移动IP相关术语</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106175526732.png" alt="image-20210106175526732"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106175654950.png" alt="image-20210106175654950"></p>
+<h3 id="移动IP通信过程"><a href="#移动IP通信过程" class="headerlink" title="移动IP通信过程"></a>移动IP通信过程</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106180013997.png" alt="image-20210106180013997"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106180127519.png" alt="image-20210106180127519"></p>
+<h1 id="网络层设备"><a href="#网络层设备" class="headerlink" title="网络层设备"></a>网络层设备</h1><h2 id="路由器"><a href="#路由器" class="headerlink" title="路由器"></a>路由器</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106180403926.png" alt="image-20210106180403926"></p>
+<h3 id="输入端口对线路上收到的分组的处理"><a href="#输入端口对线路上收到的分组的处理" class="headerlink" title="输入端口对线路上收到的分组的处理"></a>输入端口对线路上收到的分组的处理</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106180519277.png" alt="image-20210106180519277"></p>
+<h3 id="输出端口将交换结构传送来的分组发送到线路"><a href="#输出端口将交换结构传送来的分组发送到线路" class="headerlink" title="输出端口将交换结构传送来的分组发送到线路"></a>输出端口将交换结构传送来的分组发送到线路</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106180622007.png"></p>
+<h2 id="三层设备的区别"><a href="#三层设备的区别" class="headerlink" title="三层设备的区别"></a>三层设备的区别</h2><ul>
+<li>路由器：<ul>
+<li>可以互联两个不同网络层协议的网段</li>
+</ul>
+</li>
+<li>网桥：<ul>
+<li>可以互联两个物理层和链路层不同的网段</li>
+</ul>
+</li>
+<li>集线器：<ul>
+<li>不能互联两个物理层不同的网段</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106180908794.png" alt="image-20210106180908794"></p>
+<h2 id="路由表和路由转发"><a href="#路由表和路由转发" class="headerlink" title="路由表和路由转发"></a>路由表和路由转发</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106181034023.png" alt="image-20210106181034023"></p>
+<h1 id="第四章总结"><a href="#第四章总结" class="headerlink" title="第四章总结"></a>第四章总结</h1><p>Xmind</p>
+]]></content>
       <categories>
         <category>计算机网络</category>
       </categories>
