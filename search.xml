@@ -19,7 +19,7 @@
 ]]></content>
   </entry>
   <entry>
-    <title>计网第一章--概述</title>
+    <title>计网第一章——概述</title>
     <url>/2021/01/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%AC%E4%B8%80%E7%AB%A0/</url>
     <content><![CDATA[<p>计算机网络的概念、组成、功能和分类…</p>
 <a id="more"></a>
@@ -268,7 +268,7 @@
       </tags>
   </entry>
   <entry>
-    <title>计网第二章--物理层</title>
+    <title>计网第二章——物理层</title>
     <url>/2021/01/02/%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%BA%8C%E7%AB%A0--%E7%89%A9%E7%90%86%E5%B1%82/</url>
     <content><![CDATA[<p>物理层基本概念、两个定理、三种通信方式、传输介质、物理层设备…</p>
 <a id="more"></a>
@@ -535,7 +535,118 @@
       </tags>
   </entry>
   <entry>
-    <title>计网第四章</title>
+    <title>计网第五章——传输层</title>
+    <url>/2021/01/05/%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%BA%94%E7%AB%A0--%E4%BC%A0%E8%BE%93%E5%B1%82/</url>
+    <content><![CDATA[<h1 id="传输层概述"><a href="#传输层概述" class="headerlink" title="传输层概述"></a>传输层概述</h1><blockquote>
+<p>只有主机才有的层次</p>
+</blockquote>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106203651985.png" alt="image-20210106203651985"></p>
+<h2 id="传输层的功能："><a href="#传输层的功能：" class="headerlink" title="传输层的功能："></a>传输层的功能：</h2><ol>
+<li>传输层提供进程和进程之间的逻辑通信<ul>
+<li>网络层提供主机之间的逻辑通信</li>
+</ul>
+</li>
+<li>复用和分用</li>
+<li>传输层对收到的报文进行差错检测</li>
+<li>传输层的两种协议</li>
+</ol>
+<h2 id="传输层的两个协议"><a href="#传输层的两个协议" class="headerlink" title="传输层的两个协议"></a>传输层的两个协议</h2><ol>
+<li>TCP<ul>
+<li>可靠，面向连接，时延大，适用于大文件</li>
+<li><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106203957423.png" alt="image-20210106203957423"></li>
+</ul>
+</li>
+<li>UDP<ul>
+<li>不可靠，无连接，时延小，适用于小文件</li>
+<li><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106204024722.png" alt="image-20210106204024722"></li>
+</ul>
+</li>
+</ol>
+<h2 id="传输层的寻址与端口"><a href="#传输层的寻址与端口" class="headerlink" title="传输层的寻址与端口"></a>传输层的寻址与端口</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106204332134.png" alt="image-20210106204332134"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106204436327.png" alt="image-20210106204436327"></p>
+<h1 id="UDP协议"><a href="#UDP协议" class="headerlink" title="UDP协议"></a>UDP协议</h1><h2 id="用户数据报协议UDP概述"><a href="#用户数据报协议UDP概述" class="headerlink" title="用户数据报协议UDP概述"></a>用户数据报协议UDP概述</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106204939137.png" alt="image-20210106204939137"></p>
+<h2 id="UDP首部格式"><a href="#UDP首部格式" class="headerlink" title="UDP首部格式"></a>UDP首部格式</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106205119624.png" alt="image-20210106205119624"></p>
+<h2 id="UDP校验"><a href="#UDP校验" class="headerlink" title="UDP校验"></a>UDP校验</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106205245867.png" alt="image-20210106205245867"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106205457833.png" alt="image-20210106205457833"></p>
+<h1 id="TCP协议"><a href="#TCP协议" class="headerlink" title="TCP协议"></a>TCP协议</h1><h2 id="TCP协议特点"><a href="#TCP协议特点" class="headerlink" title="TCP协议特点"></a>TCP协议特点</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106205855121.png" alt="image-20210106205855121"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106205913699.png" alt="image-20210106205913699"></p>
+<h2 id="TCP报文段首部格式"><a href="#TCP报文段首部格式" class="headerlink" title="TCP报文段首部格式"></a>TCP报文段首部格式</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106210243437.png" alt="image-20210106210243437"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106210625372.png" alt="image-20210106210625372"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106210857046.png" alt="image-20210106210857046"></p>
+<h2 id="TCP连接管理"><a href="#TCP连接管理" class="headerlink" title="TCP连接管理"></a>TCP连接管理</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106211038166.png" alt="image-20210106211038166"></p>
+<h3 id="TCP连接建立"><a href="#TCP连接建立" class="headerlink" title="TCP连接建立"></a>TCP连接建立</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106211413095.png" alt="image-20210106211413095"></p>
+<h3 id="SYN洪泛攻击"><a href="#SYN洪泛攻击" class="headerlink" title="SYN洪泛攻击"></a>SYN洪泛攻击</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106211503642.png" alt="image-20210106211503642"></p>
+<h3 id="TCP的连接释放"><a href="#TCP的连接释放" class="headerlink" title="TCP的连接释放"></a>TCP的连接释放</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106211533122.png" alt="image-20210106211533122"></p>
+<p>![image-20210106211807812](/Users/fine/Library/Application Support/typora-user-images/image-20210106211807812.png)</p>
+<h2 id="TCP可靠传输"><a href="#TCP可靠传输" class="headerlink" title="TCP可靠传输"></a>TCP可靠传输</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106211922707.png" alt="image-20210106211922707"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106212223019.png" alt="image-20210106212223019"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106212411228.png" alt="image-20210106212411228"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106212517585.png" alt="image-20210106212517585"></p>
+<h2 id="TCP流量控制"><a href="#TCP流量控制" class="headerlink" title="TCP流量控制"></a>TCP流量控制</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106212811492.png" alt="image-20210106212811492"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106213238466.png" alt="image-20210106213238466"></p>
+<ul>
+<li>窗口为0后，AB互相等待。B可能发了一个信息给A说可以传了，但是信息丢失了，而A又不知道丢了，就一直等。</li>
+<li>解决方法：持续计时器</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106213445309.png" alt="image-20210106213445309"></p>
+<h2 id="TCP拥塞控制"><a href="#TCP拥塞控制" class="headerlink" title="TCP拥塞控制"></a>TCP拥塞控制</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106213714802.png" alt="image-20210106213714802"></p>
+<h3 id="拥塞控制的四种算法"><a href="#拥塞控制的四种算法" class="headerlink" title="拥塞控制的四种算法"></a>拥塞控制的四种算法</h3><ul>
+<li>慢开始</li>
+<li>拥塞避免</li>
+</ul>
+<ul>
+<li>快重传</li>
+<li>快恢复</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106213918554.png" alt="image-20210106213918554"></p>
+<h3 id="慢开始和拥塞避免"><a href="#慢开始和拥塞避免" class="headerlink" title="慢开始和拥塞避免"></a>慢开始和拥塞避免</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106214101985.png" alt="image-20210106214101985"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106214348119.png" alt="image-20210106214348119"></p>
+<ul>
+<li>新的ssthresh的初始值为原来的除以2</li>
+</ul>
+<h3 id="快重传和快恢复"><a href="#快重传和快恢复" class="headerlink" title="快重传和快恢复"></a>快重传和快恢复</h3><p>![image-20210106214652844](/Users/fine/Library/Application Support/typora-user-images/image-20210106214652844.png)</p>
+<h1 id="传输层总结"><a href="#传输层总结" class="headerlink" title="传输层总结"></a>传输层总结</h1><p>xmind</p>
+]]></content>
+      <categories>
+        <category>计算机网络</category>
+      </categories>
+      <tags>
+        <tag>share</tag>
+        <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>计网第六章——应用层</title>
+    <url>/2021/01/06/%E8%AE%A1%E7%BD%91%E7%AC%AC%E5%85%AD%E7%AB%A0--%E5%BA%94%E7%94%A8%E5%B1%82/</url>
+    <content><![CDATA[<h1 id="应用层概述"><a href="#应用层概述" class="headerlink" title="应用层概述"></a>应用层概述</h1><blockquote>
+<p>应用层对应用程序的通信提供服务。</p>
+</blockquote>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106215449349.png" alt="image-20210106215449349"></p>
+<h2 id="应用层协议定义"><a href="#应用层协议定义" class="headerlink" title="应用层协议定义"></a>应用层协议定义</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106215500877.png" alt="image-20210106215500877"></p>
+<h2 id="应用层功能"><a href="#应用层功能" class="headerlink" title="应用层功能"></a>应用层功能</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106215516080.png" alt="image-20210106215516080"></p>
+<h2 id="应用层重要协议"><a href="#应用层重要协议" class="headerlink" title="应用层重要协议"></a>应用层重要协议</h2><ul>
+<li>FTP</li>
+<li>SMTP、POP3</li>
+<li>HTTP</li>
+<li>DNS</li>
+</ul>
+<h2 id="网络应用模型"><a href="#网络应用模型" class="headerlink" title="网络应用模型"></a>网络应用模型</h2><ul>
+<li>客户/ 服务器模型（Client/Server）</li>
+<li>P2P模型（Peer-to-peer）</li>
+</ul>
+<h3 id="客户-服务器模型（Client-Server）"><a href="#客户-服务器模型（Client-Server）" class="headerlink" title="客户/ 服务器模型（Client/Server）"></a>客户/ 服务器模型（Client/Server）</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106215838884.png" alt="image-20210106215838884"></p>
+<h3 id="P2P模型"><a href="#P2P模型" class="headerlink" title="P2P模型"></a>P2P模型</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106220023192.png" alt="image-20210106220023192"></p>
+<h1 id="DNS系统"><a href="#DNS系统" class="headerlink" title="DNS系统"></a>DNS系统</h1>]]></content>
+      <categories>
+        <category>计算机网络</category>
+      </categories>
+      <tags>
+        <tag>share</tag>
+        <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>计网第四章——网络层</title>
     <url>/2021/01/05/%E8%AE%A1%E7%BD%91%E7%AC%AC%E5%9B%9B%E7%AB%A0--%E7%BD%91%E7%BB%9C%E5%B1%82/</url>
     <content><![CDATA[<h1 id="网络层概述"><a href="#网络层概述" class="headerlink" title="网络层概述"></a>网络层概述</h1><blockquote>
 <p>主要任务是把<strong>分组</strong>从源端传到目的端，为分组交换网上的不同主机提供通信服务。</p>
@@ -1045,7 +1156,7 @@
       </tags>
   </entry>
   <entry>
-    <title>计网第三章--数据链路层</title>
+    <title>计网第三章——数据链路层</title>
     <url>/2021/01/02/%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%B8%89%E7%AB%A0--%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/</url>
     <content><![CDATA[<p>链路层的功能、链路层的两种信道、局域网、广域网、链路层的设备…</p>
 <a id="more"></a>
