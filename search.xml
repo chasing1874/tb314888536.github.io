@@ -1,24 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2020/12/05/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. <a id="more"></a>Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>计网第一章--概述</title>
     <url>/2021/01/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%AC%E4%B8%80%E7%AB%A0/</url>
     <content><![CDATA[<p>计算机网络的概念、组成、功能和分类…</p>
@@ -266,6 +248,24 @@
         <tag>share</tag>
         <tag>notes</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2020/12/05/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. <a id="more"></a>Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
   </entry>
   <entry>
     <title>计网第二章--物理层</title>
@@ -764,7 +764,106 @@
 <h5 id="BGP-4的四种报文"><a href="#BGP-4的四种报文" class="headerlink" title="BGP-4的四种报文"></a>BGP-4的四种报文</h5><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210105220547895.png" alt="image-20210105220547895"></p>
 <h3 id="三种路由协议比较"><a href="#三种路由协议比较" class="headerlink" title="三种路由协议比较"></a>三种路由协议比较</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210105220720993.png" alt="image-20210105220720993"></p>
 <p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210105220742246.png" alt="image-20210105220742246"></p>
-]]></content>
+<h1 id="IP数据报"><a href="#IP数据报" class="headerlink" title="IP数据报"></a>IP数据报</h1><h2 id="TCP-IP协议栈"><a href="#TCP-IP协议栈" class="headerlink" title="TCP/IP协议栈"></a>TCP/IP协议栈</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106101254940.png" alt="image-20210106101254940"></p>
+<h2 id="IP数据报格式"><a href="#IP数据报格式" class="headerlink" title="IP数据报格式"></a>IP数据报格式</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106101417077.png" alt="image-20210106101417077"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106102149226.png" alt="image-20210106102149226"></p>
+<ul>
+<li>协议字段：<ul>
+<li>TCP 6</li>
+<li>UDP 17</li>
+</ul>
+</li>
+</ul>
+<h3 id="-1"><a href="#-1" class="headerlink" title=""></a></h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106102828535.png" alt="image-20210106102828535"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106110250659.png" alt="image-20210106110250659"></p>
+<ul>
+<li>一种八片首饰</li>
+</ul>
+<h2 id="IP数据报分片"><a href="#IP数据报分片" class="headerlink" title="IP数据报分片"></a>IP数据报分片</h2><h3 id="最大传输带元MTU"><a href="#最大传输带元MTU" class="headerlink" title="最大传输带元MTU"></a>最大传输带元MTU</h3><blockquote>
+<p>链路层数据帧可封装的数据的上限。</p>
+<p>以太网的MTU是1500字节。</p>
+</blockquote>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106102501128.png" alt="image-20210106102501128"></p>
+<h3 id="IP数据报分片例题"><a href="#IP数据报分片例题" class="headerlink" title="IP数据报分片例题"></a>IP数据报分片例题</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106110058800.png" alt="image-20210106110058800"></p>
+<h2 id="IPv4地址"><a href="#IPv4地址" class="headerlink" title="IPv4地址"></a>IPv4地址</h2><h3 id="IP地址"><a href="#IP地址" class="headerlink" title="IP地址"></a>IP地址</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106110545943.png" alt="image-20210106110545943"></p>
+<h3 id="IP编制的历史阶段"><a href="#IP编制的历史阶段" class="headerlink" title="IP编制的历史阶段"></a>IP编制的历史阶段</h3><ul>
+<li>分类的IP地址</li>
+<li>子网的划分</li>
+<li>构成超网（无分类编址方法）</li>
+</ul>
+<h3 id="一、分类的IP地址"><a href="#一、分类的IP地址" class="headerlink" title="一、分类的IP地址"></a>一、分类的IP地址</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106110905405.png" alt="image-20210106110905405"></p>
+<ul>
+<li>IP地址：<ul>
+<li>全世界唯一的<strong>32位/4字节</strong>标识符，标识路由器主机的接口</li>
+<li>网络号，主机号</li>
+<li>点分十进制</li>
+</ul>
+</li>
+</ul>
+<h4 id="互联网中的IP地址"><a href="#互联网中的IP地址" class="headerlink" title="互联网中的IP地址"></a>互联网中的IP地址</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106111258905.png" alt="image-20210106111258905"></p>
+<ul>
+<li>网桥分网段不分广播域</li>
+<li>路由器分广播域</li>
+</ul>
+<h4 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106111509936.png" alt="image-20210106111509936"></p>
+<h4 id="特殊IP地址"><a href="#特殊IP地址" class="headerlink" title="特殊IP地址"></a>特殊IP地址</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106111803171.png" alt="image-20210106111803171"></p>
+<h4 id="私有IP地址"><a href="#私有IP地址" class="headerlink" title="私有IP地址"></a>私有IP地址</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106112018905.png" alt="image-20210106112018905"></p>
+<h4 id="分类IP可使用数"><a href="#分类IP可使用数" class="headerlink" title="分类IP可使用数"></a>分类IP可使用数</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106112320617.png" alt="image-20210106112320617"></p>
+<h4 id="网络地址转换NAT"><a href="#网络地址转换NAT" class="headerlink" title="网络地址转换NAT"></a>网络地址转换NAT</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106113044397.png" alt="image-20210106113044397"></p>
+<ul>
+<li>NET转换表<ul>
+<li>请求结构：{【源地址】，【目的地址】，【端口号】}</li>
+<li>​    每一行都一一对应</li>
+<li>局域内网通信对应LAN端</li>
+<li>通过路由器与外网连接对应WAN端</li>
+<li>内网主机想访问外网内容要先通过路由器NET转换，从LAN接口转到WAN去访问</li>
+</ul>
+</li>
+</ul>
+<h3 id="二、子网划分"><a href="#二、子网划分" class="headerlink" title="二、子网划分"></a>二、子网划分</h3><h4 id="分类IP地址弱点"><a href="#分类IP地址弱点" class="headerlink" title="分类IP地址弱点"></a>分类IP地址弱点</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106113654134.png" alt="image-20210106113654134"></p>
+<ol>
+<li>IP地址空间的利用率有时候很低<ul>
+<li>可能根本用不到那么多主机号，没那么多设备</li>
+</ul>
+</li>
+<li>两级IP地址不够灵活</li>
+</ol>
+<h4 id="子网划分"><a href="#子网划分" class="headerlink" title="子网划分"></a>子网划分</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106114100549.png" alt="image-20210106114100549"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106114231410.png" alt="image-20210106114231410"></p>
+<h4 id="子网掩码"><a href="#子网掩码" class="headerlink" title="子网掩码"></a>子网掩码</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106114503899.png" alt="image-20210106114503899"></p>
+<ul>
+<li>子网掩码与IP地址逐位相与，就得到子网网络地址</li>
+</ul>
+<h4 id="子网掩码习题"><a href="#子网掩码习题" class="headerlink" title="子网掩码习题"></a>子网掩码习题</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106115008878.png" alt="image-20210106115008878"></p>
+<p>72 = $2^6 + 2^3$        第7位，第4位</p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106115818109.png" alt="image-20210106115818109"></p>
+<ul>
+<li><p>子网掩码：255.255.252.0</p>
+<ul>
+<li>252即11111100，即前面的8+8+6=22位作为网络号，后面10位主机号</li>
+</ul>
+</li>
+<li><p>IP地址：180.80.77.55</p>
+<ul>
+<li>180说明是B类IP地址，所以16位作为网络号，6位子网号</li>
+<li>77对应01001101，取前6位即子网号010011</li>
+<li>主机所在网络号180.80.76.0</li>
+</ul>
+</li>
+<li><p>广播地址：</p>
+<ul>
+<li>主机号全1，（BCD都有可能，因为不知道子网号占多少位）</li>
+<li>所以要把IP地址中后10位全部变为1，导致76-&gt;79，55-&gt;255</li>
+<li>最终答案180.80.79.255</li>
+</ul>
+</li>
+</ul>
+<h4 id="使用子网时分组的转发"><a href="#使用子网时分组的转发" class="headerlink" title="使用子网时分组的转发"></a>使用子网时分组的转发</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106121227641.png" alt="image-20210106121227641"></p>
+<ul>
+<li>使用相与的操作</li>
+<li>超过分组的TTL生存时间会丢弃</li>
+</ul>
+<h3 id="三、无分类编址CIDR"><a href="#三、无分类编址CIDR" class="headerlink" title="三、无分类编址CIDR"></a>三、无分类编址CIDR</h3>]]></content>
       <categories>
         <category>计算机网络</category>
       </categories>
