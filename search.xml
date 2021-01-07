@@ -535,69 +535,6 @@
       </tags>
   </entry>
   <entry>
-    <title>计网第六章——应用层</title>
-    <url>/2021/01/06/%E8%AE%A1%E7%BD%91%E7%AC%AC%E5%85%AD%E7%AB%A0--%E5%BA%94%E7%94%A8%E5%B1%82/</url>
-    <content><![CDATA[<h1 id="应用层概述"><a href="#应用层概述" class="headerlink" title="应用层概述"></a>应用层概述</h1><blockquote>
-<p>应用层对应用程序的通信提供服务。</p>
-</blockquote>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106215449349.png" alt="image-20210106215449349"></p>
-<h2 id="应用层协议定义"><a href="#应用层协议定义" class="headerlink" title="应用层协议定义"></a>应用层协议定义</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106215500877.png" alt="image-20210106215500877"></p>
-<h2 id="应用层功能"><a href="#应用层功能" class="headerlink" title="应用层功能"></a>应用层功能</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106215516080.png" alt="image-20210106215516080"></p>
-<h2 id="应用层重要协议"><a href="#应用层重要协议" class="headerlink" title="应用层重要协议"></a>应用层重要协议</h2><ul>
-<li>FTP</li>
-<li>SMTP、POP3</li>
-<li>HTTP</li>
-<li>DNS</li>
-</ul>
-<h2 id="网络应用模型"><a href="#网络应用模型" class="headerlink" title="网络应用模型"></a>网络应用模型</h2><ul>
-<li>客户/ 服务器模型（Client/Server）</li>
-<li>P2P模型（Peer-to-peer）</li>
-</ul>
-<h3 id="客户-服务器模型（Client-Server）"><a href="#客户-服务器模型（Client-Server）" class="headerlink" title="客户/ 服务器模型（Client/Server）"></a>客户/ 服务器模型（Client/Server）</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106215838884.png" alt="image-20210106215838884"></p>
-<h3 id="P2P模型"><a href="#P2P模型" class="headerlink" title="P2P模型"></a>P2P模型</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106220023192.png" alt="image-20210106220023192"></p>
-<h1 id="DNS系统"><a href="#DNS系统" class="headerlink" title="DNS系统"></a>DNS系统</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106221047582.png" alt="image-20210106221047582"></p>
-<h2 id="域名"><a href="#域名" class="headerlink" title="域名"></a>域名</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106221339816.png" alt="image-20210106221339816"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106221354211.png" alt="image-20210106221354211"></p>
-<h2 id="域名服务器"><a href="#域名服务器" class="headerlink" title="域名服务器"></a>域名服务器</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106221905213.png" alt="image-20210106221905213"></p>
-<h2 id="域名解析过程"><a href="#域名解析过程" class="headerlink" title="域名解析过程"></a>域名解析过程</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106222009482.png" alt="image-20210106222009482"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106222316434.png" alt="image-20210106222316434"></p>
-<h1 id="文件传输协议FTP"><a href="#文件传输协议FTP" class="headerlink" title="文件传输协议FTP"></a>文件传输协议FTP</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106222436541.png" alt="image-20210106222436541"></p>
-<h2 id="FTP服务器和用户端"><a href="#FTP服务器和用户端" class="headerlink" title="FTP服务器和用户端"></a>FTP服务器和用户端</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106222522785.png" alt="image-20210106222522785"></p>
-<h2 id="FTP工作原理"><a href="#FTP工作原理" class="headerlink" title="FTP工作原理"></a>FTP工作原理</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106222743640.png" alt="image-20210106222743640"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223022264.png" alt="image-20210106223022264"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223032369.png" alt="image-20210106223032369"></p>
-<h2 id="电子邮件"><a href="#电子邮件" class="headerlink" title="电子邮件"></a>电子邮件</h2><h3 id="电子邮件的信息格式"><a href="#电子邮件的信息格式" class="headerlink" title="电子邮件的信息格式"></a>电子邮件的信息格式</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223152420.png" alt="image-20210106223152420"></p>
-<h3 id="电子邮件系统组成结构"><a href="#电子邮件系统组成结构" class="headerlink" title="电子邮件系统组成结构"></a>电子邮件系统组成结构</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223422693.png" alt="image-20210106223422693"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223452512.png" alt="image-20210106223452512"></p>
-<h2 id="简单邮件传送协议SMTP"><a href="#简单邮件传送协议SMTP" class="headerlink" title="简单邮件传送协议SMTP"></a>简单邮件传送协议SMTP</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223532031.png" alt="image-20210106223532031"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223726695.png" alt="image-20210106223726695"></p>
-<p>缺点：</p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223812569.png" alt="image-20210106223812569"></p>
-<h2 id="MIME"><a href="#MIME" class="headerlink" title="MIME"></a>MIME</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223835956.png" alt="image-20210106223835956"></p>
-<h2 id="邮局协议POP3"><a href="#邮局协议POP3" class="headerlink" title="邮局协议POP3"></a>邮局协议POP3</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223938956.png" alt="image-20210106223938956"></p>
-<h2 id="网际报文存取协议IMAP"><a href="#网际报文存取协议IMAP" class="headerlink" title="网际报文存取协议IMAP"></a>网际报文存取协议IMAP</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224018876.png" alt="image-20210106224018876"></p>
-<h2 id="基于万维网的电子邮件"><a href="#基于万维网的电子邮件" class="headerlink" title="基于万维网的电子邮件"></a>基于万维网的电子邮件</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224052288.png" alt="image-20210106224052288"></p>
-<h2 id="邮件脑图"><a href="#邮件脑图" class="headerlink" title="邮件脑图"></a>邮件脑图</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224108106.png" alt="image-20210106224108106"></p>
-<h1 id="万维网"><a href="#万维网" class="headerlink" title="万维网"></a>万维网</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224309444.png" alt="image-20210106224309444"></p>
-<h1 id="超文本传输协议HTTP"><a href="#超文本传输协议HTTP" class="headerlink" title="超文本传输协议HTTP"></a>超文本传输协议HTTP</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224439705.png" alt="image-20210106224439705"></p>
-<h2 id="HTTP协议的特点"><a href="#HTTP协议的特点" class="headerlink" title="HTTP协议的特点"></a>HTTP协议的特点</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224609080.png" alt="image-20210106224609080"></p>
-<h2 id="HTTP协议的连接方式"><a href="#HTTP协议的连接方式" class="headerlink" title="HTTP协议的连接方式"></a>HTTP协议的连接方式</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224644852.png" alt="image-20210106224644852"></p>
-<ul>
-<li>非流水线式（停等）</li>
-</ul>
-<h2 id="HTTP报文结构"><a href="#HTTP报文结构" class="headerlink" title="HTTP报文结构"></a>HTTP报文结构</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224848264.png" alt="image-20210106224848264"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106225020029.png" alt="image-20210106225020029"></p>
-<h1 id="应用层总结"><a href="#应用层总结" class="headerlink" title="应用层总结"></a>应用层总结</h1><p>xmid</p>
-]]></content>
-      <categories>
-        <category>计算机网络</category>
-      </categories>
-      <tags>
-        <tag>share</tag>
-        <tag>notes</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>计网第五章——传输层</title>
     <url>/2021/01/05/%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%BA%94%E7%AB%A0--%E4%BC%A0%E8%BE%93%E5%B1%82/</url>
     <content><![CDATA[<h1 id="传输层概述"><a href="#传输层概述" class="headerlink" title="传输层概述"></a>传输层概述</h1><blockquote>
@@ -669,6 +606,69 @@
 </ul>
 <h3 id="快重传和快恢复"><a href="#快重传和快恢复" class="headerlink" title="快重传和快恢复"></a>快重传和快恢复</h3><p>![image-20210106214652844](/Users/fine/Library/Application Support/typora-user-images/image-20210106214652844.png)</p>
 <h1 id="传输层总结"><a href="#传输层总结" class="headerlink" title="传输层总结"></a>传输层总结</h1><p>xmind</p>
+]]></content>
+      <categories>
+        <category>计算机网络</category>
+      </categories>
+      <tags>
+        <tag>share</tag>
+        <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>计网第六章——应用层</title>
+    <url>/2021/01/06/%E8%AE%A1%E7%BD%91%E7%AC%AC%E5%85%AD%E7%AB%A0--%E5%BA%94%E7%94%A8%E5%B1%82/</url>
+    <content><![CDATA[<h1 id="应用层概述"><a href="#应用层概述" class="headerlink" title="应用层概述"></a>应用层概述</h1><blockquote>
+<p>应用层对应用程序的通信提供服务。</p>
+</blockquote>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106215449349.png" alt="image-20210106215449349"></p>
+<h2 id="应用层协议定义"><a href="#应用层协议定义" class="headerlink" title="应用层协议定义"></a>应用层协议定义</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106215500877.png" alt="image-20210106215500877"></p>
+<h2 id="应用层功能"><a href="#应用层功能" class="headerlink" title="应用层功能"></a>应用层功能</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106215516080.png" alt="image-20210106215516080"></p>
+<h2 id="应用层重要协议"><a href="#应用层重要协议" class="headerlink" title="应用层重要协议"></a>应用层重要协议</h2><ul>
+<li>FTP</li>
+<li>SMTP、POP3</li>
+<li>HTTP</li>
+<li>DNS</li>
+</ul>
+<h2 id="网络应用模型"><a href="#网络应用模型" class="headerlink" title="网络应用模型"></a>网络应用模型</h2><ul>
+<li>客户/ 服务器模型（Client/Server）</li>
+<li>P2P模型（Peer-to-peer）</li>
+</ul>
+<h3 id="客户-服务器模型（Client-Server）"><a href="#客户-服务器模型（Client-Server）" class="headerlink" title="客户/ 服务器模型（Client/Server）"></a>客户/ 服务器模型（Client/Server）</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106215838884.png" alt="image-20210106215838884"></p>
+<h3 id="P2P模型"><a href="#P2P模型" class="headerlink" title="P2P模型"></a>P2P模型</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106220023192.png" alt="image-20210106220023192"></p>
+<h1 id="DNS系统"><a href="#DNS系统" class="headerlink" title="DNS系统"></a>DNS系统</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106221047582.png" alt="image-20210106221047582"></p>
+<h2 id="域名"><a href="#域名" class="headerlink" title="域名"></a>域名</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106221339816.png" alt="image-20210106221339816"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106221354211.png" alt="image-20210106221354211"></p>
+<h2 id="域名服务器"><a href="#域名服务器" class="headerlink" title="域名服务器"></a>域名服务器</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106221905213.png" alt="image-20210106221905213"></p>
+<h2 id="域名解析过程"><a href="#域名解析过程" class="headerlink" title="域名解析过程"></a>域名解析过程</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106222009482.png" alt="image-20210106222009482"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106222316434.png" alt="image-20210106222316434"></p>
+<h1 id="文件传输协议FTP"><a href="#文件传输协议FTP" class="headerlink" title="文件传输协议FTP"></a>文件传输协议FTP</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106222436541.png" alt="image-20210106222436541"></p>
+<h2 id="FTP服务器和用户端"><a href="#FTP服务器和用户端" class="headerlink" title="FTP服务器和用户端"></a>FTP服务器和用户端</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106222522785.png" alt="image-20210106222522785"></p>
+<h2 id="FTP工作原理"><a href="#FTP工作原理" class="headerlink" title="FTP工作原理"></a>FTP工作原理</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106222743640.png" alt="image-20210106222743640"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223022264.png" alt="image-20210106223022264"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223032369.png" alt="image-20210106223032369"></p>
+<h2 id="电子邮件"><a href="#电子邮件" class="headerlink" title="电子邮件"></a>电子邮件</h2><h3 id="电子邮件的信息格式"><a href="#电子邮件的信息格式" class="headerlink" title="电子邮件的信息格式"></a>电子邮件的信息格式</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223152420.png" alt="image-20210106223152420"></p>
+<h3 id="电子邮件系统组成结构"><a href="#电子邮件系统组成结构" class="headerlink" title="电子邮件系统组成结构"></a>电子邮件系统组成结构</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223422693.png" alt="image-20210106223422693"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223452512.png" alt="image-20210106223452512"></p>
+<h2 id="简单邮件传送协议SMTP"><a href="#简单邮件传送协议SMTP" class="headerlink" title="简单邮件传送协议SMTP"></a>简单邮件传送协议SMTP</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223532031.png" alt="image-20210106223532031"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223726695.png" alt="image-20210106223726695"></p>
+<p>缺点：</p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223812569.png" alt="image-20210106223812569"></p>
+<h2 id="MIME"><a href="#MIME" class="headerlink" title="MIME"></a>MIME</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223835956.png" alt="image-20210106223835956"></p>
+<h2 id="邮局协议POP3"><a href="#邮局协议POP3" class="headerlink" title="邮局协议POP3"></a>邮局协议POP3</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223938956.png" alt="image-20210106223938956"></p>
+<h2 id="网际报文存取协议IMAP"><a href="#网际报文存取协议IMAP" class="headerlink" title="网际报文存取协议IMAP"></a>网际报文存取协议IMAP</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224018876.png" alt="image-20210106224018876"></p>
+<h2 id="基于万维网的电子邮件"><a href="#基于万维网的电子邮件" class="headerlink" title="基于万维网的电子邮件"></a>基于万维网的电子邮件</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224052288.png" alt="image-20210106224052288"></p>
+<h2 id="邮件脑图"><a href="#邮件脑图" class="headerlink" title="邮件脑图"></a>邮件脑图</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224108106.png" alt="image-20210106224108106"></p>
+<h1 id="万维网"><a href="#万维网" class="headerlink" title="万维网"></a>万维网</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224309444.png" alt="image-20210106224309444"></p>
+<h1 id="超文本传输协议HTTP"><a href="#超文本传输协议HTTP" class="headerlink" title="超文本传输协议HTTP"></a>超文本传输协议HTTP</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224439705.png" alt="image-20210106224439705"></p>
+<h2 id="HTTP协议的特点"><a href="#HTTP协议的特点" class="headerlink" title="HTTP协议的特点"></a>HTTP协议的特点</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224609080.png" alt="image-20210106224609080"></p>
+<h2 id="HTTP协议的连接方式"><a href="#HTTP协议的连接方式" class="headerlink" title="HTTP协议的连接方式"></a>HTTP协议的连接方式</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224644852.png" alt="image-20210106224644852"></p>
+<ul>
+<li>非流水线式（停等）</li>
+</ul>
+<h2 id="HTTP报文结构"><a href="#HTTP报文结构" class="headerlink" title="HTTP报文结构"></a>HTTP报文结构</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224848264.png" alt="image-20210106224848264"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106225020029.png" alt="image-20210106225020029"></p>
+<h1 id="应用层总结"><a href="#应用层总结" class="headerlink" title="应用层总结"></a>应用层总结</h1><p>xmid</p>
 ]]></content>
       <categories>
         <category>计算机网络</category>
