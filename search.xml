@@ -268,6 +268,80 @@
       </tags>
   </entry>
   <entry>
+    <title>计网应用题</title>
+    <url>/2021/01/07/%E8%AE%A1%E7%BD%91%E5%BA%94%E7%94%A8%E9%A2%98/</url>
+    <content><![CDATA[<h1 id="冗余码计算"><a href="#冗余码计算" class="headerlink" title="冗余码计算"></a>冗余码计算</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171634481.png" alt="image-20210107171634481"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171648084.png" alt="image-20210107171648084"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171721030.png" alt="image-20210107171721030"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171740599.png" alt="image-20210107171740599"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171749408.png" alt="image-20210107171749408"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171800007.png" alt="image-20210107171800007"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171827008.png" alt="image-20210107171827008"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171852899.png" alt="image-20210107171852899"></p>
+<ul>
+<li>运算时候用异或，同0异1</li>
+</ul>
+<h1 id="数据报分片"><a href="#数据报分片" class="headerlink" title="数据报分片"></a>数据报分片</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171905980.png" alt="image-20210107171905980"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171924869.png" alt="image-20210107171924869"></p>
+<ul>
+<li>数据报长度 = 数据部分长度+首部长度</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107172025702.png" alt="image-20210107172025702"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107172151402.png" alt="image-20210107172151402"></p>
+<ul>
+<li>MTU为1500字节</li>
+</ul>
+<h1 id="码分多址通信"><a href="#码分多址通信" class="headerlink" title="码分多址通信"></a>码分多址通信</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107172232286.png" alt="image-20210107172232286"></p>
+<h1 id="地址聚合"><a href="#地址聚合" class="headerlink" title="地址聚合"></a>地址聚合</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107163635796.png" alt="image-20210107163635796"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107163701071.png" alt="image-20210107163701071"></p>
+<h1 id="路由表更新"><a href="#路由表更新" class="headerlink" title="路由表更新"></a>路由表更新</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107163748580.png" alt="image-20210107163748580"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107163856330.png" alt="image-20210107163856330"></p>
+<p>![image-20210107164031175](/Users/fine/Library/Application Support/typora-user-images/image-20210107164031175.png)</p>
+<p>![image-20210107164043213](/Users/fine/Library/Application Support/typora-user-images/image-20210107164043213.png)</p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107164148511.png" alt="image-20210107164148511"></p>
+<h1 id="路由表下一跳"><a href="#路由表下一跳" class="headerlink" title="路由表下一跳"></a>路由表下一跳</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107164521306.png" alt="image-20210107164521306"></p>
+<ul>
+<li>子网掩码，逐位相与</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107164836786.png" alt="image-20210107164836786"></p>
+<h1 id="网桥转发表"><a href="#网桥转发表" class="headerlink" title="网桥转发表"></a>网桥转发表</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107164853878.png" alt="image-20210107164853878"></p>
+<p> <img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107165539095.png" alt="image-20210107165539095"></p>
+<h1 id="子网划分"><a href="#子网划分" class="headerlink" title="子网划分"></a>子网划分</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107165606990.png" alt="image-20210107165606990"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107165617908.png" alt="image-20210107165617908"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107170011105.png" alt="image-20210107170011105"></p>
+<ul>
+<li>主机位要留5位，子网号3位</li>
+<li>子网掩码即每位都令为1</li>
+<li>网络地址即令主机位排列组合，除去全0全1情况</li>
+<li>广播地址即令主机位全为1</li>
+<li>主机地址范围即为主机号范围</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107170500451.png" alt="image-20210107170500451"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107170510635.png" alt="image-20210107170510635"></p>
+<ul>
+<li>各个子网划分不能重叠</li>
+</ul>
+<h1 id="拥塞控制算法"><a href="#拥塞控制算法" class="headerlink" title="拥塞控制算法"></a>拥塞控制算法</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107170603812.png" alt="image-20210107170603812"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107170612183.png" alt="image-20210107170612183"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107170913389.png" alt="image-20210107170913389"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171123968.png" alt="image-20210107171123968"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171202459.png" alt="image-20210107171202459"></p>
+<ul>
+<li>开始 慢开始，指数增加cwnd，第一轮为2，第0轮为1</li>
+<li>然后达到阈值，拥塞避免，加法增加cwnd</li>
+<li>遇到超时，直接重开，且阈值改变为 超时/2</li>
+<li>遇到重复ACK，报文段丢失，启动快重传，快恢复，从新阈值重新开始</li>
+</ul>
+]]></content>
+      <categories>
+        <category>计算机网络</category>
+      </categories>
+      <tags>
+        <tag>share</tag>
+        <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>计网第二章——物理层</title>
     <url>/2021/01/02/%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%BA%8C%E7%AB%A0--%E7%89%A9%E7%90%86%E5%B1%82/</url>
     <content><![CDATA[<p>物理层基本概念、两个定理、三种通信方式、传输介质、物理层设备…</p>
