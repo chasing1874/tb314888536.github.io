@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>Hello World</title>
-    <url>/2020/12/05/hello-world/</url>
+    <url>/posts/4a17b156/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. <a id="more"></a>Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
@@ -20,11 +20,11 @@
   </entry>
   <entry>
     <title>计网第一章——概述</title>
-    <url>/2021/01/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%AC%E4%B8%80%E7%AB%A0/</url>
+    <url>/posts/997666ff/</url>
     <content><![CDATA[<p>计算机网络的概念、组成、功能和分类…</p>
 <a id="more"></a>
 
-<h1 id="1-1-1-概念、组成、功能和分类"><a href="#1-1-1-概念、组成、功能和分类" class="headerlink" title="1.1.1 概念、组成、功能和分类"></a>1.1.1 概念、组成、功能和分类</h1><h3 id="计算机网络的概念"><a href="#计算机网络的概念" class="headerlink" title="计算机网络的概念"></a>计算机网络的概念</h3><blockquote>
+<h1 id="1-1-1-概念、组成、功能和分类"><a href="#1-1-1-概念、组成、功能和分类" class="headerlink" title="1.1.1 概念、组成、功能和分类"></a>1.1.1 概念、组成、功能和分类</h1><h2 id="计算机网络的概念"><a href="#计算机网络的概念" class="headerlink" title="计算机网络的概念"></a>计算机网络的概念</h2><blockquote>
 <p>是一个将分散的、具有独立功能的计算机系统，通过通信设备与线路连接起来，由功能完善的软件实现 资源共享和信息传递的系统</p>
 </blockquote>
 <p>计算机网络是互联的、自治的计算机集合</p>
@@ -34,7 +34,7 @@
 <li><p>自治 – 无主从关系</p>
 </li>
 </ul>
-<h3 id="计算机网络的功能"><a href="#计算机网络的功能" class="headerlink" title="计算机网络的功能"></a>计算机网络的功能</h3><ol>
+<h2 id="计算机网络的功能"><a href="#计算机网络的功能" class="headerlink" title="计算机网络的功能"></a>计算机网络的功能</h2><ol>
 <li><p>数据通信（连通性）</p>
 </li>
 <li><p>资源共享：硬件、软件、数据</p>
@@ -46,31 +46,31 @@
 <li><p>负载均衡（各计算机之间更亲密）</p>
 </li>
 </ol>
-<h3 id="计算机网络的组成"><a href="#计算机网络的组成" class="headerlink" title="计算机网络的组成"></a>计算机网络的组成</h3><h5 id="1、组成部分"><a href="#1、组成部分" class="headerlink" title="1、组成部分"></a>1、组成部分</h5><p>硬件、软件、协议</p>
-<h5 id="2、工作方式"><a href="#2、工作方式" class="headerlink" title="2、工作方式"></a>2、工作方式</h5><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101194117425.png" alt="image-20210101194117425"></p>
-<h5 id="3、功能组成"><a href="#3、功能组成" class="headerlink" title="3、功能组成"></a>3、功能组成</h5><ul>
+<h2 id="计算机网络的组成"><a href="#计算机网络的组成" class="headerlink" title="计算机网络的组成"></a>计算机网络的组成</h2><h3 id="1、组成部分"><a href="#1、组成部分" class="headerlink" title="1、组成部分"></a>1、组成部分</h3><p>硬件、软件、协议</p>
+<h3 id="2、工作方式"><a href="#2、工作方式" class="headerlink" title="2、工作方式"></a>2、工作方式</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101194117425.png" alt="image-20210101194117425"></p>
+<h3 id="3、功能组成"><a href="#3、功能组成" class="headerlink" title="3、功能组成"></a>3、功能组成</h3><ul>
 <li><p>通信子网：实现数据通信</p>
 </li>
 <li><p>资源子网：实现资源共享、数据处理</p>
 </li>
 </ul>
 <p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101195109924.png" alt="image-20210101195109924"></p>
-<h3 id="计算机网络的分类"><a href="#计算机网络的分类" class="headerlink" title="计算机网络的分类"></a>计算机网络的分类</h3><h5 id="1-按分布范围分"><a href="#1-按分布范围分" class="headerlink" title="1.按分布范围分"></a>1.按分布范围分</h5><p>广域网WAN、城域网MAN、局域网WAN、个人区域网PAN</p>
-<h5 id="2、按使用者分"><a href="#2、按使用者分" class="headerlink" title="2、按使用者分"></a>2、按使用者分</h5><p>公用网、专用网</p>
-<h5 id="3、按交换技术分"><a href="#3、按交换技术分" class="headerlink" title="3、按交换技术分"></a>3、按交换技术分</h5><p>电路交换 、报文交换、分组交换</p>
-<h5 id="4、按拓扑类型分"><a href="#4、按拓扑类型分" class="headerlink" title="4、按拓扑类型分"></a>4、按拓扑类型分</h5><p>总线型、星型、环型、网状型</p>
+<h2 id="计算机网络的分类"><a href="#计算机网络的分类" class="headerlink" title="计算机网络的分类"></a>计算机网络的分类</h2><h3 id="1-按分布范围分"><a href="#1-按分布范围分" class="headerlink" title="1.按分布范围分"></a>1.按分布范围分</h3><p>广域网WAN、城域网MAN、局域网WAN、个人区域网PAN</p>
+<h3 id="2、按使用者分"><a href="#2、按使用者分" class="headerlink" title="2、按使用者分"></a>2、按使用者分</h3><p>公用网、专用网</p>
+<h3 id="3、按交换技术分"><a href="#3、按交换技术分" class="headerlink" title="3、按交换技术分"></a>3、按交换技术分</h3><p>电路交换 、报文交换、分组交换</p>
+<h3 id="4、按拓扑类型分"><a href="#4、按拓扑类型分" class="headerlink" title="4、按拓扑类型分"></a>4、按拓扑类型分</h3><p>总线型、星型、环型、网状型</p>
 <p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101195439213.png" alt="image-20210101195439213"></p>
-<h3 id="脑图"><a href="#脑图" class="headerlink" title="脑图"></a>脑图</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101195516966.png" alt="image-20210101195516966"></p>
-<h1 id="1-1-2-标准化工作及相关组织"><a href="#1-1-2-标准化工作及相关组织" class="headerlink" title="1.1.2 标准化工作及相关组织"></a>1.1.2 标准化工作及相关组织</h1><h3 id="标准化工作"><a href="#标准化工作" class="headerlink" title="标准化工作"></a>标准化工作</h3><blockquote>
+<h2 id="脑图"><a href="#脑图" class="headerlink" title="脑图"></a>脑图</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101195516966.png" alt="image-20210101195516966"></p>
+<h1 id="1-1-2-标准化工作及相关组织"><a href="#1-1-2-标准化工作及相关组织" class="headerlink" title="1.1.2 标准化工作及相关组织"></a>1.1.2 标准化工作及相关组织</h1><h2 id="标准化工作"><a href="#标准化工作" class="headerlink" title="标准化工作"></a>标准化工作</h2><blockquote>
 <p>为实现不同厂商硬件软件的相互联通</p>
 </blockquote>
-<h5 id="标准的分类"><a href="#标准的分类" class="headerlink" title="标准的分类"></a>标准的分类</h5><ul>
+<h3 id="标准的分类"><a href="#标准的分类" class="headerlink" title="标准的分类"></a>标准的分类</h3><ul>
 <li><p>法定标准：由权威机构制定的正式的、合法的标准  OSI</p>
 </li>
 <li><p>事实标准：某些公式产品占据了主流  TCP/IP</p>
 </li>
 </ul>
-<h5 id="RFC-Request-For-Comments-–-因特网标准的形式"><a href="#RFC-Request-For-Comments-–-因特网标准的形式" class="headerlink" title="RFC(Request For Comments)  – 因特网标准的形式"></a>RFC(Request For Comments)  – 因特网标准的形式</h5><p>RFC上升为因特网正式标准：</p>
+<h3 id="RFC-Request-For-Comments-–-因特网标准的形式"><a href="#RFC-Request-For-Comments-–-因特网标准的形式" class="headerlink" title="RFC(Request For Comments)  – 因特网标准的形式"></a>RFC(Request For Comments)  – 因特网标准的形式</h3><p>RFC上升为因特网正式标准：</p>
 <ol>
 <li><p>因特网草案：非RFC</p>
 </li>
@@ -81,19 +81,19 @@
 <li><p>因特网标准</p>
 </li>
 </ol>
-<h5 id="标准化工作的相关组织"><a href="#标准化工作的相关组织" class="headerlink" title="标准化工作的相关组织"></a>标准化工作的相关组织</h5><ul>
+<h3 id="标准化工作的相关组织"><a href="#标准化工作的相关组织" class="headerlink" title="标准化工作的相关组织"></a>标准化工作的相关组织</h3><ul>
 <li>国际标准化组织ISO  （OSI参考模型、HDLC协议）</li>
 <li>国际电信联盟    （制定通信规则）</li>
 <li>国际电气电子工程师协会IEEE  （学术机构、5G、IEEE802系列标准）</li>
 <li>Internet工程任务组IETF （负责因特网相关标准的制定，RFCxxxx）</li>
 </ul>
-<h5 id="脑图-1"><a href="#脑图-1" class="headerlink" title="脑图"></a>脑图</h5><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101200543997.png" alt="image-20210101200543997"></p>
-<h1 id="1-1-3-速率相关的性能指标"><a href="#1-1-3-速率相关的性能指标" class="headerlink" title="1.1.3 速率相关的性能指标"></a>1.1.3 速率相关的性能指标</h1><h3 id="速率"><a href="#速率" class="headerlink" title="速率"></a>速率</h3><blockquote>
+<h2 id="脑图-1"><a href="#脑图-1" class="headerlink" title="脑图"></a>脑图</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101200543997.png" alt="image-20210101200543997"></p>
+<h1 id="1-1-3-速率相关的性能指标"><a href="#1-1-3-速率相关的性能指标" class="headerlink" title="1.1.3 速率相关的性能指标"></a>1.1.3 速率相关的性能指标</h1><h2 id="速率"><a href="#速率" class="headerlink" title="速率"></a>速率</h2><blockquote>
 <p>速率即==数据率==或者称==数据传输率==或==比特率==</p>
 </blockquote>
 <p>连接再计算机网络上的主机在数字信道上传输数据位数的速率</p>
 <p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101200906350.png" alt="image-20210101200906350"></p>
-<h3 id="带宽"><a href="#带宽" class="headerlink" title="带宽"></a>带宽</h3><ol>
+<h2 id="带宽"><a href="#带宽" class="headerlink" title="带宽"></a>带宽</h2><ol>
 <li><p>原本指某个信号具有的频带宽度，即最高频率与最低频率之差，单位赫兹</p>
 </li>
 <li><p>计算机网络中，带宽用来表示网络的通信线路传送数据的能力，单位时间从网络某一点到另一个点能通过的==最高数据率==。</p>
@@ -101,36 +101,36 @@
 </ol>
 <p>==网络所支持的最高速度==</p>
 <p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101201354323.png" alt="image-20210101201354323"></p>
-<h3 id="吞吐量"><a href="#吞吐量" class="headerlink" title="吞吐量"></a>吞吐量</h3><blockquote>
+<h2 id="吞吐量"><a href="#吞吐量" class="headerlink" title="吞吐量"></a>吞吐量</h2><blockquote>
 <p>==单位时间==通过==某个网络（信道、接口）==数据量。</p>
 </blockquote>
 <p>吞吐量受网络带宽或网络的额定速率的限制。</p>
 <p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101201707066.png" alt="image-20210101201707066"></p>
-<h1 id="1-1-4-时延、时延带宽积、RTT和利用率"><a href="#1-1-4-时延、时延带宽积、RTT和利用率" class="headerlink" title="1.1.4 时延、时延带宽积、RTT和利用率"></a>1.1.4 时延、时延带宽积、RTT和利用率</h1><h3 id="时延"><a href="#时延" class="headerlink" title="时延"></a>时延</h3><blockquote>
+<h1 id="1-1-4-时延、时延带宽积、RTT和利用率"><a href="#1-1-4-时延、时延带宽积、RTT和利用率" class="headerlink" title="1.1.4 时延、时延带宽积、RTT和利用率"></a>1.1.4 时延、时延带宽积、RTT和利用率</h1><h2 id="时延"><a href="#时延" class="headerlink" title="时延"></a>时延</h2><blockquote>
 <p>数据（报文、分组、比特流）从网络（或链路）的一端传送到另一端所需的时间。==延迟==或==迟延==。单位s。</p>
 </blockquote>
 <p>发送时延（传输时延）、传播时延、排队时延、处理时延</p>
 <p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101202304640.png" alt="image-20210101202304640"></p>
-<h3 id="时延带宽积"><a href="#时延带宽积" class="headerlink" title="时延带宽积"></a>时延带宽积</h3><blockquote>
+<h2 id="时延带宽积"><a href="#时延带宽积" class="headerlink" title="时延带宽积"></a>时延带宽积</h2><blockquote>
 <p>时延带宽积又称为以==比特为单位的链路长度==，某段链路有多少比特（容量）</p>
 </blockquote>
 <p>时延带宽积 = 传播时延 x 带宽</p>
 <p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101202849818.png" alt="image-20210101202849818"></p>
-<h3 id="往返时延RTT"><a href="#往返时延RTT" class="headerlink" title="往返时延RTT"></a>往返时延RTT</h3><blockquote>
+<h2 id="往返时延RTT"><a href="#往返时延RTT" class="headerlink" title="往返时延RTT"></a>往返时延RTT</h2><blockquote>
 <p>从发送方发送数据开始，到发送方收到的接收方的确认（接收方收到数据后立即发送确认）总共经历的时延。</p>
 </blockquote>
 <p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101203049556.png" alt="image-20210101203049556"></p>
-<h3 id="利用率"><a href="#利用率" class="headerlink" title="利用率"></a>利用率</h3><ol>
+<h2 id="利用率"><a href="#利用率" class="headerlink" title="利用率"></a>利用率</h2><ol>
 <li><p>信道利用率</p>
 </li>
 <li><p>网络利用率</p>
 </li>
 </ol>
 <p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101203146929.png" alt="image-20210101203146929"></p>
-<h3 id="脑图-2"><a href="#脑图-2" class="headerlink" title="脑图"></a>脑图</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101203242040.png" alt="image-20210101203242040"></p>
-<h1 id="1-2-1-分层结构、协议、接口、服务"><a href="#1-2-1-分层结构、协议、接口、服务" class="headerlink" title="1.2.1 分层结构、协议、接口、服务"></a>1.2.1 分层结构、协议、接口、服务</h1><h3 id="为什么要分层"><a href="#为什么要分层" class="headerlink" title="为什么要分层"></a>为什么要分层</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101203457764.png" alt="image-20210101203457764"></p>
-<h3 id="怎么分层"><a href="#怎么分层" class="headerlink" title="怎么分层"></a>怎么分层</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101203743153.png" alt="image-20210101203743153"></p>
-<h3 id="分层结构"><a href="#分层结构" class="headerlink" title="分层结构"></a>分层结构</h3><ol>
+<h2 id="脑图-2"><a href="#脑图-2" class="headerlink" title="脑图"></a>脑图</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101203242040.png" alt="image-20210101203242040"></p>
+<h1 id="1-2-1-分层结构、协议、接口、服务"><a href="#1-2-1-分层结构、协议、接口、服务" class="headerlink" title="1.2.1 分层结构、协议、接口、服务"></a>1.2.1 分层结构、协议、接口、服务</h1><h2 id="为什么要分层"><a href="#为什么要分层" class="headerlink" title="为什么要分层"></a>为什么要分层</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101203457764.png" alt="image-20210101203457764"></p>
+<h2 id="怎么分层"><a href="#怎么分层" class="headerlink" title="怎么分层"></a>怎么分层</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101203743153.png" alt="image-20210101203743153"></p>
+<h2 id="分层结构"><a href="#分层结构" class="headerlink" title="分层结构"></a>分层结构</h2><ol>
 <li><p>实体：n层实体。对等实体</p>
 </li>
 <li><p>协议：为==对等实体==数据交换建立的标准</p>
@@ -148,22 +148,22 @@
 </li>
 </ol>
 <p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101204321769.png" alt="image-20210101204321769"></p>
-<h3 id="概念总结"><a href="#概念总结" class="headerlink" title="概念总结"></a>概念总结</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101213808016.png" alt="image-20210101213808016"></p>
-<h3 id="脑图-3"><a href="#脑图-3" class="headerlink" title="脑图"></a>脑图</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101204558820.png" alt="image-20210101204558820"></p>
-<h1 id="1-2-2-OSI参考模型"><a href="#1-2-2-OSI参考模型" class="headerlink" title="1.2.2 OSI参考模型"></a>1.2.2 OSI参考模型</h1><h3 id="计算机网络分层结构"><a href="#计算机网络分层结构" class="headerlink" title="计算机网络分层结构"></a>计算机网络分层结构</h3><ol>
+<h2 id="概念总结"><a href="#概念总结" class="headerlink" title="概念总结"></a>概念总结</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101213808016.png" alt="image-20210101213808016"></p>
+<h2 id="脑图-3"><a href="#脑图-3" class="headerlink" title="脑图"></a>脑图</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101204558820.png" alt="image-20210101204558820"></p>
+<h1 id="1-2-2-OSI参考模型"><a href="#1-2-2-OSI参考模型" class="headerlink" title="1.2.2 OSI参考模型"></a>1.2.2 OSI参考模型</h1><h2 id="计算机网络分层结构"><a href="#计算机网络分层结构" class="headerlink" title="计算机网络分层结构"></a>计算机网络分层结构</h2><ol>
 <li>7层OSI参考模型（法定标准）</li>
 <li>4层TCP/IP参考模型（事实标准）</li>
 <li>5层的体系结构</li>
 </ol>
-<h3 id="ISO-OSI参考模型"><a href="#ISO-OSI参考模型" class="headerlink" title="ISO/OSI参考模型"></a>ISO/OSI参考模型</h3><h5 id="七层结构"><a href="#七层结构" class="headerlink" title="七层结构"></a>七层结构</h5><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101205417032.png" alt="image-20210101205417032"></p>
-<h5 id="解释通信过程"><a href="#解释通信过程" class="headerlink" title="解释通信过程"></a>解释通信过程</h5><p>A给B写信，经过邮局</p>
+<h2 id="ISO-OSI参考模型"><a href="#ISO-OSI参考模型" class="headerlink" title="ISO/OSI参考模型"></a>ISO/OSI参考模型</h2><h3 id="七层结构"><a href="#七层结构" class="headerlink" title="七层结构"></a>七层结构</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101205417032.png" alt="image-20210101205417032"></p>
+<h3 id="解释通信过程"><a href="#解释通信过程" class="headerlink" title="解释通信过程"></a>解释通信过程</h3><p>A给B写信，经过邮局</p>
 <p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101205747080.png" alt="image-20210101205747080"></p>
 <p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101205937471.png" alt="image-20210101205937471"></p>
-<h3 id="OSI各层"><a href="#OSI各层" class="headerlink" title="OSI各层"></a>OSI各层</h3><h5 id="应用层"><a href="#应用层" class="headerlink" title="应用层"></a>应用层</h5><blockquote>
+<h2 id="OSI各层"><a href="#OSI各层" class="headerlink" title="OSI各层"></a>OSI各层</h2><h3 id="应用层"><a href="#应用层" class="headerlink" title="应用层"></a>应用层</h3><blockquote>
 <p>所有能和用户交互产生网络流量的程序</p>
 </blockquote>
 <p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101210111104.png" alt="image-20210101210111104"></p>
-<h5 id="表示层"><a href="#表示层" class="headerlink" title="表示层"></a>表示层</h5><blockquote>
+<h3 id="表示层"><a href="#表示层" class="headerlink" title="表示层"></a>表示层</h3><blockquote>
 <p>用于处理在两个通信系统中交换信息的表示方式（语义和语法）</p>
 </blockquote>
 <ol>
@@ -171,14 +171,14 @@
 <li>数据加密解密（聊天记录）</li>
 <li>数据压缩和恢复（视频）</li>
 </ol>
-<h5 id="会话层"><a href="#会话层" class="headerlink" title="会话层"></a>会话层</h5><blockquote>
+<h3 id="会话层"><a href="#会话层" class="headerlink" title="会话层"></a>会话层</h3><blockquote>
 <p>向表示层实体/用户进程提供==建立连接==并在连接上==有序==地传输数据。这是会话，也是==建立同步==。</p>
 </blockquote>
 <ol>
 <li>建立、管理、终止会话</li>
 <li>使用校验点可使会话在通信失效时从==校验点/同步点==继续恢复通信，实现数据同步。（文件传输中断）</li>
 </ol>
-<h5 id="传输层"><a href="#传输层" class="headerlink" title="传输层"></a>传输层</h5><blockquote>
+<h3 id="传输层"><a href="#传输层" class="headerlink" title="传输层"></a>传输层</h3><blockquote>
 <p>负责主机中==两个进程==的通信，即==端到端==的通信。传输单位：报文段、数据报。</p>
 </blockquote>
 <ol>
@@ -192,7 +192,7 @@
 </li>
 </ol>
 <p>==可差留用==</p>
-<h5 id="网络层"><a href="#网络层" class="headerlink" title="网络层"></a>网络层</h5><blockquote>
+<h3 id="网络层"><a href="#网络层" class="headerlink" title="网络层"></a>网络层</h3><blockquote>
 <p>把==分组==从源端传到目的端，为分组交换网上的不同主机提供通信服务。传输单位：数据报（分组的集合）</p>
 </blockquote>
 <ol>
@@ -207,7 +207,7 @@
 <p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101211403455.png" alt="image-20210101211403455"></p>
 </li>
 </ol>
-<h5 id="数据链路层"><a href="#数据链路层" class="headerlink" title="数据链路层"></a>数据链路层</h5><blockquote>
+<h3 id="数据链路层"><a href="#数据链路层" class="headerlink" title="数据链路层"></a>数据链路层</h3><blockquote>
 <p>把网络层传下来的数据报==组装成帧==。传输单位：帧</p>
 </blockquote>
 <ol>
@@ -221,7 +221,7 @@
 <p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101213733835.png" alt="image-20210101213733835"></p>
 </li>
 </ol>
-<h5 id="物理层"><a href="#物理层" class="headerlink" title="物理层"></a>物理层</h5><blockquote>
+<h3 id="物理层"><a href="#物理层" class="headerlink" title="物理层"></a>物理层</h3><blockquote>
 <p>在==物理媒体==上实现比特流的==透明传输==。传输单位：比特</p>
 </blockquote>
 <p>透明传输：不管所传数据是什么样的的比特组合，都可在链路上传送</p>
@@ -237,14 +237,14 @@
 <li>比特同步</li>
 <li>比特编码</li>
 </ol>
-<h3 id="脑图-4"><a href="#脑图-4" class="headerlink" title="脑图"></a>脑图</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101212032611.png" alt="image-20210101212032611"></p>
-<h1 id="1-2-4-TCP-IP-参考模型和5层参考模型"><a href="#1-2-4-TCP-IP-参考模型和5层参考模型" class="headerlink" title="1.2.4 TCP/IP 参考模型和5层参考模型"></a>1.2.4 TCP/IP 参考模型和5层参考模型</h1><h3 id="OSI参考模型和TCP-IP参考模型"><a href="#OSI参考模型和TCP-IP参考模型" class="headerlink" title="OSI参考模型和TCP/IP参考模型"></a>OSI参考模型和TCP/IP参考模型</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101212350890.png" alt="image-20210101212350890"></p>
-<h3 id="OSI参考模型和TCP-IP参考模型异同"><a href="#OSI参考模型和TCP-IP参考模型异同" class="headerlink" title="OSI参考模型和TCP/IP参考模型异同"></a>OSI参考模型和TCP/IP参考模型异同</h3><h5 id="相同点："><a href="#相同点：" class="headerlink" title="相同点："></a>相同点：</h5><ol>
+<h2 id="脑图-4"><a href="#脑图-4" class="headerlink" title="脑图"></a>脑图</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101212032611.png" alt="image-20210101212032611"></p>
+<h1 id="1-2-4-TCP-IP-参考模型和5层参考模型"><a href="#1-2-4-TCP-IP-参考模型和5层参考模型" class="headerlink" title="1.2.4 TCP/IP 参考模型和5层参考模型"></a>1.2.4 TCP/IP 参考模型和5层参考模型</h1><h2 id="OSI参考模型和TCP-IP参考模型"><a href="#OSI参考模型和TCP-IP参考模型" class="headerlink" title="OSI参考模型和TCP/IP参考模型"></a>OSI参考模型和TCP/IP参考模型</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101212350890.png" alt="image-20210101212350890"></p>
+<h2 id="OSI参考模型和TCP-IP参考模型异同"><a href="#OSI参考模型和TCP-IP参考模型异同" class="headerlink" title="OSI参考模型和TCP/IP参考模型异同"></a>OSI参考模型和TCP/IP参考模型异同</h2><h3 id="相同点："><a href="#相同点：" class="headerlink" title="相同点："></a>相同点：</h3><ol>
 <li>都分层</li>
 <li>基于独立的协议栈的概念</li>
 <li>可以实现异构网络互联（不同厂商）</li>
 </ol>
-<h5 id="不同点："><a href="#不同点：" class="headerlink" title="不同点："></a>不同点：</h5><ol>
+<h3 id="不同点："><a href="#不同点：" class="headerlink" title="不同点："></a>不同点：</h3><ol>
 <li>OSI定义三点：<ul>
 <li>服务</li>
 <li>协议</li>
@@ -255,8 +255,8 @@
 <li>TCP/IP设计之初就考虑到异构网互联问题，将IP作为重要层次</li>
 <li><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101213648823.png" alt="image-20210101213648823"></li>
 </ol>
-<h3 id="5层参考模型"><a href="#5层参考模型" class="headerlink" title="5层参考模型"></a>5层参考模型</h3><h5 id="模型图"><a href="#模型图" class="headerlink" title="模型图"></a>模型图</h5><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101213028676.png" alt="image-20210101213028676"></p>
-<h5 id="数据封装与解封装"><a href="#数据封装与解封装" class="headerlink" title="数据封装与解封装"></a>数据封装与解封装</h5><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101213225550.png" alt="image-20210101213225550"></p>
+<h2 id="5层参考模型"><a href="#5层参考模型" class="headerlink" title="5层参考模型"></a>5层参考模型</h2><h3 id="模型图"><a href="#模型图" class="headerlink" title="模型图"></a>模型图</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101213028676.png" alt="image-20210101213028676"></p>
+<h3 id="数据封装与解封装"><a href="#数据封装与解封装" class="headerlink" title="数据封装与解封装"></a>数据封装与解封装</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101213225550.png" alt="image-20210101213225550"></p>
 <h1 id="1-3-第一章知识总结"><a href="#1-3-第一章知识总结" class="headerlink" title="1.3 第一章知识总结"></a>1.3 第一章知识总结</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101213405540.png" alt="image-20210101213405540"></p>
 ]]></content>
       <categories>
@@ -269,7 +269,7 @@
   </entry>
   <entry>
     <title>计网应用题</title>
-    <url>/2021/01/07/%E8%AE%A1%E7%BD%91%E5%BA%94%E7%94%A8%E9%A2%98/</url>
+    <url>/posts/9648dc07/</url>
     <content><![CDATA[<h1 id="冗余码计算"><a href="#冗余码计算" class="headerlink" title="冗余码计算"></a>冗余码计算</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171634481.png" alt="image-20210107171634481"></p>
 <p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171648084.png" alt="image-20210107171648084"></p>
 <p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171721030.png" alt="image-20210107171721030"></p>
@@ -343,11 +343,11 @@
   </entry>
   <entry>
     <title>计网第二章——物理层</title>
-    <url>/2021/01/02/%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%BA%8C%E7%AB%A0--%E7%89%A9%E7%90%86%E5%B1%82/</url>
+    <url>/posts/2d4e58b9/</url>
     <content><![CDATA[<p>物理层基本概念、两个定理、三种通信方式、传输介质、物理层设备…</p>
 <a id="more"></a>
 
-<h1 id="物理层基本概念"><a href="#物理层基本概念" class="headerlink" title="物理层基本概念"></a>物理层基本概念</h1><h3 id="物理层基本概念-1"><a href="#物理层基本概念-1" class="headerlink" title="物理层基本概念"></a>物理层基本概念</h3><blockquote>
+<h1 id="物理层基本概念"><a href="#物理层基本概念" class="headerlink" title="物理层基本概念"></a>物理层基本概念</h1><h2 id="物理层基本概念-1"><a href="#物理层基本概念-1" class="headerlink" title="物理层基本概念"></a>物理层基本概念</h2><blockquote>
 <p>物理层解决如何在连接各种计算机的传输媒体上<strong>传输数据比特流</strong>，而不是指具体的传输媒体。</p>
 </blockquote>
 <p>主要任务：确定与传输媒体接口有关的一些特性 —— 定义标准</p>
@@ -357,8 +357,8 @@
 <li><strong>功能特性</strong>：指明某条线上出现的某一电平表示何种意义，接口部件信号线的用途</li>
 <li><strong>规程特性</strong>：（过程特性）定义各条物理线路的工作规程和时序关系</li>
 </ol>
-<h1 id="数据通信基础知识"><a href="#数据通信基础知识" class="headerlink" title="数据通信基础知识"></a>数据通信基础知识</h1><h3 id="典型的数据通信模型"><a href="#典型的数据通信模型" class="headerlink" title="典型的数据通信模型"></a>典型的数据通信模型</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102162601996.png" alt="image-20210102162601996"></p>
-<h3 id="数据通信相关术语"><a href="#数据通信相关术语" class="headerlink" title="数据通信相关术语"></a>数据通信相关术语</h3><blockquote>
+<h1 id="数据通信基础知识"><a href="#数据通信基础知识" class="headerlink" title="数据通信基础知识"></a>数据通信基础知识</h1><h2 id="典型的数据通信模型"><a href="#典型的数据通信模型" class="headerlink" title="典型的数据通信模型"></a>典型的数据通信模型</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102162601996.png" alt="image-20210102162601996"></p>
+<h2 id="数据通信相关术语"><a href="#数据通信相关术语" class="headerlink" title="数据通信相关术语"></a>数据通信相关术语</h2><blockquote>
 <p>通信的目的是传送消息</p>
 </blockquote>
 <ul>
@@ -379,12 +379,12 @@
 <p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102163150670.png" alt="image-20210102163150670"></p>
 </li>
 </ul>
-<h3 id="三种通信方式"><a href="#三种通信方式" class="headerlink" title="三种通信方式"></a>三种通信方式</h3><ol>
+<h2 id="三种通信方式"><a href="#三种通信方式" class="headerlink" title="三种通信方式"></a>三种通信方式</h2><ol>
 <li><strong>单工通信</strong>：只有一个方向的通信而没有反方向的交互，仅需要一条信道</li>
 <li><strong>半双工通信</strong>：通信的双方都可以发送或接受信息，但是任何一方不能同时发送或接受，需要两条信道</li>
 <li><strong>全双工通信</strong>：通信双方可以<em>同时</em>发送和接受，需要两条信道</li>
 </ol>
-<h3 id="两种数据传输方式"><a href="#两种数据传输方式" class="headerlink" title="两种数据传输方式"></a>两种数据传输方式</h3><ol>
+<h2 id="两种数据传输方式"><a href="#两种数据传输方式" class="headerlink" title="两种数据传输方式"></a>两种数据传输方式</h2><ol>
 <li><h5 id="串行传输"><a href="#串行传输" class="headerlink" title="串行传输"></a>串行传输</h5><p>速度慢，费用低，适合远距离</p>
 <p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102163725926.png" alt="image-20210102163725926"></p>
 </li>
@@ -393,24 +393,24 @@
 </li>
 </ol>
 <p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102163819903.png" alt="image-20210102163819903"></p>
-<h1 id="码元、波特、速率、带宽"><a href="#码元、波特、速率、带宽" class="headerlink" title="码元、波特、速率、带宽"></a>码元、波特、速率、带宽</h1><h3 id="码元"><a href="#码元" class="headerlink" title="码元"></a>码元</h3><blockquote>
+<h1 id="码元、波特、速率、带宽"><a href="#码元、波特、速率、带宽" class="headerlink" title="码元、波特、速率、带宽"></a>码元、波特、速率、带宽</h1><h2 id="码元"><a href="#码元" class="headerlink" title="码元"></a>码元</h2><blockquote>
 <p>指用一个<strong>固定时长</strong>的信号波形（数字脉冲），代表不同离散值的基本波形，是数值通信中数字信号的计量单位，这个时长内的信号成为<strong>k进制码元</strong>，该时长成为码元宽度。当码元的离散状态有m个时（m&gt;2），码元称为m进制码元</p>
 </blockquote>
 <p>1码元可以携带多个比特的信号量。例如，在使用二进制编码时，只有两个不同的码元，一种代表0状态，另一种代表1状态，一个比特。</p>
 <p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102164446098.png" alt="image-20210102164446098"></p>
-<h3 id="速率、波特、带宽"><a href="#速率、波特、带宽" class="headerlink" title="速率、波特、带宽"></a>速率、波特、带宽</h3><blockquote>
+<h2 id="速率、波特、带宽"><a href="#速率、波特、带宽" class="headerlink" title="速率、波特、带宽"></a>速率、波特、带宽</h2><blockquote>
 <p>速率也叫数据率，是指数据的<strong>传输速率</strong>，表示单位时间内传输的数据量。可以用<strong>码元传输速率</strong>和<strong>信息传输速率</strong>表示。</p>
 </blockquote>
 <ol>
-<li><h5 id="码元传输速率："><a href="#码元传输速率：" class="headerlink" title="码元传输速率："></a>码元传输速率：</h5><p>单位波特</p>
+<li><h3 id="码元传输速率："><a href="#码元传输速率：" class="headerlink" title="码元传输速率："></a>码元传输速率：</h3><p>单位波特</p>
 <p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102164808122.png" alt="image-20210102164808122"></p>
 </li>
-<li><h5 id="信息传输速率："><a href="#信息传输速率：" class="headerlink" title="信息传输速率："></a>信息传输速率：</h5><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102173741936.png" alt="image-20210102173741936"></p>
+<li><h3 id="信息传输速率："><a href="#信息传输速率：" class="headerlink" title="信息传输速率："></a>信息传输速率：</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102173741936.png" alt="image-20210102173741936"></p>
 </li>
 </ol>
-<h3 id="练习题"><a href="#练习题" class="headerlink" title="练习题"></a>练习题</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102165458617.png" alt="image-20210102165458617"></p>
+<h2 id="练习题"><a href="#练习题" class="headerlink" title="练习题"></a>练习题</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102165458617.png" alt="image-20210102165458617"></p>
 <p>十六进制能表示多少状态，用以2为底的对数</p>
-<h1 id="奈氏准则和香农定理"><a href="#奈氏准则和香农定理" class="headerlink" title="奈氏准则和香农定理"></a>奈氏准则和香农定理</h1><h3 id="失真"><a href="#失真" class="headerlink" title="失真"></a>失真</h3><h5 id="失真类别"><a href="#失真类别" class="headerlink" title="失真类别"></a>失真类别</h5><ul>
+<h1 id="奈氏准则和香农定理"><a href="#奈氏准则和香农定理" class="headerlink" title="奈氏准则和香农定理"></a>奈氏准则和香农定理</h1><h2 id="失真"><a href="#失真" class="headerlink" title="失真"></a>失真</h2><h3 id="失真类别"><a href="#失真类别" class="headerlink" title="失真类别"></a>失真类别</h3><ul>
 <li><p>有失真但可识别</p>
 <p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102165859791.png" alt="image-20210102165859791"></p>
 </li>
@@ -418,20 +418,20 @@
 <p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102165942300.png" alt="image-20210102165942300"></p>
 </li>
 </ul>
-<h5 id="影响失真程度的因素"><a href="#影响失真程度的因素" class="headerlink" title="影响失真程度的因素"></a>影响失真程度的因素</h5><ol>
+<h3 id="影响失真程度的因素"><a href="#影响失真程度的因素" class="headerlink" title="影响失真程度的因素"></a>影响失真程度的因素</h3><ol>
 <li>码元传输速率</li>
 <li>信号传输距离</li>
 <li>噪声干扰</li>
 <li><em>传输媒体质量</em></li>
 </ol>
-<h5 id="失真的一种现象-——-码间串扰"><a href="#失真的一种现象-——-码间串扰" class="headerlink" title="失真的一种现象 —— 码间串扰"></a>失真的一种现象 —— 码间串扰</h5><blockquote>
+<h3 id="失真的一种现象-——-码间串扰"><a href="#失真的一种现象-——-码间串扰" class="headerlink" title="失真的一种现象 —— 码间串扰"></a>失真的一种现象 —— 码间串扰</h3><blockquote>
 <p><strong>信道带宽</strong>是信道能通过的最高频率和最低频率之差</p>
 </blockquote>
 <blockquote>
 <p>码间串扰：接收端收到的信号波形失去了码元之间清晰界限的现象</p>
 </blockquote>
 <p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102170535032.png" alt="image-20210102170535032"></p>
-<h3 id="奈氏准则（奈奎斯特定理）"><a href="#奈氏准则（奈奎斯特定理）" class="headerlink" title="奈氏准则（奈奎斯特定理）"></a>奈氏准则（奈奎斯特定理）</h3><blockquote>
+<h2 id="奈氏准则（奈奎斯特定理）"><a href="#奈氏准则（奈奎斯特定理）" class="headerlink" title="奈氏准则（奈奎斯特定理）"></a>奈氏准则（奈奎斯特定理）</h2><blockquote>
 <p>在理想低通（无噪声、带宽受限），为了避免码间串扰，极限码元传输速率为2w Baud，w是信道带宽，单位Hz</p>
 </blockquote>
 <p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102170908532.png" alt="image-20210102170908532"></p>
@@ -441,26 +441,26 @@
 <li>奈氏准则给出了码元传输速率的限制，并没有对信息传输速率给出限制</li>
 <li>要提卡数据的传输速率，就必须设法使每个码元能携带更多个比特的信息量，这就需要采用多元制的调制方法。</li>
 </ol>
-<h5 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h5><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102171508491.png" alt="image-20210102171508491"></p>
-<h3 id="香农定理"><a href="#香农定理" class="headerlink" title="香农定理"></a>香农定理</h3><blockquote>
+<h3 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102171508491.png" alt="image-20210102171508491"></p>
+<h2 id="香农定理"><a href="#香农定理" class="headerlink" title="香农定理"></a>香农定理</h2><blockquote>
 <p>香农定理：在带宽受限且有噪声的信道中，为了不产生误差，信息的数据传输速率有上限值。</p>
 </blockquote>
 <blockquote>
 <p><strong>噪声</strong>存在于所有的电子设备和通信信道中。由于噪声随机产生，有时瞬时值很大，因此噪声会使接收端对码元的判决产生错误。但是噪声影响是相对的，信号较强，则影响较小。因此，<strong>信噪比</strong>很重要。</p>
 </blockquote>
-<h5 id="信噪比"><a href="#信噪比" class="headerlink" title="信噪比"></a>信噪比</h5><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102171951739.png" alt="image-20210102171951739"></p>
-<h5 id="香农定理-1"><a href="#香农定理-1" class="headerlink" title="香农定理"></a>香农定理</h5><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102172036161.png" alt="image-20210102172036161"></p>
-<h5 id="结论-1"><a href="#结论-1" class="headerlink" title="结论"></a>结论</h5><ol>
+<h3 id="信噪比"><a href="#信噪比" class="headerlink" title="信噪比"></a>信噪比</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102171951739.png" alt="image-20210102171951739"></p>
+<h3 id="香农定理-1"><a href="#香农定理-1" class="headerlink" title="香农定理"></a>香农定理</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102172036161.png" alt="image-20210102172036161"></p>
+<h3 id="结论-1"><a href="#结论-1" class="headerlink" title="结论"></a>结论</h3><ol>
 <li>信道的<strong>带宽</strong>或<strong>信噪比</strong>越大，则信息的极限传输速率就越高</li>
 <li>对一定的传输带宽和一定的信噪比，信息传输速率的上限就确定了</li>
 <li>只要信息的传输速率低于信道的极限传输速率，就一定能找到某种方法来实现<strong>无差错的传输</strong></li>
 <li>香农定理得出的是极限信息传输速率，实际信道能达到的传输速率要小很多</li>
 <li>若W和信噪比没有上限（不可能），信道极限速率也无上限</li>
 </ol>
-<h5 id="例题-1"><a href="#例题-1" class="headerlink" title="例题"></a>例题</h5><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102173658842.png" alt="image-20210102173658842"></p>
-<h3 id="『Nice』和『香浓』"><a href="#『Nice』和『香浓』" class="headerlink" title="『Nice』和『香浓』"></a>『Nice』和『香浓』</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102172903591.png" alt="image-20210102172903591"></p>
+<h3 id="例题-1"><a href="#例题-1" class="headerlink" title="例题"></a>例题</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102173658842.png" alt="image-20210102173658842"></p>
+<h2 id="『Nice』和『香浓』"><a href="#『Nice』和『香浓』" class="headerlink" title="『Nice』和『香浓』"></a>『Nice』和『香浓』</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102172903591.png" alt="image-20210102172903591"></p>
 <h5 id="例题-2"><a href="#例题-2" class="headerlink" title="例题"></a>例题</h5><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102172957796.png" alt="image-20210102172957796"></p>
-<h1 id="编码和调制"><a href="#编码和调制" class="headerlink" title="编码和调制"></a>编码和调制</h1><h3 id="基带信号与宽带信号"><a href="#基带信号与宽带信号" class="headerlink" title="基带信号与宽带信号"></a>基带信号与宽带信号</h3><ul>
+<h1 id="编码和调制"><a href="#编码和调制" class="headerlink" title="编码和调制"></a>编码和调制</h1><h2 id="基带信号与宽带信号"><a href="#基带信号与宽带信号" class="headerlink" title="基带信号与宽带信号"></a>基带信号与宽带信号</h2><ul>
 <li><p>基带信号：</p>
 <p>ex：数字信号</p>
 <p>传输距离较近时使用，近距离衰减小，信号内容不易发生改变</p>
@@ -472,7 +472,7 @@
 <p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102173633932.png" alt="image-20210102173633932"></p>
 </li>
 </ul>
-<h3 id="编码与调制"><a href="#编码与调制" class="headerlink" title="编码与调制"></a>编码与调制</h3><ul>
+<h2 id="编码与调制"><a href="#编码与调制" class="headerlink" title="编码与调制"></a>编码与调制</h2><ul>
 <li><p>编码：</p>
 <p>数据 –&gt; 数字信号 </p>
 </li>
@@ -481,7 +481,7 @@
 </li>
 </ul>
 <p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102174052211.png" alt="image-20210102174052211"></p>
-<h3 id="数字数据编码为数字信号"><a href="#数字数据编码为数字信号" class="headerlink" title="数字数据编码为数字信号"></a>数字数据编码为数字信号</h3><ol>
+<h2 id="数字数据编码为数字信号"><a href="#数字数据编码为数字信号" class="headerlink" title="数字数据编码为数字信号"></a>数字数据编码为数字信号</h2><ol>
 <li><p><strong>非归零编码『NRZ』</strong></p>
 <p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102174812087.png" alt="image-20210102174812087"></p>
 </li>
@@ -502,19 +502,19 @@
 <li><p>4B/5B编码</p>
 </li>
 </ol>
-<h5 id="示意图"><a href="#示意图" class="headerlink" title="示意图"></a>示意图</h5><p>   <img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102175940142.png" alt="image-20210102175940142"></p>
+<h3 id="示意图"><a href="#示意图" class="headerlink" title="示意图"></a>示意图</h3><p>   <img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102175940142.png" alt="image-20210102175940142"></p>
 <p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102175802275.png" alt="image-20210102175802275"></p>
-<h3 id="数字数据调制为模拟信号"><a href="#数字数据调制为模拟信号" class="headerlink" title="数字数据调制为模拟信号"></a>数字数据调制为模拟信号</h3><ul>
+<h2 id="数字数据调制为模拟信号"><a href="#数字数据调制为模拟信号" class="headerlink" title="数字数据调制为模拟信号"></a>数字数据调制为模拟信号</h2><ul>
 <li>调幅（2ASK）</li>
 <li>调频（2FSK）</li>
 <li>调相（2PSK）</li>
 <li>调幅+调相（QAM）</li>
 </ul>
 <p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102180441242.png" alt="image-20210102180441242"></p>
-<h3 id="模拟数据编码为数字信号"><a href="#模拟数据编码为数字信号" class="headerlink" title="模拟数据编码为数字信号"></a>模拟数据编码为数字信号</h3><blockquote>
+<h2 id="模拟数据编码为数字信号"><a href="#模拟数据编码为数字信号" class="headerlink" title="模拟数据编码为数字信号"></a>模拟数据编码为数字信号</h2><blockquote>
 <p>计算机内部处理的是二进制数据，处理的都是<strong>数字音频</strong>，所以需要将模拟音频通过采样、量化转换成有限个数字表示的离散序列，实现音频数字化。</p>
 </blockquote>
-<h5 id="PCM："><a href="#PCM：" class="headerlink" title="PCM："></a>PCM：</h5><ol>
+<h3 id="PCM："><a href="#PCM：" class="headerlink" title="PCM："></a>PCM：</h3><ol>
 <li><p>抽样</p>
 <p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102194024113.png" alt="image-20210102194024113"></p>
 </li>
@@ -525,12 +525,12 @@
 <p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102200228856.png" alt="image-20210102200228856"></p>
 </li>
 </ol>
-<h3 id="模拟信号调制为模拟信号"><a href="#模拟信号调制为模拟信号" class="headerlink" title="模拟信号调制为模拟信号"></a>模拟信号调制为模拟信号</h3><blockquote>
+<h2 id="模拟信号调制为模拟信号"><a href="#模拟信号调制为模拟信号" class="headerlink" title="模拟信号调制为模拟信号"></a>模拟信号调制为模拟信号</h2><blockquote>
 <p>为了实现传输的有效性，可能需要较高的频率。这种调试方式还可以使用频分复用技术，充分利用带宽资源。在电话机和本地交换机所传输的信号是采用模拟信号传输模拟数据的方式；模拟的声音数据是加载到模拟的载波信号中传输的。</p>
 </blockquote>
 <p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102200640257.png" alt="image-20210102200640257"></p>
-<h3 id="脑图"><a href="#脑图" class="headerlink" title="脑图"></a>脑图</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102200702495.png" alt="image-20210102200702495"></p>
-<h1 id="物理层传输介质"><a href="#物理层传输介质" class="headerlink" title="物理层传输介质"></a>物理层传输介质</h1><h3 id="传输介质及分类"><a href="#传输介质及分类" class="headerlink" title="传输介质及分类"></a>传输介质及分类</h3><blockquote>
+<h2 id="脑图"><a href="#脑图" class="headerlink" title="脑图"></a>脑图</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102200702495.png" alt="image-20210102200702495"></p>
+<h1 id="物理层传输介质"><a href="#物理层传输介质" class="headerlink" title="物理层传输介质"></a>物理层传输介质</h1><h2 id="传输介质及分类"><a href="#传输介质及分类" class="headerlink" title="传输介质及分类"></a>传输介质及分类</h2><blockquote>
 <p>传输介质也称传输媒体、传输媒介，它就是数据传输系统中在发送设备和接受设备之间的物理通路。 </p>
 <p>传输媒介并不是物理层。</p>
 </blockquote>
@@ -542,7 +542,7 @@
 </li>
 </ul>
 <ol>
-<li><h5 id="双绞线"><a href="#双绞线" class="headerlink" title="双绞线"></a>双绞线</h5><blockquote>
+<li><h3 id="双绞线"><a href="#双绞线" class="headerlink" title="双绞线"></a>双绞线</h3><blockquote>
 <p>古老又最常用的传输介质，由两根采用一定规则并排绞合、相互绝缘的铜导线组成。</p>
 <p>绞合可以减少对相邻导线的电磁干扰。</p>
 </blockquote>
@@ -551,7 +551,7 @@
 <p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102201536574.png"></p>
 <p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102201609625.png" alt="image-20210102201609625"></p>
 <ol start="2">
-<li><h5 id="同轴电缆"><a href="#同轴电缆" class="headerlink" title="同轴电缆"></a>同轴电缆</h5><ul>
+<li><h3 id="同轴电缆"><a href="#同轴电缆" class="headerlink" title="同轴电缆"></a>同轴电缆</h3><ul>
 <li>基带同轴电缆</li>
 <li>宽带同轴电缆</li>
 </ul>
@@ -559,7 +559,7 @@
 </ol>
 <p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102201809384.png" alt="image-20210102201809384"></p>
 <ol start="3">
-<li><h5 id="光纤"><a href="#光纤" class="headerlink" title="光纤"></a>光纤</h5><blockquote>
+<li><h3 id="光纤"><a href="#光纤" class="headerlink" title="光纤"></a>光纤</h3><blockquote>
 <p>传递光脉冲来进行通信。</p>
 <p>光纤通信系统的带宽远远大于目前其他各种传输媒体的带宽。</p>
 </blockquote>
@@ -578,26 +578,26 @@
 <li>不易被窃听或截取数据</li>
 <li>体积小重量轻</li>
 </ul>
-<h3 id="非导向性传输介质"><a href="#非导向性传输介质" class="headerlink" title="非导向性传输介质"></a>非导向性传输介质</h3><ol>
-<li><h5 id="无线电波"><a href="#无线电波" class="headerlink" title="无线电波"></a>无线电波</h5><ul>
+<h2 id="非导向性传输介质"><a href="#非导向性传输介质" class="headerlink" title="非导向性传输介质"></a>非导向性传输介质</h2><ol>
+<li><h3 id="无线电波"><a href="#无线电波" class="headerlink" title="无线电波"></a>无线电波</h3><ul>
 <li>信号向所有方向传播</li>
 <li>穿透能力较强，可传远距离，广泛用于通信</li>
 </ul>
 </li>
-<li><h5 id="微波"><a href="#微波" class="headerlink" title="微波"></a>微波</h5><ul>
+<li><h3 id="微波"><a href="#微波" class="headerlink" title="微波"></a>微波</h3><ul>
 <li>信号固定方向传播</li>
 <li><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102202740831.png" alt="image-20210102202740831"></li>
 </ul>
 </li>
-<li><h5 id="红外线、激光"><a href="#红外线、激光" class="headerlink" title="红外线、激光"></a>红外线、激光</h5><ul>
+<li><h3 id="红外线、激光"><a href="#红外线、激光" class="headerlink" title="红外线、激光"></a>红外线、激光</h3><ul>
 <li>信号固定方向传播</li>
 <li>要把传输信号分别转换为各自的信号格式，即红外光信号和激光信号，再传播</li>
 </ul>
 </li>
 </ol>
-<h3 id="脑图-1"><a href="#脑图-1" class="headerlink" title="脑图"></a>脑图</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102203108707.png" alt="image-20210102203108707"></p>
-<h1 id="物理层设备"><a href="#物理层设备" class="headerlink" title="物理层设备"></a>物理层设备</h1><h3 id="中继器"><a href="#中继器" class="headerlink" title="中继器"></a>中继器</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102203530197.png" alt="image-20210102203530197"></p>
-<h3 id="集线器（多口中继器）"><a href="#集线器（多口中继器）" class="headerlink" title="集线器（多口中继器）"></a>集线器（多口中继器）</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102205012908.png" alt="image-20210102205012908"></p>
+<h2 id="脑图-1"><a href="#脑图-1" class="headerlink" title="脑图"></a>脑图</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102203108707.png" alt="image-20210102203108707"></p>
+<h1 id="物理层设备"><a href="#物理层设备" class="headerlink" title="物理层设备"></a>物理层设备</h1><h2 id="中继器"><a href="#中继器" class="headerlink" title="中继器"></a>中继器</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102203530197.png" alt="image-20210102203530197"></p>
+<h2 id="集线器（多口中继器）"><a href="#集线器（多口中继器）" class="headerlink" title="集线器（多口中继器）"></a>集线器（多口中继器）</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102205012908.png" alt="image-20210102205012908"></p>
 <h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102204904877.png"></p>
 ]]></content>
       <categories>
@@ -610,7 +610,7 @@
   </entry>
   <entry>
     <title>计网第五章——传输层</title>
-    <url>/2021/01/05/%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%BA%94%E7%AB%A0--%E4%BC%A0%E8%BE%93%E5%B1%82/</url>
+    <url>/posts/bef5de24/</url>
     <content><![CDATA[<h1 id="传输层概述"><a href="#传输层概述" class="headerlink" title="传输层概述"></a>传输层概述</h1><blockquote>
 <p>只有主机才有的层次</p>
 </blockquote>
@@ -691,7 +691,7 @@
   </entry>
   <entry>
     <title>计网第六章——应用层</title>
-    <url>/2021/01/06/%E8%AE%A1%E7%BD%91%E7%AC%AC%E5%85%AD%E7%AB%A0--%E5%BA%94%E7%94%A8%E5%B1%82/</url>
+    <url>/posts/9c3a6023/</url>
     <content><![CDATA[<h1 id="应用层概述"><a href="#应用层概述" class="headerlink" title="应用层概述"></a>应用层概述</h1><blockquote>
 <p>应用层对应用程序的通信提供服务。</p>
 </blockquote>
@@ -754,7 +754,7 @@
   </entry>
   <entry>
     <title>计网第四章——网络层</title>
-    <url>/2021/01/05/%E8%AE%A1%E7%BD%91%E7%AC%AC%E5%9B%9B%E7%AB%A0--%E7%BD%91%E7%BB%9C%E5%B1%82/</url>
+    <url>/posts/87cd1f77/</url>
     <content><![CDATA[<h1 id="网络层概述"><a href="#网络层概述" class="headerlink" title="网络层概述"></a>网络层概述</h1><blockquote>
 <p>主要任务是把<strong>分组</strong>从源端传到目的端，为分组交换网上的不同主机提供通信服务。</p>
 <p>网络层传输单位：<strong>数据报</strong></p>
@@ -1264,7 +1264,7 @@
   </entry>
   <entry>
     <title>计网第三章——数据链路层</title>
-    <url>/2021/01/02/%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%B8%89%E7%AB%A0--%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/</url>
+    <url>/posts/ce382230/</url>
     <content><![CDATA[<p>链路层的功能、链路层的两种信道、局域网、广域网、链路层的设备…</p>
 <a id="more"></a>
 
