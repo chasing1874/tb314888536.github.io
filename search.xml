@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hello World</title>
+    <url>/posts/4a17b156/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. <a id="more"></a>Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>数据库第一章——数据库系统概论</title>
     <url>/posts/4efd1fa7/</url>
     <content><![CDATA[<h1 id="数据库基本概念"><a href="#数据库基本概念" class="headerlink" title="数据库基本概念"></a>数据库基本概念</h1><ul>
@@ -284,24 +302,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/posts/4a17b156/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. <a id="more"></a>Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>数据库第二章——数据库系统结构</title>
     <url>/posts/95a84140/</url>
     <content><![CDATA[<h1 id="数据库系统结构概述"><a href="#数据库系统结构概述" class="headerlink" title="数据库系统结构概述"></a>数据库系统结构概述</h1><ul>
@@ -473,73 +473,314 @@
       </tags>
   </entry>
   <entry>
-    <title>计网应用题</title>
-    <url>/posts/9648dc07/</url>
-    <content><![CDATA[<h1 id="冗余码计算"><a href="#冗余码计算" class="headerlink" title="冗余码计算"></a>冗余码计算</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171634481.png" alt="image-20210107171634481"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171648084.png" alt="image-20210107171648084"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171721030.png" alt="image-20210107171721030"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171740599.png" alt="image-20210107171740599"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171749408.png" alt="image-20210107171749408"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171800007.png" alt="image-20210107171800007"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171827008.png" alt="image-20210107171827008"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171852899.png" alt="image-20210107171852899"></p>
+    <title>数据库第四章——关系数据库标准语言SQL（1）</title>
+    <url>/posts/a605aa1a/</url>
+    <content><![CDATA[<h1 id="SQL概述"><a href="#SQL概述" class="headerlink" title="SQL概述"></a>SQL概述</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109154021659.png" alt="image-20210109154021659"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109154033612.png" alt="image-20210109154033612"></p>
+<h3 id="SQL语言的提出和发展"><a href="#SQL语言的提出和发展" class="headerlink" title="SQL语言的提出和发展"></a>SQL语言的提出和发展</h3><ul>
+<li><p>1974年，由Boyce和Chamber提出</p>
+</li>
+<li><p>1975-1979年，在System R上首次实现，由IBM的San Jose研究室研制，称为SEQUEL(Structured English QUEry Language)</p>
+</li>
+<li><p>1986年推出了SQL标准：SQL-86，“数据库语言SQL: Structured Query Language”</p>
+</li>
+<li><p>1989年ANSI / ISO推出了SQL标准: SQL-89, 数据库语言SQL的标准集合</p>
+</li>
+<li><p>1992年进一步推出了SQL标准：SQL-92，也称为SQL2</p>
 <ul>
-<li>运算时候用异或，同0异1</li>
+<li>是SQL-89的超集</li>
+<li>增加了许多新特性，如新数据类型，更丰富数据操作，更强完整性支持等</li>
+<li>原SQL-89被称为entry-SQL, 扩展的被称为Int ermediate级和Full级</li>
 </ul>
-<h1 id="数据报分片"><a href="#数据报分片" class="headerlink" title="数据报分片"></a>数据报分片</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171905980.png" alt="image-20210107171905980"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171924869.png" alt="image-20210107171924869"></p>
+</li>
+<li><p>1999年进一步推出了SQL标准： SQL-99，也称为SQL3</p>
 <ul>
-<li>数据报长度 = 数据部分长度+首部长度</li>
+<li>对面向对象的一些特征予以支持，支持抽象数据类型，支持行对象和列对象等</li>
+<li>有些特征，现有数据库厂商尚不能做到完全支持</li>
 </ul>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107172025702.png" alt="image-20210107172025702"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107172151402.png" alt="image-20210107172151402"></p>
+</li>
+</ul>
+<h3 id="标准SQL语言的“方言”"><a href="#标准SQL语言的“方言”" class="headerlink" title="标准SQL语言的“方言”"></a>标准SQL语言的“方言”</h3><ul>
+<li>各数据库厂商的产品对SQL语言的支持大部分是相似的(至少要实现SQL-92的entry-SQL)，但它们之间也存在着一定的差异<ul>
+<li>Oracle: PL/SQL language</li>
+<li>SQL Server: Transact-SQL language(本课程的教学演示语言)</li>
+</ul>
+</li>
+<li>但我们在介绍SQL时主要介绍标准的SQL语言</li>
+</ul>
+<h3 id="SQL语言的功能组成"><a href="#SQL语言的功能组成" class="headerlink" title="SQL语言的功能组成"></a>SQL语言的功能组成</h3><h4 id="Data-Manipulation-Language-DML-重点"><a href="#Data-Manipulation-Language-DML-重点" class="headerlink" title="Data Manipulation Language (DML)(重点)"></a>Data Manipulation Language (DML)(重点)</h4><ul>
+<li><p>数据查询(Data Query Language (DQL))(核心)</p>
+<blockquote>
+<p>数据查询功能用于实现对数据库中数据的查询、检索 </p>
+</blockquote>
+</li>
+<li><p>数据操纵(Data Manipulation)</p>
+<blockquote>
+<p>数据操纵功能用于实现对数据库数据的增加、删除和修改</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="Data-Definition-Language-DDL"><a href="#Data-Definition-Language-DDL" class="headerlink" title="Data Definition Language (DDL)"></a>Data Definition Language (DDL)</h4><ul>
+<li><p>数据定义(Data Definition)</p>
+<blockquote>
+<p>数据定义功能用于定义、删除和修改数据库中的对象 </p>
+</blockquote>
+</li>
+</ul>
+<h4 id="Data-Control-Language-DCL"><a href="#Data-Control-Language-DCL" class="headerlink" title="Data Control Language (DCL)"></a>Data Control Language (DCL)</h4><ul>
+<li><p>数据控制(Data Control)</p>
+<blockquote>
+<p>数据控制功能用于控制用户对数据库的操作权限 </p>
+</blockquote>
+</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109154659361.png" alt="image-20210109154659361"></p>
+<h3 id="SQL语言的特点"><a href="#SQL语言的特点" class="headerlink" title="SQL语言的特点"></a>SQL语言的特点</h3><ul>
+<li><p>综合统一</p>
+</li>
+<li><p>高度非过程化</p>
+</li>
+<li><p>面向集合的操作方式</p>
+</li>
+<li><p>语言简捷，易学易用</p>
+</li>
+<li><p>以同一种语法结构提供两种使用方式</p>
 <ul>
-<li>MTU为1500字节</li>
+<li>独立</li>
+<li>嵌入</li>
 </ul>
-<h1 id="码分多址通信"><a href="#码分多址通信" class="headerlink" title="码分多址通信"></a>码分多址通信</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107172232286.png" alt="image-20210107172232286"></p>
-<h1 id="地址聚合"><a href="#地址聚合" class="headerlink" title="地址聚合"></a>地址聚合</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107163635796.png" alt="image-20210107163635796"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107163701071.png" alt="image-20210107163701071"></p>
-<h1 id="路由表更新"><a href="#路由表更新" class="headerlink" title="路由表更新"></a>路由表更新</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107163748580.png" alt="image-20210107163748580"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107163856330.png" alt="image-20210107163856330"></p>
-<p>![image-20210107164031175](/Users/fine/Library/Application Support/typora-user-images/image-20210107164031175.png)</p>
-<p>![image-20210107164043213](/Users/fine/Library/Application Support/typora-user-images/image-20210107164043213.png)</p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107164148511.png" alt="image-20210107164148511"></p>
-<h1 id="路由表下一跳"><a href="#路由表下一跳" class="headerlink" title="路由表下一跳"></a>路由表下一跳</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107164521306.png" alt="image-20210107164521306"></p>
+</li>
+</ul>
+<h4 id="独立使用方式-又称“交互式”"><a href="#独立使用方式-又称“交互式”" class="headerlink" title="独立使用方式(又称“交互式”)"></a>独立使用方式(又称“交互式”)</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109154924831.png" alt="image-20210109154924831"></p>
+<h4 id="嵌入使用方式"><a href="#嵌入使用方式" class="headerlink" title="嵌入使用方式"></a>嵌入使用方式</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109154947922.png" alt="image-20210109154947922"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109155005186.png" alt="image-20210109155005186"></p>
+<h1 id="单表查询"><a href="#单表查询" class="headerlink" title="单表查询"></a>单表查询</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109155121542.png" alt="image-20210109155121542"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109155138661.png" alt="image-20210109155138661"></p>
+<h2 id="没有WHERE-子句和使用-的简单查询"><a href="#没有WHERE-子句和使用-的简单查询" class="headerlink" title="没有WHERE 子句和使用*的简单查询"></a>没有WHERE 子句和使用*的简单查询</h2><blockquote>
+<p>不带元组筛选条件的单表查询</p>
+</blockquote>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109155215882.png" alt="image-20210109155215882"></p>
+<p></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> Employee</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="关于“-”"><a href="#关于“-”" class="headerlink" title="关于“*”"></a>关于“*”</h3><ul>
+<li>当使用 * 时，结果集中的列的顺序与 CREATE TABLE、ALTER TABLE 或 CREATE VIEW(视图)语句中所指定的顺序相同</li>
+<li>在应用程序中使用 SELECT时，最好显式地指定需要查询的列而不是指定一个星号<br>Why?</li>
+</ul>
+<p><strong>如果表名或列名是SQL关键字或者中间有空格，用[]</strong></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> [Oeder Detail]</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109155341974.png" alt="image-20210109155341974"></p>
+<p><strong>“显式地指定需要查询的列”的另一个好处：可以控制结果集中列显示的顺序</strong></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> FNME,LNAME,SEX,SNN <span class="keyword">FROM</span> Employee</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109155608438.png" alt="image-20210109155608438"></p>
+<h2 id="属性重命名"><a href="#属性重命名" class="headerlink" title="属性重命名"></a>属性重命名</h2><blockquote>
+<p>重命名查询结果关系列名（但数据库存储文件的列名未改变）</p>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> FNAME <span class="keyword">AS</span> 名,LNAME <span class="keyword">AS</span> 姓 <span class="keyword">FROM</span> Employee</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109155901741.png" alt="image-20210109155901741"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> FNAME 名,LNAME 姓 <span class="keyword">FROM</span> EMPLOYEE</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109155950784.png" alt="image-20210109155950784"></p>
 <ul>
-<li>子网掩码，逐位相与</li>
+<li>AS可省略</li>
 </ul>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107164836786.png" alt="image-20210107164836786"></p>
-<h1 id="网桥转发表"><a href="#网桥转发表" class="headerlink" title="网桥转发表"></a>网桥转发表</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107164853878.png" alt="image-20210107164853878"></p>
-<p> <img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107165539095.png" alt="image-20210107165539095"></p>
-<h1 id="子网划分"><a href="#子网划分" class="headerlink" title="子网划分"></a>子网划分</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107165606990.png" alt="image-20210107165606990"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107165617908.png" alt="image-20210107165617908"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107170011105.png" alt="image-20210107170011105"></p>
+<h2 id="选择元组（WHERE）"><a href="#选择元组（WHERE）" class="headerlink" title="选择元组（WHERE）"></a>选择元组（WHERE）</h2><blockquote>
+<p>筛选元组</p>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> FNAME,LNEME,SNN <span class="keyword">FROM</span> EMPLOYEE <span class="keyword">WHERE</span> SEX = <span class="string">&#x27;F&#x27;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109160103216.png" alt="image-20210109160103216"></p>
+<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><ul>
+<li>在SQL程序中添加注释<ul>
+<li><strong>–</strong> 单行注释(类似于C++语言的 // ) </li>
+<li>C-style <strong>/* comment block */</strong> (多行注释)</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> FNAME,LNAME,SEX,SNSN,BDATA,SALARY <span class="keyword">FROM</span> EMPLOYEE <span class="keyword">WHERE</span> (<span class="keyword">NOT</span> SEX = <span class="string">&#x27;F)   WRONG</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109160308965.png" alt="image-20210109160308965"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> FNAME,LNAME,SEX,SNSN,BDATA,SALARY <span class="keyword">FROM</span> EMPLOYEE <span class="keyword">WHERE</span> SEX&lt;&gt;<span class="string">&#x27;F&#x27;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109160650239.png" alt="image-20210109160650239"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> BDATA,ADDRESS <span class="keyword">FROM</span> EMPLOYEE <span class="keyword">WHERE</span> FNAME = <span class="string">&#x27;JOHN&#x27;</span> <span class="keyword">AND</span> MINIT = <span class="string">&#x27;B&#x27;</span> <span class="keyword">AND</span> LNAME=<span class="string">&#x27;SMITH&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109160757125.png" alt="image-20210109160757125"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> FNAME,LNAME,SEX,SSN,SALARY <span class="keyword">FROM</span> EMPOYEE <span class="keyword">WHERE</span> (SALARY&gt;<span class="number">3000</span> <span class="keyword">AND</span> SEX=<span class="string">&#x27;M&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109160815086.png" alt="image-20210109160815086"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> EMPLOYEE <span class="keyword">WHERE</span> (BDATA&gt;=<span class="string">&#x27;1960-1-1&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109160833716.png" alt="image-20210109160833716"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> EMPLOYEE <span class="keyword">WHERE</span> (SALARY&gt;=<span class="number">30000</span> <span class="keyword">AND</span> SALARY&lt;=<span class="number">55000</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109160854559.png" alt="image-20210109160854559"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> E <span class="keyword">WHERE</span> <span class="keyword">NOT</span> (S&gt;=<span class="number">30000</span> <span class="keyword">AND</span> S&lt;=<span class="number">55000</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109160905916.png" alt="image-20210109160905916"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> E <span class="keyword">WHERE</span> (S&lt;<span class="number">30000</span> <span class="keyword">OR</span> S&gt;<span class="number">55000</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109160930083.png" alt="image-20210109160930083"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> E <span class="keyword">WHERE</span> (S <span class="keyword">BETWEEN</span> <span class="number">30000</span> <span class="keyword">AND</span> <span class="number">55000</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109161022843.png" alt="image-20210109161022843"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> E <span class="keyword">WHERE</span> <span class="keyword">NOT</span> (S <span class="keyword">BETWEEN</span> <span class="number">30000</span> <span class="keyword">AND</span> <span class="number">55000</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109161034618.png" alt="image-20210109161034618"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> E <span class="keyword">WHERE</span> S <span class="keyword">NOT</span> <span class="keyword">BETWEEN</span> <span class="number">30000</span> <span class="keyword">AND</span> <span class="number">55000</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109161046337.png" alt="image-20210109161046337"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109161202119.png" alt="image-20210109161202119"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> E <span class="keyword">WHERE</span> P <span class="keyword">BETWEEN</span> <span class="string">&#x27;A&#x27;</span> <span class="keyword">AND</span> <span class="string">&#x27;F&#x27;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109161323921.png" alt="image-20210109161323921"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> E <span class="keyword">WHERE</span> (C=<span class="string">&#x27;H&#x27;</span> <span class="keyword">OR</span> C=<span class="string">&#x27;H&#x27;</span> <span class="keyword">OR</span> C=<span class="string">&#x27;S&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109161355942.png" alt="image-20210109161355942"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> E <span class="keyword">WHERE</span> C <span class="keyword">IN</span> (<span class="string">&#x27;H&#x27;</span>,<span class="string">&#x27;H&#x27;</span>,<span class="string">&#x27;S&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109161428550.png" alt="image-20210109161428550"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> E <span class="keyword">WHERE</span> <span class="keyword">NOT</span> (C <span class="keyword">IN</span> (<span class="string">&#x27;H&#x27;</span>,<span class="string">&#x27;H&#x27;</span>,<span class="string">&#x27;S&#x27;</span>))</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109161440997.png" alt="image-20210109161440997"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> E <span class="keyword">WHERE</span> C <span class="keyword">NOT</span> <span class="keyword">IN</span> (<span class="string">&#x27;H&#x27;</span>,<span class="string">&#x27;H&#x27;</span>,<span class="string">&#x27;S&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109161454178.png" alt="image-20210109161454178"></p>
+<h2 id="比较操作符"><a href="#比较操作符" class="headerlink" title="比较操作符"></a>比较操作符</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109160725739.png" alt="image-20210109160725739"></p>
+<h2 id="SQL中作为集合的表"><a href="#SQL中作为集合的表" class="headerlink" title="SQL中作为集合的表"></a>SQL中作为集合的表</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109161531535.png" alt="image-20210109161531535"></p>
+<h3 id="注意-1"><a href="#注意-1" class="headerlink" title="注意"></a>注意</h3><ul>
+<li>SQL 允许一个表有相同的多行数据。因此，SQL表不是一组元组的集合, 而是一个多集</li>
+<li>然而, 一些SQL表被限制为一组元组的集合<ul>
+<li>通过在基本表上申明主键约束</li>
+<li>查询时使用distinct关键字使得查询结果表消除重复</li>
+</ul>
+</li>
+</ul>
+<p><strong>例6-20：查询不重复的员工性别和工资组合</strong></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">Select</span> <span class="keyword">distinct</span> sex,salary <span class="keyword">from</span> Employee</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="为什么-SQL不自动消除重复元组"><a href="#为什么-SQL不自动消除重复元组" class="headerlink" title="为什么 SQL不自动消除重复元组?"></a>为什么 SQL不自动消除重复元组?</h3><ul>
+<li>消除重复是代价很高的操作</li>
+<li>用户可能希望在查询结果中看到重复元组</li>
+</ul>
+<h2 id="字符匹配"><a href="#字符匹配" class="headerlink" title="字符匹配"></a>字符匹配</h2><h3 id="ALL-关键字-默认值"><a href="#ALL-关键字-默认值" class="headerlink" title="ALL 关键字 (默认值)"></a>ALL 关键字 (默认值)</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">ALL</span> SEX,SALARY <span class="keyword">FROM</span> E</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="使用-LIKE-比较运算符进行字符串匹配"><a href="#使用-LIKE-比较运算符进行字符串匹配" class="headerlink" title="使用 LIKE 比较运算符进行字符串匹配"></a>使用 LIKE 比较运算符进行字符串匹配</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109164607103.png" alt="image-20210109164607103"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109164713470.png" alt="image-20210109164713470"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109164851385.png" alt="image-20210109164851385"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109164919386.png" alt="image-20210109164919386"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109164947732.png" alt="image-20210109164947732"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109165000161.png" alt="image-20210109165000161"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109165105958.png" alt="image-20210109165105958"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109165118073.png" alt="image-20210109165118073"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109165132162.png" alt="image-20210109165132162"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109165143407.png" alt="image-20210109165143407"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109165233641.png" alt="image-20210109165233641"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109165244004.png" alt="image-20210109165244004"></p>
+<h2 id="包含-NULL和三值逻辑的比较"><a href="#包含-NULL和三值逻辑的比较" class="headerlink" title="包含 NULL和三值逻辑的比较"></a>包含 NULL和三值逻辑的比较</h2><ul>
+<li><p>逻辑表达式的运算结果为: TRUE, FALSE, <strong>Unknown</strong></p>
+</li>
+<li><p>Unknown：当NULL出现在比较运算中，结果将是“<strong>Unknown</strong>”</p>
+</li>
+<li><p>在选择运算时，只有选择条件结果为 <strong>TRUE</strong>的元组被选出</p>
+</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109165917244.png" alt="image-20210109165917244"></p>
 <ul>
-<li>主机位要留5位，子网号3位</li>
-<li>子网掩码即每位都令为1</li>
-<li>网络地址即令主机位排列组合，除去全0全1情况</li>
-<li>广播地址即令主机位全为1</li>
-<li>主机地址范围即为主机号范围</li>
+<li>NOT TURE IS FALSE AND NOT INCLUDE UNKNOWN</li>
 </ul>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107170500451.png" alt="image-20210107170500451"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107170510635.png" alt="image-20210107170510635"></p>
+<h3 id="包含NULL的比较"><a href="#包含NULL的比较" class="headerlink" title="包含NULL的比较"></a>包含NULL的比较</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109170207855.png" alt="image-20210109170207855"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109170230644.png" alt="image-20210109170230644"></p>
+<h3 id="求“补集”的正确SQL表达式"><a href="#求“补集”的正确SQL表达式" class="headerlink" title="求“补集”的正确SQL表达式"></a>求“补集”的正确SQL表达式</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109170304432.png" alt="image-20210109170304432"></p>
 <ul>
-<li>各个子网划分不能重叠</li>
+<li>在关键字段尽量加上非空约束，比如“姓名”、“性别”、<br>“院系编号”等</li>
 </ul>
-<h1 id="拥塞控制算法"><a href="#拥塞控制算法" class="headerlink" title="拥塞控制算法"></a>拥塞控制算法</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107170603812.png" alt="image-20210107170603812"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107170612183.png" alt="image-20210107170612183"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107170913389.png" alt="image-20210107170913389"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171123968.png" alt="image-20210107171123968"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171202459.png" alt="image-20210107171202459"></p>
+<h2 id="对查询结果排序"><a href="#对查询结果排序" class="headerlink" title="对查询结果排序"></a>对查询结果排序</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109170410621.png" alt="image-20210109170410621"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109170425397.png" alt="image-20210109170425397"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109170440753.png" alt="image-20210109170440753"></p>
+<h2 id="算术操作符"><a href="#算术操作符" class="headerlink" title="算术操作符"></a>算术操作符</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109170515394.png" alt="image-20210109170515394"></p>
+<h2 id="聚合函数"><a href="#聚合函数" class="headerlink" title="聚合函数"></a>聚合函数</h2><h3 id="count"><a href="#count" class="headerlink" title="count"></a>count</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109170710661.png" alt="image-20210109170710661"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109170723725.png" alt="image-20210109170723725"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109170738153.png" alt="image-20210109170738153"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109170747477.png" alt="image-20210109170747477"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109170759153.png" alt="image-20210109170759153"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109170824882.png" alt="image-20210109170824882"></p>
+<h3 id="sum"><a href="#sum" class="headerlink" title="sum"></a>sum</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109170903032.png" alt="image-20210109170903032"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109170923144.png" alt="image-20210109170923144"></p>
+<h3 id="MAX、MIN"><a href="#MAX、MIN" class="headerlink" title="MAX、MIN"></a>MAX、MIN</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109170931394.png" alt="image-20210109170931394"></p>
+<h3 id="AVG"><a href="#AVG" class="headerlink" title="AVG"></a>AVG</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109170950824.png" alt="image-20210109170950824"></p>
 <ul>
-<li>开始 慢开始，指数增加cwnd，第一轮为2，第0轮为1</li>
-<li>然后达到阈值，拥塞避免，加法增加cwnd</li>
-<li>遇到超时，直接重开，且阈值改变为 超时/2</li>
-<li>遇到重复ACK，报文段丢失，启动快重传，快恢复，从新阈值重新开始</li>
+<li>AVG运算其实是由SUM和COUNT运算导出的</li>
 </ul>
+<h2 id="分组"><a href="#分组" class="headerlink" title="分组"></a>分组</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109171035722.png" alt="image-20210109171035722"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109171057069.png" alt="image-20210109171057069"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109171106084.png" alt="image-20210109171106084"></p>
+<ul>
+<li>统计每一分组的行数最好用COUNT(*)，不用COUNT(某一属性)，为什么呢？<ul>
+<li>某一属性可能会有空值，而元组不会</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109171145095.png" alt="image-20210109171145095"></p>
+<h2 id="WHERE与HAVING的区别"><a href="#WHERE与HAVING的区别" class="headerlink" title="WHERE与HAVING的区别"></a>WHERE与HAVING的区别</h2><ul>
+<li>WHERE 对原始数据进行筛选（分组前） </li>
+<li>HAVING 对聚合后的数据进行筛选（分组后） </li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109171233912.png" alt="image-20210109171233912"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109171244451.png" alt="image-20210109171244451"></p>
+<h2 id="补充-注入式攻击"><a href="#补充-注入式攻击" class="headerlink" title="补充: 注入式攻击"></a>补充: 注入式攻击</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109170553897.png" alt="image-20210109170553897"></p>
 ]]></content>
       <categories>
-        <category>计算机网络</category>
+        <category>数据库原理及应用</category>
       </categories>
       <tags>
         <tag>share</tag>
@@ -786,6 +1027,80 @@
 <h2 id="5层参考模型"><a href="#5层参考模型" class="headerlink" title="5层参考模型"></a>5层参考模型</h2><h3 id="模型图"><a href="#模型图" class="headerlink" title="模型图"></a>模型图</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101213028676.png" alt="image-20210101213028676"></p>
 <h3 id="数据封装与解封装"><a href="#数据封装与解封装" class="headerlink" title="数据封装与解封装"></a>数据封装与解封装</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101213225550.png" alt="image-20210101213225550"></p>
 <h1 id="1-3-第一章知识总结"><a href="#1-3-第一章知识总结" class="headerlink" title="1.3 第一章知识总结"></a>1.3 第一章知识总结</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101213405540.png" alt="image-20210101213405540"></p>
+]]></content>
+      <categories>
+        <category>计算机网络</category>
+      </categories>
+      <tags>
+        <tag>share</tag>
+        <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>计网应用题</title>
+    <url>/posts/9648dc07/</url>
+    <content><![CDATA[<h1 id="冗余码计算"><a href="#冗余码计算" class="headerlink" title="冗余码计算"></a>冗余码计算</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171634481.png" alt="image-20210107171634481"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171648084.png" alt="image-20210107171648084"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171721030.png" alt="image-20210107171721030"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171740599.png" alt="image-20210107171740599"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171749408.png" alt="image-20210107171749408"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171800007.png" alt="image-20210107171800007"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171827008.png" alt="image-20210107171827008"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171852899.png" alt="image-20210107171852899"></p>
+<ul>
+<li>运算时候用异或，同0异1</li>
+</ul>
+<h1 id="数据报分片"><a href="#数据报分片" class="headerlink" title="数据报分片"></a>数据报分片</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171905980.png" alt="image-20210107171905980"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171924869.png" alt="image-20210107171924869"></p>
+<ul>
+<li>数据报长度 = 数据部分长度+首部长度</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107172025702.png" alt="image-20210107172025702"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107172151402.png" alt="image-20210107172151402"></p>
+<ul>
+<li>MTU为1500字节</li>
+</ul>
+<h1 id="码分多址通信"><a href="#码分多址通信" class="headerlink" title="码分多址通信"></a>码分多址通信</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107172232286.png" alt="image-20210107172232286"></p>
+<h1 id="地址聚合"><a href="#地址聚合" class="headerlink" title="地址聚合"></a>地址聚合</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107163635796.png" alt="image-20210107163635796"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107163701071.png" alt="image-20210107163701071"></p>
+<h1 id="路由表更新"><a href="#路由表更新" class="headerlink" title="路由表更新"></a>路由表更新</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107163748580.png" alt="image-20210107163748580"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107163856330.png" alt="image-20210107163856330"></p>
+<p>![image-20210107164031175](/Users/fine/Library/Application Support/typora-user-images/image-20210107164031175.png)</p>
+<p>![image-20210107164043213](/Users/fine/Library/Application Support/typora-user-images/image-20210107164043213.png)</p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107164148511.png" alt="image-20210107164148511"></p>
+<h1 id="路由表下一跳"><a href="#路由表下一跳" class="headerlink" title="路由表下一跳"></a>路由表下一跳</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107164521306.png" alt="image-20210107164521306"></p>
+<ul>
+<li>子网掩码，逐位相与</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107164836786.png" alt="image-20210107164836786"></p>
+<h1 id="网桥转发表"><a href="#网桥转发表" class="headerlink" title="网桥转发表"></a>网桥转发表</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107164853878.png" alt="image-20210107164853878"></p>
+<p> <img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107165539095.png" alt="image-20210107165539095"></p>
+<h1 id="子网划分"><a href="#子网划分" class="headerlink" title="子网划分"></a>子网划分</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107165606990.png" alt="image-20210107165606990"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107165617908.png" alt="image-20210107165617908"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107170011105.png" alt="image-20210107170011105"></p>
+<ul>
+<li>主机位要留5位，子网号3位</li>
+<li>子网掩码即每位都令为1</li>
+<li>网络地址即令主机位排列组合，除去全0全1情况</li>
+<li>广播地址即令主机位全为1</li>
+<li>主机地址范围即为主机号范围</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107170500451.png" alt="image-20210107170500451"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107170510635.png" alt="image-20210107170510635"></p>
+<ul>
+<li>各个子网划分不能重叠</li>
+</ul>
+<h1 id="拥塞控制算法"><a href="#拥塞控制算法" class="headerlink" title="拥塞控制算法"></a>拥塞控制算法</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107170603812.png" alt="image-20210107170603812"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107170612183.png" alt="image-20210107170612183"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107170913389.png" alt="image-20210107170913389"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171123968.png" alt="image-20210107171123968"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171202459.png" alt="image-20210107171202459"></p>
+<ul>
+<li>开始 慢开始，指数增加cwnd，第一轮为2，第0轮为1</li>
+<li>然后达到阈值，拥塞避免，加法增加cwnd</li>
+<li>遇到超时，直接重开，且阈值改变为 超时/2</li>
+<li>遇到重复ACK，报文段丢失，启动快重传，快恢复，从新阈值重新开始</li>
+</ul>
 ]]></content>
       <categories>
         <category>计算机网络</category>
