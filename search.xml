@@ -1207,6 +1207,449 @@
       </tags>
   </entry>
   <entry>
+    <title>数据库第三章——关系数据库基础</title>
+    <url>/posts/d0584767/</url>
+    <content><![CDATA[<h1 id="关系数据库简史"><a href="#关系数据库简史" class="headerlink" title="关系数据库简史"></a>关系数据库简史</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109100148025.png" alt="image-20210109100148025"></p>
+<h1 id="关系模型概述"><a href="#关系模型概述" class="headerlink" title="关系模型概述"></a>关系模型概述</h1><ul>
+<li>关系数据库系统是支持<strong>关系模型</strong>的数据库系统</li>
+<li>关系模型<ul>
+<li>数据结构：<ul>
+<li>关系(二维表)</li>
+</ul>
+</li>
+<li>数据操作<ul>
+<li>查询操作(重点)</li>
+<li>增、删、改操作</li>
+</ul>
+</li>
+<li>完整性约束：<ul>
+<li>实体完整性</li>
+<li>参照完整性</li>
+<li>用户定义的完整性</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="关系数据库的基本概念"><a href="#关系数据库的基本概念" class="headerlink" title="关系数据库的基本概念"></a>关系数据库的基本概念</h1><ul>
+<li>关系模型认为数据库是一组关系，每个关系从外观上看起来象一张二维表</li>
+<li>在正式的关系模型术语中, 行称为<strong>元组 (tuple)</strong>, 列标题称为<strong>属性(attribute)</strong>, 表称为关系 <strong>(relation)**。属性的取值范围称为该属性的</strong>域 (domain)**</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109100548907.png" alt="image-20210109100548907"></p>
+<h2 id="域-Domain"><a href="#域-Domain" class="headerlink" title="域 (Domain)"></a>域 (Domain)</h2><ul>
+<li>域是原子值的集合(set)。“原子”的含义是指域中每个值是不可分割的<ul>
+<li>域是一组具有相同数据类型、格式、度量单位的“原子”值的集合，用于表示属性的取值范围</li>
+</ul>
+</li>
+<li>例如：<ul>
+<li>院系域：{1，2，3，4，……，最大院系编号}</li>
+<li>中国民族域：中华人民共和国56个民族名称</li>
+<li>性别域：{男，女}</li>
+<li>生日域：YYYYMMDD</li>
+</ul>
+</li>
+</ul>
+<h3 id="dom-Ai-第i个属性的域"><a href="#dom-Ai-第i个属性的域" class="headerlink" title="dom(Ai)(第i个属性的域)"></a>dom(Ai)(第i个属性的域)</h3><ul>
+<li>例如：<ul>
+<li>dom(StudentDepartID) =院系域</li>
+<li>dom(StudentNation)  =中国民族域</li>
+<li>dom(StudentGender) =性别域</li>
+</ul>
+</li>
+<li>不同的属性可出自同一个域<ul>
+<li>姓名域、性别域</li>
+</ul>
+</li>
+</ul>
+<h2 id="关系模式-Relation-Schema"><a href="#关系模式-Relation-Schema" class="headerlink" title="关系模式(Relation Schema)"></a>关系模式(Relation Schema)</h2><ul>
+<li>R的<strong>关系模式</strong>表示为 R(A1, A2, . . ., An), 由关系名 R 和属性列表 A1, A2, . . ., An组成</li>
+<li><strong>关系的目或度</strong>是指关系模式属性的个数 </li>
+<li>例如：StudentInfo(StudentNo,StudentPassword,StudentName,StudentGender,……,StudentDepartID)</li>
+</ul>
+<h3 id="关系的一种定义"><a href="#关系的一种定义" class="headerlink" title="关系的一种定义"></a>关系的一种定义</h3><blockquote>
+<p>关系模式R(A1, A2, . . ., An)的关系 (或关系状态) <strong>r</strong> 是一个n元组的集合，即**r = {t1, t2, . . ., tm}**。每个n元组t是n个值的有序列表 t = &lt;v1, v2, . . ., vn&gt;, 每个值 vi(1≤i ≤n)是dom(Ai) 的一个元素或者为 **null(空)**。元组t第i个值同属性Ai相对应，它可表示为 t<a href="%E5%8D%B3%E5%85%83%E7%BB%84%E5%9C%A8Ai%E5%B1%9E%E6%80%A7%E4%B8%8A%E7%9A%84%E5%88%86%E9%87%8F">Ai(即元组在Ai属性上的分量) </a> </p>
+</blockquote>
+<ul>
+<li><p>注意：</p>
+<blockquote>
+<p>严格意义上，“属性”是指的列标题，不包括元组的分量，这就是为什么n元组是“有序的”原因</p>
+</blockquote>
+</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109101709830.png" alt="image-20210109101709830"></p>
+<h4 id="为什么会有“空值”-null-value"><a href="#为什么会有“空值”-null-value" class="headerlink" title="为什么会有“空值”(null value)"></a>为什么会有“空值”(null value)</h4><ul>
+<li>值是未知的</li>
+<li>值存在但不能获得</li>
+<li>当前属性对当前元组不适合</li>
+</ul>
+<h3 id="关系的另一种数学定义"><a href="#关系的另一种数学定义" class="headerlink" title="关系的另一种数学定义"></a>关系的另一种数学定义</h3><blockquote>
+<p>关系 r(R) 是定义在域 dom (A1), dom(A2), . . ., dom(An)上的、度为n的数学关系，它是这些域的笛卡尔积的子集:<br> r(R)   (dom (A1) x dom(A2) x . . . x dom(An))</p>
+</blockquote>
+<h4 id="域的笛卡尔积-Cartesian-product"><a href="#域的笛卡尔积-Cartesian-product" class="headerlink" title="域的笛卡尔积(Cartesian product)"></a>域的笛卡尔积(Cartesian product)</h4><p>笛卡尔积包含来自其组成域的值的所有可能的组合<br>如果将域中值的个数(即域D的基数)表示成| D | (假设所有域都是有限的)，那么，笛卡尔积中总的元组个数为:</p>
+<blockquote>
+<p>| | dom(A1) | * | dom(A2) | * . . . * | dom(An) | \</p>
+</blockquote>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109102120869.png" alt="image-20210109102120869"></p>
+<ul>
+<li>在所有可能的组合中，给定时间的关系状态即当前关系状态，仅反映了代表现实世界特定状态的<strong>有效元组</strong> </li>
+<li>一般来说，当现实世界的状态改变时，关系的状态也会改变，它会转换成另一个关系状态</li>
+<li>关系模式R是相对静态的，不会经常发生改变，极少数情况除外（如添加一个表示新的信息的属性）</li>
+<li>关系是关系模式在<strong>某一时刻</strong>的状态或内容</li>
+</ul>
+<h2 id="定义总结"><a href="#定义总结" class="headerlink" title="定义总结"></a>定义总结</h2><table>
+<thead>
+<tr>
+<th>非正式术语</th>
+<th>正式术语</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>表</td>
+<td>关系</td>
+</tr>
+<tr>
+<td>列标题</td>
+<td>属性</td>
+</tr>
+<tr>
+<td>列所有可能的值</td>
+<td>域</td>
+</tr>
+<tr>
+<td>行</td>
+<td>元组</td>
+</tr>
+<tr>
+<td>表定义</td>
+<td>关系的模式</td>
+</tr>
+<tr>
+<td>填充表</td>
+<td>关系的状态</td>
+</tr>
+</tbody></table>
+<h1 id="关系的类型"><a href="#关系的类型" class="headerlink" title="关系的类型"></a>关系的类型</h1><ul>
+<li><p>基本关系(基本表)</p>
+<blockquote>
+<p>实际存在的表，是实际存储数据的逻辑表示</p>
+</blockquote>
+</li>
+<li><p>查询表</p>
+<blockquote>
+<p>查询结果对应的表</p>
+</blockquote>
+</li>
+<li><p>视图表(虚表，不占存储空间)</p>
+<blockquote>
+<p>由基本表或其他视图表导出的表</p>
+</blockquote>
+</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109102612734.png" alt="image-20210109102612734"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109102622860.png" alt="image-20210109102622860"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109102636880.png" alt="image-20210109102636880"></p>
+<h1 id="关系的性质"><a href="#关系的性质" class="headerlink" title="关系的性质"></a>关系的性质</h1><h2 id="以下性质也是“关系”区别于普通文件或表格的主要特征"><a href="#以下性质也是“关系”区别于普通文件或表格的主要特征" class="headerlink" title="以下性质也是“关系”区别于普通文件或表格的主要特征:"></a>以下性质也是“关系”区别于普通文件或表格的主要特征:</h2><ul>
+<li><p>列是同质的，即每一列中的分量是同一类型的数据，来自同一个域</p>
+</li>
+<li><p>关系中的元组(行)无先后顺序</p>
+<blockquote>
+<p>关系是元组的集合(set)。在数学上，一个集合的元素间是无序的，因此，一个关系中的元组间也没有特定的顺序，虽然在表格形式下，行之间是有顺序的</p>
+</blockquote>
+</li>
+<li><p>关系中的属性(列)无先后顺序</p>
+<blockquote>
+<p>在逻辑上，属性和相应的属性值之间的顺序也是无关紧要的，只要维护好属性和属性值之间的对应关系</p>
+</blockquote>
+</li>
+<li><p>一个关系中所有元组都是独一无二的</p>
+<ul>
+<li><p>关系模式的一个或一组属性**(必须是最小组合)**，使得关系任何一个状态中的任意两个元组在该属性子集上值的组合都不同</p>
+<ul>
+<li><p>称为键(或候选键)</p>
+</li>
+<li><p>若一个关系有多个候选键，则选定其中一个为<strong>主键(Primary Key)，其余的为次要键或唯一键</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>元组的每一个值都是原子的，不可再分的(符合第一范式)</p>
+<ul>
+<li>不允许存在复合属性和多值属性</li>
+</ul>
+</li>
+</ul>
+<h2 id="复合属性-Composite-Attributes"><a href="#复合属性-Composite-Attributes" class="headerlink" title="复合属性 (Composite Attributes)"></a>复合属性 (Composite Attributes)</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109103430482.png" alt="image-20210109103430482"></p>
+<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109103458786.png" alt="image-20210109103458786"></p>
+<h2 id="多值属性"><a href="#多值属性" class="headerlink" title="多值属性"></a>多值属性</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109103541861.png" alt="image-20210109103541861"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109103556392.png" alt="image-20210109103556392"></p>
+<h1 id="关系数据库和关系数据库模式"><a href="#关系数据库和关系数据库模式" class="headerlink" title="关系数据库和关系数据库模式"></a>关系数据库和关系数据库模式</h1><ul>
+<li><strong>关系数据库模式 S</strong> 是关系模式的集合S = {R1, R2, . . ., Rm} 以及完整性约束 (IC：Integrity Constraint)的集合。S的一个<strong>关系数据库状态</strong>DB是关系状态的集合 DB = {r1, r2, . . ., rm}， 其中每个 ri 是 Ri 的一个状态，并且ri满足IC中规定的完整性约束</li>
+<li>当提及一个关系数据库时, 常隐含地包含它的模式和当前状态</li>
+</ul>
+<h1 id="完整性约束"><a href="#完整性约束" class="headerlink" title="完整性约束"></a>完整性约束</h1><blockquote>
+<p><strong>约束</strong>：约束是指所有有效关系状态必须满足的条件</p>
+</blockquote>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109104035278.png" alt="image-20210109104035278"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109104101127.png" alt="image-20210109104101127"></p>
+<h2 id="关系的完整性"><a href="#关系的完整性" class="headerlink" title="关系的完整性"></a>关系的完整性</h2><ol>
+<li><p>单一关系</p>
+</li>
+<li><p>多个关系</p>
+</li>
+</ol>
+<h3 id="一、单一关系"><a href="#一、单一关系" class="headerlink" title="一、单一关系"></a>一、单一关系</h3><h4 id="域约束-Domain-Constraints"><a href="#域约束-Domain-Constraints" class="headerlink" title="域约束 (Domain Constraints)"></a>域约束 (Domain Constraints)</h4><blockquote>
+<p>域约束指元组中每个属性A的值必须是来自域dom(A)的原子值</p>
+<p>例如：性别只能是“男”或“女”，民族只能是56个民族之一，而不能是其他的值</p>
+</blockquote>
+<h4 id="键约束-Key-Constraints"><a href="#键约束-Key-Constraints" class="headerlink" title="键约束 (Key Constraints)"></a>键约束 (Key Constraints)</h4><ul>
+<li><p>关系被定义为元组的集合。按照定义，集合中的所有元素是不同的，因此，一个关系中的所有元组也必须是不同的</p>
+<ul>
+<li>每个关系必须要有主键，且每个元组的主键值不得重复</li>
+</ul>
+</li>
+<li><p>“一个关系的键是什么？”这是关系模式的特性（而且是不随时间变化的特性），因此必须从属性的含义判断是否能作为键</p>
+<ul>
+<li>学生关系的“Name” 属性不能被指定为键</li>
+</ul>
+</li>
+</ul>
+<h4 id="非空约束-Not-Null"><a href="#非空约束-Not-Null" class="headerlink" title="非空约束 (Not Null)"></a>非空约束 (Not Null)</h4><blockquote>
+<p>例如：学生姓名不允许为空</p>
+</blockquote>
+<h4 id="实体完整性-Entity-Integrity-约束"><a href="#实体完整性-Entity-Integrity-约束" class="headerlink" title="实体完整性(Entity Integrity)约束"></a>实体完整性(Entity Integrity)约束</h4><ul>
+<li><p>主键不允许为空</p>
+</li>
+<li><p>复合主键的各属性都不能取空值，而不仅是主键整体不能取空值</p>
+</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109104425053.png" alt="image-20210109104425053"></p>
+<h2 id="二、多个关系"><a href="#二、多个关系" class="headerlink" title="二、多个关系"></a>二、多个关系</h2><h3 id="参照完整性-Referential-Integrity-约束"><a href="#参照完整性-Referential-Integrity-约束" class="headerlink" title="参照完整性(Referential Integrity)约束"></a>参照完整性(Referential Integrity)约束</h3><ul>
+<li>外键或者取Null值(在允许为Null的情况下)<ul>
+<li>如果外键是主属性(组成键的属性)，则不允许为空</li>
+</ul>
+</li>
+<li>外键或者等于其被参照关系某个元组的主键值</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109104627218.png" alt="image-20210109104627218"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109104653268.png" alt="image-20210109104653268"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109104715790.png" alt="image-20210109104715790"></p>
+<h3 id="用户定义的完整性"><a href="#用户定义的完整性" class="headerlink" title="用户定义的完整性"></a>用户定义的完整性</h3><blockquote>
+<p>例如：学生每学期的选课门数不得超过10<br>实际上是业务规则</p>
+</blockquote>
+<h1 id="数据操作"><a href="#数据操作" class="headerlink" title="数据操作"></a>数据操作</h1><h2 id="关系操作"><a href="#关系操作" class="headerlink" title="关系操作"></a>关系操作</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109104907070.png" alt="image-20210109104907070"></p>
+<h2 id="数据操作-1"><a href="#数据操作-1" class="headerlink" title="数据操作"></a>数据操作</h2><ul>
+<li><p>关系模型操作分为<strong>检索</strong>和<strong>更新</strong>。</p>
+</li>
+<li><p>当对关系进行更新操作时，不应该违反定义在关系数据库上的完整性约束</p>
+</li>
+</ul>
+<h3 id="更新（增删改操作）"><a href="#更新（增删改操作）" class="headerlink" title="更新（增删改操作）"></a>更新（增删改操作）</h3><h4 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109105126821.png" alt="image-20210109105126821"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109105154029.png" alt="image-20210109105154029"></p>
+<h4 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h4><ul>
+<li>用于从关系中删除元组(“一次一集合”，不必使用循环语句)</li>
+<li>当指定删除操作时，一般要给出一个关系属性上的条件来选择要被删除的元组</li>
+<li>有可能会违反：<ul>
+<li>参照完整性约束</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109105258299.png" alt="image-20210109105258299"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109105310892.png" alt="image-20210109105310892"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109105323350.png" alt="image-20210109105323350"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109105337617.png" alt="image-20210109105337617"></p>
+<h4 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h4><ul>
+<li>用于改变关系中指定元组的一个或多个属性值 (“一次一集合”，不必使用循环语句)</li>
+<li>一般需要在关系的属性上指定条件来选择要修改的元组</li>
+<li>修改主键的本质：删除旧的元组并插入新的元组</li>
+<li>有可能会违反：<ul>
+<li>域约束</li>
+<li>键约束</li>
+<li>非空约束</li>
+<li>实体完整性约束</li>
+<li>参照完整性约束</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109105523258.png" alt="image-20210109105523258"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109105533814.png" alt="image-20210109105533814"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109105542416.png" alt="image-20210109105542416"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109105552247.png" alt="image-20210109105552247"></p>
+<h1 id="关系代数概述"><a href="#关系代数概述" class="headerlink" title="关系代数概述"></a>关系代数概述</h1><ul>
+<li>关系代数是一种<strong>抽象的</strong>查询语言，是关系数据操纵语言的一种<strong>传统</strong>(SQL语言的基础)表达方式，它是用<strong>对关系的运算</strong>来表达查询的</li>
+<li>运算：<ul>
+<li>运算对象(Operand)</li>
+<li>运算符(Operator)</li>
+<li>运算结果(Result)<br>(3+6)*4=36    (表达式)</li>
+</ul>
+</li>
+<li>关系代数的运算<ul>
+<li>运算对象—》关系</li>
+<li>运算结果—》关系</li>
+<li>运算符   —》四类</li>
+<li>关系代数操作的一个序列形成关系代数表达式，其运算结果也是一个关系</li>
+</ul>
+</li>
+</ul>
+<h2 id="关系代数的运算符"><a href="#关系代数的运算符" class="headerlink" title="关系代数的运算符"></a>关系代数的运算符</h2><ul>
+<li><p>集合运算符</p>
+<ul>
+<li><p>将关系看成元组的集合</p>
+</li>
+<li><p>运算是从关系的“水平”方向即行的角度来进行</p>
+</li>
+</ul>
+</li>
+<li><p>专门的关系运算符</p>
+<ul>
+<li>不仅涉及行而且涉及列</li>
+</ul>
+</li>
+<li><p>算术比较符</p>
+<ul>
+<li>辅助专门的关系运算符进行操作</li>
+</ul>
+</li>
+<li><p>逻辑运算符</p>
+<ul>
+<li>辅助专门的关系运算符进行操作</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109111947940.png" alt="image-20210109111947940"></p>
+<h1 id="专门的关系运算"><a href="#专门的关系运算" class="headerlink" title="专门的关系运算"></a>专门的关系运算</h1><ol>
+<li>SELECT</li>
+<li>PROJECT</li>
+<li>JOIN</li>
+<li>DIVISION</li>
+</ol>
+<h2 id="SELECT"><a href="#SELECT" class="headerlink" title="SELECT"></a>SELECT</h2><blockquote>
+<p>SELECT(选择) 操作用于从一个关系中选出满足选择条件的元组的一个子集</p>
+<p>表示方法:<br>σ&lt;选择条件&gt;(R)<br>σ(sigma) 表示选择操作, &lt;选择条件&gt;是作用于关系 R的一个布尔表达式</p>
+</blockquote>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109112329473.png" alt="image-20210109112329473"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109112343655.png" alt="image-20210109112343655"></p>
+<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><ul>
+<li>R可以是一个基本关系(或者视图表)，<strong>也可以是其他关系代数运算的中间结果关系(以后的运算都是如此)</strong></li>
+<li>选择得到的关系与 R有相同的属性</li>
+<li>选择得到的关系的元组个数小于或等于R的元组个数(选择条件选中的元组占所有元组的比率被称为条件的<strong>选中率</strong>)</li>
+<li>选择运算是从<strong>行的角度</strong>进行的运算</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109112507494.png" alt="image-20210109112507494"></p>
+<h3 id="关于“筛选条件”"><a href="#关于“筛选条件”" class="headerlink" title="关于“筛选条件”"></a>关于“筛选条件”</h3><ul>
+<li>&lt;选择条件&gt; 由若干个如下子句构成：<ul>
+<li>&lt;属性名&gt; &lt;比较操作符&gt; &lt;常量值&gt;</li>
+<li>&lt;属性名&gt; &lt;比较操作符&gt; &lt;属性名&gt;</li>
+</ul>
+</li>
+<li>&lt;属性名&gt; 是R的某一个属性的名称</li>
+<li>&lt;比较操作符&gt; 通常是操作符集 {=,  &lt;, ≤, &gt;, ≥ , ≠ }中的一个, &lt;常量值&gt; 是来自于属性域中的一个常量值 </li>
+<li>可以用布尔操作符 AND, OR, NOT 任意连接子句，从而形成一个复合选择条件</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109112646329.png" alt="image-20210109112646329"></p>
+<h3 id="SELECT运算的特性"><a href="#SELECT运算的特性" class="headerlink" title="SELECT运算的特性"></a>SELECT运算的特性</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109112729098.png" alt="image-20210109112729098"></p>
+<h2 id="PROJECT"><a href="#PROJECT" class="headerlink" title="PROJECT"></a>PROJECT</h2><blockquote>
+<p>PROJECT(投影) 从一个关系中选择某些列(属性)并丢弃掉其它列(属性) 而得到一个新的关系</p>
+</blockquote>
+<p>表示方法：</p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109112824475.png" alt="image-20210109112824475"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109112835069.png" alt="image-20210109112835069"></p>
+<h3 id="注意-1"><a href="#注意-1" class="headerlink" title="注意"></a>注意</h3><ul>
+<li>R可以是一个基本关系(或者视图表)，<strong>也可以是其他关系代数运算的中间结果关系</strong></li>
+<li>PROJECT 操作得到的关系仅有&lt;属性列表&gt; 中列出的属性并且其顺序和属性列表的顺序一致</li>
+<li>如果属性列表只包含R的<strong>非键</strong>属性，那么就有可能出现重复的元组，PROJECT操作将会去除任何重复的元组，这样PROJECT操作的结果就是一个有效的关系，这种做法叫<strong>重复消除</strong></li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109113019308.png" alt="image-20210109113019308"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109113031447.png" alt="image-20210109113031447"></p>
+<h3 id="PROJECT运算的特性"><a href="#PROJECT运算的特性" class="headerlink" title="PROJECT运算的特性"></a>PROJECT运算的特性</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109113107455.png" alt="image-20210109113107455"></p>
+<h3 id="操作序列和RENAME-重命名-操作"><a href="#操作序列和RENAME-重命名-操作" class="headerlink" title="操作序列和RENAME(重命名)操作"></a>操作序列和RENAME(重命名)操作</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109113400198.png" alt="image-20210109113400198"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109113440816.png" alt="image-20210109113440816"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109113411771.png" alt="image-20210109113411771"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109113425304.png" alt="image-20210109113425304"></p>
+<h2 id="JOIN"><a href="#JOIN" class="headerlink" title="JOIN"></a>JOIN</h2><ul>
+<li>主要是用于将两个有联系的关系连接起来<ul>
+<li>用于处理关系间的联系，对于任何包含多个关系的关系数据库非常重要</li>
+</ul>
+</li>
+<li>表示方法<ul>
+<li>R(A1, A2, . . ., An) 和 S(B1, B2, . . ., Bm) 的连接表示为:</li>
+<li><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109114630208.png" alt="image-20210109114630208"></li>
+</ul>
+</li>
+</ul>
+<h3 id="示例：查询有家属的女性员工姓名及其家属姓名"><a href="#示例：查询有家属的女性员工姓名及其家属姓名" class="headerlink" title="示例：查询有家属的女性员工姓名及其家属姓名"></a>示例：查询有家属的女性员工姓名及其家属姓名</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109114722030.png" alt="image-20210109114722030"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109114732655.png" alt="image-20210109114732655"></p>
+<ul>
+<li>笛卡尔积和连接的主要区别是：只有符合连接条件的元组才会出现在连接结果中；然而两个关系所有元组的组合都会出现在笛卡尔积的结果中</li>
+</ul>
+<h3 id="连接条件"><a href="#连接条件" class="headerlink" title="连接条件"></a>连接条件</h3><p>通常连接条件的形式如下: </p>
+<ul>
+<li>&lt;条件&gt; AND &lt;条件&gt; AND . . . AND &lt;条件&gt; </li>
+<li>每一个条件的表示形式为 AiθBj, Ai 是 R的一个属性, Bj 是 S的一个属性, Ai 和 Bj 有相同的域， θ(theta) 是一个比较运算符 {=, &lt;,≤ , &gt;,≥  ,≠ }. </li>
+<li>带有上述连接条件的JOIN操作称为 THETA JOIN </li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109115110691.png" alt="image-20210109115110691"></p>
+<h3 id="等值连接-EQUIJOIN"><a href="#等值连接-EQUIJOIN" class="headerlink" title="等值连接(EQUIJOIN)"></a>等值连接(EQUIJOIN)</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109115447585.png" alt="image-20210109115447585"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109115640518.png" alt="image-20210109115640518"></p>
+<h3 id="自然连接-NATURAL-JOIN"><a href="#自然连接-NATURAL-JOIN" class="headerlink" title="自然连接(NATURAL JOIN)"></a>自然连接(NATURAL JOIN)</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109115625090.png" alt="image-20210109115625090"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109115659326.png" alt="image-20210109115659326"></p>
+<h2 id="DIVISION"><a href="#DIVISION" class="headerlink" title="DIVISION"></a>DIVISION</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109115719663.png" alt="image-20210109115719663"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109115923070.png" alt="image-20210109115923070"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109115934138.png" alt="image-20210109115934138"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109115954524.png" alt="image-20210109115954524"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109120007909.png" alt="image-20210109120007909"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109120018290.png" alt="image-20210109120018290"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109120027045.png" alt="image-20210109120027045"></p>
+<h1 id="传统的集合运算"><a href="#传统的集合运算" class="headerlink" title="传统的集合运算"></a>传统的集合运算</h1><ol>
+<li><strong>UNION</strong></li>
+<li><strong>MINUS</strong></li>
+<li>SET DIFFERENCE</li>
+<li><strong>INTERSECTION</strong></li>
+<li><strong>笛卡尔积</strong></li>
+<li>CARTESIAN PRODUCT</li>
+</ol>
+<h2 id="UNION（并）"><a href="#UNION（并）" class="headerlink" title="UNION（并）"></a>UNION（并）</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><ul>
+<li>属于关系R或属于关系S的元组组成的集合</li>
+<li>R∪S ={ t | t∈R∨t∈S }</li>
+<li><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109113800943.png" alt="image-20210109113800943"></li>
+</ul>
+<h3 id="注意-2"><a href="#注意-2" class="headerlink" title="注意"></a>注意</h3><ul>
+<li>并结果中的重复元组会被消除</li>
+<li>两个关系R和S若进行并运算，则它们必须具有相同的关系模式(<strong>并相容性</strong>)</li>
+<li>两个关系要有相同的属性个数，并且每个相对应的属性对都具有相同的域 (<strong>属性名不一定要一致，若不一致，则以R关系(前一个关系)的属性名为准</strong> ）</li>
+</ul>
+<h3 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109113706266.png" alt="image-20210109113706266"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109113715428.png" alt="image-20210109113715428"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109113725032.png" alt="image-20210109113725032"></p>
+<h2 id="MINUS（差）"><a href="#MINUS（差）" class="headerlink" title="MINUS（差）"></a>MINUS（差）</h2><h3 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h3><ul>
+<li><p>由属于关系R而不属于关系S的元组组成的集合</p>
+</li>
+<li><p>R-S ={ t | t∈R∧t  S }</p>
+</li>
+<li><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109113921557.png" alt="image-20210109113921557"></p>
+</li>
+</ul>
+<h2 id="INTERSECTION（交）"><a href="#INTERSECTION（交）" class="headerlink" title="INTERSECTION（交）"></a>INTERSECTION（交）</h2><h3 id="定义-2"><a href="#定义-2" class="headerlink" title="定义"></a>定义</h3><ul>
+<li>既属于关系R又属于关系S的元组组成的集合</li>
+<li>R∩S ={ t | t∈R∧t∈S }</li>
+<li>R∩S=R-(R-S)</li>
+<li><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109114031838.png" alt="image-20210109114031838"></li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109114116429.png" alt="image-20210109114116429"></p>
+<h3 id="UNION-INTERSECTION和MINUS的特性"><a href="#UNION-INTERSECTION和MINUS的特性" class="headerlink" title="UNION, INTERSECTION和MINUS的特性"></a>UNION, INTERSECTION和MINUS的特性</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109114204061.png" alt="image-20210109114204061"></p>
+<h2 id="笛卡尔积（叉积）"><a href="#笛卡尔积（叉积）" class="headerlink" title="笛卡尔积（叉积）"></a>笛卡尔积（叉积）</h2><p>R(A1, A2, . . ., An) x S(B1, B2, . . ., Bm) 的结果是一个关系 Q ，Q具有 n + m 个属性，属性次序为 Q(A1, A2, . . ., An, B1, B2, . . ., Bm)。Q对于来自R的一个元组和来自S的一个元组的每一种组合，都有一个相对应的元组。因此, 如果R 有nR 个元组， S 有 nS个元组, 则 R x S有nR * nS个元组</p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109114419140.png" alt="image-20210109114419140"></p>
+<h1 id="基本运算"><a href="#基本运算" class="headerlink" title="基本运算"></a>基本运算</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109120047821.png" alt="image-20210109120047821"></p>
+]]></content>
+      <categories>
+        <category>数据库原理及应用</category>
+      </categories>
+      <tags>
+        <tag>share</tag>
+        <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>计网第四章——网络层</title>
     <url>/posts/87cd1f77/</url>
     <content><![CDATA[<h1 id="网络层概述"><a href="#网络层概述" class="headerlink" title="网络层概述"></a>网络层概述</h1><blockquote>
