@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hello World</title>
+    <url>/posts/4a17b156/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. <a id="more"></a>Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>数据库第一章——数据库系统概论</title>
     <url>/posts/4efd1fa7/</url>
     <content><![CDATA[<h1 id="数据库基本概念"><a href="#数据库基本概念" class="headerlink" title="数据库基本概念"></a>数据库基本概念</h1><ul>
@@ -282,24 +300,6 @@
         <tag>share</tag>
         <tag>notes</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/posts/4a17b156/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. <a id="more"></a>Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
   </entry>
   <entry>
     <title>数据库第二章——数据库系统结构</title>
@@ -781,6 +781,57 @@
 ]]></content>
       <categories>
         <category>数据库原理及应用</category>
+      </categories>
+      <tags>
+        <tag>share</tag>
+        <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>线性代数第七章——方阵对角化及其应用</title>
+    <url>/posts/b60ddbe5/</url>
+    <content><![CDATA[<h1 id="规范正交化"><a href="#规范正交化" class="headerlink" title="规范正交化"></a>规范正交化</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109201509010.png" alt="image-20210109201509010"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109201809185.png" alt="image-20210109201809185"></p>
+<h1 id="求矩阵的特征值"><a href="#求矩阵的特征值" class="headerlink" title="求矩阵的特征值"></a>求矩阵的特征值</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109201906847.png" alt="image-20210109201906847"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109201934012.png" alt="image-20210109201934012"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109202023128.png" alt="image-20210109202023128"></p>
+<h1 id="求矩阵的特征向量"><a href="#求矩阵的特征向量" class="headerlink" title="求矩阵的特征向量"></a>求矩阵的特征向量</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109202047908.png" alt="image-20210109202047908"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109202211400.png" alt="image-20210109202211400"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109202307519.png" alt="image-20210109202307519"></p>
+<h1 id="判断方阵是否与对角线相似-是否满足-P-1AP-A’"><a href="#判断方阵是否与对角线相似-是否满足-P-1AP-A’" class="headerlink" title="判断方阵是否与对角线相似/是否满足$P^-1AP=A’$"></a>判断方阵是否与对角线相似/是否满足$P^-1AP=A’$</h1><h1 id=""><a href="#" class="headerlink" title=""></a></h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109202550322.png"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109202606181.png" alt="image-20210109202606181"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109202624066.png" alt="image-20210109202624066"></p>
+<h1 id="求方阵对应的对角阵A’及颗粒变换矩阵P"><a href="#求方阵对应的对角阵A’及颗粒变换矩阵P" class="headerlink" title="求方阵对应的对角阵A’及颗粒变换矩阵P"></a>求方阵对应的对角阵A’及颗粒变换矩阵P</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109202720868.png" alt="image-20210109202720868"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109202956836.png" alt="image-20210109202956836"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109203004147.png" alt="image-20210109203004147"></p>
+<h1 id="已知-P-1AP-A’-，求关于A的复杂式子"><a href="#已知-P-1AP-A’-，求关于A的复杂式子" class="headerlink" title="已知$P^-1AP=A’$，求关于A的复杂式子"></a>已知$P^-1AP=A’$，求关于A的复杂式子</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109203115365.png" alt="image-20210109203115365"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109203158489.png" alt="image-20210109203158489"></p>
+]]></content>
+      <categories>
+        <category>线性代数</category>
+      </categories>
+      <tags>
+        <tag>share</tag>
+        <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>线性代数第八章——二次型</title>
+    <url>/posts/d4c1f1bf/</url>
+    <content><![CDATA[<h1 id="求二次型对应的系数矩阵"><a href="#求二次型对应的系数矩阵" class="headerlink" title="求二次型对应的系数矩阵"></a>求二次型对应的系数矩阵</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109204019812.png" alt="image-20210109204019812"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109204051005.png" alt="image-20210109204051005"></p>
+<h1 id="把二次型化成标准型"><a href="#把二次型化成标准型" class="headerlink" title="把二次型化成标准型"></a>把二次型化成标准型</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109204153146.png" alt="image-20210109204153146"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109204411980.png" alt="image-20210109204411980"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109204312144.png" alt="image-20210109204312144"></p>
+<h1 id="把二次型化成规范性"><a href="#把二次型化成规范性" class="headerlink" title="把二次型化成规范性"></a>把二次型化成规范性</h1><p>![image-20210109205518223](/Users/fine/Library/Application Support/typora-user-images/image-20210109205518223.png)</p>
+<h1 id="用配方法把二次型化成标准型"><a href="#用配方法把二次型化成标准型" class="headerlink" title="用配方法把二次型化成标准型"></a>用配方法把二次型化成标准型</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109205846550.png" alt="image-20210109205846550"></p>
+<h1 id="判断二次型的正定性"><a href="#判断二次型的正定性" class="headerlink" title="判断二次型的正定性"></a>判断二次型的正定性</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109210241326.png" alt="image-20210109210241326"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109210334211.png" alt="image-20210109210334211"></p>
+<h1 id="二次型为正定的等价条件"><a href="#二次型为正定的等价条件" class="headerlink" title="二次型为正定的等价条件"></a>二次型为正定的等价条件</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109210428995.png" alt="image-20210109210428995"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109210507451.png" alt="image-20210109210507451"></p>
+]]></content>
+      <categories>
+        <category>线性代数</category>
       </categories>
       <tags>
         <tag>share</tag>
