@@ -1,24 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/posts/4a17b156/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. <a id="more"></a>Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>数据库第一章——数据库系统概论</title>
     <url>/posts/4efd1fa7/</url>
     <content><![CDATA[<h1 id="数据库基本概念"><a href="#数据库基本概念" class="headerlink" title="数据库基本概念"></a>数据库基本概念</h1><ul>
@@ -788,6 +770,200 @@
       </tags>
   </entry>
   <entry>
+    <title>数据库第四章——关系数据库标准语言SQL（2）</title>
+    <url>/posts/b4b005f4/</url>
+    <content><![CDATA[<h1 id="SQL的功能组成"><a href="#SQL的功能组成" class="headerlink" title="SQL的功能组成"></a>SQL的功能组成</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111095419310.png" alt="image-20210111095419310"></p>
+<h2 id="SQL－-gt-DML-－-gt-DQL-数据查询"><a href="#SQL－-gt-DML-－-gt-DQL-数据查询" class="headerlink" title="SQL－&gt;DML －&gt;DQL(数据查询)"></a>SQL－&gt;DML －&gt;DQL(数据查询)</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111095619074.png" alt="image-20210111095619074"></p>
+<h1 id="内连接"><a href="#内连接" class="headerlink" title="内连接"></a>内连接</h1><p><strong>例7-1：查询所有学生所在院系信息。</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100039169.png" alt="image-20210111100039169"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100055583.png"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> STUDENTINFO</span><br><span class="line"><span class="keyword">INNER</span> <span class="keyword">JOIN</span> DEPARTMENT <span class="keyword">ON</span> (STUDENTINFO.STUDENTDEPARTMENTIN=DEPARTMENT.DEPARTMENTID)</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+<h2 id="内连接执行过程"><a href="#内连接执行过程" class="headerlink" title="内连接执行过程"></a>内连接执行过程</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100310303.png" alt="image-20210111100310303"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111102107255.png" alt="image-20210111102107255"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100511937.png" alt="image-20210111100511937"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> S.STUDENTNO, S.STUDENTNAME, D.DEPARTMENTNAME <span class="keyword">FROM</span> STUDENTINFO <span class="keyword">AS</span> S <span class="keyword">INNER</span> <span class="keyword">JOIN</span> DEPARTMENT <span class="keyword">AS</span> D <span class="keyword">ON</span> (S.STUDENTDEPARTIN = D.DEPARTMENTID)</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="多表查询时SELECT-表示的含义"><a href="#多表查询时SELECT-表示的含义" class="headerlink" title="多表查询时SELECT *表示的含义"></a>多表查询时SELECT *表示的含义</h2><ul>
+<li>当未使用限定符指定时，星号解析为对 FROM 子句中所指定的所有表或视图中的所有列的引用</li>
+<li>当使用表或视图名称进行限定时，星号解析为对表或视图中的所有列的引用</li>
+</ul>
+<h2 id="注意：尽量不要用以下连接方式"><a href="#注意：尽量不要用以下连接方式" class="headerlink" title="注意：尽量不要用以下连接方式"></a>注意：尽量不要用以下连接方式</h2><ul>
+<li><pre><code class="sql">SELECT * FROM STUDENTINFO, DEPARTMENT WHERE STUDENTINFO.STUDENTDEPARTID=DEPARTMENT.DEPARTMENTID
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">- 原因：无法将连接条件和针对连接后生成的“大表”的筛选条件分开</span><br><span class="line"></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">**数据挖掘例7-2：考察这家公司技术部门的男女员工比例**</span><br><span class="line"></span><br><span class="line">![image-20210111100750333](https:&#x2F;&#x2F;chasing1874.oss-cn-chengdu.aliyuncs.com&#x2F;image-20210111100750333.png)</span><br><span class="line"></span><br><span class="line">![image-20210111100805120](https:&#x2F;&#x2F;chasing1874.oss-cn-chengdu.aliyuncs.com&#x2F;image-20210111100805120.png)</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;sql</span><br><span class="line">SELECT * FROM EMPLOYEE E JOIN DEPARTMENT D ON (E.DNO &#x3D; D.DNUMBER)</span><br><span class="line"></span><br><span class="line">SELECT SEX, COUNT(*) AS 人数 FROM EMPLOYEE JOIN DEPARTMENT ON (DNO &#x3D; DNUMBER) WHERE DNAME&#x3D;&#39;RESEARCH&#39; GROUP BY SEX</span><br></pre></td></tr></table></figure>
+
+
+</code></pre>
+</li>
+</ul>
+<h2 id="多表内连接查询"><a href="#多表内连接查询" class="headerlink" title="多表内连接查询"></a>多表内连接查询</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100842785.png" alt="image-20210111100842785"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100854911.png" alt="image-20210111100854911"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100906322.png" alt="image-20210111100906322"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> EXAMRECORD E <span class="keyword">JOIN</span> STUDENTINFO S <span class="keyword">ON</span> (E.STUDENTNO = E.STUDENTNO) <span class="keyword">JOIN</span> COURSE C <span class="keyword">ON</span> (C.COURSEID = E.COURSEID)</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p><strong>例7-3：查询所有学生各门课程成绩</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100932313.png" alt="image-20210111100932313"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> STUDENTNAME <span class="keyword">AS</span> 学生姓名 , COURSENAME <span class="keyword">AS</span> 课程名称, SCORE <span class="keyword">AS</span> 成绩 <span class="keyword">FROM</span> EXAMRECORD E <span class="keyword">JOIN</span> STUDENTINFO S <span class="keyword">ON</span> (E.STUDENTNO=S.STUDENTNO) <span class="keyword">JOIN</span> COUSE C <span class="keyword">ON</span> (C.COURSEID=E.COURSEID)</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p><strong>例7-4 ：查询各门课程任课教师信息</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100959522.png" alt="image-20210111100959522"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111101013925.png" alt="image-20210111101013925"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> COURSE <span class="keyword">ORDER</span> <span class="keyword">BY</span> TEACHERID <span class="keyword">DESC</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> TEACHER</span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> COURSE C <span class="keyword">JOIN</span> TEACHER T <span class="keyword">ON</span> (C.TEACHERID=T.TEACHERID)</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<h1 id="外连接"><a href="#外连接" class="headerlink" title="外连接"></a>外连接</h1><h2 id="LEFT-OUTER-JOIN"><a href="#LEFT-OUTER-JOIN" class="headerlink" title="LEFT OUTER JOIN"></a>LEFT OUTER JOIN</h2><blockquote>
+<p>显示LEFT表(Course)中的全部元组，如果RIGHT表(Teacher)<br>中没有扫描到符合连接条件的元组，则用NULL代替</p>
+</blockquote>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111104650305.png" alt="image-20210111104650305"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> COURSE C <span class="keyword">LEFT</span> <span class="keyword">OUTER</span> <span class="keyword">JOIN</span> TEACHER T <span class="keyword">ON</span> (C.TEACHERID = T.TEACHERID) <span class="keyword">ORDER</span> <span class="keyword">BY</span> T.TEACHERID <span class="keyword">DESC</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="RIGHT-OUTER-JOIN"><a href="#RIGHT-OUTER-JOIN" class="headerlink" title="RIGHT OUTER JOIN"></a>RIGHT OUTER JOIN</h2><blockquote>
+<p>显示LEFT表(Course)中的全部元组，如果RIGHT表(Teacher)<br>中没有扫描到符合连接条件的元组，则用NULL代替</p>
+</blockquote>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111104745799.png" alt="image-20210111104745799"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> COURSE C <span class="keyword">RIGHT</span> <span class="keyword">OUTER</span> <span class="keyword">JOIN</span> TEACHER T <span class="keyword">ON</span> (C.TEACHERID=T.TEACHERID) <span class="keyword">ORDER</span> <span class="keyword">BY</span> C.COURSEID <span class="keyword">DESC</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="注意：进行左、右外连接时表的顺序非常重要"><a href="#注意：进行左、右外连接时表的顺序非常重要" class="headerlink" title="注意：进行左、右外连接时表的顺序非常重要"></a>注意：进行左、右外连接时表的顺序非常重要</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111104837990.png" alt="image-20210111104837990"></p>
+<h2 id="FULL-OUTTER-JOIN"><a href="#FULL-OUTTER-JOIN" class="headerlink" title="FULL OUTTER JOIN"></a>FULL OUTTER JOIN</h2><blockquote>
+<p>显示LEFT表(Course) 和RIGHT表(Teacher)中的全部元组，如果<br>没有扫描到符合连接条件的元组，<strong>则用NULL代替</strong></p>
+</blockquote>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111104907825.png" alt="image-20210111104907825"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> COURSE C <span class="keyword">FULL</span> <span class="keyword">OUTER</span> <span class="keyword">JOIN</span> TEACHER T <span class="keyword">ON</span> (C.TEACHERID=T.TEACHERID) <span class="keyword">ORDER</span> <span class="keyword">BY</span> C.TEACHERID <span class="keyword">DESC</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="注意：多表外连接，表顺序很重要"><a href="#注意：多表外连接，表顺序很重要" class="headerlink" title="注意：多表外连接，表顺序很重要"></a>注意：多表外连接，表顺序很重要</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111104939651.png" alt="image-20210111104939651"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111104949775.png" alt="image-20210111104949775"></p>
+<h3 id="例7-5-："><a href="#例7-5-：" class="headerlink" title="例7-5 ："></a><strong>例7-5 ：</strong></h3><p><strong>查询所有学生选修的课程(包括未选课学生以及没有学生选修的课程信息)</strong></p>
+<ol>
+<li>连接“StudentInfo”和“ExamRecord”</li>
+</ol>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105100017.png" alt="image-20210111105100017"></p>
+<ol start="2">
+<li>把第1步生成的结果关系与“Course”连接</li>
+</ol>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105207670.png" alt="image-20210111105207670"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105222970.png" alt="image-20210111105222970"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105234460.png" alt="image-20210111105234460"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105245515.png" alt="image-20210111105245515"></p>
+<ol start="3">
+<li>按照题目要求进行适当的投影操作</li>
+</ol>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105348702.png" alt="image-20210111105348702"></p>
+<h3 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h3><blockquote>
+<p>所有用于单表的查询技术都可以用于多表查询，多表只不过是把单表按照一定连接条件(join condition)连接成一张<strong>“大表”</strong></p>
+</blockquote>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105430685.png" alt="image-20210111105430685"></p>
+<h2 id="有连接时的查询执行过程"><a href="#有连接时的查询执行过程" class="headerlink" title="有连接时的查询执行过程"></a>有连接时的查询执行过程</h2><ul>
+<li>生成结果关系(“大表”)—》在“大表”上利用WHERE指定的条件筛选元组—》按照Group by指定的属性将元组分组—》将Group by的分组用Having指定的条件筛选—》按照Order By指定的属性对元组排序(排序的属性可以不在最后投影的属性列中)—》投影或用函数、表达式计算</li>
+</ul>
+<ul>
+<li>如果没有GROUP BY和HAVING的话，上述步骤中红色的部分将不会执行</li>
+</ul>
+<h3 id="例7-6-："><a href="#例7-6-：" class="headerlink" title="例7-6 ："></a><strong>例7-6 ：</strong></h3><p><strong>查询部门男性员工数大于2的部门名称及男性员工人数，并按人数降序排列</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105654992.png" alt="image-20210111105654992"></p>
+<ol>
+<li>生成结果关系(“大表”)</li>
+</ol>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105731991.png" alt="image-20210111105731991"></p>
+<ol start="2">
+<li>在“大表”上利用WHERE指定的条件筛选元组</li>
+</ol>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105755760.png" alt="image-20210111105755760"></p>
+<ol start="3">
+<li>按照Group by指定的属性将元组分组</li>
+</ol>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105827865.png" alt="image-20210111105827865"></p>
+<ol start="4">
+<li>将Group by的分组用Having指定的条件筛选</li>
+</ol>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105850431.png" alt="image-20210111105850431"></p>
+<ol start="5">
+<li>按照Order By指定的属性对元组排序</li>
+</ol>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105914626.png" alt="image-20210111105914626"></p>
+<ol start="6">
+<li>投影或用函数、表达式计算</li>
+</ol>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105944800.png" alt="image-20210111105944800"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> DNAME , <span class="keyword">COUNT</span>(*) <span class="keyword">FROM</span> EMPLOYEE E <span class="keyword">JOIN</span> DEPARTMENT D <span class="keyword">ON</span> (E.DNO=D.DNUMBER) <span class="keyword">WHERE</span> SEX=<span class="string">&#x27;M&#x27;</span> <span class="keyword">GROUP</span> <span class="keyword">BY</span> DNAME <span class="keyword">HAVING</span> <span class="keyword">COUNT</span>(*) &gt; <span class="number">2</span> <span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="keyword">COUNT</span>(*) <span class="keyword">DESC</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="补充：一个查询优化的例子"><a href="#补充：一个查询优化的例子" class="headerlink" title="补充：一个查询优化的例子"></a>补充：一个查询优化的例子</h3><p>在逻辑上，我们可以认为DBMS是先通过JOIN操作(关系代数)把所有的表连成一张“大表”后再来执行SELECT操作(关系代数)，但实际上DBMS在某些情况下会对查询的执行过程进行优化，比如先执行SELECT操作(从而有可能减少参与JOIN操作的关系的元组数)，再执行JOIN操作。</p>
+<h4 id="DBMS处理查询的过程"><a href="#DBMS处理查询的过程" class="headerlink" title="DBMS处理查询的过程"></a>DBMS处理查询的过程</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111110027640.png" alt="image-20210111110027640"></p>
+<h3 id="例7-7-："><a href="#例7-7-：" class="headerlink" title="例7-7 ："></a>例7-7 ：</h3><p><strong>查询女性员工的家属信息</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111110108326.png" alt="image-20210111110108326"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> FNAME, LNAME, DEPENDRNT_NAME <span class="keyword">FROM</span> EMPLOYEE <span class="keyword">JOIN</span> DEPENDENT <span class="keyword">ON</span> (SSN = ESSN) <span class="keyword">WHERE</span> (EMPLOYEE.SEX = <span class="string">&#x27;F&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111110136785.png" alt="image-20210111110136785"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111110146387.png" alt="image-20210111110146387"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111110159964.png" alt="image-20210111110159964"></p>
+<h1 id="交叉连接"><a href="#交叉连接" class="headerlink" title="交叉连接"></a>交叉连接</h1><blockquote>
+<p>交叉连接(CROSS JOIN)：实际就是关系代数中的“笛卡尔积”(Cartesian Product)</p>
+</blockquote>
+<h3 id="例7-8-："><a href="#例7-8-：" class="headerlink" title="例7-8 ："></a>例7-8 ：</h3><p><strong>将StudentInfo与Department表交叉连接</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111115926151.png" alt="image-20210111115926151"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111115938420.png" alt="image-20210111115938420"></p>
+<p><strong>如果添加一个 WHERE 子句，则交叉连接的作用将同内连接一样</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111120001776.png" alt="image-20210111120001776"></p>
+<h3 id="注意：-1"><a href="#注意：-1" class="headerlink" title="注意："></a>注意：</h3><p>CROSS JOIN后面不能加ON</p>
+<h3 id="CROSS-JOIN的用处"><a href="#CROSS-JOIN的用处" class="headerlink" title="CROSS JOIN的用处"></a>CROSS JOIN的用处</h3><blockquote>
+<p>CROSS JOIN的一个用途是生成样本或测试数据。例如：如果你要生成1000行3列的一个表用于测试，不必建立这样一张表并进行1000次插入操作，可以建立三张表，每张表1列10行数据，然后将这三张表进行交叉连接可得10<em>10</em>10=1000行数据。</p>
+</blockquote>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111120117583.png" alt="image-20210111120117583"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111120132062.png" alt="image-20210111120132062"></p>
+<h1 id="自连接"><a href="#自连接" class="headerlink" title="自连接"></a>自连接</h1><h3 id="例7-9-："><a href="#例7-9-：" class="headerlink" title="例7-9 ："></a>例7-9 ：</h3><p><strong>查询每个员工上级的姓名</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111120202140.png" alt="image-20210111120202140"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111120219805.png" alt="image-20210111120219805"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111120231994.png" alt="image-20210111120231994"></p>
+]]></content>
+      <categories>
+        <category>数据库原理及应用</category>
+      </categories>
+      <tags>
+        <tag>share</tag>
+        <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>线性代数第七章——方阵对角化及其应用</title>
     <url>/posts/b60ddbe5/</url>
     <content><![CDATA[<h1 id="规范正交化"><a href="#规范正交化" class="headerlink" title="规范正交化"></a>规范正交化</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109201509010.png" alt="image-20210109201509010"></p>
@@ -798,10 +974,10 @@
 <h1 id="求矩阵的特征向量"><a href="#求矩阵的特征向量" class="headerlink" title="求矩阵的特征向量"></a>求矩阵的特征向量</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109202047908.png" alt="image-20210109202047908"></p>
 <p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109202211400.png" alt="image-20210109202211400"></p>
 <p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109202307519.png" alt="image-20210109202307519"></p>
-<h1 id="判断方阵是否与对角线相似-是否满足-P-1AP-A’"><a href="#判断方阵是否与对角线相似-是否满足-P-1AP-A’" class="headerlink" title="判断方阵是否与对角线相似/是否满足$P^-1AP=A’$"></a>判断方阵是否与对角线相似/是否满足$P^-1AP=A’$</h1><h1 id=""><a href="#" class="headerlink" title=""></a></h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109202550322.png"></p>
+<h1 id="判断方阵是否与对角线相似-是否满足-P-1AP-A’"><a href="#判断方阵是否与对角线相似-是否满足-P-1AP-A’" class="headerlink" title="判断方阵是否与对角线相似/是否满足$P^-1AP=A’$"></a>判断方阵是否与对角线相似/是否满足$P^-1AP=A’$</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109202550322.png"></p>
 <p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109202606181.png" alt="image-20210109202606181"></p>
 <p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109202624066.png" alt="image-20210109202624066"></p>
-<h1 id="求方阵对应的对角阵A’及颗粒变换矩阵P"><a href="#求方阵对应的对角阵A’及颗粒变换矩阵P" class="headerlink" title="求方阵对应的对角阵A’及颗粒变换矩阵P"></a>求方阵对应的对角阵A’及颗粒变换矩阵P</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109202720868.png" alt="image-20210109202720868"></p>
+<h1 id="求方阵对应的对角阵A’及相应变换矩阵P"><a href="#求方阵对应的对角阵A’及相应变换矩阵P" class="headerlink" title="求方阵对应的对角阵A’及相应变换矩阵P"></a>求方阵对应的对角阵A’及相应变换矩阵P</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109202720868.png" alt="image-20210109202720868"></p>
 <p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109202956836.png" alt="image-20210109202956836"></p>
 <p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109203004147.png" alt="image-20210109203004147"></p>
 <h1 id="已知-P-1AP-A’-，求关于A的复杂式子"><a href="#已知-P-1AP-A’-，求关于A的复杂式子" class="headerlink" title="已知$P^-1AP=A’$，求关于A的复杂式子"></a>已知$P^-1AP=A’$，求关于A的复杂式子</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109203115365.png" alt="image-20210109203115365"></p>
@@ -832,6 +1008,242 @@
 ]]></content>
       <categories>
         <category>线性代数</category>
+      </categories>
+      <tags>
+        <tag>share</tag>
+        <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>计网应用题</title>
+    <url>/posts/9648dc07/</url>
+    <content><![CDATA[<h1 id="冗余码计算"><a href="#冗余码计算" class="headerlink" title="冗余码计算"></a>冗余码计算</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171634481.png" alt="image-20210107171634481"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171648084.png" alt="image-20210107171648084"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171721030.png" alt="image-20210107171721030"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171740599.png" alt="image-20210107171740599"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171749408.png" alt="image-20210107171749408"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171800007.png" alt="image-20210107171800007"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171827008.png" alt="image-20210107171827008"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171852899.png" alt="image-20210107171852899"></p>
+<ul>
+<li>运算时候用异或，同0异1</li>
+</ul>
+<h1 id="数据报分片"><a href="#数据报分片" class="headerlink" title="数据报分片"></a>数据报分片</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171905980.png" alt="image-20210107171905980"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171924869.png" alt="image-20210107171924869"></p>
+<ul>
+<li>数据报长度 = 数据部分长度+首部长度</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107172025702.png" alt="image-20210107172025702"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107172151402.png" alt="image-20210107172151402"></p>
+<ul>
+<li>MTU为1500字节</li>
+</ul>
+<h1 id="码分多址通信"><a href="#码分多址通信" class="headerlink" title="码分多址通信"></a>码分多址通信</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107172232286.png" alt="image-20210107172232286"></p>
+<h1 id="地址聚合"><a href="#地址聚合" class="headerlink" title="地址聚合"></a>地址聚合</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107163635796.png" alt="image-20210107163635796"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107163701071.png" alt="image-20210107163701071"></p>
+<h1 id="路由表更新"><a href="#路由表更新" class="headerlink" title="路由表更新"></a>路由表更新</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107163748580.png" alt="image-20210107163748580"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107163856330.png" alt="image-20210107163856330"></p>
+<p>![image-20210107164031175](/Users/fine/Library/Application Support/typora-user-images/image-20210107164031175.png)</p>
+<p>![image-20210107164043213](/Users/fine/Library/Application Support/typora-user-images/image-20210107164043213.png)</p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107164148511.png" alt="image-20210107164148511"></p>
+<h1 id="路由表下一跳"><a href="#路由表下一跳" class="headerlink" title="路由表下一跳"></a>路由表下一跳</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107164521306.png" alt="image-20210107164521306"></p>
+<ul>
+<li>子网掩码，逐位相与</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107164836786.png" alt="image-20210107164836786"></p>
+<h1 id="网桥转发表"><a href="#网桥转发表" class="headerlink" title="网桥转发表"></a>网桥转发表</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107164853878.png" alt="image-20210107164853878"></p>
+<p> <img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107165539095.png" alt="image-20210107165539095"></p>
+<h1 id="子网划分"><a href="#子网划分" class="headerlink" title="子网划分"></a>子网划分</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107165606990.png" alt="image-20210107165606990"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107165617908.png" alt="image-20210107165617908"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107170011105.png" alt="image-20210107170011105"></p>
+<ul>
+<li>主机位要留5位，子网号3位</li>
+<li>子网掩码即每位都令为1</li>
+<li>网络地址即令主机位排列组合，除去全0全1情况</li>
+<li>广播地址即令主机位全为1</li>
+<li>主机地址范围即为主机号范围</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107170500451.png" alt="image-20210107170500451"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107170510635.png" alt="image-20210107170510635"></p>
+<ul>
+<li>各个子网划分不能重叠</li>
+</ul>
+<h1 id="拥塞控制算法"><a href="#拥塞控制算法" class="headerlink" title="拥塞控制算法"></a>拥塞控制算法</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107170603812.png" alt="image-20210107170603812"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107170612183.png" alt="image-20210107170612183"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107170913389.png" alt="image-20210107170913389"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171123968.png" alt="image-20210107171123968"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171202459.png" alt="image-20210107171202459"></p>
+<ul>
+<li>开始 慢开始，指数增加cwnd，第一轮为2，第0轮为1</li>
+<li>然后达到阈值，拥塞避免，加法增加cwnd</li>
+<li>遇到超时，直接重开，且阈值改变为 超时/2</li>
+<li>遇到重复ACK，报文段丢失，启动快重传，快恢复，从新阈值重新开始</li>
+</ul>
+]]></content>
+      <categories>
+        <category>计算机网络</category>
+      </categories>
+      <tags>
+        <tag>share</tag>
+        <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/posts/4a17b156/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. <a id="more"></a>Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>计网第五章——传输层</title>
+    <url>/posts/bef5de24/</url>
+    <content><![CDATA[<h1 id="传输层概述"><a href="#传输层概述" class="headerlink" title="传输层概述"></a>传输层概述</h1><blockquote>
+<p>只有主机才有的层次</p>
+</blockquote>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106203651985.png" alt="image-20210106203651985"></p>
+<h2 id="传输层的功能："><a href="#传输层的功能：" class="headerlink" title="传输层的功能："></a>传输层的功能：</h2><ol>
+<li>传输层提供进程和进程之间的逻辑通信<ul>
+<li>网络层提供主机之间的逻辑通信</li>
+</ul>
+</li>
+<li>复用和分用</li>
+<li>传输层对收到的报文进行差错检测</li>
+<li>传输层的两种协议</li>
+</ol>
+<h2 id="传输层的两个协议"><a href="#传输层的两个协议" class="headerlink" title="传输层的两个协议"></a>传输层的两个协议</h2><ol>
+<li>TCP<ul>
+<li>可靠，面向连接，时延大，适用于大文件</li>
+<li><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106203957423.png" alt="image-20210106203957423"></li>
+</ul>
+</li>
+<li>UDP<ul>
+<li>不可靠，无连接，时延小，适用于小文件</li>
+<li><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106204024722.png" alt="image-20210106204024722"></li>
+</ul>
+</li>
+</ol>
+<h2 id="传输层的寻址与端口"><a href="#传输层的寻址与端口" class="headerlink" title="传输层的寻址与端口"></a>传输层的寻址与端口</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106204332134.png" alt="image-20210106204332134"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106204436327.png" alt="image-20210106204436327"></p>
+<h1 id="UDP协议"><a href="#UDP协议" class="headerlink" title="UDP协议"></a>UDP协议</h1><h2 id="用户数据报协议UDP概述"><a href="#用户数据报协议UDP概述" class="headerlink" title="用户数据报协议UDP概述"></a>用户数据报协议UDP概述</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106204939137.png" alt="image-20210106204939137"></p>
+<h2 id="UDP首部格式"><a href="#UDP首部格式" class="headerlink" title="UDP首部格式"></a>UDP首部格式</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106205119624.png" alt="image-20210106205119624"></p>
+<h2 id="UDP校验"><a href="#UDP校验" class="headerlink" title="UDP校验"></a>UDP校验</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106205245867.png" alt="image-20210106205245867"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106205457833.png" alt="image-20210106205457833"></p>
+<h1 id="TCP协议"><a href="#TCP协议" class="headerlink" title="TCP协议"></a>TCP协议</h1><h2 id="TCP协议特点"><a href="#TCP协议特点" class="headerlink" title="TCP协议特点"></a>TCP协议特点</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106205855121.png" alt="image-20210106205855121"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106205913699.png" alt="image-20210106205913699"></p>
+<h2 id="TCP报文段首部格式"><a href="#TCP报文段首部格式" class="headerlink" title="TCP报文段首部格式"></a>TCP报文段首部格式</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106210243437.png" alt="image-20210106210243437"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106210625372.png" alt="image-20210106210625372"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106210857046.png" alt="image-20210106210857046"></p>
+<h2 id="TCP连接管理"><a href="#TCP连接管理" class="headerlink" title="TCP连接管理"></a>TCP连接管理</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106211038166.png" alt="image-20210106211038166"></p>
+<h3 id="TCP连接建立"><a href="#TCP连接建立" class="headerlink" title="TCP连接建立"></a>TCP连接建立</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106211413095.png" alt="image-20210106211413095"></p>
+<h3 id="SYN洪泛攻击"><a href="#SYN洪泛攻击" class="headerlink" title="SYN洪泛攻击"></a>SYN洪泛攻击</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106211503642.png" alt="image-20210106211503642"></p>
+<h3 id="TCP的连接释放"><a href="#TCP的连接释放" class="headerlink" title="TCP的连接释放"></a>TCP的连接释放</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106211533122.png" alt="image-20210106211533122"></p>
+<p>![image-20210106211807812](/Users/fine/Library/Application Support/typora-user-images/image-20210106211807812.png)</p>
+<h2 id="TCP可靠传输"><a href="#TCP可靠传输" class="headerlink" title="TCP可靠传输"></a>TCP可靠传输</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106211922707.png" alt="image-20210106211922707"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106212223019.png" alt="image-20210106212223019"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106212411228.png" alt="image-20210106212411228"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106212517585.png" alt="image-20210106212517585"></p>
+<h2 id="TCP流量控制"><a href="#TCP流量控制" class="headerlink" title="TCP流量控制"></a>TCP流量控制</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106212811492.png" alt="image-20210106212811492"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106213238466.png" alt="image-20210106213238466"></p>
+<ul>
+<li>窗口为0后，AB互相等待。B可能发了一个信息给A说可以传了，但是信息丢失了，而A又不知道丢了，就一直等。</li>
+<li>解决方法：持续计时器</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106213445309.png" alt="image-20210106213445309"></p>
+<h2 id="TCP拥塞控制"><a href="#TCP拥塞控制" class="headerlink" title="TCP拥塞控制"></a>TCP拥塞控制</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106213714802.png" alt="image-20210106213714802"></p>
+<h3 id="拥塞控制的四种算法"><a href="#拥塞控制的四种算法" class="headerlink" title="拥塞控制的四种算法"></a>拥塞控制的四种算法</h3><ul>
+<li>慢开始</li>
+<li>拥塞避免</li>
+</ul>
+<ul>
+<li>快重传</li>
+<li>快恢复</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106213918554.png" alt="image-20210106213918554"></p>
+<h3 id="慢开始和拥塞避免"><a href="#慢开始和拥塞避免" class="headerlink" title="慢开始和拥塞避免"></a>慢开始和拥塞避免</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106214101985.png" alt="image-20210106214101985"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106214348119.png" alt="image-20210106214348119"></p>
+<ul>
+<li>新的ssthresh的初始值为原来的除以2</li>
+</ul>
+<h3 id="快重传和快恢复"><a href="#快重传和快恢复" class="headerlink" title="快重传和快恢复"></a>快重传和快恢复</h3><p>![image-20210106214652844](/Users/fine/Library/Application Support/typora-user-images/image-20210106214652844.png)</p>
+<h1 id="传输层总结"><a href="#传输层总结" class="headerlink" title="传输层总结"></a>传输层总结</h1><p>xmind</p>
+]]></content>
+      <categories>
+        <category>计算机网络</category>
+      </categories>
+      <tags>
+        <tag>share</tag>
+        <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>计网第六章——应用层</title>
+    <url>/posts/9c3a6023/</url>
+    <content><![CDATA[<h1 id="应用层概述"><a href="#应用层概述" class="headerlink" title="应用层概述"></a>应用层概述</h1><blockquote>
+<p>应用层对应用程序的通信提供服务。</p>
+</blockquote>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106215449349.png" alt="image-20210106215449349"></p>
+<h2 id="应用层协议定义"><a href="#应用层协议定义" class="headerlink" title="应用层协议定义"></a>应用层协议定义</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106215500877.png" alt="image-20210106215500877"></p>
+<h2 id="应用层功能"><a href="#应用层功能" class="headerlink" title="应用层功能"></a>应用层功能</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106215516080.png" alt="image-20210106215516080"></p>
+<h2 id="应用层重要协议"><a href="#应用层重要协议" class="headerlink" title="应用层重要协议"></a>应用层重要协议</h2><ul>
+<li>FTP</li>
+<li>SMTP、POP3</li>
+<li>HTTP</li>
+<li>DNS</li>
+</ul>
+<h2 id="网络应用模型"><a href="#网络应用模型" class="headerlink" title="网络应用模型"></a>网络应用模型</h2><ul>
+<li>客户/ 服务器模型（Client/Server）</li>
+<li>P2P模型（Peer-to-peer）</li>
+</ul>
+<h3 id="客户-服务器模型（Client-Server）"><a href="#客户-服务器模型（Client-Server）" class="headerlink" title="客户/ 服务器模型（Client/Server）"></a>客户/ 服务器模型（Client/Server）</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106215838884.png" alt="image-20210106215838884"></p>
+<h3 id="P2P模型"><a href="#P2P模型" class="headerlink" title="P2P模型"></a>P2P模型</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106220023192.png" alt="image-20210106220023192"></p>
+<h1 id="DNS系统"><a href="#DNS系统" class="headerlink" title="DNS系统"></a>DNS系统</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106221047582.png" alt="image-20210106221047582"></p>
+<h2 id="域名"><a href="#域名" class="headerlink" title="域名"></a>域名</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106221339816.png" alt="image-20210106221339816"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106221354211.png" alt="image-20210106221354211"></p>
+<h2 id="域名服务器"><a href="#域名服务器" class="headerlink" title="域名服务器"></a>域名服务器</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106221905213.png" alt="image-20210106221905213"></p>
+<h2 id="域名解析过程"><a href="#域名解析过程" class="headerlink" title="域名解析过程"></a>域名解析过程</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106222009482.png" alt="image-20210106222009482"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106222316434.png" alt="image-20210106222316434"></p>
+<h1 id="文件传输协议FTP"><a href="#文件传输协议FTP" class="headerlink" title="文件传输协议FTP"></a>文件传输协议FTP</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106222436541.png" alt="image-20210106222436541"></p>
+<h2 id="FTP服务器和用户端"><a href="#FTP服务器和用户端" class="headerlink" title="FTP服务器和用户端"></a>FTP服务器和用户端</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106222522785.png" alt="image-20210106222522785"></p>
+<h2 id="FTP工作原理"><a href="#FTP工作原理" class="headerlink" title="FTP工作原理"></a>FTP工作原理</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106222743640.png" alt="image-20210106222743640"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223022264.png" alt="image-20210106223022264"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223032369.png" alt="image-20210106223032369"></p>
+<h2 id="电子邮件"><a href="#电子邮件" class="headerlink" title="电子邮件"></a>电子邮件</h2><h3 id="电子邮件的信息格式"><a href="#电子邮件的信息格式" class="headerlink" title="电子邮件的信息格式"></a>电子邮件的信息格式</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223152420.png" alt="image-20210106223152420"></p>
+<h3 id="电子邮件系统组成结构"><a href="#电子邮件系统组成结构" class="headerlink" title="电子邮件系统组成结构"></a>电子邮件系统组成结构</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223422693.png" alt="image-20210106223422693"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223452512.png" alt="image-20210106223452512"></p>
+<h2 id="简单邮件传送协议SMTP"><a href="#简单邮件传送协议SMTP" class="headerlink" title="简单邮件传送协议SMTP"></a>简单邮件传送协议SMTP</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223532031.png" alt="image-20210106223532031"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223726695.png" alt="image-20210106223726695"></p>
+<p>缺点：</p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223812569.png" alt="image-20210106223812569"></p>
+<h2 id="MIME"><a href="#MIME" class="headerlink" title="MIME"></a>MIME</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223835956.png" alt="image-20210106223835956"></p>
+<h2 id="邮局协议POP3"><a href="#邮局协议POP3" class="headerlink" title="邮局协议POP3"></a>邮局协议POP3</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223938956.png" alt="image-20210106223938956"></p>
+<h2 id="网际报文存取协议IMAP"><a href="#网际报文存取协议IMAP" class="headerlink" title="网际报文存取协议IMAP"></a>网际报文存取协议IMAP</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224018876.png" alt="image-20210106224018876"></p>
+<h2 id="基于万维网的电子邮件"><a href="#基于万维网的电子邮件" class="headerlink" title="基于万维网的电子邮件"></a>基于万维网的电子邮件</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224052288.png" alt="image-20210106224052288"></p>
+<h2 id="邮件脑图"><a href="#邮件脑图" class="headerlink" title="邮件脑图"></a>邮件脑图</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224108106.png" alt="image-20210106224108106"></p>
+<h1 id="万维网"><a href="#万维网" class="headerlink" title="万维网"></a>万维网</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224309444.png" alt="image-20210106224309444"></p>
+<h1 id="超文本传输协议HTTP"><a href="#超文本传输协议HTTP" class="headerlink" title="超文本传输协议HTTP"></a>超文本传输协议HTTP</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224439705.png" alt="image-20210106224439705"></p>
+<h2 id="HTTP协议的特点"><a href="#HTTP协议的特点" class="headerlink" title="HTTP协议的特点"></a>HTTP协议的特点</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224609080.png" alt="image-20210106224609080"></p>
+<h2 id="HTTP协议的连接方式"><a href="#HTTP协议的连接方式" class="headerlink" title="HTTP协议的连接方式"></a>HTTP协议的连接方式</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224644852.png" alt="image-20210106224644852"></p>
+<ul>
+<li>非流水线式（停等）</li>
+</ul>
+<h2 id="HTTP报文结构"><a href="#HTTP报文结构" class="headerlink" title="HTTP报文结构"></a>HTTP报文结构</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224848264.png" alt="image-20210106224848264"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106225020029.png" alt="image-20210106225020029"></p>
+<h1 id="应用层总结"><a href="#应用层总结" class="headerlink" title="应用层总结"></a>应用层总结</h1><p>xmid</p>
+]]></content>
+      <categories>
+        <category>计算机网络</category>
       </categories>
       <tags>
         <tag>share</tag>
@@ -1078,80 +1490,6 @@
 <h2 id="5层参考模型"><a href="#5层参考模型" class="headerlink" title="5层参考模型"></a>5层参考模型</h2><h3 id="模型图"><a href="#模型图" class="headerlink" title="模型图"></a>模型图</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101213028676.png" alt="image-20210101213028676"></p>
 <h3 id="数据封装与解封装"><a href="#数据封装与解封装" class="headerlink" title="数据封装与解封装"></a>数据封装与解封装</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101213225550.png" alt="image-20210101213225550"></p>
 <h1 id="1-3-第一章知识总结"><a href="#1-3-第一章知识总结" class="headerlink" title="1.3 第一章知识总结"></a>1.3 第一章知识总结</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101213405540.png" alt="image-20210101213405540"></p>
-]]></content>
-      <categories>
-        <category>计算机网络</category>
-      </categories>
-      <tags>
-        <tag>share</tag>
-        <tag>notes</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>计网应用题</title>
-    <url>/posts/9648dc07/</url>
-    <content><![CDATA[<h1 id="冗余码计算"><a href="#冗余码计算" class="headerlink" title="冗余码计算"></a>冗余码计算</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171634481.png" alt="image-20210107171634481"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171648084.png" alt="image-20210107171648084"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171721030.png" alt="image-20210107171721030"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171740599.png" alt="image-20210107171740599"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171749408.png" alt="image-20210107171749408"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171800007.png" alt="image-20210107171800007"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171827008.png" alt="image-20210107171827008"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171852899.png" alt="image-20210107171852899"></p>
-<ul>
-<li>运算时候用异或，同0异1</li>
-</ul>
-<h1 id="数据报分片"><a href="#数据报分片" class="headerlink" title="数据报分片"></a>数据报分片</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171905980.png" alt="image-20210107171905980"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171924869.png" alt="image-20210107171924869"></p>
-<ul>
-<li>数据报长度 = 数据部分长度+首部长度</li>
-</ul>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107172025702.png" alt="image-20210107172025702"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107172151402.png" alt="image-20210107172151402"></p>
-<ul>
-<li>MTU为1500字节</li>
-</ul>
-<h1 id="码分多址通信"><a href="#码分多址通信" class="headerlink" title="码分多址通信"></a>码分多址通信</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107172232286.png" alt="image-20210107172232286"></p>
-<h1 id="地址聚合"><a href="#地址聚合" class="headerlink" title="地址聚合"></a>地址聚合</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107163635796.png" alt="image-20210107163635796"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107163701071.png" alt="image-20210107163701071"></p>
-<h1 id="路由表更新"><a href="#路由表更新" class="headerlink" title="路由表更新"></a>路由表更新</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107163748580.png" alt="image-20210107163748580"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107163856330.png" alt="image-20210107163856330"></p>
-<p>![image-20210107164031175](/Users/fine/Library/Application Support/typora-user-images/image-20210107164031175.png)</p>
-<p>![image-20210107164043213](/Users/fine/Library/Application Support/typora-user-images/image-20210107164043213.png)</p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107164148511.png" alt="image-20210107164148511"></p>
-<h1 id="路由表下一跳"><a href="#路由表下一跳" class="headerlink" title="路由表下一跳"></a>路由表下一跳</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107164521306.png" alt="image-20210107164521306"></p>
-<ul>
-<li>子网掩码，逐位相与</li>
-</ul>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107164836786.png" alt="image-20210107164836786"></p>
-<h1 id="网桥转发表"><a href="#网桥转发表" class="headerlink" title="网桥转发表"></a>网桥转发表</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107164853878.png" alt="image-20210107164853878"></p>
-<p> <img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107165539095.png" alt="image-20210107165539095"></p>
-<h1 id="子网划分"><a href="#子网划分" class="headerlink" title="子网划分"></a>子网划分</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107165606990.png" alt="image-20210107165606990"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107165617908.png" alt="image-20210107165617908"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107170011105.png" alt="image-20210107170011105"></p>
-<ul>
-<li>主机位要留5位，子网号3位</li>
-<li>子网掩码即每位都令为1</li>
-<li>网络地址即令主机位排列组合，除去全0全1情况</li>
-<li>广播地址即令主机位全为1</li>
-<li>主机地址范围即为主机号范围</li>
-</ul>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107170500451.png" alt="image-20210107170500451"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107170510635.png" alt="image-20210107170510635"></p>
-<ul>
-<li>各个子网划分不能重叠</li>
-</ul>
-<h1 id="拥塞控制算法"><a href="#拥塞控制算法" class="headerlink" title="拥塞控制算法"></a>拥塞控制算法</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107170603812.png" alt="image-20210107170603812"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107170612183.png" alt="image-20210107170612183"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107170913389.png" alt="image-20210107170913389"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171123968.png" alt="image-20210107171123968"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171202459.png" alt="image-20210107171202459"></p>
-<ul>
-<li>开始 慢开始，指数增加cwnd，第一轮为2，第0轮为1</li>
-<li>然后达到阈值，拥塞避免，加法增加cwnd</li>
-<li>遇到超时，直接重开，且阈值改变为 超时/2</li>
-<li>遇到重复ACK，报文段丢失，启动快重传，快恢复，从新阈值重新开始</li>
-</ul>
 ]]></content>
       <categories>
         <category>计算机网络</category>
@@ -1419,150 +1757,6 @@
 <h1 id="物理层设备"><a href="#物理层设备" class="headerlink" title="物理层设备"></a>物理层设备</h1><h2 id="中继器"><a href="#中继器" class="headerlink" title="中继器"></a>中继器</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102203530197.png" alt="image-20210102203530197"></p>
 <h2 id="集线器（多口中继器）"><a href="#集线器（多口中继器）" class="headerlink" title="集线器（多口中继器）"></a>集线器（多口中继器）</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102205012908.png" alt="image-20210102205012908"></p>
 <h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102204904877.png"></p>
-]]></content>
-      <categories>
-        <category>计算机网络</category>
-      </categories>
-      <tags>
-        <tag>share</tag>
-        <tag>notes</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>计网第五章——传输层</title>
-    <url>/posts/bef5de24/</url>
-    <content><![CDATA[<h1 id="传输层概述"><a href="#传输层概述" class="headerlink" title="传输层概述"></a>传输层概述</h1><blockquote>
-<p>只有主机才有的层次</p>
-</blockquote>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106203651985.png" alt="image-20210106203651985"></p>
-<h2 id="传输层的功能："><a href="#传输层的功能：" class="headerlink" title="传输层的功能："></a>传输层的功能：</h2><ol>
-<li>传输层提供进程和进程之间的逻辑通信<ul>
-<li>网络层提供主机之间的逻辑通信</li>
-</ul>
-</li>
-<li>复用和分用</li>
-<li>传输层对收到的报文进行差错检测</li>
-<li>传输层的两种协议</li>
-</ol>
-<h2 id="传输层的两个协议"><a href="#传输层的两个协议" class="headerlink" title="传输层的两个协议"></a>传输层的两个协议</h2><ol>
-<li>TCP<ul>
-<li>可靠，面向连接，时延大，适用于大文件</li>
-<li><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106203957423.png" alt="image-20210106203957423"></li>
-</ul>
-</li>
-<li>UDP<ul>
-<li>不可靠，无连接，时延小，适用于小文件</li>
-<li><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106204024722.png" alt="image-20210106204024722"></li>
-</ul>
-</li>
-</ol>
-<h2 id="传输层的寻址与端口"><a href="#传输层的寻址与端口" class="headerlink" title="传输层的寻址与端口"></a>传输层的寻址与端口</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106204332134.png" alt="image-20210106204332134"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106204436327.png" alt="image-20210106204436327"></p>
-<h1 id="UDP协议"><a href="#UDP协议" class="headerlink" title="UDP协议"></a>UDP协议</h1><h2 id="用户数据报协议UDP概述"><a href="#用户数据报协议UDP概述" class="headerlink" title="用户数据报协议UDP概述"></a>用户数据报协议UDP概述</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106204939137.png" alt="image-20210106204939137"></p>
-<h2 id="UDP首部格式"><a href="#UDP首部格式" class="headerlink" title="UDP首部格式"></a>UDP首部格式</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106205119624.png" alt="image-20210106205119624"></p>
-<h2 id="UDP校验"><a href="#UDP校验" class="headerlink" title="UDP校验"></a>UDP校验</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106205245867.png" alt="image-20210106205245867"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106205457833.png" alt="image-20210106205457833"></p>
-<h1 id="TCP协议"><a href="#TCP协议" class="headerlink" title="TCP协议"></a>TCP协议</h1><h2 id="TCP协议特点"><a href="#TCP协议特点" class="headerlink" title="TCP协议特点"></a>TCP协议特点</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106205855121.png" alt="image-20210106205855121"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106205913699.png" alt="image-20210106205913699"></p>
-<h2 id="TCP报文段首部格式"><a href="#TCP报文段首部格式" class="headerlink" title="TCP报文段首部格式"></a>TCP报文段首部格式</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106210243437.png" alt="image-20210106210243437"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106210625372.png" alt="image-20210106210625372"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106210857046.png" alt="image-20210106210857046"></p>
-<h2 id="TCP连接管理"><a href="#TCP连接管理" class="headerlink" title="TCP连接管理"></a>TCP连接管理</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106211038166.png" alt="image-20210106211038166"></p>
-<h3 id="TCP连接建立"><a href="#TCP连接建立" class="headerlink" title="TCP连接建立"></a>TCP连接建立</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106211413095.png" alt="image-20210106211413095"></p>
-<h3 id="SYN洪泛攻击"><a href="#SYN洪泛攻击" class="headerlink" title="SYN洪泛攻击"></a>SYN洪泛攻击</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106211503642.png" alt="image-20210106211503642"></p>
-<h3 id="TCP的连接释放"><a href="#TCP的连接释放" class="headerlink" title="TCP的连接释放"></a>TCP的连接释放</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106211533122.png" alt="image-20210106211533122"></p>
-<p>![image-20210106211807812](/Users/fine/Library/Application Support/typora-user-images/image-20210106211807812.png)</p>
-<h2 id="TCP可靠传输"><a href="#TCP可靠传输" class="headerlink" title="TCP可靠传输"></a>TCP可靠传输</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106211922707.png" alt="image-20210106211922707"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106212223019.png" alt="image-20210106212223019"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106212411228.png" alt="image-20210106212411228"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106212517585.png" alt="image-20210106212517585"></p>
-<h2 id="TCP流量控制"><a href="#TCP流量控制" class="headerlink" title="TCP流量控制"></a>TCP流量控制</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106212811492.png" alt="image-20210106212811492"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106213238466.png" alt="image-20210106213238466"></p>
-<ul>
-<li>窗口为0后，AB互相等待。B可能发了一个信息给A说可以传了，但是信息丢失了，而A又不知道丢了，就一直等。</li>
-<li>解决方法：持续计时器</li>
-</ul>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106213445309.png" alt="image-20210106213445309"></p>
-<h2 id="TCP拥塞控制"><a href="#TCP拥塞控制" class="headerlink" title="TCP拥塞控制"></a>TCP拥塞控制</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106213714802.png" alt="image-20210106213714802"></p>
-<h3 id="拥塞控制的四种算法"><a href="#拥塞控制的四种算法" class="headerlink" title="拥塞控制的四种算法"></a>拥塞控制的四种算法</h3><ul>
-<li>慢开始</li>
-<li>拥塞避免</li>
-</ul>
-<ul>
-<li>快重传</li>
-<li>快恢复</li>
-</ul>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106213918554.png" alt="image-20210106213918554"></p>
-<h3 id="慢开始和拥塞避免"><a href="#慢开始和拥塞避免" class="headerlink" title="慢开始和拥塞避免"></a>慢开始和拥塞避免</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106214101985.png" alt="image-20210106214101985"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106214348119.png" alt="image-20210106214348119"></p>
-<ul>
-<li>新的ssthresh的初始值为原来的除以2</li>
-</ul>
-<h3 id="快重传和快恢复"><a href="#快重传和快恢复" class="headerlink" title="快重传和快恢复"></a>快重传和快恢复</h3><p>![image-20210106214652844](/Users/fine/Library/Application Support/typora-user-images/image-20210106214652844.png)</p>
-<h1 id="传输层总结"><a href="#传输层总结" class="headerlink" title="传输层总结"></a>传输层总结</h1><p>xmind</p>
-]]></content>
-      <categories>
-        <category>计算机网络</category>
-      </categories>
-      <tags>
-        <tag>share</tag>
-        <tag>notes</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>计网第六章——应用层</title>
-    <url>/posts/9c3a6023/</url>
-    <content><![CDATA[<h1 id="应用层概述"><a href="#应用层概述" class="headerlink" title="应用层概述"></a>应用层概述</h1><blockquote>
-<p>应用层对应用程序的通信提供服务。</p>
-</blockquote>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106215449349.png" alt="image-20210106215449349"></p>
-<h2 id="应用层协议定义"><a href="#应用层协议定义" class="headerlink" title="应用层协议定义"></a>应用层协议定义</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106215500877.png" alt="image-20210106215500877"></p>
-<h2 id="应用层功能"><a href="#应用层功能" class="headerlink" title="应用层功能"></a>应用层功能</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106215516080.png" alt="image-20210106215516080"></p>
-<h2 id="应用层重要协议"><a href="#应用层重要协议" class="headerlink" title="应用层重要协议"></a>应用层重要协议</h2><ul>
-<li>FTP</li>
-<li>SMTP、POP3</li>
-<li>HTTP</li>
-<li>DNS</li>
-</ul>
-<h2 id="网络应用模型"><a href="#网络应用模型" class="headerlink" title="网络应用模型"></a>网络应用模型</h2><ul>
-<li>客户/ 服务器模型（Client/Server）</li>
-<li>P2P模型（Peer-to-peer）</li>
-</ul>
-<h3 id="客户-服务器模型（Client-Server）"><a href="#客户-服务器模型（Client-Server）" class="headerlink" title="客户/ 服务器模型（Client/Server）"></a>客户/ 服务器模型（Client/Server）</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106215838884.png" alt="image-20210106215838884"></p>
-<h3 id="P2P模型"><a href="#P2P模型" class="headerlink" title="P2P模型"></a>P2P模型</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106220023192.png" alt="image-20210106220023192"></p>
-<h1 id="DNS系统"><a href="#DNS系统" class="headerlink" title="DNS系统"></a>DNS系统</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106221047582.png" alt="image-20210106221047582"></p>
-<h2 id="域名"><a href="#域名" class="headerlink" title="域名"></a>域名</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106221339816.png" alt="image-20210106221339816"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106221354211.png" alt="image-20210106221354211"></p>
-<h2 id="域名服务器"><a href="#域名服务器" class="headerlink" title="域名服务器"></a>域名服务器</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106221905213.png" alt="image-20210106221905213"></p>
-<h2 id="域名解析过程"><a href="#域名解析过程" class="headerlink" title="域名解析过程"></a>域名解析过程</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106222009482.png" alt="image-20210106222009482"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106222316434.png" alt="image-20210106222316434"></p>
-<h1 id="文件传输协议FTP"><a href="#文件传输协议FTP" class="headerlink" title="文件传输协议FTP"></a>文件传输协议FTP</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106222436541.png" alt="image-20210106222436541"></p>
-<h2 id="FTP服务器和用户端"><a href="#FTP服务器和用户端" class="headerlink" title="FTP服务器和用户端"></a>FTP服务器和用户端</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106222522785.png" alt="image-20210106222522785"></p>
-<h2 id="FTP工作原理"><a href="#FTP工作原理" class="headerlink" title="FTP工作原理"></a>FTP工作原理</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106222743640.png" alt="image-20210106222743640"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223022264.png" alt="image-20210106223022264"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223032369.png" alt="image-20210106223032369"></p>
-<h2 id="电子邮件"><a href="#电子邮件" class="headerlink" title="电子邮件"></a>电子邮件</h2><h3 id="电子邮件的信息格式"><a href="#电子邮件的信息格式" class="headerlink" title="电子邮件的信息格式"></a>电子邮件的信息格式</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223152420.png" alt="image-20210106223152420"></p>
-<h3 id="电子邮件系统组成结构"><a href="#电子邮件系统组成结构" class="headerlink" title="电子邮件系统组成结构"></a>电子邮件系统组成结构</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223422693.png" alt="image-20210106223422693"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223452512.png" alt="image-20210106223452512"></p>
-<h2 id="简单邮件传送协议SMTP"><a href="#简单邮件传送协议SMTP" class="headerlink" title="简单邮件传送协议SMTP"></a>简单邮件传送协议SMTP</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223532031.png" alt="image-20210106223532031"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223726695.png" alt="image-20210106223726695"></p>
-<p>缺点：</p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223812569.png" alt="image-20210106223812569"></p>
-<h2 id="MIME"><a href="#MIME" class="headerlink" title="MIME"></a>MIME</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223835956.png" alt="image-20210106223835956"></p>
-<h2 id="邮局协议POP3"><a href="#邮局协议POP3" class="headerlink" title="邮局协议POP3"></a>邮局协议POP3</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223938956.png" alt="image-20210106223938956"></p>
-<h2 id="网际报文存取协议IMAP"><a href="#网际报文存取协议IMAP" class="headerlink" title="网际报文存取协议IMAP"></a>网际报文存取协议IMAP</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224018876.png" alt="image-20210106224018876"></p>
-<h2 id="基于万维网的电子邮件"><a href="#基于万维网的电子邮件" class="headerlink" title="基于万维网的电子邮件"></a>基于万维网的电子邮件</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224052288.png" alt="image-20210106224052288"></p>
-<h2 id="邮件脑图"><a href="#邮件脑图" class="headerlink" title="邮件脑图"></a>邮件脑图</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224108106.png" alt="image-20210106224108106"></p>
-<h1 id="万维网"><a href="#万维网" class="headerlink" title="万维网"></a>万维网</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224309444.png" alt="image-20210106224309444"></p>
-<h1 id="超文本传输协议HTTP"><a href="#超文本传输协议HTTP" class="headerlink" title="超文本传输协议HTTP"></a>超文本传输协议HTTP</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224439705.png" alt="image-20210106224439705"></p>
-<h2 id="HTTP协议的特点"><a href="#HTTP协议的特点" class="headerlink" title="HTTP协议的特点"></a>HTTP协议的特点</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224609080.png" alt="image-20210106224609080"></p>
-<h2 id="HTTP协议的连接方式"><a href="#HTTP协议的连接方式" class="headerlink" title="HTTP协议的连接方式"></a>HTTP协议的连接方式</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224644852.png" alt="image-20210106224644852"></p>
-<ul>
-<li>非流水线式（停等）</li>
-</ul>
-<h2 id="HTTP报文结构"><a href="#HTTP报文结构" class="headerlink" title="HTTP报文结构"></a>HTTP报文结构</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224848264.png" alt="image-20210106224848264"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106225020029.png" alt="image-20210106225020029"></p>
-<h1 id="应用层总结"><a href="#应用层总结" class="headerlink" title="应用层总结"></a>应用层总结</h1><p>xmid</p>
 ]]></content>
       <categories>
         <category>计算机网络</category>
