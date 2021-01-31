@@ -284,24 +284,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/posts/4a17b156/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. <a id="more"></a>Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>数据库第二章——数据库系统结构</title>
     <url>/posts/95a84140/</url>
     <content><![CDATA[<h1 id="数据库系统结构概述"><a href="#数据库系统结构概述" class="headerlink" title="数据库系统结构概述"></a>数据库系统结构概述</h1><ul>
@@ -1195,6 +1177,24 @@
       </tags>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/posts/4a17b156/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. <a id="more"></a>Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>数据库第四章——关系数据库标准语言SQL（4）</title>
     <url>/posts/91db5a28/</url>
     <content><![CDATA[<h1 id="视图的基本概念"><a href="#视图的基本概念" class="headerlink" title="视图的基本概念"></a>视图的基本概念</h1><h2 id="SQL支持关系数据库三级模式结构"><a href="#SQL支持关系数据库三级模式结构" class="headerlink" title="SQL支持关系数据库三级模式结构"></a>SQL支持关系数据库三级模式结构</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111211444397.png" alt="image-20210111211444397"></p>
@@ -1603,6 +1603,80 @@
       </tags>
   </entry>
   <entry>
+    <title>计网应用题</title>
+    <url>/posts/9648dc07/</url>
+    <content><![CDATA[<h1 id="冗余码计算"><a href="#冗余码计算" class="headerlink" title="冗余码计算"></a>冗余码计算</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171634481.png" alt="image-20210107171634481"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171648084.png" alt="image-20210107171648084"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171721030.png" alt="image-20210107171721030"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171740599.png" alt="image-20210107171740599"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171749408.png" alt="image-20210107171749408"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171800007.png" alt="image-20210107171800007"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171827008.png" alt="image-20210107171827008"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171852899.png" alt="image-20210107171852899"></p>
+<ul>
+<li>运算时候用异或，同0异1</li>
+</ul>
+<h1 id="数据报分片"><a href="#数据报分片" class="headerlink" title="数据报分片"></a>数据报分片</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171905980.png" alt="image-20210107171905980"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171924869.png" alt="image-20210107171924869"></p>
+<ul>
+<li>数据报长度 = 数据部分长度+首部长度</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107172025702.png" alt="image-20210107172025702"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107172151402.png" alt="image-20210107172151402"></p>
+<ul>
+<li>MTU为1500字节</li>
+</ul>
+<h1 id="码分多址通信"><a href="#码分多址通信" class="headerlink" title="码分多址通信"></a>码分多址通信</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107172232286.png" alt="image-20210107172232286"></p>
+<h1 id="地址聚合"><a href="#地址聚合" class="headerlink" title="地址聚合"></a>地址聚合</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107163635796.png" alt="image-20210107163635796"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107163701071.png" alt="image-20210107163701071"></p>
+<h1 id="路由表更新"><a href="#路由表更新" class="headerlink" title="路由表更新"></a>路由表更新</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107163748580.png" alt="image-20210107163748580"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107163856330.png" alt="image-20210107163856330"></p>
+<p>![image-20210107164031175](/Users/fine/Library/Application Support/typora-user-images/image-20210107164031175.png)</p>
+<p>![image-20210107164043213](/Users/fine/Library/Application Support/typora-user-images/image-20210107164043213.png)</p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107164148511.png" alt="image-20210107164148511"></p>
+<h1 id="路由表下一跳"><a href="#路由表下一跳" class="headerlink" title="路由表下一跳"></a>路由表下一跳</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107164521306.png" alt="image-20210107164521306"></p>
+<ul>
+<li>子网掩码，逐位相与</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107164836786.png" alt="image-20210107164836786"></p>
+<h1 id="网桥转发表"><a href="#网桥转发表" class="headerlink" title="网桥转发表"></a>网桥转发表</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107164853878.png" alt="image-20210107164853878"></p>
+<p> <img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107165539095.png" alt="image-20210107165539095"></p>
+<h1 id="子网划分"><a href="#子网划分" class="headerlink" title="子网划分"></a>子网划分</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107165606990.png" alt="image-20210107165606990"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107165617908.png" alt="image-20210107165617908"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107170011105.png" alt="image-20210107170011105"></p>
+<ul>
+<li>主机位要留5位，子网号3位</li>
+<li>子网掩码即每位都令为1</li>
+<li>网络地址即令主机位排列组合，除去全0全1情况</li>
+<li>广播地址即令主机位全为1</li>
+<li>主机地址范围即为主机号范围</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107170500451.png" alt="image-20210107170500451"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107170510635.png" alt="image-20210107170510635"></p>
+<ul>
+<li>各个子网划分不能重叠</li>
+</ul>
+<h1 id="拥塞控制算法"><a href="#拥塞控制算法" class="headerlink" title="拥塞控制算法"></a>拥塞控制算法</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107170603812.png" alt="image-20210107170603812"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107170612183.png" alt="image-20210107170612183"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107170913389.png" alt="image-20210107170913389"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171123968.png" alt="image-20210107171123968"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171202459.png" alt="image-20210107171202459"></p>
+<ul>
+<li>开始 慢开始，指数增加cwnd，第一轮为2，第0轮为1</li>
+<li>然后达到阈值，拥塞避免，加法增加cwnd</li>
+<li>遇到超时，直接重开，且阈值改变为 超时/2</li>
+<li>遇到重复ACK，报文段丢失，启动快重传，快恢复，从新阈值重新开始</li>
+</ul>
+]]></content>
+      <categories>
+        <category>计算机网络</category>
+      </categories>
+      <tags>
+        <tag>share</tag>
+        <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>计网第一章——概述</title>
     <url>/posts/997666ff/</url>
     <content><![CDATA[<p>计算机网络的概念、组成、功能和分类…</p>
@@ -1842,6 +1916,87 @@
 <h2 id="5层参考模型"><a href="#5层参考模型" class="headerlink" title="5层参考模型"></a>5层参考模型</h2><h3 id="模型图"><a href="#模型图" class="headerlink" title="模型图"></a>模型图</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101213028676.png" alt="image-20210101213028676"></p>
 <h3 id="数据封装与解封装"><a href="#数据封装与解封装" class="headerlink" title="数据封装与解封装"></a>数据封装与解封装</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101213225550.png" alt="image-20210101213225550"></p>
 <h1 id="1-3-第一章知识总结"><a href="#1-3-第一章知识总结" class="headerlink" title="1.3 第一章知识总结"></a>1.3 第一章知识总结</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101213405540.png" alt="image-20210101213405540"></p>
+]]></content>
+      <categories>
+        <category>计算机网络</category>
+      </categories>
+      <tags>
+        <tag>share</tag>
+        <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>计网第五章——传输层</title>
+    <url>/posts/bef5de24/</url>
+    <content><![CDATA[<h1 id="传输层概述"><a href="#传输层概述" class="headerlink" title="传输层概述"></a>传输层概述</h1><blockquote>
+<p>只有主机才有的层次</p>
+</blockquote>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106203651985.png" alt="image-20210106203651985"></p>
+<h2 id="传输层的功能："><a href="#传输层的功能：" class="headerlink" title="传输层的功能："></a>传输层的功能：</h2><ol>
+<li>传输层提供进程和进程之间的逻辑通信<ul>
+<li>网络层提供主机之间的逻辑通信</li>
+</ul>
+</li>
+<li>复用和分用</li>
+<li>传输层对收到的报文进行差错检测</li>
+<li>传输层的两种协议</li>
+</ol>
+<h2 id="传输层的两个协议"><a href="#传输层的两个协议" class="headerlink" title="传输层的两个协议"></a>传输层的两个协议</h2><ol>
+<li>TCP<ul>
+<li>可靠，面向连接，时延大，适用于大文件</li>
+<li><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106203957423.png" alt="image-20210106203957423"></li>
+</ul>
+</li>
+<li>UDP<ul>
+<li>不可靠，无连接，时延小，适用于小文件</li>
+<li><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106204024722.png" alt="image-20210106204024722"></li>
+</ul>
+</li>
+</ol>
+<h2 id="传输层的寻址与端口"><a href="#传输层的寻址与端口" class="headerlink" title="传输层的寻址与端口"></a>传输层的寻址与端口</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106204332134.png" alt="image-20210106204332134"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106204436327.png" alt="image-20210106204436327"></p>
+<h1 id="UDP协议"><a href="#UDP协议" class="headerlink" title="UDP协议"></a>UDP协议</h1><h2 id="用户数据报协议UDP概述"><a href="#用户数据报协议UDP概述" class="headerlink" title="用户数据报协议UDP概述"></a>用户数据报协议UDP概述</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106204939137.png" alt="image-20210106204939137"></p>
+<h2 id="UDP首部格式"><a href="#UDP首部格式" class="headerlink" title="UDP首部格式"></a>UDP首部格式</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106205119624.png" alt="image-20210106205119624"></p>
+<h2 id="UDP校验"><a href="#UDP校验" class="headerlink" title="UDP校验"></a>UDP校验</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106205245867.png" alt="image-20210106205245867"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106205457833.png" alt="image-20210106205457833"></p>
+<h1 id="TCP协议"><a href="#TCP协议" class="headerlink" title="TCP协议"></a>TCP协议</h1><h2 id="TCP协议特点"><a href="#TCP协议特点" class="headerlink" title="TCP协议特点"></a>TCP协议特点</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106205855121.png" alt="image-20210106205855121"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106205913699.png" alt="image-20210106205913699"></p>
+<h2 id="TCP报文段首部格式"><a href="#TCP报文段首部格式" class="headerlink" title="TCP报文段首部格式"></a>TCP报文段首部格式</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106210243437.png" alt="image-20210106210243437"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106210625372.png" alt="image-20210106210625372"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106210857046.png" alt="image-20210106210857046"></p>
+<h2 id="TCP连接管理"><a href="#TCP连接管理" class="headerlink" title="TCP连接管理"></a>TCP连接管理</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106211038166.png" alt="image-20210106211038166"></p>
+<h3 id="TCP连接建立"><a href="#TCP连接建立" class="headerlink" title="TCP连接建立"></a>TCP连接建立</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106211413095.png" alt="image-20210106211413095"></p>
+<h3 id="SYN洪泛攻击"><a href="#SYN洪泛攻击" class="headerlink" title="SYN洪泛攻击"></a>SYN洪泛攻击</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106211503642.png" alt="image-20210106211503642"></p>
+<h3 id="TCP的连接释放"><a href="#TCP的连接释放" class="headerlink" title="TCP的连接释放"></a>TCP的连接释放</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106211533122.png" alt="image-20210106211533122"></p>
+<p>![image-20210106211807812](/Users/fine/Library/Application Support/typora-user-images/image-20210106211807812.png)</p>
+<h2 id="TCP可靠传输"><a href="#TCP可靠传输" class="headerlink" title="TCP可靠传输"></a>TCP可靠传输</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106211922707.png" alt="image-20210106211922707"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106212223019.png" alt="image-20210106212223019"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106212411228.png" alt="image-20210106212411228"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106212517585.png" alt="image-20210106212517585"></p>
+<h2 id="TCP流量控制"><a href="#TCP流量控制" class="headerlink" title="TCP流量控制"></a>TCP流量控制</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106212811492.png" alt="image-20210106212811492"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106213238466.png" alt="image-20210106213238466"></p>
+<ul>
+<li>窗口为0后，AB互相等待。B可能发了一个信息给A说可以传了，但是信息丢失了，而A又不知道丢了，就一直等。</li>
+<li>解决方法：持续计时器</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106213445309.png" alt="image-20210106213445309"></p>
+<h2 id="TCP拥塞控制"><a href="#TCP拥塞控制" class="headerlink" title="TCP拥塞控制"></a>TCP拥塞控制</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106213714802.png" alt="image-20210106213714802"></p>
+<h3 id="拥塞控制的四种算法"><a href="#拥塞控制的四种算法" class="headerlink" title="拥塞控制的四种算法"></a>拥塞控制的四种算法</h3><ul>
+<li>慢开始</li>
+<li>拥塞避免</li>
+</ul>
+<ul>
+<li>快重传</li>
+<li>快恢复</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106213918554.png" alt="image-20210106213918554"></p>
+<h3 id="慢开始和拥塞避免"><a href="#慢开始和拥塞避免" class="headerlink" title="慢开始和拥塞避免"></a>慢开始和拥塞避免</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106214101985.png" alt="image-20210106214101985"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106214348119.png" alt="image-20210106214348119"></p>
+<ul>
+<li>新的ssthresh的初始值为原来的除以2</li>
+</ul>
+<h3 id="快重传和快恢复"><a href="#快重传和快恢复" class="headerlink" title="快重传和快恢复"></a>快重传和快恢复</h3><p>![image-20210106214652844](/Users/fine/Library/Application Support/typora-user-images/image-20210106214652844.png)</p>
+<h1 id="传输层总结"><a href="#传输层总结" class="headerlink" title="传输层总结"></a>传输层总结</h1><p>xmind</p>
 ]]></content>
       <categories>
         <category>计算机网络</category>
@@ -2119,80 +2274,6 @@
       </tags>
   </entry>
   <entry>
-    <title>计网应用题</title>
-    <url>/posts/9648dc07/</url>
-    <content><![CDATA[<h1 id="冗余码计算"><a href="#冗余码计算" class="headerlink" title="冗余码计算"></a>冗余码计算</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171634481.png" alt="image-20210107171634481"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171648084.png" alt="image-20210107171648084"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171721030.png" alt="image-20210107171721030"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171740599.png" alt="image-20210107171740599"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171749408.png" alt="image-20210107171749408"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171800007.png" alt="image-20210107171800007"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171827008.png" alt="image-20210107171827008"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171852899.png" alt="image-20210107171852899"></p>
-<ul>
-<li>运算时候用异或，同0异1</li>
-</ul>
-<h1 id="数据报分片"><a href="#数据报分片" class="headerlink" title="数据报分片"></a>数据报分片</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171905980.png" alt="image-20210107171905980"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171924869.png" alt="image-20210107171924869"></p>
-<ul>
-<li>数据报长度 = 数据部分长度+首部长度</li>
-</ul>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107172025702.png" alt="image-20210107172025702"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107172151402.png" alt="image-20210107172151402"></p>
-<ul>
-<li>MTU为1500字节</li>
-</ul>
-<h1 id="码分多址通信"><a href="#码分多址通信" class="headerlink" title="码分多址通信"></a>码分多址通信</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107172232286.png" alt="image-20210107172232286"></p>
-<h1 id="地址聚合"><a href="#地址聚合" class="headerlink" title="地址聚合"></a>地址聚合</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107163635796.png" alt="image-20210107163635796"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107163701071.png" alt="image-20210107163701071"></p>
-<h1 id="路由表更新"><a href="#路由表更新" class="headerlink" title="路由表更新"></a>路由表更新</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107163748580.png" alt="image-20210107163748580"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107163856330.png" alt="image-20210107163856330"></p>
-<p>![image-20210107164031175](/Users/fine/Library/Application Support/typora-user-images/image-20210107164031175.png)</p>
-<p>![image-20210107164043213](/Users/fine/Library/Application Support/typora-user-images/image-20210107164043213.png)</p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107164148511.png" alt="image-20210107164148511"></p>
-<h1 id="路由表下一跳"><a href="#路由表下一跳" class="headerlink" title="路由表下一跳"></a>路由表下一跳</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107164521306.png" alt="image-20210107164521306"></p>
-<ul>
-<li>子网掩码，逐位相与</li>
-</ul>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107164836786.png" alt="image-20210107164836786"></p>
-<h1 id="网桥转发表"><a href="#网桥转发表" class="headerlink" title="网桥转发表"></a>网桥转发表</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107164853878.png" alt="image-20210107164853878"></p>
-<p> <img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107165539095.png" alt="image-20210107165539095"></p>
-<h1 id="子网划分"><a href="#子网划分" class="headerlink" title="子网划分"></a>子网划分</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107165606990.png" alt="image-20210107165606990"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107165617908.png" alt="image-20210107165617908"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107170011105.png" alt="image-20210107170011105"></p>
-<ul>
-<li>主机位要留5位，子网号3位</li>
-<li>子网掩码即每位都令为1</li>
-<li>网络地址即令主机位排列组合，除去全0全1情况</li>
-<li>广播地址即令主机位全为1</li>
-<li>主机地址范围即为主机号范围</li>
-</ul>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107170500451.png" alt="image-20210107170500451"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107170510635.png" alt="image-20210107170510635"></p>
-<ul>
-<li>各个子网划分不能重叠</li>
-</ul>
-<h1 id="拥塞控制算法"><a href="#拥塞控制算法" class="headerlink" title="拥塞控制算法"></a>拥塞控制算法</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107170603812.png" alt="image-20210107170603812"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107170612183.png" alt="image-20210107170612183"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107170913389.png" alt="image-20210107170913389"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171123968.png" alt="image-20210107171123968"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171202459.png" alt="image-20210107171202459"></p>
-<ul>
-<li>开始 慢开始，指数增加cwnd，第一轮为2，第0轮为1</li>
-<li>然后达到阈值，拥塞避免，加法增加cwnd</li>
-<li>遇到超时，直接重开，且阈值改变为 超时/2</li>
-<li>遇到重复ACK，报文段丢失，启动快重传，快恢复，从新阈值重新开始</li>
-</ul>
-]]></content>
-      <categories>
-        <category>计算机网络</category>
-      </categories>
-      <tags>
-        <tag>share</tag>
-        <tag>notes</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>计网第六章——应用层</title>
     <url>/posts/9c3a6023/</url>
     <content><![CDATA[<h1 id="应用层概述"><a href="#应用层概述" class="headerlink" title="应用层概述"></a>应用层概述</h1><blockquote>
@@ -2246,87 +2327,6 @@
 <h2 id="HTTP报文结构"><a href="#HTTP报文结构" class="headerlink" title="HTTP报文结构"></a>HTTP报文结构</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224848264.png" alt="image-20210106224848264"></p>
 <p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106225020029.png" alt="image-20210106225020029"></p>
 <h1 id="应用层总结"><a href="#应用层总结" class="headerlink" title="应用层总结"></a>应用层总结</h1><p>xmid</p>
-]]></content>
-      <categories>
-        <category>计算机网络</category>
-      </categories>
-      <tags>
-        <tag>share</tag>
-        <tag>notes</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>计网第五章——传输层</title>
-    <url>/posts/bef5de24/</url>
-    <content><![CDATA[<h1 id="传输层概述"><a href="#传输层概述" class="headerlink" title="传输层概述"></a>传输层概述</h1><blockquote>
-<p>只有主机才有的层次</p>
-</blockquote>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106203651985.png" alt="image-20210106203651985"></p>
-<h2 id="传输层的功能："><a href="#传输层的功能：" class="headerlink" title="传输层的功能："></a>传输层的功能：</h2><ol>
-<li>传输层提供进程和进程之间的逻辑通信<ul>
-<li>网络层提供主机之间的逻辑通信</li>
-</ul>
-</li>
-<li>复用和分用</li>
-<li>传输层对收到的报文进行差错检测</li>
-<li>传输层的两种协议</li>
-</ol>
-<h2 id="传输层的两个协议"><a href="#传输层的两个协议" class="headerlink" title="传输层的两个协议"></a>传输层的两个协议</h2><ol>
-<li>TCP<ul>
-<li>可靠，面向连接，时延大，适用于大文件</li>
-<li><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106203957423.png" alt="image-20210106203957423"></li>
-</ul>
-</li>
-<li>UDP<ul>
-<li>不可靠，无连接，时延小，适用于小文件</li>
-<li><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106204024722.png" alt="image-20210106204024722"></li>
-</ul>
-</li>
-</ol>
-<h2 id="传输层的寻址与端口"><a href="#传输层的寻址与端口" class="headerlink" title="传输层的寻址与端口"></a>传输层的寻址与端口</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106204332134.png" alt="image-20210106204332134"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106204436327.png" alt="image-20210106204436327"></p>
-<h1 id="UDP协议"><a href="#UDP协议" class="headerlink" title="UDP协议"></a>UDP协议</h1><h2 id="用户数据报协议UDP概述"><a href="#用户数据报协议UDP概述" class="headerlink" title="用户数据报协议UDP概述"></a>用户数据报协议UDP概述</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106204939137.png" alt="image-20210106204939137"></p>
-<h2 id="UDP首部格式"><a href="#UDP首部格式" class="headerlink" title="UDP首部格式"></a>UDP首部格式</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106205119624.png" alt="image-20210106205119624"></p>
-<h2 id="UDP校验"><a href="#UDP校验" class="headerlink" title="UDP校验"></a>UDP校验</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106205245867.png" alt="image-20210106205245867"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106205457833.png" alt="image-20210106205457833"></p>
-<h1 id="TCP协议"><a href="#TCP协议" class="headerlink" title="TCP协议"></a>TCP协议</h1><h2 id="TCP协议特点"><a href="#TCP协议特点" class="headerlink" title="TCP协议特点"></a>TCP协议特点</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106205855121.png" alt="image-20210106205855121"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106205913699.png" alt="image-20210106205913699"></p>
-<h2 id="TCP报文段首部格式"><a href="#TCP报文段首部格式" class="headerlink" title="TCP报文段首部格式"></a>TCP报文段首部格式</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106210243437.png" alt="image-20210106210243437"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106210625372.png" alt="image-20210106210625372"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106210857046.png" alt="image-20210106210857046"></p>
-<h2 id="TCP连接管理"><a href="#TCP连接管理" class="headerlink" title="TCP连接管理"></a>TCP连接管理</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106211038166.png" alt="image-20210106211038166"></p>
-<h3 id="TCP连接建立"><a href="#TCP连接建立" class="headerlink" title="TCP连接建立"></a>TCP连接建立</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106211413095.png" alt="image-20210106211413095"></p>
-<h3 id="SYN洪泛攻击"><a href="#SYN洪泛攻击" class="headerlink" title="SYN洪泛攻击"></a>SYN洪泛攻击</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106211503642.png" alt="image-20210106211503642"></p>
-<h3 id="TCP的连接释放"><a href="#TCP的连接释放" class="headerlink" title="TCP的连接释放"></a>TCP的连接释放</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106211533122.png" alt="image-20210106211533122"></p>
-<p>![image-20210106211807812](/Users/fine/Library/Application Support/typora-user-images/image-20210106211807812.png)</p>
-<h2 id="TCP可靠传输"><a href="#TCP可靠传输" class="headerlink" title="TCP可靠传输"></a>TCP可靠传输</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106211922707.png" alt="image-20210106211922707"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106212223019.png" alt="image-20210106212223019"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106212411228.png" alt="image-20210106212411228"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106212517585.png" alt="image-20210106212517585"></p>
-<h2 id="TCP流量控制"><a href="#TCP流量控制" class="headerlink" title="TCP流量控制"></a>TCP流量控制</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106212811492.png" alt="image-20210106212811492"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106213238466.png" alt="image-20210106213238466"></p>
-<ul>
-<li>窗口为0后，AB互相等待。B可能发了一个信息给A说可以传了，但是信息丢失了，而A又不知道丢了，就一直等。</li>
-<li>解决方法：持续计时器</li>
-</ul>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106213445309.png" alt="image-20210106213445309"></p>
-<h2 id="TCP拥塞控制"><a href="#TCP拥塞控制" class="headerlink" title="TCP拥塞控制"></a>TCP拥塞控制</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106213714802.png" alt="image-20210106213714802"></p>
-<h3 id="拥塞控制的四种算法"><a href="#拥塞控制的四种算法" class="headerlink" title="拥塞控制的四种算法"></a>拥塞控制的四种算法</h3><ul>
-<li>慢开始</li>
-<li>拥塞避免</li>
-</ul>
-<ul>
-<li>快重传</li>
-<li>快恢复</li>
-</ul>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106213918554.png" alt="image-20210106213918554"></p>
-<h3 id="慢开始和拥塞避免"><a href="#慢开始和拥塞避免" class="headerlink" title="慢开始和拥塞避免"></a>慢开始和拥塞避免</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106214101985.png" alt="image-20210106214101985"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106214348119.png" alt="image-20210106214348119"></p>
-<ul>
-<li>新的ssthresh的初始值为原来的除以2</li>
-</ul>
-<h3 id="快重传和快恢复"><a href="#快重传和快恢复" class="headerlink" title="快重传和快恢复"></a>快重传和快恢复</h3><p>![image-20210106214652844](/Users/fine/Library/Application Support/typora-user-images/image-20210106214652844.png)</p>
-<h1 id="传输层总结"><a href="#传输层总结" class="headerlink" title="传输层总结"></a>传输层总结</h1><p>xmind</p>
 ]]></content>
       <categories>
         <category>计算机网络</category>
