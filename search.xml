@@ -1,6 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>java枚举类与注解</title>
+    <url>/posts/2b247dfd/</url>
+    <content><![CDATA[<h1 id="枚举类"><a href="#枚举类" class="headerlink" title="枚举类"></a>枚举类</h1><h2 id="枚举类的使用"><a href="#枚举类的使用" class="headerlink" title="枚举类的使用"></a>枚举类的使用</h2><p><strong>1. 枚举类的理解：类的对象只有有限个、确定的。</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210215185948689.png" alt="image-20210215185948689"></p>
+<ol start="2">
+<li><p><strong>当需要定义一组常量时，强烈建议使用枚举类</strong></p>
+</li>
+<li><p>若枚举类只有一个对象，则可以作为一种单例模式的实现方式。</p>
+</li>
+</ol>
+<h2 id="如何自定义枚举类"><a href="#如何自定义枚举类" class="headerlink" title="如何自定义枚举类"></a>如何自定义枚举类</h2><p>方式一：jdk5.0之前，自定义枚举类</p>
+<p>方式二：jdk5.0，可以使用enum关键字定义枚举类</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Season spring = Season.SPRING;</span><br><span class="line">        System.out.println(spring);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Season</span> </span>&#123;</span><br><span class="line">    <span class="comment">//1. 声明色season对象的属性：private final 修饰</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> String seasonName;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> String seasonDesc;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//2. 私有化类的构造器，并给对象赋值</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Season</span><span class="params">(String seasonName, String seasonDesc)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.seasonName = seasonName;</span><br><span class="line">        <span class="keyword">this</span>.seasonDesc = seasonDesc;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//3. 提供当前枚举类的多个对象: public static final</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Season SPRING = <span class="keyword">new</span> Season(<span class="string">&quot;春天&quot;</span>, <span class="string">&quot;春暖花开&quot;</span>);</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Season SUMMER = <span class="keyword">new</span> Season(<span class="string">&quot;夏天&quot;</span>, <span class="string">&quot;夏日炎炎&quot;</span>);</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Season AUTUMN = <span class="keyword">new</span> Season(<span class="string">&quot;秋天&quot;</span>, <span class="string">&quot;秋高气爽&quot;</span>);</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Season WINTER = <span class="keyword">new</span> Season(<span class="string">&quot;冬天&quot;</span>, <span class="string">&quot;大雪纷飞&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//4. 其他诉求1：获取枚举类对象的属性</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getSeasonName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> seasonName;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getSeasonDesc</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> seasonDesc;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//4. 其他诉求2：提供toString（）</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Season&#123;&quot;</span> +</span><br><span class="line">                <span class="string">&quot;seasonName=&#x27;&quot;</span> + seasonName + <span class="string">&#x27;\&#x27;&#x27;</span> +</span><br><span class="line">                <span class="string">&quot;, seasonDesc=&#x27;&quot;</span> + seasonDesc + <span class="string">&#x27;\&#x27;&#x27;</span> +</span><br><span class="line">                <span class="string">&#x27;&#125;&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Season1 spring = Season1.SPRING;</span><br><span class="line">        System.out.println(spring);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">enum</span> <span class="title">Season1</span> </span>&#123;</span><br><span class="line">    <span class="comment">//1. 提供当前枚举类的对象，多个对象之间用 【，】 隔开，每位对象【；】结束</span></span><br><span class="line">    SPRING(<span class="string">&quot;春天&quot;</span>, <span class="string">&quot;春暖花开&quot;</span>),</span><br><span class="line">    SUMMER(<span class="string">&quot;夏天&quot;</span>, <span class="string">&quot;夏日炎炎&quot;</span>),</span><br><span class="line">    AUTUMN(<span class="string">&quot;秋天&quot;</span>, <span class="string">&quot;秋高气爽&quot;</span>),</span><br><span class="line">    WINTER(<span class="string">&quot;冬天&quot;</span>, <span class="string">&quot;大雪纷飞&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//2. 声明色season对象的属性：private final 修饰</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> String seasonName;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> String seasonDesc;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//3. 私有化类的构造器，并给对象赋值</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Season1</span><span class="params">(String seasonName, String seasonDesc)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.seasonName = seasonName;</span><br><span class="line">        <span class="keyword">this</span>.seasonDesc = seasonDesc;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//4. 其他诉求2：提供toString（）</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Season1&#123;&quot;</span> +</span><br><span class="line">                <span class="string">&quot;seasonName=&#x27;&quot;</span> + seasonName + <span class="string">&#x27;\&#x27;&#x27;</span> +</span><br><span class="line">                <span class="string">&quot;, seasonDesc=&#x27;&quot;</span> + seasonDesc + <span class="string">&#x27;\&#x27;&#x27;</span> +</span><br><span class="line">                <span class="string">&#x27;&#125;&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="enum的主要方法"><a href="#enum的主要方法" class="headerlink" title="enum的主要方法"></a>enum的主要方法</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210215194658811.png" alt="image-20210215194658811"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210215194739223.png" alt="image-20210215194739223"></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AAA</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//values（）</span></span><br><span class="line">        Season1 [] values = Season1.values();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; values.length; i++) &#123;</span><br><span class="line">            System.out.println(values[i]);</span><br><span class="line">        &#125;</span><br><span class="line">      </span><br><span class="line">      System.out.println(<span class="string">&quot;+++++++++&quot;</span>);</span><br><span class="line">        <span class="comment">//valueOf(String objName):返回枚举类中对象名是objName的对象。字符转化为枚举类</span></span><br><span class="line">        Season1 winter = Season1.valueOf(<span class="string">&quot;WINTER&quot;</span>);</span><br><span class="line">        System.out.println(winter);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210215195858173.png" alt="image-20210215195858173"></p>
+<h2 id="使用enum关键字定义的枚举类实现接口的情况"><a href="#使用enum关键字定义的枚举类实现接口的情况" class="headerlink" title="使用enum关键字定义的枚举类实现接口的情况"></a>使用enum关键字定义的枚举类实现接口的情况</h2><p>情况一：实现接口，在enum类中实现接口方法</p>
+<p>情况二：让枚举类的对象分别实现接口中的方法</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Season1 spring = Season1.SPRING;</span><br><span class="line">        System.out.println(spring);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Info</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">enum</span> <span class="title">Season1</span> <span class="keyword">implements</span> <span class="title">Info</span> </span>&#123;</span><br><span class="line">   </span><br><span class="line">    <span class="comment">//1. 提供当前枚举类的对象，多个对象之间用 【，】 隔开，每位对象【；】结束</span></span><br><span class="line">    SPRING(<span class="string">&quot;春天&quot;</span>, <span class="string">&quot;春暖花开&quot;</span>),</span><br><span class="line">    SUMMER(<span class="string">&quot;夏天&quot;</span>, <span class="string">&quot;夏日炎炎&quot;</span>),</span><br><span class="line">    AUTUMN(<span class="string">&quot;秋天&quot;</span>, <span class="string">&quot;秋高气爽&quot;</span>),</span><br><span class="line">    WINTER(<span class="string">&quot;冬天&quot;</span>, <span class="string">&quot;大雪纷飞&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//2. 声明色season对象的属性：private final 修饰</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> String seasonName;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> String seasonDesc;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//3. 私有化类的构造器，并给对象赋值</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Season1</span><span class="params">(String seasonName, String seasonDesc)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.seasonName = seasonName;</span><br><span class="line">        <span class="keyword">this</span>.seasonDesc = seasonDesc;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="comment">//重写接口方法</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span>&#123;</span><br><span class="line">    system.out,println(<span class="string">&quot;...&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Season1 spring = Season1.SPRING;</span><br><span class="line">        System.out.println(spring);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Info</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">enum</span> <span class="title">Season1</span> <span class="keyword">implements</span> <span class="title">Info</span></span>&#123;</span><br><span class="line">    <span class="comment">//1. 提供当前枚举类的对象，多个对象之间用 【，】 隔开，每位对象【；】结束</span></span><br><span class="line">    SPRING(<span class="string">&quot;春天&quot;</span>, <span class="string">&quot;春暖花开&quot;</span>)&#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;...&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    SUMMER(<span class="string">&quot;夏天&quot;</span>, <span class="string">&quot;夏日炎炎&quot;</span>)&#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;pp&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    AUTUMN(<span class="string">&quot;秋天&quot;</span>, <span class="string">&quot;秋高气爽&quot;</span>)&#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;ss&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    WINTER(<span class="string">&quot;冬天&quot;</span>, <span class="string">&quot;大雪纷飞&quot;</span>) &#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;LL&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//2. 声明色season对象的属性：private final 修饰</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> String seasonName;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> String seasonDesc;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//3. 私有化类的构造器，并给对象赋值</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Season1</span><span class="params">(String seasonName, String seasonDesc)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.seasonName = seasonName;</span><br><span class="line">        <span class="keyword">this</span>.seasonDesc = seasonDesc;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h1 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210215212516225.png" alt="image-20210215212516225"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210215212526606.png" alt="image-20210215212526606"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210215212825335.png" alt="image-20210215212825335"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210215212849679.png" alt="image-20210215212849679"></p>
+<ol>
+<li><h2 id="理解Annotation"><a href="#理解Annotation" class="headerlink" title="理解Annotation"></a>理解Annotation</h2></li>
+</ol>
+<p>Annotation其实就是代码里的<strong>特殊标记</strong>，这些标记可以编译，类加载，运行时被读取，并执行相应的处理。可以在不改变原有逻辑的情况下，在源文件中嵌入一些补充信息。</p>
+<ol start="2">
+<li><h2 id="Annotation的使用用例"><a href="#Annotation的使用用例" class="headerlink" title="Annotation的使用用例"></a>Annotation的使用用例</h2><p>示例一：生成文档相关的注解</p>
+<p>示例二：在编译时进行格式检查</p>
+<p>​    @override</p>
+<p>​    @Deprecated</p>
+<p>​    @SuppressWarnings：抑制编译器警告</p>
+<p>实例三：跟踪代码依赖性，实现替代配置文件功能</p>
+</li>
+</ol>
+<ol start="3">
+<li><h2 id="如何自定义注解：参照suppressWarnings"><a href="#如何自定义注解：参照suppressWarnings" class="headerlink" title="如何自定义注解：参照suppressWarnings"></a>如何自定义注解：参照suppressWarnings</h2><p>①注解声明为：@interface</p>
+<p>②内部定义成员，通常用value（）表示</p>
+<p>③可以指定成员的默认值，使用default定义</p>
+<p>Ⅳ如果自定义注解没有成员，标明是一个标识作用</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> MyAnnotation &#123;</span><br><span class="line">	<span class="function">String <span class="title">value</span><span class="params">()</span> <span class="keyword">default</span> &quot;hello&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">@MyAnnotation(value = &quot;hi&quot;)</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>如果注解有成员，在使用注解时，需要指明成员的值。</p>
+</li>
+<li><p>自定义注解必须配上注解的信息处理流程（使用反射）才有意义</p>
+</li>
+<li><p>自定义注解通常都会指明两个元注解：Retention、Target</p>
+</li>
+</ul>
+</li>
+</ol>
+<ol start="4">
+<li><h2 id="jdk提供的4种元注解"><a href="#jdk提供的4种元注解" class="headerlink" title="jdk提供的4种元注解"></a>jdk提供的4种元注解</h2><blockquote>
+<p>元注解：对现有的注解修饰的注解</p>
+</blockquote>
+<p>​    Retention：生命周期source、class、runtime</p>
+<p>​        只有声明为runtime的注解才能通过反射获取</p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210215215948913.png" alt="image-20210215215948913"></p>
+<p>Target：用于指定被修饰的Annotation能用于修饰哪些程序元素</p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210215220322269.png" alt="image-20210215220322269"></p>
+<p>Documented：表示所修饰的注解在被javadoc解析时，保留下来。</p>
+<p>Inherited：被它修饰的ANnotation将具有继承性</p>
+</li>
+</ol>
+<ol start="5">
+<li><h2 id="通过反射获取注解信息"><a href="#通过反射获取注解信息" class="headerlink" title="通过反射获取注解信息"></a>通过反射获取注解信息</h2></li>
+<li><h2 id="jdk-8中注解的新特性"><a href="#jdk-8中注解的新特性" class="headerlink" title="jdk 8中注解的新特性"></a>jdk 8中注解的新特性</h2><ul>
+<li><p>可重复注解</p>
+<blockquote>
+<p>①在MyAnnotation上声明@Repeatable，成员值为MyAnnotations.class</p>
+<p>②MyAnnotation的Target和Retention要与MyAnnotation相同</p>
+</blockquote>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210215222137909.png" alt="image-20210215222137909"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210215222234606.png" alt="image-20210215222234606"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210215222307209.png" alt="image-20210215222307209"></p>
+</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li><p>类型注解</p>
+<blockquote>
+<p>ElementType.TYPE_PARAMETER 表示该注解能写在类型变量的声明语句中（如：泛型声明）</p>
+<p>ElementType.TYPE_USE 表示该注解能写在使用类型的任何语句中。</p>
+</blockquote>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210215222847623.png" alt="image-20210215222847623"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210215222902202.png" alt="image-20210215222902202"></p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>share</tag>
+        <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/posts/4a17b156/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. <a id="more"></a>Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -302,125 +421,6 @@
       </tags>
   </entry>
   <entry>
-    <title>java枚举类与注解</title>
-    <url>/posts/2b247dfd/</url>
-    <content><![CDATA[<h1 id="枚举类"><a href="#枚举类" class="headerlink" title="枚举类"></a>枚举类</h1><h2 id="枚举类的使用"><a href="#枚举类的使用" class="headerlink" title="枚举类的使用"></a>枚举类的使用</h2><p><strong>1. 枚举类的理解：类的对象只有有限个、确定的。</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210215185948689.png" alt="image-20210215185948689"></p>
-<ol start="2">
-<li><p><strong>当需要定义一组常量时，强烈建议使用枚举类</strong></p>
-</li>
-<li><p>若枚举类只有一个对象，则可以作为一种单例模式的实现方式。</p>
-</li>
-</ol>
-<h2 id="如何自定义枚举类"><a href="#如何自定义枚举类" class="headerlink" title="如何自定义枚举类"></a>如何自定义枚举类</h2><p>方式一：jdk5.0之前，自定义枚举类</p>
-<p>方式二：jdk5.0，可以使用enum关键字定义枚举类</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Season spring = Season.SPRING;</span><br><span class="line">        System.out.println(spring);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Season</span> </span>&#123;</span><br><span class="line">    <span class="comment">//1. 声明色season对象的属性：private final 修饰</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> String seasonName;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> String seasonDesc;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//2. 私有化类的构造器，并给对象赋值</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Season</span><span class="params">(String seasonName, String seasonDesc)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.seasonName = seasonName;</span><br><span class="line">        <span class="keyword">this</span>.seasonDesc = seasonDesc;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//3. 提供当前枚举类的多个对象: public static final</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Season SPRING = <span class="keyword">new</span> Season(<span class="string">&quot;春天&quot;</span>, <span class="string">&quot;春暖花开&quot;</span>);</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Season SUMMER = <span class="keyword">new</span> Season(<span class="string">&quot;夏天&quot;</span>, <span class="string">&quot;夏日炎炎&quot;</span>);</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Season AUTUMN = <span class="keyword">new</span> Season(<span class="string">&quot;秋天&quot;</span>, <span class="string">&quot;秋高气爽&quot;</span>);</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Season WINTER = <span class="keyword">new</span> Season(<span class="string">&quot;冬天&quot;</span>, <span class="string">&quot;大雪纷飞&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//4. 其他诉求1：获取枚举类对象的属性</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getSeasonName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> seasonName;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getSeasonDesc</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> seasonDesc;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//4. 其他诉求2：提供toString（）</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Season&#123;&quot;</span> +</span><br><span class="line">                <span class="string">&quot;seasonName=&#x27;&quot;</span> + seasonName + <span class="string">&#x27;\&#x27;&#x27;</span> +</span><br><span class="line">                <span class="string">&quot;, seasonDesc=&#x27;&quot;</span> + seasonDesc + <span class="string">&#x27;\&#x27;&#x27;</span> +</span><br><span class="line">                <span class="string">&#x27;&#125;&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Season1 spring = Season1.SPRING;</span><br><span class="line">        System.out.println(spring);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">enum</span> <span class="title">Season1</span> </span>&#123;</span><br><span class="line">    <span class="comment">//1. 提供当前枚举类的对象，多个对象之间用 【，】 隔开，每位对象【；】结束</span></span><br><span class="line">    SPRING(<span class="string">&quot;春天&quot;</span>, <span class="string">&quot;春暖花开&quot;</span>),</span><br><span class="line">    SUMMER(<span class="string">&quot;夏天&quot;</span>, <span class="string">&quot;夏日炎炎&quot;</span>),</span><br><span class="line">    AUTUMN(<span class="string">&quot;秋天&quot;</span>, <span class="string">&quot;秋高气爽&quot;</span>),</span><br><span class="line">    WINTER(<span class="string">&quot;冬天&quot;</span>, <span class="string">&quot;大雪纷飞&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//2. 声明色season对象的属性：private final 修饰</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> String seasonName;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> String seasonDesc;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//3. 私有化类的构造器，并给对象赋值</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Season1</span><span class="params">(String seasonName, String seasonDesc)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.seasonName = seasonName;</span><br><span class="line">        <span class="keyword">this</span>.seasonDesc = seasonDesc;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//4. 其他诉求2：提供toString（）</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Season1&#123;&quot;</span> +</span><br><span class="line">                <span class="string">&quot;seasonName=&#x27;&quot;</span> + seasonName + <span class="string">&#x27;\&#x27;&#x27;</span> +</span><br><span class="line">                <span class="string">&quot;, seasonDesc=&#x27;&quot;</span> + seasonDesc + <span class="string">&#x27;\&#x27;&#x27;</span> +</span><br><span class="line">                <span class="string">&#x27;&#125;&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="enum的主要方法"><a href="#enum的主要方法" class="headerlink" title="enum的主要方法"></a>enum的主要方法</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210215194658811.png" alt="image-20210215194658811"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210215194739223.png" alt="image-20210215194739223"></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AAA</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//values（）</span></span><br><span class="line">        Season1 [] values = Season1.values();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; values.length; i++) &#123;</span><br><span class="line">            System.out.println(values[i]);</span><br><span class="line">        &#125;</span><br><span class="line">      </span><br><span class="line">      System.out.println(<span class="string">&quot;+++++++++&quot;</span>);</span><br><span class="line">        <span class="comment">//valueOf(String objName):返回枚举类中对象名是objName的对象。字符转化为枚举类</span></span><br><span class="line">        Season1 winter = Season1.valueOf(<span class="string">&quot;WINTER&quot;</span>);</span><br><span class="line">        System.out.println(winter);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210215195858173.png" alt="image-20210215195858173"></p>
-<h2 id="使用enum关键字定义的枚举类实现接口的情况"><a href="#使用enum关键字定义的枚举类实现接口的情况" class="headerlink" title="使用enum关键字定义的枚举类实现接口的情况"></a>使用enum关键字定义的枚举类实现接口的情况</h2><p>情况一：实现接口，在enum类中实现接口方法</p>
-<p>情况二：让枚举类的对象分别实现接口中的方法</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Season1 spring = Season1.SPRING;</span><br><span class="line">        System.out.println(spring);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Info</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">enum</span> <span class="title">Season1</span> <span class="keyword">implements</span> <span class="title">Info</span> </span>&#123;</span><br><span class="line">   </span><br><span class="line">    <span class="comment">//1. 提供当前枚举类的对象，多个对象之间用 【，】 隔开，每位对象【；】结束</span></span><br><span class="line">    SPRING(<span class="string">&quot;春天&quot;</span>, <span class="string">&quot;春暖花开&quot;</span>),</span><br><span class="line">    SUMMER(<span class="string">&quot;夏天&quot;</span>, <span class="string">&quot;夏日炎炎&quot;</span>),</span><br><span class="line">    AUTUMN(<span class="string">&quot;秋天&quot;</span>, <span class="string">&quot;秋高气爽&quot;</span>),</span><br><span class="line">    WINTER(<span class="string">&quot;冬天&quot;</span>, <span class="string">&quot;大雪纷飞&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//2. 声明色season对象的属性：private final 修饰</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> String seasonName;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> String seasonDesc;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//3. 私有化类的构造器，并给对象赋值</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Season1</span><span class="params">(String seasonName, String seasonDesc)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.seasonName = seasonName;</span><br><span class="line">        <span class="keyword">this</span>.seasonDesc = seasonDesc;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="comment">//重写接口方法</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span>&#123;</span><br><span class="line">    system.out,println(<span class="string">&quot;...&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Season1 spring = Season1.SPRING;</span><br><span class="line">        System.out.println(spring);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Info</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">enum</span> <span class="title">Season1</span> <span class="keyword">implements</span> <span class="title">Info</span></span>&#123;</span><br><span class="line">    <span class="comment">//1. 提供当前枚举类的对象，多个对象之间用 【，】 隔开，每位对象【；】结束</span></span><br><span class="line">    SPRING(<span class="string">&quot;春天&quot;</span>, <span class="string">&quot;春暖花开&quot;</span>)&#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;...&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    SUMMER(<span class="string">&quot;夏天&quot;</span>, <span class="string">&quot;夏日炎炎&quot;</span>)&#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;pp&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    AUTUMN(<span class="string">&quot;秋天&quot;</span>, <span class="string">&quot;秋高气爽&quot;</span>)&#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;ss&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    WINTER(<span class="string">&quot;冬天&quot;</span>, <span class="string">&quot;大雪纷飞&quot;</span>) &#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;LL&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//2. 声明色season对象的属性：private final 修饰</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> String seasonName;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> String seasonDesc;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//3. 私有化类的构造器，并给对象赋值</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Season1</span><span class="params">(String seasonName, String seasonDesc)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.seasonName = seasonName;</span><br><span class="line">        <span class="keyword">this</span>.seasonDesc = seasonDesc;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h1 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210215212516225.png" alt="image-20210215212516225"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210215212526606.png" alt="image-20210215212526606"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210215212825335.png" alt="image-20210215212825335"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210215212849679.png" alt="image-20210215212849679"></p>
-<ol>
-<li><h2 id="理解Annotation"><a href="#理解Annotation" class="headerlink" title="理解Annotation"></a>理解Annotation</h2></li>
-</ol>
-<p>Annotation其实就是代码里的<strong>特殊标记</strong>，这些标记可以编译，类加载，运行时被读取，并执行相应的处理。可以在不改变原有逻辑的情况下，在源文件中嵌入一些补充信息。</p>
-<ol start="2">
-<li><h2 id="Annotation的使用用例"><a href="#Annotation的使用用例" class="headerlink" title="Annotation的使用用例"></a>Annotation的使用用例</h2><p>示例一：生成文档相关的注解</p>
-<p>示例二：在编译时进行格式检查</p>
-<p>​    @override</p>
-<p>​    @Deprecated</p>
-<p>​    @SuppressWarnings：抑制编译器警告</p>
-<p>实例三：跟踪代码依赖性，实现替代配置文件功能</p>
-</li>
-</ol>
-<ol start="3">
-<li><h2 id="如何自定义注解：参照suppressWarnings"><a href="#如何自定义注解：参照suppressWarnings" class="headerlink" title="如何自定义注解：参照suppressWarnings"></a>如何自定义注解：参照suppressWarnings</h2><p>①注解声明为：@interface</p>
-<p>②内部定义成员，通常用value（）表示</p>
-<p>③可以指定成员的默认值，使用default定义</p>
-<p>Ⅳ如果自定义注解没有成员，标明是一个标识作用</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> MyAnnotation &#123;</span><br><span class="line">	<span class="function">String <span class="title">value</span><span class="params">()</span> <span class="keyword">default</span> &quot;hello&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">@MyAnnotation(value = &quot;hi&quot;)</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>如果注解有成员，在使用注解时，需要指明成员的值。</p>
-</li>
-<li><p>自定义注解必须配上注解的信息处理流程（使用反射）才有意义</p>
-</li>
-<li><p>自定义注解通常都会指明两个元注解：Retention、Target</p>
-</li>
-</ul>
-</li>
-</ol>
-<ol start="4">
-<li><h2 id="jdk提供的4种元注解"><a href="#jdk提供的4种元注解" class="headerlink" title="jdk提供的4种元注解"></a>jdk提供的4种元注解</h2><blockquote>
-<p>元注解：对现有的注解修饰的注解</p>
-</blockquote>
-<p>​    Retention：生命周期source、class、runtime</p>
-<p>​        只有声明为runtime的注解才能通过反射获取</p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210215215948913.png" alt="image-20210215215948913"></p>
-<p>Target：用于指定被修饰的Annotation能用于修饰哪些程序元素</p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210215220322269.png" alt="image-20210215220322269"></p>
-<p>Documented：表示所修饰的注解在被javadoc解析时，保留下来。</p>
-<p>Inherited：被它修饰的ANnotation将具有继承性</p>
-</li>
-</ol>
-<ol start="5">
-<li><h2 id="通过反射获取注解信息"><a href="#通过反射获取注解信息" class="headerlink" title="通过反射获取注解信息"></a>通过反射获取注解信息</h2></li>
-<li><h2 id="jdk-8中注解的新特性"><a href="#jdk-8中注解的新特性" class="headerlink" title="jdk 8中注解的新特性"></a>jdk 8中注解的新特性</h2><ul>
-<li><p>可重复注解</p>
-<blockquote>
-<p>①在MyAnnotation上声明@Repeatable，成员值为MyAnnotations.class</p>
-<p>②MyAnnotation的Target和Retention要与MyAnnotation相同</p>
-</blockquote>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210215222137909.png" alt="image-20210215222137909"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210215222234606.png" alt="image-20210215222234606"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210215222307209.png" alt="image-20210215222307209"></p>
-</li>
-</ul>
-</li>
-</ol>
-<ul>
-<li><p>类型注解</p>
-<blockquote>
-<p>ElementType.TYPE_PARAMETER 表示该注解能写在类型变量的声明语句中（如：泛型声明）</p>
-<p>ElementType.TYPE_USE 表示该注解能写在使用类型的任何语句中。</p>
-</blockquote>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210215222847623.png" alt="image-20210215222847623"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210215222902202.png" alt="image-20210215222902202"></p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>share</tag>
-        <tag>notes</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>数据库第二章——数据库系统结构</title>
     <url>/posts/95a84140/</url>
     <content><![CDATA[<h1 id="数据库系统结构概述"><a href="#数据库系统结构概述" class="headerlink" title="数据库系统结构概述"></a>数据库系统结构概述</h1><ul>
@@ -582,206 +582,6 @@
 <h4 id="图书馆信息管理系统表现层"><a href="#图书馆信息管理系统表现层" class="headerlink" title="图书馆信息管理系统表现层"></a>图书馆信息管理系统表现层</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212554829.png" alt="image-20210108212554829"></p>
 <p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212607770.png" alt="image-20210108212607770"></p>
 <p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212619538.png" alt="image-20210108212619538"></p>
-]]></content>
-      <categories>
-        <category>数据库原理及应用</category>
-      </categories>
-      <tags>
-        <tag>share</tag>
-        <tag>notes</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数据库第四章——关系数据库标准语言SQL（2）</title>
-    <url>/posts/b4b005f4/</url>
-    <content><![CDATA[<h1 id="SQL的功能组成"><a href="#SQL的功能组成" class="headerlink" title="SQL的功能组成"></a>SQL的功能组成</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111095419310.png" alt="image-20210111095419310"></p>
-<h2 id="SQL－-gt-DML-－-gt-DQL-数据查询"><a href="#SQL－-gt-DML-－-gt-DQL-数据查询" class="headerlink" title="SQL－&gt;DML －&gt;DQL(数据查询)"></a>SQL－&gt;DML －&gt;DQL(数据查询)</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111095619074.png" alt="image-20210111095619074"></p>
-<h1 id="内连接"><a href="#内连接" class="headerlink" title="内连接"></a>内连接</h1><p><strong>例7-1：查询所有学生所在院系信息。</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100039169.png" alt="image-20210111100039169"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100055583.png"></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> STUDENTINFO</span><br><span class="line"><span class="keyword">INNER</span> <span class="keyword">JOIN</span> DEPARTMENT <span class="keyword">ON</span> (STUDENTINFO.STUDENTDEPARTMENTIN=DEPARTMENT.DEPARTMENTID)</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-
-
-<h2 id="内连接执行过程"><a href="#内连接执行过程" class="headerlink" title="内连接执行过程"></a>内连接执行过程</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100310303.png" alt="image-20210111100310303"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111102107255.png" alt="image-20210111102107255"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100511937.png" alt="image-20210111100511937"></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> S.STUDENTNO, S.STUDENTNAME, D.DEPARTMENTNAME <span class="keyword">FROM</span> STUDENTINFO <span class="keyword">AS</span> S <span class="keyword">INNER</span> <span class="keyword">JOIN</span> DEPARTMENT <span class="keyword">AS</span> D <span class="keyword">ON</span> (S.STUDENTDEPARTIN = D.DEPARTMENTID)</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h2 id="多表查询时SELECT-表示的含义"><a href="#多表查询时SELECT-表示的含义" class="headerlink" title="多表查询时SELECT *表示的含义"></a>多表查询时SELECT *表示的含义</h2><ul>
-<li>当未使用限定符指定时，星号解析为对 FROM 子句中所指定的所有表或视图中的所有列的引用</li>
-<li>当使用表或视图名称进行限定时，星号解析为对表或视图中的所有列的引用</li>
-</ul>
-<h2 id="注意：尽量不要用以下连接方式"><a href="#注意：尽量不要用以下连接方式" class="headerlink" title="注意：尽量不要用以下连接方式"></a>注意：尽量不要用以下连接方式</h2><ul>
-<li><pre><code class="sql">SELECT * FROM STUDENTINFO, DEPARTMENT WHERE STUDENTINFO.STUDENTDEPARTID=DEPARTMENT.DEPARTMENTID
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">- 原因：无法将连接条件和针对连接后生成的“大表”的筛选条件分开</span><br><span class="line"></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">**数据挖掘例7-2：考察这家公司技术部门的男女员工比例**</span><br><span class="line"></span><br><span class="line">![image-20210111100750333](https:&#x2F;&#x2F;chasing1874.oss-cn-chengdu.aliyuncs.com&#x2F;image-20210111100750333.png)</span><br><span class="line"></span><br><span class="line">![image-20210111100805120](https:&#x2F;&#x2F;chasing1874.oss-cn-chengdu.aliyuncs.com&#x2F;image-20210111100805120.png)</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;sql</span><br><span class="line">SELECT * FROM EMPLOYEE E JOIN DEPARTMENT D ON (E.DNO &#x3D; D.DNUMBER)</span><br><span class="line"></span><br><span class="line">SELECT SEX, COUNT(*) AS 人数 FROM EMPLOYEE JOIN DEPARTMENT ON (DNO &#x3D; DNUMBER) WHERE DNAME&#x3D;&#39;RESEARCH&#39; GROUP BY SEX</span><br></pre></td></tr></table></figure>
-
-
-</code></pre>
-</li>
-</ul>
-<h2 id="多表内连接查询"><a href="#多表内连接查询" class="headerlink" title="多表内连接查询"></a>多表内连接查询</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100842785.png" alt="image-20210111100842785"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100854911.png" alt="image-20210111100854911"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100906322.png" alt="image-20210111100906322"></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> EXAMRECORD E <span class="keyword">JOIN</span> STUDENTINFO S <span class="keyword">ON</span> (E.STUDENTNO = E.STUDENTNO) <span class="keyword">JOIN</span> COURSE C <span class="keyword">ON</span> (C.COURSEID = E.COURSEID)</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<p><strong>例7-3：查询所有学生各门课程成绩</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100932313.png" alt="image-20210111100932313"></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> STUDENTNAME <span class="keyword">AS</span> 学生姓名 , COURSENAME <span class="keyword">AS</span> 课程名称, SCORE <span class="keyword">AS</span> 成绩 <span class="keyword">FROM</span> EXAMRECORD E <span class="keyword">JOIN</span> STUDENTINFO S <span class="keyword">ON</span> (E.STUDENTNO=S.STUDENTNO) <span class="keyword">JOIN</span> COUSE C <span class="keyword">ON</span> (C.COURSEID=E.COURSEID)</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<p><strong>例7-4 ：查询各门课程任课教师信息</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100959522.png" alt="image-20210111100959522"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111101013925.png" alt="image-20210111101013925"></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> COURSE <span class="keyword">ORDER</span> <span class="keyword">BY</span> TEACHERID <span class="keyword">DESC</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> TEACHER</span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> COURSE C <span class="keyword">JOIN</span> TEACHER T <span class="keyword">ON</span> (C.TEACHERID=T.TEACHERID)</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-<h1 id="外连接"><a href="#外连接" class="headerlink" title="外连接"></a>外连接</h1><h2 id="LEFT-OUTER-JOIN"><a href="#LEFT-OUTER-JOIN" class="headerlink" title="LEFT OUTER JOIN"></a>LEFT OUTER JOIN</h2><blockquote>
-<p>显示LEFT表(Course)中的全部元组，如果RIGHT表(Teacher)<br>中没有扫描到符合连接条件的元组，则用NULL代替</p>
-</blockquote>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111104650305.png" alt="image-20210111104650305"></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> COURSE C <span class="keyword">LEFT</span> <span class="keyword">OUTER</span> <span class="keyword">JOIN</span> TEACHER T <span class="keyword">ON</span> (C.TEACHERID = T.TEACHERID) <span class="keyword">ORDER</span> <span class="keyword">BY</span> T.TEACHERID <span class="keyword">DESC</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="RIGHT-OUTER-JOIN"><a href="#RIGHT-OUTER-JOIN" class="headerlink" title="RIGHT OUTER JOIN"></a>RIGHT OUTER JOIN</h2><blockquote>
-<p>显示LEFT表(Course)中的全部元组，如果RIGHT表(Teacher)<br>中没有扫描到符合连接条件的元组，则用NULL代替</p>
-</blockquote>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111104745799.png" alt="image-20210111104745799"></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> COURSE C <span class="keyword">RIGHT</span> <span class="keyword">OUTER</span> <span class="keyword">JOIN</span> TEACHER T <span class="keyword">ON</span> (C.TEACHERID=T.TEACHERID) <span class="keyword">ORDER</span> <span class="keyword">BY</span> C.COURSEID <span class="keyword">DESC</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h3 id="注意：进行左、右外连接时表的顺序非常重要"><a href="#注意：进行左、右外连接时表的顺序非常重要" class="headerlink" title="注意：进行左、右外连接时表的顺序非常重要"></a>注意：进行左、右外连接时表的顺序非常重要</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111104837990.png" alt="image-20210111104837990"></p>
-<h2 id="FULL-OUTTER-JOIN"><a href="#FULL-OUTTER-JOIN" class="headerlink" title="FULL OUTTER JOIN"></a>FULL OUTTER JOIN</h2><blockquote>
-<p>显示LEFT表(Course) 和RIGHT表(Teacher)中的全部元组，如果<br>没有扫描到符合连接条件的元组，<strong>则用NULL代替</strong></p>
-</blockquote>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111104907825.png" alt="image-20210111104907825"></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> COURSE C <span class="keyword">FULL</span> <span class="keyword">OUTER</span> <span class="keyword">JOIN</span> TEACHER T <span class="keyword">ON</span> (C.TEACHERID=T.TEACHERID) <span class="keyword">ORDER</span> <span class="keyword">BY</span> C.TEACHERID <span class="keyword">DESC</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h3 id="注意：多表外连接，表顺序很重要"><a href="#注意：多表外连接，表顺序很重要" class="headerlink" title="注意：多表外连接，表顺序很重要"></a>注意：多表外连接，表顺序很重要</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111104939651.png" alt="image-20210111104939651"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111104949775.png" alt="image-20210111104949775"></p>
-<h3 id="例7-5-："><a href="#例7-5-：" class="headerlink" title="例7-5 ："></a><strong>例7-5 ：</strong></h3><p><strong>查询所有学生选修的课程(包括未选课学生以及没有学生选修的课程信息)</strong></p>
-<ol>
-<li>连接“StudentInfo”和“ExamRecord”</li>
-</ol>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105100017.png" alt="image-20210111105100017"></p>
-<ol start="2">
-<li>把第1步生成的结果关系与“Course”连接</li>
-</ol>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105207670.png" alt="image-20210111105207670"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105222970.png" alt="image-20210111105222970"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105234460.png" alt="image-20210111105234460"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105245515.png" alt="image-20210111105245515"></p>
-<ol start="3">
-<li>按照题目要求进行适当的投影操作</li>
-</ol>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105348702.png" alt="image-20210111105348702"></p>
-<h3 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h3><blockquote>
-<p>所有用于单表的查询技术都可以用于多表查询，多表只不过是把单表按照一定连接条件(join condition)连接成一张<strong>“大表”</strong></p>
-</blockquote>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105430685.png" alt="image-20210111105430685"></p>
-<h2 id="有连接时的查询执行过程"><a href="#有连接时的查询执行过程" class="headerlink" title="有连接时的查询执行过程"></a>有连接时的查询执行过程</h2><ul>
-<li>生成结果关系(“大表”)—》在“大表”上利用WHERE指定的条件筛选元组—》按照Group by指定的属性将元组分组—》将Group by的分组用Having指定的条件筛选—》按照Order By指定的属性对元组排序(排序的属性可以不在最后投影的属性列中)—》投影或用函数、表达式计算</li>
-</ul>
-<ul>
-<li>如果没有GROUP BY和HAVING的话，上述步骤中红色的部分将不会执行</li>
-</ul>
-<h3 id="例7-6-："><a href="#例7-6-：" class="headerlink" title="例7-6 ："></a><strong>例7-6 ：</strong></h3><p><strong>查询部门男性员工数大于2的部门名称及男性员工人数，并按人数降序排列</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105654992.png" alt="image-20210111105654992"></p>
-<ol>
-<li>生成结果关系(“大表”)</li>
-</ol>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105731991.png" alt="image-20210111105731991"></p>
-<ol start="2">
-<li>在“大表”上利用WHERE指定的条件筛选元组</li>
-</ol>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105755760.png" alt="image-20210111105755760"></p>
-<ol start="3">
-<li>按照Group by指定的属性将元组分组</li>
-</ol>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105827865.png" alt="image-20210111105827865"></p>
-<ol start="4">
-<li>将Group by的分组用Having指定的条件筛选</li>
-</ol>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105850431.png" alt="image-20210111105850431"></p>
-<ol start="5">
-<li>按照Order By指定的属性对元组排序</li>
-</ol>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105914626.png" alt="image-20210111105914626"></p>
-<ol start="6">
-<li>投影或用函数、表达式计算</li>
-</ol>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105944800.png" alt="image-20210111105944800"></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> DNAME , <span class="keyword">COUNT</span>(*) <span class="keyword">FROM</span> EMPLOYEE E <span class="keyword">JOIN</span> DEPARTMENT D <span class="keyword">ON</span> (E.DNO=D.DNUMBER) <span class="keyword">WHERE</span> SEX=<span class="string">&#x27;M&#x27;</span> <span class="keyword">GROUP</span> <span class="keyword">BY</span> DNAME <span class="keyword">HAVING</span> <span class="keyword">COUNT</span>(*) &gt; <span class="number">2</span> <span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="keyword">COUNT</span>(*) <span class="keyword">DESC</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h3 id="补充：一个查询优化的例子"><a href="#补充：一个查询优化的例子" class="headerlink" title="补充：一个查询优化的例子"></a>补充：一个查询优化的例子</h3><p>在逻辑上，我们可以认为DBMS是先通过JOIN操作(关系代数)把所有的表连成一张“大表”后再来执行SELECT操作(关系代数)，但实际上DBMS在某些情况下会对查询的执行过程进行优化，比如先执行SELECT操作(从而有可能减少参与JOIN操作的关系的元组数)，再执行JOIN操作。</p>
-<h4 id="DBMS处理查询的过程"><a href="#DBMS处理查询的过程" class="headerlink" title="DBMS处理查询的过程"></a>DBMS处理查询的过程</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111110027640.png" alt="image-20210111110027640"></p>
-<h3 id="例7-7-："><a href="#例7-7-：" class="headerlink" title="例7-7 ："></a>例7-7 ：</h3><p><strong>查询女性员工的家属信息</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111110108326.png" alt="image-20210111110108326"></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> FNAME, LNAME, DEPENDRNT_NAME <span class="keyword">FROM</span> EMPLOYEE <span class="keyword">JOIN</span> DEPENDENT <span class="keyword">ON</span> (SSN = ESSN) <span class="keyword">WHERE</span> (EMPLOYEE.SEX = <span class="string">&#x27;F&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-
-
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111110136785.png" alt="image-20210111110136785"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111110146387.png" alt="image-20210111110146387"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111110159964.png" alt="image-20210111110159964"></p>
-<h1 id="交叉连接"><a href="#交叉连接" class="headerlink" title="交叉连接"></a>交叉连接</h1><blockquote>
-<p>交叉连接(CROSS JOIN)：实际就是关系代数中的“笛卡尔积”(Cartesian Product)</p>
-</blockquote>
-<h3 id="例7-8-："><a href="#例7-8-：" class="headerlink" title="例7-8 ："></a>例7-8 ：</h3><p><strong>将StudentInfo与Department表交叉连接</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111115926151.png" alt="image-20210111115926151"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111115938420.png" alt="image-20210111115938420"></p>
-<p><strong>如果添加一个 WHERE 子句，则交叉连接的作用将同内连接一样</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111120001776.png" alt="image-20210111120001776"></p>
-<h3 id="注意：-1"><a href="#注意：-1" class="headerlink" title="注意："></a>注意：</h3><p>CROSS JOIN后面不能加ON</p>
-<h3 id="CROSS-JOIN的用处"><a href="#CROSS-JOIN的用处" class="headerlink" title="CROSS JOIN的用处"></a>CROSS JOIN的用处</h3><blockquote>
-<p>CROSS JOIN的一个用途是生成样本或测试数据。例如：如果你要生成1000行3列的一个表用于测试，不必建立这样一张表并进行1000次插入操作，可以建立三张表，每张表1列10行数据，然后将这三张表进行交叉连接可得10<em>10</em>10=1000行数据。</p>
-</blockquote>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111120117583.png" alt="image-20210111120117583"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111120132062.png" alt="image-20210111120132062"></p>
-<h1 id="自连接"><a href="#自连接" class="headerlink" title="自连接"></a>自连接</h1><h3 id="例7-9-："><a href="#例7-9-：" class="headerlink" title="例7-9 ："></a>例7-9 ：</h3><p><strong>查询每个员工上级的姓名</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111120202140.png" alt="image-20210111120202140"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111120219805.png" alt="image-20210111120219805"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111120231994.png" alt="image-20210111120231994"></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> EMPLOYEE E1 <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> EMPLOYEE E2 <span class="keyword">ON</span> (E1.SUPERSSN=E2.SSN) <span class="keyword">ORDER</span> <span class="keyword">BY</span> E1.SUPERSSN <span class="keyword">DESC</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> E1.FNAME+<span class="string">&#x27;,&#x27;</span>+E1.LNAME 员工姓名, E2.FNAME+<span class="string">&#x27;,&#x27;</span>E2.LNAME 上级姓名 <span class="keyword">FROM</span> EMPLOYEE E1 <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> EMPLOYEE E2 <span class="keyword">ON</span> E1.SUPERSSN=E2.SSN <span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="number">2</span> D</span><br></pre></td></tr></table></figure>
-
-
-
-
-
 ]]></content>
       <categories>
         <category>数据库原理及应用</category>
@@ -1097,6 +897,206 @@
 <p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109171233912.png" alt="image-20210109171233912"></p>
 <p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109171244451.png" alt="image-20210109171244451"></p>
 <h2 id="补充-注入式攻击"><a href="#补充-注入式攻击" class="headerlink" title="补充: 注入式攻击"></a>补充: 注入式攻击</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109170553897.png" alt="image-20210109170553897"></p>
+]]></content>
+      <categories>
+        <category>数据库原理及应用</category>
+      </categories>
+      <tags>
+        <tag>share</tag>
+        <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据库第四章——关系数据库标准语言SQL（2）</title>
+    <url>/posts/b4b005f4/</url>
+    <content><![CDATA[<h1 id="SQL的功能组成"><a href="#SQL的功能组成" class="headerlink" title="SQL的功能组成"></a>SQL的功能组成</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111095419310.png" alt="image-20210111095419310"></p>
+<h2 id="SQL－-gt-DML-－-gt-DQL-数据查询"><a href="#SQL－-gt-DML-－-gt-DQL-数据查询" class="headerlink" title="SQL－&gt;DML －&gt;DQL(数据查询)"></a>SQL－&gt;DML －&gt;DQL(数据查询)</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111095619074.png" alt="image-20210111095619074"></p>
+<h1 id="内连接"><a href="#内连接" class="headerlink" title="内连接"></a>内连接</h1><p><strong>例7-1：查询所有学生所在院系信息。</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100039169.png" alt="image-20210111100039169"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100055583.png"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> STUDENTINFO</span><br><span class="line"><span class="keyword">INNER</span> <span class="keyword">JOIN</span> DEPARTMENT <span class="keyword">ON</span> (STUDENTINFO.STUDENTDEPARTMENTIN=DEPARTMENT.DEPARTMENTID)</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+<h2 id="内连接执行过程"><a href="#内连接执行过程" class="headerlink" title="内连接执行过程"></a>内连接执行过程</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100310303.png" alt="image-20210111100310303"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111102107255.png" alt="image-20210111102107255"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100511937.png" alt="image-20210111100511937"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> S.STUDENTNO, S.STUDENTNAME, D.DEPARTMENTNAME <span class="keyword">FROM</span> STUDENTINFO <span class="keyword">AS</span> S <span class="keyword">INNER</span> <span class="keyword">JOIN</span> DEPARTMENT <span class="keyword">AS</span> D <span class="keyword">ON</span> (S.STUDENTDEPARTIN = D.DEPARTMENTID)</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="多表查询时SELECT-表示的含义"><a href="#多表查询时SELECT-表示的含义" class="headerlink" title="多表查询时SELECT *表示的含义"></a>多表查询时SELECT *表示的含义</h2><ul>
+<li>当未使用限定符指定时，星号解析为对 FROM 子句中所指定的所有表或视图中的所有列的引用</li>
+<li>当使用表或视图名称进行限定时，星号解析为对表或视图中的所有列的引用</li>
+</ul>
+<h2 id="注意：尽量不要用以下连接方式"><a href="#注意：尽量不要用以下连接方式" class="headerlink" title="注意：尽量不要用以下连接方式"></a>注意：尽量不要用以下连接方式</h2><ul>
+<li><pre><code class="sql">SELECT * FROM STUDENTINFO, DEPARTMENT WHERE STUDENTINFO.STUDENTDEPARTID=DEPARTMENT.DEPARTMENTID
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">- 原因：无法将连接条件和针对连接后生成的“大表”的筛选条件分开</span><br><span class="line"></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">**数据挖掘例7-2：考察这家公司技术部门的男女员工比例**</span><br><span class="line"></span><br><span class="line">![image-20210111100750333](https:&#x2F;&#x2F;chasing1874.oss-cn-chengdu.aliyuncs.com&#x2F;image-20210111100750333.png)</span><br><span class="line"></span><br><span class="line">![image-20210111100805120](https:&#x2F;&#x2F;chasing1874.oss-cn-chengdu.aliyuncs.com&#x2F;image-20210111100805120.png)</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;sql</span><br><span class="line">SELECT * FROM EMPLOYEE E JOIN DEPARTMENT D ON (E.DNO &#x3D; D.DNUMBER)</span><br><span class="line"></span><br><span class="line">SELECT SEX, COUNT(*) AS 人数 FROM EMPLOYEE JOIN DEPARTMENT ON (DNO &#x3D; DNUMBER) WHERE DNAME&#x3D;&#39;RESEARCH&#39; GROUP BY SEX</span><br></pre></td></tr></table></figure>
+
+
+</code></pre>
+</li>
+</ul>
+<h2 id="多表内连接查询"><a href="#多表内连接查询" class="headerlink" title="多表内连接查询"></a>多表内连接查询</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100842785.png" alt="image-20210111100842785"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100854911.png" alt="image-20210111100854911"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100906322.png" alt="image-20210111100906322"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> EXAMRECORD E <span class="keyword">JOIN</span> STUDENTINFO S <span class="keyword">ON</span> (E.STUDENTNO = E.STUDENTNO) <span class="keyword">JOIN</span> COURSE C <span class="keyword">ON</span> (C.COURSEID = E.COURSEID)</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p><strong>例7-3：查询所有学生各门课程成绩</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100932313.png" alt="image-20210111100932313"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> STUDENTNAME <span class="keyword">AS</span> 学生姓名 , COURSENAME <span class="keyword">AS</span> 课程名称, SCORE <span class="keyword">AS</span> 成绩 <span class="keyword">FROM</span> EXAMRECORD E <span class="keyword">JOIN</span> STUDENTINFO S <span class="keyword">ON</span> (E.STUDENTNO=S.STUDENTNO) <span class="keyword">JOIN</span> COUSE C <span class="keyword">ON</span> (C.COURSEID=E.COURSEID)</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p><strong>例7-4 ：查询各门课程任课教师信息</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100959522.png" alt="image-20210111100959522"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111101013925.png" alt="image-20210111101013925"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> COURSE <span class="keyword">ORDER</span> <span class="keyword">BY</span> TEACHERID <span class="keyword">DESC</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> TEACHER</span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> COURSE C <span class="keyword">JOIN</span> TEACHER T <span class="keyword">ON</span> (C.TEACHERID=T.TEACHERID)</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<h1 id="外连接"><a href="#外连接" class="headerlink" title="外连接"></a>外连接</h1><h2 id="LEFT-OUTER-JOIN"><a href="#LEFT-OUTER-JOIN" class="headerlink" title="LEFT OUTER JOIN"></a>LEFT OUTER JOIN</h2><blockquote>
+<p>显示LEFT表(Course)中的全部元组，如果RIGHT表(Teacher)<br>中没有扫描到符合连接条件的元组，则用NULL代替</p>
+</blockquote>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111104650305.png" alt="image-20210111104650305"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> COURSE C <span class="keyword">LEFT</span> <span class="keyword">OUTER</span> <span class="keyword">JOIN</span> TEACHER T <span class="keyword">ON</span> (C.TEACHERID = T.TEACHERID) <span class="keyword">ORDER</span> <span class="keyword">BY</span> T.TEACHERID <span class="keyword">DESC</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="RIGHT-OUTER-JOIN"><a href="#RIGHT-OUTER-JOIN" class="headerlink" title="RIGHT OUTER JOIN"></a>RIGHT OUTER JOIN</h2><blockquote>
+<p>显示LEFT表(Course)中的全部元组，如果RIGHT表(Teacher)<br>中没有扫描到符合连接条件的元组，则用NULL代替</p>
+</blockquote>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111104745799.png" alt="image-20210111104745799"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> COURSE C <span class="keyword">RIGHT</span> <span class="keyword">OUTER</span> <span class="keyword">JOIN</span> TEACHER T <span class="keyword">ON</span> (C.TEACHERID=T.TEACHERID) <span class="keyword">ORDER</span> <span class="keyword">BY</span> C.COURSEID <span class="keyword">DESC</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="注意：进行左、右外连接时表的顺序非常重要"><a href="#注意：进行左、右外连接时表的顺序非常重要" class="headerlink" title="注意：进行左、右外连接时表的顺序非常重要"></a>注意：进行左、右外连接时表的顺序非常重要</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111104837990.png" alt="image-20210111104837990"></p>
+<h2 id="FULL-OUTTER-JOIN"><a href="#FULL-OUTTER-JOIN" class="headerlink" title="FULL OUTTER JOIN"></a>FULL OUTTER JOIN</h2><blockquote>
+<p>显示LEFT表(Course) 和RIGHT表(Teacher)中的全部元组，如果<br>没有扫描到符合连接条件的元组，<strong>则用NULL代替</strong></p>
+</blockquote>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111104907825.png" alt="image-20210111104907825"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> COURSE C <span class="keyword">FULL</span> <span class="keyword">OUTER</span> <span class="keyword">JOIN</span> TEACHER T <span class="keyword">ON</span> (C.TEACHERID=T.TEACHERID) <span class="keyword">ORDER</span> <span class="keyword">BY</span> C.TEACHERID <span class="keyword">DESC</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="注意：多表外连接，表顺序很重要"><a href="#注意：多表外连接，表顺序很重要" class="headerlink" title="注意：多表外连接，表顺序很重要"></a>注意：多表外连接，表顺序很重要</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111104939651.png" alt="image-20210111104939651"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111104949775.png" alt="image-20210111104949775"></p>
+<h3 id="例7-5-："><a href="#例7-5-：" class="headerlink" title="例7-5 ："></a><strong>例7-5 ：</strong></h3><p><strong>查询所有学生选修的课程(包括未选课学生以及没有学生选修的课程信息)</strong></p>
+<ol>
+<li>连接“StudentInfo”和“ExamRecord”</li>
+</ol>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105100017.png" alt="image-20210111105100017"></p>
+<ol start="2">
+<li>把第1步生成的结果关系与“Course”连接</li>
+</ol>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105207670.png" alt="image-20210111105207670"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105222970.png" alt="image-20210111105222970"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105234460.png" alt="image-20210111105234460"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105245515.png" alt="image-20210111105245515"></p>
+<ol start="3">
+<li>按照题目要求进行适当的投影操作</li>
+</ol>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105348702.png" alt="image-20210111105348702"></p>
+<h3 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h3><blockquote>
+<p>所有用于单表的查询技术都可以用于多表查询，多表只不过是把单表按照一定连接条件(join condition)连接成一张<strong>“大表”</strong></p>
+</blockquote>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105430685.png" alt="image-20210111105430685"></p>
+<h2 id="有连接时的查询执行过程"><a href="#有连接时的查询执行过程" class="headerlink" title="有连接时的查询执行过程"></a>有连接时的查询执行过程</h2><ul>
+<li>生成结果关系(“大表”)—》在“大表”上利用WHERE指定的条件筛选元组—》按照Group by指定的属性将元组分组—》将Group by的分组用Having指定的条件筛选—》按照Order By指定的属性对元组排序(排序的属性可以不在最后投影的属性列中)—》投影或用函数、表达式计算</li>
+</ul>
+<ul>
+<li>如果没有GROUP BY和HAVING的话，上述步骤中红色的部分将不会执行</li>
+</ul>
+<h3 id="例7-6-："><a href="#例7-6-：" class="headerlink" title="例7-6 ："></a><strong>例7-6 ：</strong></h3><p><strong>查询部门男性员工数大于2的部门名称及男性员工人数，并按人数降序排列</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105654992.png" alt="image-20210111105654992"></p>
+<ol>
+<li>生成结果关系(“大表”)</li>
+</ol>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105731991.png" alt="image-20210111105731991"></p>
+<ol start="2">
+<li>在“大表”上利用WHERE指定的条件筛选元组</li>
+</ol>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105755760.png" alt="image-20210111105755760"></p>
+<ol start="3">
+<li>按照Group by指定的属性将元组分组</li>
+</ol>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105827865.png" alt="image-20210111105827865"></p>
+<ol start="4">
+<li>将Group by的分组用Having指定的条件筛选</li>
+</ol>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105850431.png" alt="image-20210111105850431"></p>
+<ol start="5">
+<li>按照Order By指定的属性对元组排序</li>
+</ol>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105914626.png" alt="image-20210111105914626"></p>
+<ol start="6">
+<li>投影或用函数、表达式计算</li>
+</ol>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105944800.png" alt="image-20210111105944800"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> DNAME , <span class="keyword">COUNT</span>(*) <span class="keyword">FROM</span> EMPLOYEE E <span class="keyword">JOIN</span> DEPARTMENT D <span class="keyword">ON</span> (E.DNO=D.DNUMBER) <span class="keyword">WHERE</span> SEX=<span class="string">&#x27;M&#x27;</span> <span class="keyword">GROUP</span> <span class="keyword">BY</span> DNAME <span class="keyword">HAVING</span> <span class="keyword">COUNT</span>(*) &gt; <span class="number">2</span> <span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="keyword">COUNT</span>(*) <span class="keyword">DESC</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="补充：一个查询优化的例子"><a href="#补充：一个查询优化的例子" class="headerlink" title="补充：一个查询优化的例子"></a>补充：一个查询优化的例子</h3><p>在逻辑上，我们可以认为DBMS是先通过JOIN操作(关系代数)把所有的表连成一张“大表”后再来执行SELECT操作(关系代数)，但实际上DBMS在某些情况下会对查询的执行过程进行优化，比如先执行SELECT操作(从而有可能减少参与JOIN操作的关系的元组数)，再执行JOIN操作。</p>
+<h4 id="DBMS处理查询的过程"><a href="#DBMS处理查询的过程" class="headerlink" title="DBMS处理查询的过程"></a>DBMS处理查询的过程</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111110027640.png" alt="image-20210111110027640"></p>
+<h3 id="例7-7-："><a href="#例7-7-：" class="headerlink" title="例7-7 ："></a>例7-7 ：</h3><p><strong>查询女性员工的家属信息</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111110108326.png" alt="image-20210111110108326"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> FNAME, LNAME, DEPENDRNT_NAME <span class="keyword">FROM</span> EMPLOYEE <span class="keyword">JOIN</span> DEPENDENT <span class="keyword">ON</span> (SSN = ESSN) <span class="keyword">WHERE</span> (EMPLOYEE.SEX = <span class="string">&#x27;F&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111110136785.png" alt="image-20210111110136785"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111110146387.png" alt="image-20210111110146387"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111110159964.png" alt="image-20210111110159964"></p>
+<h1 id="交叉连接"><a href="#交叉连接" class="headerlink" title="交叉连接"></a>交叉连接</h1><blockquote>
+<p>交叉连接(CROSS JOIN)：实际就是关系代数中的“笛卡尔积”(Cartesian Product)</p>
+</blockquote>
+<h3 id="例7-8-："><a href="#例7-8-：" class="headerlink" title="例7-8 ："></a>例7-8 ：</h3><p><strong>将StudentInfo与Department表交叉连接</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111115926151.png" alt="image-20210111115926151"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111115938420.png" alt="image-20210111115938420"></p>
+<p><strong>如果添加一个 WHERE 子句，则交叉连接的作用将同内连接一样</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111120001776.png" alt="image-20210111120001776"></p>
+<h3 id="注意：-1"><a href="#注意：-1" class="headerlink" title="注意："></a>注意：</h3><p>CROSS JOIN后面不能加ON</p>
+<h3 id="CROSS-JOIN的用处"><a href="#CROSS-JOIN的用处" class="headerlink" title="CROSS JOIN的用处"></a>CROSS JOIN的用处</h3><blockquote>
+<p>CROSS JOIN的一个用途是生成样本或测试数据。例如：如果你要生成1000行3列的一个表用于测试，不必建立这样一张表并进行1000次插入操作，可以建立三张表，每张表1列10行数据，然后将这三张表进行交叉连接可得10<em>10</em>10=1000行数据。</p>
+</blockquote>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111120117583.png" alt="image-20210111120117583"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111120132062.png" alt="image-20210111120132062"></p>
+<h1 id="自连接"><a href="#自连接" class="headerlink" title="自连接"></a>自连接</h1><h3 id="例7-9-："><a href="#例7-9-：" class="headerlink" title="例7-9 ："></a>例7-9 ：</h3><p><strong>查询每个员工上级的姓名</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111120202140.png" alt="image-20210111120202140"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111120219805.png" alt="image-20210111120219805"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111120231994.png" alt="image-20210111120231994"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> EMPLOYEE E1 <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> EMPLOYEE E2 <span class="keyword">ON</span> (E1.SUPERSSN=E2.SSN) <span class="keyword">ORDER</span> <span class="keyword">BY</span> E1.SUPERSSN <span class="keyword">DESC</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> E1.FNAME+<span class="string">&#x27;,&#x27;</span>+E1.LNAME 员工姓名, E2.FNAME+<span class="string">&#x27;,&#x27;</span>E2.LNAME 上级姓名 <span class="keyword">FROM</span> EMPLOYEE E1 <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> EMPLOYEE E2 <span class="keyword">ON</span> E1.SUPERSSN=E2.SSN <span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="number">2</span> D</span><br></pre></td></tr></table></figure>
+
+
+
+
+
 ]]></content>
       <categories>
         <category>数据库原理及应用</category>
@@ -2312,69 +2312,6 @@
       </tags>
   </entry>
   <entry>
-    <title>计网第六章——应用层</title>
-    <url>/posts/9c3a6023/</url>
-    <content><![CDATA[<h1 id="应用层概述"><a href="#应用层概述" class="headerlink" title="应用层概述"></a>应用层概述</h1><blockquote>
-<p>应用层对应用程序的通信提供服务。</p>
-</blockquote>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106215449349.png" alt="image-20210106215449349"></p>
-<h2 id="应用层协议定义"><a href="#应用层协议定义" class="headerlink" title="应用层协议定义"></a>应用层协议定义</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106215500877.png" alt="image-20210106215500877"></p>
-<h2 id="应用层功能"><a href="#应用层功能" class="headerlink" title="应用层功能"></a>应用层功能</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106215516080.png" alt="image-20210106215516080"></p>
-<h2 id="应用层重要协议"><a href="#应用层重要协议" class="headerlink" title="应用层重要协议"></a>应用层重要协议</h2><ul>
-<li>FTP</li>
-<li>SMTP、POP3</li>
-<li>HTTP</li>
-<li>DNS</li>
-</ul>
-<h2 id="网络应用模型"><a href="#网络应用模型" class="headerlink" title="网络应用模型"></a>网络应用模型</h2><ul>
-<li>客户/ 服务器模型（Client/Server）</li>
-<li>P2P模型（Peer-to-peer）</li>
-</ul>
-<h3 id="客户-服务器模型（Client-Server）"><a href="#客户-服务器模型（Client-Server）" class="headerlink" title="客户/ 服务器模型（Client/Server）"></a>客户/ 服务器模型（Client/Server）</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106215838884.png" alt="image-20210106215838884"></p>
-<h3 id="P2P模型"><a href="#P2P模型" class="headerlink" title="P2P模型"></a>P2P模型</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106220023192.png" alt="image-20210106220023192"></p>
-<h1 id="DNS系统"><a href="#DNS系统" class="headerlink" title="DNS系统"></a>DNS系统</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106221047582.png" alt="image-20210106221047582"></p>
-<h2 id="域名"><a href="#域名" class="headerlink" title="域名"></a>域名</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106221339816.png" alt="image-20210106221339816"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106221354211.png" alt="image-20210106221354211"></p>
-<h2 id="域名服务器"><a href="#域名服务器" class="headerlink" title="域名服务器"></a>域名服务器</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106221905213.png" alt="image-20210106221905213"></p>
-<h2 id="域名解析过程"><a href="#域名解析过程" class="headerlink" title="域名解析过程"></a>域名解析过程</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106222009482.png" alt="image-20210106222009482"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106222316434.png" alt="image-20210106222316434"></p>
-<h1 id="文件传输协议FTP"><a href="#文件传输协议FTP" class="headerlink" title="文件传输协议FTP"></a>文件传输协议FTP</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106222436541.png" alt="image-20210106222436541"></p>
-<h2 id="FTP服务器和用户端"><a href="#FTP服务器和用户端" class="headerlink" title="FTP服务器和用户端"></a>FTP服务器和用户端</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106222522785.png" alt="image-20210106222522785"></p>
-<h2 id="FTP工作原理"><a href="#FTP工作原理" class="headerlink" title="FTP工作原理"></a>FTP工作原理</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106222743640.png" alt="image-20210106222743640"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223022264.png" alt="image-20210106223022264"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223032369.png" alt="image-20210106223032369"></p>
-<h2 id="电子邮件"><a href="#电子邮件" class="headerlink" title="电子邮件"></a>电子邮件</h2><h3 id="电子邮件的信息格式"><a href="#电子邮件的信息格式" class="headerlink" title="电子邮件的信息格式"></a>电子邮件的信息格式</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223152420.png" alt="image-20210106223152420"></p>
-<h3 id="电子邮件系统组成结构"><a href="#电子邮件系统组成结构" class="headerlink" title="电子邮件系统组成结构"></a>电子邮件系统组成结构</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223422693.png" alt="image-20210106223422693"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223452512.png" alt="image-20210106223452512"></p>
-<h2 id="简单邮件传送协议SMTP"><a href="#简单邮件传送协议SMTP" class="headerlink" title="简单邮件传送协议SMTP"></a>简单邮件传送协议SMTP</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223532031.png" alt="image-20210106223532031"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223726695.png" alt="image-20210106223726695"></p>
-<p>缺点：</p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223812569.png" alt="image-20210106223812569"></p>
-<h2 id="MIME"><a href="#MIME" class="headerlink" title="MIME"></a>MIME</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223835956.png" alt="image-20210106223835956"></p>
-<h2 id="邮局协议POP3"><a href="#邮局协议POP3" class="headerlink" title="邮局协议POP3"></a>邮局协议POP3</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223938956.png" alt="image-20210106223938956"></p>
-<h2 id="网际报文存取协议IMAP"><a href="#网际报文存取协议IMAP" class="headerlink" title="网际报文存取协议IMAP"></a>网际报文存取协议IMAP</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224018876.png" alt="image-20210106224018876"></p>
-<h2 id="基于万维网的电子邮件"><a href="#基于万维网的电子邮件" class="headerlink" title="基于万维网的电子邮件"></a>基于万维网的电子邮件</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224052288.png" alt="image-20210106224052288"></p>
-<h2 id="邮件脑图"><a href="#邮件脑图" class="headerlink" title="邮件脑图"></a>邮件脑图</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224108106.png" alt="image-20210106224108106"></p>
-<h1 id="万维网"><a href="#万维网" class="headerlink" title="万维网"></a>万维网</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224309444.png" alt="image-20210106224309444"></p>
-<h1 id="超文本传输协议HTTP"><a href="#超文本传输协议HTTP" class="headerlink" title="超文本传输协议HTTP"></a>超文本传输协议HTTP</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224439705.png" alt="image-20210106224439705"></p>
-<h2 id="HTTP协议的特点"><a href="#HTTP协议的特点" class="headerlink" title="HTTP协议的特点"></a>HTTP协议的特点</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224609080.png" alt="image-20210106224609080"></p>
-<h2 id="HTTP协议的连接方式"><a href="#HTTP协议的连接方式" class="headerlink" title="HTTP协议的连接方式"></a>HTTP协议的连接方式</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224644852.png" alt="image-20210106224644852"></p>
-<ul>
-<li>非流水线式（停等）</li>
-</ul>
-<h2 id="HTTP报文结构"><a href="#HTTP报文结构" class="headerlink" title="HTTP报文结构"></a>HTTP报文结构</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224848264.png" alt="image-20210106224848264"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106225020029.png" alt="image-20210106225020029"></p>
-<h1 id="应用层总结"><a href="#应用层总结" class="headerlink" title="应用层总结"></a>应用层总结</h1><p>xmid</p>
-]]></content>
-      <categories>
-        <category>计算机网络</category>
-      </categories>
-      <tags>
-        <tag>share</tag>
-        <tag>notes</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>计网第五章——传输层</title>
     <url>/posts/bef5de24/</url>
     <content><![CDATA[<h1 id="传输层概述"><a href="#传输层概述" class="headerlink" title="传输层概述"></a>传输层概述</h1><blockquote>
@@ -2446,6 +2383,69 @@
 </ul>
 <h3 id="快重传和快恢复"><a href="#快重传和快恢复" class="headerlink" title="快重传和快恢复"></a>快重传和快恢复</h3><p>![image-20210106214652844](/Users/fine/Library/Application Support/typora-user-images/image-20210106214652844.png)</p>
 <h1 id="传输层总结"><a href="#传输层总结" class="headerlink" title="传输层总结"></a>传输层总结</h1><p>xmind</p>
+]]></content>
+      <categories>
+        <category>计算机网络</category>
+      </categories>
+      <tags>
+        <tag>share</tag>
+        <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>计网第六章——应用层</title>
+    <url>/posts/9c3a6023/</url>
+    <content><![CDATA[<h1 id="应用层概述"><a href="#应用层概述" class="headerlink" title="应用层概述"></a>应用层概述</h1><blockquote>
+<p>应用层对应用程序的通信提供服务。</p>
+</blockquote>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106215449349.png" alt="image-20210106215449349"></p>
+<h2 id="应用层协议定义"><a href="#应用层协议定义" class="headerlink" title="应用层协议定义"></a>应用层协议定义</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106215500877.png" alt="image-20210106215500877"></p>
+<h2 id="应用层功能"><a href="#应用层功能" class="headerlink" title="应用层功能"></a>应用层功能</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106215516080.png" alt="image-20210106215516080"></p>
+<h2 id="应用层重要协议"><a href="#应用层重要协议" class="headerlink" title="应用层重要协议"></a>应用层重要协议</h2><ul>
+<li>FTP</li>
+<li>SMTP、POP3</li>
+<li>HTTP</li>
+<li>DNS</li>
+</ul>
+<h2 id="网络应用模型"><a href="#网络应用模型" class="headerlink" title="网络应用模型"></a>网络应用模型</h2><ul>
+<li>客户/ 服务器模型（Client/Server）</li>
+<li>P2P模型（Peer-to-peer）</li>
+</ul>
+<h3 id="客户-服务器模型（Client-Server）"><a href="#客户-服务器模型（Client-Server）" class="headerlink" title="客户/ 服务器模型（Client/Server）"></a>客户/ 服务器模型（Client/Server）</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106215838884.png" alt="image-20210106215838884"></p>
+<h3 id="P2P模型"><a href="#P2P模型" class="headerlink" title="P2P模型"></a>P2P模型</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106220023192.png" alt="image-20210106220023192"></p>
+<h1 id="DNS系统"><a href="#DNS系统" class="headerlink" title="DNS系统"></a>DNS系统</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106221047582.png" alt="image-20210106221047582"></p>
+<h2 id="域名"><a href="#域名" class="headerlink" title="域名"></a>域名</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106221339816.png" alt="image-20210106221339816"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106221354211.png" alt="image-20210106221354211"></p>
+<h2 id="域名服务器"><a href="#域名服务器" class="headerlink" title="域名服务器"></a>域名服务器</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106221905213.png" alt="image-20210106221905213"></p>
+<h2 id="域名解析过程"><a href="#域名解析过程" class="headerlink" title="域名解析过程"></a>域名解析过程</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106222009482.png" alt="image-20210106222009482"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106222316434.png" alt="image-20210106222316434"></p>
+<h1 id="文件传输协议FTP"><a href="#文件传输协议FTP" class="headerlink" title="文件传输协议FTP"></a>文件传输协议FTP</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106222436541.png" alt="image-20210106222436541"></p>
+<h2 id="FTP服务器和用户端"><a href="#FTP服务器和用户端" class="headerlink" title="FTP服务器和用户端"></a>FTP服务器和用户端</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106222522785.png" alt="image-20210106222522785"></p>
+<h2 id="FTP工作原理"><a href="#FTP工作原理" class="headerlink" title="FTP工作原理"></a>FTP工作原理</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106222743640.png" alt="image-20210106222743640"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223022264.png" alt="image-20210106223022264"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223032369.png" alt="image-20210106223032369"></p>
+<h2 id="电子邮件"><a href="#电子邮件" class="headerlink" title="电子邮件"></a>电子邮件</h2><h3 id="电子邮件的信息格式"><a href="#电子邮件的信息格式" class="headerlink" title="电子邮件的信息格式"></a>电子邮件的信息格式</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223152420.png" alt="image-20210106223152420"></p>
+<h3 id="电子邮件系统组成结构"><a href="#电子邮件系统组成结构" class="headerlink" title="电子邮件系统组成结构"></a>电子邮件系统组成结构</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223422693.png" alt="image-20210106223422693"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223452512.png" alt="image-20210106223452512"></p>
+<h2 id="简单邮件传送协议SMTP"><a href="#简单邮件传送协议SMTP" class="headerlink" title="简单邮件传送协议SMTP"></a>简单邮件传送协议SMTP</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223532031.png" alt="image-20210106223532031"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223726695.png" alt="image-20210106223726695"></p>
+<p>缺点：</p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223812569.png" alt="image-20210106223812569"></p>
+<h2 id="MIME"><a href="#MIME" class="headerlink" title="MIME"></a>MIME</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223835956.png" alt="image-20210106223835956"></p>
+<h2 id="邮局协议POP3"><a href="#邮局协议POP3" class="headerlink" title="邮局协议POP3"></a>邮局协议POP3</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223938956.png" alt="image-20210106223938956"></p>
+<h2 id="网际报文存取协议IMAP"><a href="#网际报文存取协议IMAP" class="headerlink" title="网际报文存取协议IMAP"></a>网际报文存取协议IMAP</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224018876.png" alt="image-20210106224018876"></p>
+<h2 id="基于万维网的电子邮件"><a href="#基于万维网的电子邮件" class="headerlink" title="基于万维网的电子邮件"></a>基于万维网的电子邮件</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224052288.png" alt="image-20210106224052288"></p>
+<h2 id="邮件脑图"><a href="#邮件脑图" class="headerlink" title="邮件脑图"></a>邮件脑图</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224108106.png" alt="image-20210106224108106"></p>
+<h1 id="万维网"><a href="#万维网" class="headerlink" title="万维网"></a>万维网</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224309444.png" alt="image-20210106224309444"></p>
+<h1 id="超文本传输协议HTTP"><a href="#超文本传输协议HTTP" class="headerlink" title="超文本传输协议HTTP"></a>超文本传输协议HTTP</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224439705.png" alt="image-20210106224439705"></p>
+<h2 id="HTTP协议的特点"><a href="#HTTP协议的特点" class="headerlink" title="HTTP协议的特点"></a>HTTP协议的特点</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224609080.png" alt="image-20210106224609080"></p>
+<h2 id="HTTP协议的连接方式"><a href="#HTTP协议的连接方式" class="headerlink" title="HTTP协议的连接方式"></a>HTTP协议的连接方式</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224644852.png" alt="image-20210106224644852"></p>
+<ul>
+<li>非流水线式（停等）</li>
+</ul>
+<h2 id="HTTP报文结构"><a href="#HTTP报文结构" class="headerlink" title="HTTP报文结构"></a>HTTP报文结构</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224848264.png" alt="image-20210106224848264"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106225020029.png" alt="image-20210106225020029"></p>
+<h1 id="应用层总结"><a href="#应用层总结" class="headerlink" title="应用层总结"></a>应用层总结</h1><p>xmid</p>
 ]]></content>
       <categories>
         <category>计算机网络</category>
