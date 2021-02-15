@@ -1,6 +1,307 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hello World</title>
+    <url>/posts/4a17b156/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. <a id="more"></a>Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>数据库第一章——数据库系统概论</title>
+    <url>/posts/4efd1fa7/</url>
+    <content><![CDATA[<h1 id="数据库基本概念"><a href="#数据库基本概念" class="headerlink" title="数据库基本概念"></a>数据库基本概念</h1><ul>
+<li><p>数据库：</p>
+<ul>
+<li>存放和提供数据的“库房”</li>
+</ul>
+</li>
+<li><p>数据(Data)：</p>
+<ul>
+<li>数据库中存储的基本对象，是记录客观事实的符号。除了同学们熟知的“数字”以外，还包括文字、图形、图像、声音、录象等等</li>
+</ul>
+</li>
+<li><p>数据库管理系统(DBMS:Database Management System)：</p>
+<ul>
+<li>位于用户与操作系统之间的一层数据管理软件</li>
+</ul>
+</li>
+<li><p>数据库系统(Database System)：</p>
+<ul>
+<li>数据库、</li>
+<li>DBMS、</li>
+<li>软硬件支持环境、</li>
+<li>应用系统、</li>
+<li>数据库管理员(DBA:Database Administrator)、</li>
+<li>用户</li>
+<li><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108195921317.png" alt="image-20210108195921317"></li>
+</ul>
+</li>
+</ul>
+<h2 id="简化的数据库系统环境"><a href="#简化的数据库系统环境" class="headerlink" title="简化的数据库系统环境"></a>简化的数据库系统环境</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108200058519.png" alt="image-20210108200058519"></p>
+<h2 id="什么是元数据"><a href="#什么是元数据" class="headerlink" title="什么是元数据"></a>什么是元数据</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108200137506.png" alt="image-20210108200137506"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108200206879.png" alt="image-20210108200206879"></p>
+<h2 id="应用程序"><a href="#应用程序" class="headerlink" title="应用程序"></a>应用程序</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108200240700.png" alt="image-20210108200240700"></p>
+<h3 id="查询"><a href="#查询" class="headerlink" title="查询"></a>查询</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108200326202.png" alt="image-20210108200326202"></p>
+<h3 id="应用程序展示查询结果"><a href="#应用程序展示查询结果" class="headerlink" title="应用程序展示查询结果"></a>应用程序展示查询结果</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108200355873.png" alt="image-20210108200355873"></p>
+<h1 id="数据库管理系统"><a href="#数据库管理系统" class="headerlink" title="数据库管理系统"></a>数据库管理系统</h1><h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><ul>
+<li><p><strong>数据定义</strong>：</p>
+<p>帮助数据库管理员创建、删除、修改数据库里的对象</p>
+</li>
+<li><p><strong>数据的组织、存储和管理</strong></p>
+</li>
+<li><p><strong>数据操纵</strong>：实现对数据库数据的查询、增加、删除和修改</p>
+</li>
+<li><p><strong>数据库的事务管理和运行控制</strong>：</p>
+<ul>
+<li>保证数据的安全性、完整性、</li>
+<li>多用户对数据的并发使用及发生故障后的系统恢复（选修课程：大型数据库技术）</li>
+</ul>
+</li>
+<li><p><strong>数据库维护</strong></p>
+</li>
+<li><p><strong>向应用软件(数据消-费者)提供数据</strong></p>
+</li>
+</ul>
+<h2 id="主流关系型数据库管理系统"><a href="#主流关系型数据库管理系统" class="headerlink" title="主流关系型数据库管理系统"></a>主流<strong>关系型</strong>数据库管理系统</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108200818142.png" alt="image-20210108200818142"></p>
+<h1 id="数据库管理技术的发展阶段"><a href="#数据库管理技术的发展阶段" class="headerlink" title="数据库管理技术的发展阶段"></a>数据库管理技术的发展阶段</h1><h2 id="人工管理阶段"><a href="#人工管理阶段" class="headerlink" title="人工管理阶段"></a>人工管理阶段</h2><ul>
+<li><p>数据不保存</p>
+</li>
+<li><p>应用程序管理数据</p>
+</li>
+<li><p>数据不共享，冗余度极大</p>
+</li>
+<li><p>数据不具有独立性</p>
+</li>
+</ul>
+<h2 id="文件系统阶段"><a href="#文件系统阶段" class="headerlink" title="文件系统阶段"></a>文件系统阶段</h2><ul>
+<li>数据可以长期保存</li>
+<li>由专门的软件—文件系统管理数据文件</li>
+<li>数据共享性差，冗余度大</li>
+<li>数据独立性差</li>
+</ul>
+<h2 id="数据库系统阶段"><a href="#数据库系统阶段" class="headerlink" title="数据库系统阶段"></a>数据库系统阶段</h2><ul>
+<li>数据结构化</li>
+<li>数据共享性高、冗余度低、易扩充</li>
+<li>数据独立性高</li>
+<li>数据由DBMS统一管理和控制</li>
+</ul>
+<h1 id="数据库用户"><a href="#数据库用户" class="headerlink" title="数据库用户"></a>数据库用户</h1><h2 id="幕前角色"><a href="#幕前角色" class="headerlink" title="幕前角色"></a>幕前角色</h2><ul>
+<li><p>数据库管理员：</p>
+<p>负责对数据库用户授权, 监控和协调数据库使用等</p>
+</li>
+<li><p>数据库设计者：</p>
+<p>识别要存储在数据库中的数据，并选择适当的结构来表示和存储这些数据</p>
+</li>
+<li><p>最终用户: 那些为了查询、更新和报表而访问数据库的用户</p>
+<ul>
+<li>偶尔访问的用户：使用复杂的数据库查询语言</li>
+<li>简单参与的用户：使用编写好的数据库应用软件</li>
+<li>资深的最终用户</li>
+<li>独立用户：个人数据库</li>
+</ul>
+</li>
+<li><p>系统分析员</p>
+</li>
+<li><p>软件工程师</p>
+</li>
+</ul>
+<h2 id="幕后工作者"><a href="#幕后工作者" class="headerlink" title="幕后工作者"></a>幕后工作者</h2><ul>
+<li>DBMS系统设计者</li>
+<li>数据库工具开发者</li>
+<li>操作员和维护人员</li>
+</ul>
+<h1 id="数据库的一般应用"><a href="#数据库的一般应用" class="headerlink" title="数据库的一般应用"></a>数据库的一般应用</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108201642076.png" alt="image-20210108201642076"></p>
+<h1 id="数据库的高级应用"><a href="#数据库的高级应用" class="headerlink" title="数据库的高级应用"></a>数据库的高级应用</h1><h2 id="数据仓库（Data-Warehousing）"><a href="#数据仓库（Data-Warehousing）" class="headerlink" title="数据仓库（Data Warehousing）"></a>数据仓库（Data Warehousing）</h2><ul>
+<li>什么是数据仓库<ul>
+<li>数据仓库是一种数据的长期存储(历史数据)，这些数据来自多数据源，是经过组织的，以便支持管理决策。</li>
+</ul>
+</li>
+<li>数据挖掘的基础</li>
+<li>BI (Business Intelligence：商务智能)</li>
+</ul>
+<h2 id="数据挖掘"><a href="#数据挖掘" class="headerlink" title="数据挖掘"></a>数据挖掘</h2><ul>
+<li><p>从海量的数据中获得有价值的信息</p>
+<ul>
+<li><p>主要是用于发现规律(知识)</p>
+</li>
+<li><p>银行利用ATM交易数据可以发现：哪个ATM机取款最繁忙，于是银行领导就此挖掘出来的信息可以做出在哪些地段增设ATM机的决定，这就叫“决策支持(Decision Support)”。</p>
+</li>
+<li><p>超市利用每天的营业数据可以发现：哪些商品销售量比较大，于是超市采购员可以利用这个信息(结合库存数据)决定下次的采购商品清单</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="决策支持系统（DSS：Decision-Support-System）"><a href="#决策支持系统（DSS：Decision-Support-System）" class="headerlink" title="决策支持系统（DSS：Decision Support System）"></a>决策支持系统（DSS：Decision Support System）</h2><ul>
+<li><p>利用“统计分析”、“数据挖掘”等手段得出一些推论，供领导决策参考</p>
+</li>
+<li><p>以前的决策过程</p>
+<ul>
+<li>靠领导的经验、个人智慧</li>
+</ul>
+</li>
+<li><p>现在的决策过程</p>
+<ul>
+<li>靠数据库中的数据提供决策依据</li>
+</ul>
+</li>
+</ul>
+<h2 id="数据、信息（通过SQL查询）、知识（通过数据挖掘）三者之间的关系"><a href="#数据、信息（通过SQL查询）、知识（通过数据挖掘）三者之间的关系" class="headerlink" title="数据、信息（通过SQL查询）、知识（通过数据挖掘）三者之间的关系"></a>数据、信息（通过SQL查询）、知识（通过数据挖掘）三者之间的关系</h2><ul>
+<li><p>数据：</p>
+<ul>
+<li>记录客观事实的符号</li>
+</ul>
+</li>
+<li><p>信息：</p>
+<ul>
+<li>是经过加工后的数据，它会对接受者的行为和决策产生影响，具有现实的或潜在的价值</li>
+</ul>
+</li>
+<li><p>信息与数据的关系：</p>
+<ul>
+<li>信息=数据+数据处理</li>
+</ul>
+</li>
+</ul>
+<h1 id="补充：『互联网-』战略带来的『大数据』的挑战"><a href="#补充：『互联网-』战略带来的『大数据』的挑战" class="headerlink" title="补充：『互联网+』战略带来的『大数据』的挑战"></a>补充：『互联网+』战略带来的『大数据』的挑战</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108202337590.png" alt="image-20210108202337590"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108202350569.png" alt="image-20210108202350569"></p>
+<h2 id="几个概念"><a href="#几个概念" class="headerlink" title="几个概念"></a>几个概念</h2><ul>
+<li><p>大数据：</p>
+<ul>
+<li>是指无法在可承受的时间范围内用常规软件工具进行捕捉、管理和处理的数据集合，至少要达到PB级别以上(1PB=1024TB，1TB=1024GB)</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>云计算：</p>
+<ul>
+<li>通过互联网来提供动态易扩展且经常是虚拟化的资源</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>物联网：</p>
+<ul>
+<li>通过射频识别（RFID）、红外感应器、全球定位系统、激光扫描器等信息传感设备，按约定的协议，把任何物品与互联网相连接，进行信息交换和通信，以实现智能化识别、定位、跟踪、监控和管理的一种网络概念</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>物联网提供了海量数据源<br>大数据无法用单台的计算机进行处理，必须采用分布式架构。它的特色在于对海量数据进行分布式数据挖掘与处理，它必须依托云计算的分布式处理、分布式数据库和云存储、虚拟化技术</p>
+</blockquote>
+<h1 id="数据模型的基本概念"><a href="#数据模型的基本概念" class="headerlink" title="数据模型的基本概念"></a>数据模型的基本概念</h1><ul>
+<li>数据模型(Data Model)：<ul>
+<li>现实世界数据特征的抽象，用来定义数据如何组织，数据之间的关系怎样</li>
+</ul>
+</li>
+<li>数据模型的层次：<ul>
+<li>概念模型(Conceptual) ：<ul>
+<li>按用户的观点来对数据和信息建模</li>
+</ul>
+</li>
+<li>逻辑/实现模型 (Logical/Implementation)<ul>
+<li>层次模型</li>
+<li>网状模型</li>
+<li>关系模型<br>…</li>
+</ul>
+</li>
+<li>物理模型 (Physical)：<ul>
+<li>数据在具体DBMS产品(IBM、Microsoft、Oracle)中的物理存储方式</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="数据建模概述"><a href="#数据建模概述" class="headerlink" title="数据建模概述"></a>数据建模概述</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108203305250.png" alt="image-20210108203305250"></p>
+<h1 id="数据模型的组成要素"><a href="#数据模型的组成要素" class="headerlink" title="数据模型的组成要素"></a>数据模型的组成要素</h1><ul>
+<li><p>数据结构：</p>
+<blockquote>
+<p>对系统静态特征的描述</p>
+</blockquote>
+</li>
+<li><p>数据操作：</p>
+<blockquote>
+<p>对系统动态特征的描述</p>
+</blockquote>
+<ul>
+<li>检索(查询)</li>
+<li>更新(插入、删除、修改：增删改)</li>
+</ul>
+</li>
+<li><p>数据的约束条件：</p>
+<blockquote>
+<p>完整性约束规则</p>
+</blockquote>
+</li>
+</ul>
+<h1 id="概念数据模型"><a href="#概念数据模型" class="headerlink" title="概念数据模型"></a>概念数据模型</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108203455619.png" alt="image-20210108203455619"></p>
+<h1 id="逻辑（实现）数据模型"><a href="#逻辑（实现）数据模型" class="headerlink" title="逻辑（实现）数据模型"></a>逻辑（实现）数据模型</h1><ul>
+<li><p>层次模型</p>
+</li>
+<li><p>网状模型</p>
+</li>
+<li><p><strong>关系模型</strong>(Relational Data Model)</p>
+<ul>
+<li>以严格的数学理论为基础：<ul>
+<li>谓词逻辑(predicate logic)、</li>
+<li>集合论(set theory)</li>
+</ul>
+</li>
+<li>目前主流的数据库系统都是基于“关系模型”的</li>
+</ul>
+</li>
+<li><p>面向对象模型</p>
+</li>
+<li><p>对象关系模型</p>
+</li>
+</ul>
+<h1 id="物理数据模型"><a href="#物理数据模型" class="headerlink" title="物理数据模型"></a>物理数据模型</h1><blockquote>
+<p>描述数据库在计算机中的存储细节</p>
+</blockquote>
+<h1 id="补充：NoSQL和NewSQL数据库"><a href="#补充：NoSQL和NewSQL数据库" class="headerlink" title="补充：NoSQL和NewSQL数据库"></a>补充：NoSQL和NewSQL数据库</h1><h2 id="NoSQL数据库"><a href="#NoSQL数据库" class="headerlink" title="NoSQL数据库"></a>NoSQL数据库</h2><ul>
+<li><p>“大数据”带来的挑战导致传统的关系型数据库难以存储、单机数据分析统计工具无法处理，需要将这些数据存放在拥有数千万台机器的大规模并行系统上。</p>
+</li>
+<li><p>NoSQL(Not Only SQL)是对关系型SQL数据系统的补充，主要优势：</p>
+<ul>
+<li><p>高吞吐量</p>
+</li>
+<li><p>高水平扩展能力和低端硬件集群</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="NewSQL数据库"><a href="#NewSQL数据库" class="headerlink" title="NewSQL数据库"></a>NewSQL数据库</h2><ul>
+<li><p>可扩展的、高性能的SQL数据库</p>
+<ul>
+<li><p>拥有关系型数据库产品和服务，并将关系模型的好处带到分布式架构上</p>
+</li>
+<li><p>提高关系数据库的性能，使之达到不用考虑水平扩展问题的程度</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="数据库系统的分类"><a href="#数据库系统的分类" class="headerlink" title="数据库系统的分类"></a>数据库系统的分类</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108204401263.png" alt="image-20210108204401263"></p>
+]]></content>
+      <categories>
+        <category>数据库原理及应用</category>
+      </categories>
+      <tags>
+        <tag>share</tag>
+        <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>java枚举类与注解</title>
     <url>/posts/2b247dfd/</url>
     <content><![CDATA[<h1 id="枚举类"><a href="#枚举类" class="headerlink" title="枚举类"></a>枚举类</h1><h2 id="枚举类的使用"><a href="#枚举类的使用" class="headerlink" title="枚举类的使用"></a>枚举类的使用</h2><p><strong>1. 枚举类的理解：类的对象只有有限个、确定的。</strong></p>
@@ -120,22 +421,375 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/posts/4a17b156/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. <a id="more"></a>Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+    <title>数据库第二章——数据库系统结构</title>
+    <url>/posts/95a84140/</url>
+    <content><![CDATA[<h1 id="数据库系统结构概述"><a href="#数据库系统结构概述" class="headerlink" title="数据库系统结构概述"></a>数据库系统结构概述</h1><ul>
+<li><p>数据库管理系统内部的系统结构</p>
+<ul>
+<li>三级模式结构</li>
+<li>两级映射功能</li>
+</ul>
+</li>
+<li><p>数据库系统外部的体系结构</p>
+<ul>
+<li><p>集中式体系结构</p>
+</li>
+<li><p>“客户/服务器”架构</p>
+</li>
+<li><p>“客户/应用服务器/数据库服务器”架构</p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="数据库模式和实例的概念"><a href="#数据库模式和实例的概念" class="headerlink" title="数据库模式和实例的概念"></a>数据库模式和实例的概念</h1><ul>
+<li><p>模式(Schema)与实例(Instance)</p>
+<ul>
+<li><p><strong>模式</strong>：</p>
+<ul>
+<li>数据库的描述。包括数据库的数据结构、数据类型和约束</li>
+</ul>
+</li>
+<li><p>**实例(状态)**：某一时刻实际存储在数据库中的数据集合</p>
+</li>
+<li><p>实例是模式在某一时刻的具体化、实例化(类似于面向对象理论中Class与Object的关系)</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108205629791.png" alt="image-20210108205629791"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108205644673.png" alt="image-20210108205644673"></p>
+<ul>
+<li>数据库模式很少发生改变 <ul>
+<li>模式也被叫做内涵</li>
+</ul>
+</li>
+<li>每次进行数据库更新操作时数据库实例都会发生变化<ul>
+<li>实例(状态)也被称为外延</li>
+</ul>
+</li>
+</ul>
+<h1 id="数据库系统的三级模式结构"><a href="#数据库系统的三级模式结构" class="headerlink" title="数据库系统的三级模式结构"></a>数据库系统的三级模式结构</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108205831449.png" alt="image-20210108205831449"></p>
+<ul>
+<li><p><strong>内模式</strong>,也称存储模式 (Internal schema)：</p>
+<blockquote>
+<p>数据物理结构和存储方式的描述，是数据在数据库内部的表示方式 </p>
+</blockquote>
+<ul>
+<li>通常使用<strong>物理数据模型</strong>描述</li>
+</ul>
+</li>
+<li><p><strong>概念模式</strong>,也称全局模式，有时简称“模式” (Conceptual schema)：</p>
+<blockquote>
+<p>数据库中全体数据的逻辑结构和特征的描述</p>
+</blockquote>
+<ul>
+<li>通常使用<strong>概念或逻辑数据模型</strong>描述</li>
+</ul>
+</li>
+<li><p><strong>外模式</strong>,也称子模式或用户模式 (External schemas)：</p>
+<blockquote>
+<p>数据库用户能够看见和使用的局部数据的逻辑结构和特征的描述 </p>
+<p>使不同的用户能看到的界面不同。</p>
+</blockquote>
+<ul>
+<li><p>通常使用与<strong>概念模式相同的数据模型</strong>描述</p>
+</li>
+<li><p>模型(Model)与模式(Schema)的区别</p>
+<ul>
+<li>数据模型是描述数据的一种通用形式，模式则是用给定的数据模型描述具体数据。注意：真正的数据内容保存在数据库状态(State)中。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="用E-R概念模型表示的概念模型"><a href="#用E-R概念模型表示的概念模型" class="headerlink" title="用E-R概念模型表示的概念模型"></a>用E-R概念模型表示的概念模型</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108210400522.png" alt="image-20210108210400522"></p>
+<h2 id="用关系逻辑模型表示的概念模型"><a href="#用关系逻辑模型表示的概念模型" class="headerlink" title="用关系逻辑模型表示的概念模型"></a>用关系逻辑模型表示的概念模型</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108210441911.png" alt="image-20210108210441911"></p>
+<h2 id="用关系逻辑模型表示的外模式及其实例"><a href="#用关系逻辑模型表示的外模式及其实例" class="headerlink" title="用关系逻辑模型表示的外模式及其实例"></a>用关系逻辑模型表示的外模式及其实例</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108210546764.png" alt="image-20210108210546764"></p>
+<ul>
+<li>外模式用于使不同用户级别看到的界面不同</li>
+</ul>
+<h1 id="数据库系统的两级映射功能"><a href="#数据库系统的两级映射功能" class="headerlink" title="数据库系统的两级映射功能"></a>数据库系统的两级映射功能</h1><ul>
+<li><p><strong>两级映射</strong>(Mapping)</p>
+<ul>
+<li>概念模式/内模式映射</li>
+<li>外模式/概念模式映射</li>
+</ul>
+</li>
+<li><p><strong>数据独立性</strong></p>
+<ul>
+<li>物理独立性(Physical Data Independence)</li>
+<li>逻辑独立性(Logical Data Independence)</li>
+</ul>
+</li>
+</ul>
+<h2 id="数据库的工作流程"><a href="#数据库的工作流程" class="headerlink" title="数据库的工作流程"></a>数据库的工作流程</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108205831449.png" alt="image-20210108205831449"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108210927057.png" alt="image-20210108210927057"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108210952255.png" alt="image-20210108210952255"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108211003467.png" alt="image-20210108211003467"></p>
+<h2 id="数据独立性"><a href="#数据独立性" class="headerlink" title="数据独立性"></a>数据独立性</h2><h3 id="数据的物理独立性"><a href="#数据的物理独立性" class="headerlink" title="数据的物理独立性"></a>数据的物理独立性</h3><blockquote>
+<p>内模式与概念模式之间的映射提供了数据的物理独立性。当数据的物理结构发生变化时，如对数据增加索引、改变数据的存储位置、改变存储设备等，不影响数据的逻辑结构。当DBA根据应用程序对数据的存取要求，对数据的物理组织进行优化后，并不需要对概念模式和外模式进行重新定义，也不需要修改应用程序，只需要修改内模式与概念模式之间的映射。</p>
+</blockquote>
+<h3 id="数据的逻辑独立性"><a href="#数据的逻辑独立性" class="headerlink" title="数据的逻辑独立性"></a>数据的逻辑独立性</h3><blockquote>
+<p>概念模式与外模式之间的映射提供了数据的逻辑独立性。当数据的整体逻辑结构发生变化时，如增加新的关系、新的属性、改变属性的数据类型等，可以通过修改各个外模式与概念模式之间的映射，从而使外模式和依据外模式编写的应用程序不受影响。</p>
+</blockquote>
+<h1 id="数据库系统外部的体系结构"><a href="#数据库系统外部的体系结构" class="headerlink" title="数据库系统外部的体系结构"></a>数据库系统外部的体系结构</h1><h2 id="集中式架构"><a href="#集中式架构" class="headerlink" title="集中式架构"></a>集中式架构</h2><ul>
+<li>将所有软硬件集中到一起：包括DBMS,硬件，应用程序，人机交互软件等</li>
+<li>用户仍然可以通过远程终端连接。然而，所有运算都集中在一个位置</li>
+</ul>
+<p><strong>一个物理集中式的架构体系</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108211551077.png" alt="image-20210108211551077"></p>
+<h2 id="客户-服务器架构"><a href="#客户-服务器架构" class="headerlink" title="客户-服务器架构"></a>客户-服务器架构</h2><ul>
+<li><strong>网络数据库系统</strong>：<ul>
+<li>数据库系统软件安装在服务器上，通过网络向外界提供数据服务</li>
+</ul>
+</li>
+<li><strong>Client/Server：</strong><ul>
+<li>需要安装专门的客户端软件</li>
+</ul>
+</li>
+<li><strong>Browser/Server：</strong><ul>
+<li>不需要安装专门的客户端软件</li>
+</ul>
+</li>
+</ul>
+<h3 id="Client-Server架构"><a href="#Client-Server架构" class="headerlink" title="Client/Server架构"></a>Client/Server架构</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108211826865.png" alt="image-20210108211826865"></p>
+<h4 id="Client-Server架构组件"><a href="#Client-Server架构组件" class="headerlink" title="Client/Server架构组件"></a>Client/Server架构组件</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108211904397.png" alt="image-20210108211904397"></p>
+<h4 id="Client-Server架构通信过程"><a href="#Client-Server架构通信过程" class="headerlink" title="Client/Server架构通信过程"></a>Client/Server架构通信过程</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108211945073.png" alt="image-20210108211945073"></p>
+<h3 id="Browser-Server架构"><a href="#Browser-Server架构" class="headerlink" title="Browser/Server架构"></a>Browser/Server架构</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212102096.png" alt="image-20210108212102096"></p>
+<h4 id="Browser-Server架构通信过程"><a href="#Browser-Server架构通信过程" class="headerlink" title="Browser/Server架构通信过程"></a>Browser/Server架构通信过程</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212145147.png" alt="image-20210108212145147"></p>
+<h2 id="三层客户-服务器逻辑结构"><a href="#三层客户-服务器逻辑结构" class="headerlink" title="三层客户-服务器逻辑结构"></a>三层客户-服务器逻辑结构</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212244213.png" alt="image-20210108212244213"></p>
+<ul>
+<li><p><strong>表现层</strong> (Presentation layer)：</p>
+<ul>
+<li>负责展示用户界面，以及与用户的交互。</li>
+</ul>
+</li>
+<li><p><strong>业务逻辑层或中间层</strong> (Business logic layer ):</p>
+<ul>
+<li> 负责接收来自表示层的请求，并根据它包含的业务逻辑给表示层返回一个结果。</li>
+</ul>
+</li>
+<li><p><strong>数据库服务层</strong> (Database services layer): </p>
+<ul>
+<li>负责存储应用程序的数据，并在接收到请求时，把这些数据发送给业务层。</li>
+</ul>
+</li>
+</ul>
+<h3 id="例：图书管理系统"><a href="#例：图书管理系统" class="headerlink" title="例：图书管理系统"></a>例：图书管理系统</h3><h4 id="图书馆信息管理系统数据库服务层"><a href="#图书馆信息管理系统数据库服务层" class="headerlink" title="图书馆信息管理系统数据库服务层"></a>图书馆信息管理系统数据库服务层</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212457459.png" alt="image-20210108212457459"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212510722.png" alt="image-20210108212510722"></p>
+<h4 id="图书馆信息管理系统业务层"><a href="#图书馆信息管理系统业务层" class="headerlink" title="图书馆信息管理系统业务层"></a>图书馆信息管理系统业务层</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212528301.png" alt="image-20210108212528301"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212536898.png" alt="image-20210108212536898"></p>
+<h4 id="图书馆信息管理系统表现层"><a href="#图书馆信息管理系统表现层" class="headerlink" title="图书馆信息管理系统表现层"></a>图书馆信息管理系统表现层</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212554829.png" alt="image-20210108212554829"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212607770.png" alt="image-20210108212607770"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212619538.png" alt="image-20210108212619538"></p>
 ]]></content>
+      <categories>
+        <category>数据库原理及应用</category>
+      </categories>
+      <tags>
+        <tag>share</tag>
+        <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据库第四章——关系数据库标准语言SQL（2）</title>
+    <url>/posts/b4b005f4/</url>
+    <content><![CDATA[<h1 id="SQL的功能组成"><a href="#SQL的功能组成" class="headerlink" title="SQL的功能组成"></a>SQL的功能组成</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111095419310.png" alt="image-20210111095419310"></p>
+<h2 id="SQL－-gt-DML-－-gt-DQL-数据查询"><a href="#SQL－-gt-DML-－-gt-DQL-数据查询" class="headerlink" title="SQL－&gt;DML －&gt;DQL(数据查询)"></a>SQL－&gt;DML －&gt;DQL(数据查询)</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111095619074.png" alt="image-20210111095619074"></p>
+<h1 id="内连接"><a href="#内连接" class="headerlink" title="内连接"></a>内连接</h1><p><strong>例7-1：查询所有学生所在院系信息。</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100039169.png" alt="image-20210111100039169"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100055583.png"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> STUDENTINFO</span><br><span class="line"><span class="keyword">INNER</span> <span class="keyword">JOIN</span> DEPARTMENT <span class="keyword">ON</span> (STUDENTINFO.STUDENTDEPARTMENTIN=DEPARTMENT.DEPARTMENTID)</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+<h2 id="内连接执行过程"><a href="#内连接执行过程" class="headerlink" title="内连接执行过程"></a>内连接执行过程</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100310303.png" alt="image-20210111100310303"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111102107255.png" alt="image-20210111102107255"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100511937.png" alt="image-20210111100511937"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> S.STUDENTNO, S.STUDENTNAME, D.DEPARTMENTNAME <span class="keyword">FROM</span> STUDENTINFO <span class="keyword">AS</span> S <span class="keyword">INNER</span> <span class="keyword">JOIN</span> DEPARTMENT <span class="keyword">AS</span> D <span class="keyword">ON</span> (S.STUDENTDEPARTIN = D.DEPARTMENTID)</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="多表查询时SELECT-表示的含义"><a href="#多表查询时SELECT-表示的含义" class="headerlink" title="多表查询时SELECT *表示的含义"></a>多表查询时SELECT *表示的含义</h2><ul>
+<li>当未使用限定符指定时，星号解析为对 FROM 子句中所指定的所有表或视图中的所有列的引用</li>
+<li>当使用表或视图名称进行限定时，星号解析为对表或视图中的所有列的引用</li>
+</ul>
+<h2 id="注意：尽量不要用以下连接方式"><a href="#注意：尽量不要用以下连接方式" class="headerlink" title="注意：尽量不要用以下连接方式"></a>注意：尽量不要用以下连接方式</h2><ul>
+<li><pre><code class="sql">SELECT * FROM STUDENTINFO, DEPARTMENT WHERE STUDENTINFO.STUDENTDEPARTID=DEPARTMENT.DEPARTMENTID
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">- 原因：无法将连接条件和针对连接后生成的“大表”的筛选条件分开</span><br><span class="line"></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">**数据挖掘例7-2：考察这家公司技术部门的男女员工比例**</span><br><span class="line"></span><br><span class="line">![image-20210111100750333](https:&#x2F;&#x2F;chasing1874.oss-cn-chengdu.aliyuncs.com&#x2F;image-20210111100750333.png)</span><br><span class="line"></span><br><span class="line">![image-20210111100805120](https:&#x2F;&#x2F;chasing1874.oss-cn-chengdu.aliyuncs.com&#x2F;image-20210111100805120.png)</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;sql</span><br><span class="line">SELECT * FROM EMPLOYEE E JOIN DEPARTMENT D ON (E.DNO &#x3D; D.DNUMBER)</span><br><span class="line"></span><br><span class="line">SELECT SEX, COUNT(*) AS 人数 FROM EMPLOYEE JOIN DEPARTMENT ON (DNO &#x3D; DNUMBER) WHERE DNAME&#x3D;&#39;RESEARCH&#39; GROUP BY SEX</span><br></pre></td></tr></table></figure>
+
+
+</code></pre>
+</li>
+</ul>
+<h2 id="多表内连接查询"><a href="#多表内连接查询" class="headerlink" title="多表内连接查询"></a>多表内连接查询</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100842785.png" alt="image-20210111100842785"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100854911.png" alt="image-20210111100854911"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100906322.png" alt="image-20210111100906322"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> EXAMRECORD E <span class="keyword">JOIN</span> STUDENTINFO S <span class="keyword">ON</span> (E.STUDENTNO = E.STUDENTNO) <span class="keyword">JOIN</span> COURSE C <span class="keyword">ON</span> (C.COURSEID = E.COURSEID)</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p><strong>例7-3：查询所有学生各门课程成绩</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100932313.png" alt="image-20210111100932313"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> STUDENTNAME <span class="keyword">AS</span> 学生姓名 , COURSENAME <span class="keyword">AS</span> 课程名称, SCORE <span class="keyword">AS</span> 成绩 <span class="keyword">FROM</span> EXAMRECORD E <span class="keyword">JOIN</span> STUDENTINFO S <span class="keyword">ON</span> (E.STUDENTNO=S.STUDENTNO) <span class="keyword">JOIN</span> COUSE C <span class="keyword">ON</span> (C.COURSEID=E.COURSEID)</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p><strong>例7-4 ：查询各门课程任课教师信息</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100959522.png" alt="image-20210111100959522"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111101013925.png" alt="image-20210111101013925"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> COURSE <span class="keyword">ORDER</span> <span class="keyword">BY</span> TEACHERID <span class="keyword">DESC</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> TEACHER</span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> COURSE C <span class="keyword">JOIN</span> TEACHER T <span class="keyword">ON</span> (C.TEACHERID=T.TEACHERID)</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<h1 id="外连接"><a href="#外连接" class="headerlink" title="外连接"></a>外连接</h1><h2 id="LEFT-OUTER-JOIN"><a href="#LEFT-OUTER-JOIN" class="headerlink" title="LEFT OUTER JOIN"></a>LEFT OUTER JOIN</h2><blockquote>
+<p>显示LEFT表(Course)中的全部元组，如果RIGHT表(Teacher)<br>中没有扫描到符合连接条件的元组，则用NULL代替</p>
+</blockquote>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111104650305.png" alt="image-20210111104650305"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> COURSE C <span class="keyword">LEFT</span> <span class="keyword">OUTER</span> <span class="keyword">JOIN</span> TEACHER T <span class="keyword">ON</span> (C.TEACHERID = T.TEACHERID) <span class="keyword">ORDER</span> <span class="keyword">BY</span> T.TEACHERID <span class="keyword">DESC</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="RIGHT-OUTER-JOIN"><a href="#RIGHT-OUTER-JOIN" class="headerlink" title="RIGHT OUTER JOIN"></a>RIGHT OUTER JOIN</h2><blockquote>
+<p>显示LEFT表(Course)中的全部元组，如果RIGHT表(Teacher)<br>中没有扫描到符合连接条件的元组，则用NULL代替</p>
+</blockquote>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111104745799.png" alt="image-20210111104745799"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> COURSE C <span class="keyword">RIGHT</span> <span class="keyword">OUTER</span> <span class="keyword">JOIN</span> TEACHER T <span class="keyword">ON</span> (C.TEACHERID=T.TEACHERID) <span class="keyword">ORDER</span> <span class="keyword">BY</span> C.COURSEID <span class="keyword">DESC</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="注意：进行左、右外连接时表的顺序非常重要"><a href="#注意：进行左、右外连接时表的顺序非常重要" class="headerlink" title="注意：进行左、右外连接时表的顺序非常重要"></a>注意：进行左、右外连接时表的顺序非常重要</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111104837990.png" alt="image-20210111104837990"></p>
+<h2 id="FULL-OUTTER-JOIN"><a href="#FULL-OUTTER-JOIN" class="headerlink" title="FULL OUTTER JOIN"></a>FULL OUTTER JOIN</h2><blockquote>
+<p>显示LEFT表(Course) 和RIGHT表(Teacher)中的全部元组，如果<br>没有扫描到符合连接条件的元组，<strong>则用NULL代替</strong></p>
+</blockquote>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111104907825.png" alt="image-20210111104907825"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> COURSE C <span class="keyword">FULL</span> <span class="keyword">OUTER</span> <span class="keyword">JOIN</span> TEACHER T <span class="keyword">ON</span> (C.TEACHERID=T.TEACHERID) <span class="keyword">ORDER</span> <span class="keyword">BY</span> C.TEACHERID <span class="keyword">DESC</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="注意：多表外连接，表顺序很重要"><a href="#注意：多表外连接，表顺序很重要" class="headerlink" title="注意：多表外连接，表顺序很重要"></a>注意：多表外连接，表顺序很重要</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111104939651.png" alt="image-20210111104939651"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111104949775.png" alt="image-20210111104949775"></p>
+<h3 id="例7-5-："><a href="#例7-5-：" class="headerlink" title="例7-5 ："></a><strong>例7-5 ：</strong></h3><p><strong>查询所有学生选修的课程(包括未选课学生以及没有学生选修的课程信息)</strong></p>
+<ol>
+<li>连接“StudentInfo”和“ExamRecord”</li>
+</ol>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105100017.png" alt="image-20210111105100017"></p>
+<ol start="2">
+<li>把第1步生成的结果关系与“Course”连接</li>
+</ol>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105207670.png" alt="image-20210111105207670"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105222970.png" alt="image-20210111105222970"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105234460.png" alt="image-20210111105234460"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105245515.png" alt="image-20210111105245515"></p>
+<ol start="3">
+<li>按照题目要求进行适当的投影操作</li>
+</ol>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105348702.png" alt="image-20210111105348702"></p>
+<h3 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h3><blockquote>
+<p>所有用于单表的查询技术都可以用于多表查询，多表只不过是把单表按照一定连接条件(join condition)连接成一张<strong>“大表”</strong></p>
+</blockquote>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105430685.png" alt="image-20210111105430685"></p>
+<h2 id="有连接时的查询执行过程"><a href="#有连接时的查询执行过程" class="headerlink" title="有连接时的查询执行过程"></a>有连接时的查询执行过程</h2><ul>
+<li>生成结果关系(“大表”)—》在“大表”上利用WHERE指定的条件筛选元组—》按照Group by指定的属性将元组分组—》将Group by的分组用Having指定的条件筛选—》按照Order By指定的属性对元组排序(排序的属性可以不在最后投影的属性列中)—》投影或用函数、表达式计算</li>
+</ul>
+<ul>
+<li>如果没有GROUP BY和HAVING的话，上述步骤中红色的部分将不会执行</li>
+</ul>
+<h3 id="例7-6-："><a href="#例7-6-：" class="headerlink" title="例7-6 ："></a><strong>例7-6 ：</strong></h3><p><strong>查询部门男性员工数大于2的部门名称及男性员工人数，并按人数降序排列</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105654992.png" alt="image-20210111105654992"></p>
+<ol>
+<li>生成结果关系(“大表”)</li>
+</ol>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105731991.png" alt="image-20210111105731991"></p>
+<ol start="2">
+<li>在“大表”上利用WHERE指定的条件筛选元组</li>
+</ol>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105755760.png" alt="image-20210111105755760"></p>
+<ol start="3">
+<li>按照Group by指定的属性将元组分组</li>
+</ol>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105827865.png" alt="image-20210111105827865"></p>
+<ol start="4">
+<li>将Group by的分组用Having指定的条件筛选</li>
+</ol>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105850431.png" alt="image-20210111105850431"></p>
+<ol start="5">
+<li>按照Order By指定的属性对元组排序</li>
+</ol>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105914626.png" alt="image-20210111105914626"></p>
+<ol start="6">
+<li>投影或用函数、表达式计算</li>
+</ol>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105944800.png" alt="image-20210111105944800"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> DNAME , <span class="keyword">COUNT</span>(*) <span class="keyword">FROM</span> EMPLOYEE E <span class="keyword">JOIN</span> DEPARTMENT D <span class="keyword">ON</span> (E.DNO=D.DNUMBER) <span class="keyword">WHERE</span> SEX=<span class="string">&#x27;M&#x27;</span> <span class="keyword">GROUP</span> <span class="keyword">BY</span> DNAME <span class="keyword">HAVING</span> <span class="keyword">COUNT</span>(*) &gt; <span class="number">2</span> <span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="keyword">COUNT</span>(*) <span class="keyword">DESC</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="补充：一个查询优化的例子"><a href="#补充：一个查询优化的例子" class="headerlink" title="补充：一个查询优化的例子"></a>补充：一个查询优化的例子</h3><p>在逻辑上，我们可以认为DBMS是先通过JOIN操作(关系代数)把所有的表连成一张“大表”后再来执行SELECT操作(关系代数)，但实际上DBMS在某些情况下会对查询的执行过程进行优化，比如先执行SELECT操作(从而有可能减少参与JOIN操作的关系的元组数)，再执行JOIN操作。</p>
+<h4 id="DBMS处理查询的过程"><a href="#DBMS处理查询的过程" class="headerlink" title="DBMS处理查询的过程"></a>DBMS处理查询的过程</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111110027640.png" alt="image-20210111110027640"></p>
+<h3 id="例7-7-："><a href="#例7-7-：" class="headerlink" title="例7-7 ："></a>例7-7 ：</h3><p><strong>查询女性员工的家属信息</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111110108326.png" alt="image-20210111110108326"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> FNAME, LNAME, DEPENDRNT_NAME <span class="keyword">FROM</span> EMPLOYEE <span class="keyword">JOIN</span> DEPENDENT <span class="keyword">ON</span> (SSN = ESSN) <span class="keyword">WHERE</span> (EMPLOYEE.SEX = <span class="string">&#x27;F&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111110136785.png" alt="image-20210111110136785"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111110146387.png" alt="image-20210111110146387"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111110159964.png" alt="image-20210111110159964"></p>
+<h1 id="交叉连接"><a href="#交叉连接" class="headerlink" title="交叉连接"></a>交叉连接</h1><blockquote>
+<p>交叉连接(CROSS JOIN)：实际就是关系代数中的“笛卡尔积”(Cartesian Product)</p>
+</blockquote>
+<h3 id="例7-8-："><a href="#例7-8-：" class="headerlink" title="例7-8 ："></a>例7-8 ：</h3><p><strong>将StudentInfo与Department表交叉连接</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111115926151.png" alt="image-20210111115926151"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111115938420.png" alt="image-20210111115938420"></p>
+<p><strong>如果添加一个 WHERE 子句，则交叉连接的作用将同内连接一样</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111120001776.png" alt="image-20210111120001776"></p>
+<h3 id="注意：-1"><a href="#注意：-1" class="headerlink" title="注意："></a>注意：</h3><p>CROSS JOIN后面不能加ON</p>
+<h3 id="CROSS-JOIN的用处"><a href="#CROSS-JOIN的用处" class="headerlink" title="CROSS JOIN的用处"></a>CROSS JOIN的用处</h3><blockquote>
+<p>CROSS JOIN的一个用途是生成样本或测试数据。例如：如果你要生成1000行3列的一个表用于测试，不必建立这样一张表并进行1000次插入操作，可以建立三张表，每张表1列10行数据，然后将这三张表进行交叉连接可得10<em>10</em>10=1000行数据。</p>
+</blockquote>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111120117583.png" alt="image-20210111120117583"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111120132062.png" alt="image-20210111120132062"></p>
+<h1 id="自连接"><a href="#自连接" class="headerlink" title="自连接"></a>自连接</h1><h3 id="例7-9-："><a href="#例7-9-：" class="headerlink" title="例7-9 ："></a>例7-9 ：</h3><p><strong>查询每个员工上级的姓名</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111120202140.png" alt="image-20210111120202140"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111120219805.png" alt="image-20210111120219805"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111120231994.png" alt="image-20210111120231994"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> EMPLOYEE E1 <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> EMPLOYEE E2 <span class="keyword">ON</span> (E1.SUPERSSN=E2.SSN) <span class="keyword">ORDER</span> <span class="keyword">BY</span> E1.SUPERSSN <span class="keyword">DESC</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> E1.FNAME+<span class="string">&#x27;,&#x27;</span>+E1.LNAME 员工姓名, E2.FNAME+<span class="string">&#x27;,&#x27;</span>E2.LNAME 上级姓名 <span class="keyword">FROM</span> EMPLOYEE E1 <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> EMPLOYEE E2 <span class="keyword">ON</span> E1.SUPERSSN=E2.SSN <span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="number">2</span> D</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+]]></content>
+      <categories>
+        <category>数据库原理及应用</category>
+      </categories>
+      <tags>
+        <tag>share</tag>
+        <tag>notes</tag>
+      </tags>
   </entry>
   <entry>
     <title>数据库第四章——关系数据库标准语言SQL（1）</title>
@@ -453,952 +1107,6 @@
       </tags>
   </entry>
   <entry>
-    <title>数据库第一章——数据库系统概论</title>
-    <url>/posts/4efd1fa7/</url>
-    <content><![CDATA[<h1 id="数据库基本概念"><a href="#数据库基本概念" class="headerlink" title="数据库基本概念"></a>数据库基本概念</h1><ul>
-<li><p>数据库：</p>
-<ul>
-<li>存放和提供数据的“库房”</li>
-</ul>
-</li>
-<li><p>数据(Data)：</p>
-<ul>
-<li>数据库中存储的基本对象，是记录客观事实的符号。除了同学们熟知的“数字”以外，还包括文字、图形、图像、声音、录象等等</li>
-</ul>
-</li>
-<li><p>数据库管理系统(DBMS:Database Management System)：</p>
-<ul>
-<li>位于用户与操作系统之间的一层数据管理软件</li>
-</ul>
-</li>
-<li><p>数据库系统(Database System)：</p>
-<ul>
-<li>数据库、</li>
-<li>DBMS、</li>
-<li>软硬件支持环境、</li>
-<li>应用系统、</li>
-<li>数据库管理员(DBA:Database Administrator)、</li>
-<li>用户</li>
-<li><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108195921317.png" alt="image-20210108195921317"></li>
-</ul>
-</li>
-</ul>
-<h2 id="简化的数据库系统环境"><a href="#简化的数据库系统环境" class="headerlink" title="简化的数据库系统环境"></a>简化的数据库系统环境</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108200058519.png" alt="image-20210108200058519"></p>
-<h2 id="什么是元数据"><a href="#什么是元数据" class="headerlink" title="什么是元数据"></a>什么是元数据</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108200137506.png" alt="image-20210108200137506"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108200206879.png" alt="image-20210108200206879"></p>
-<h2 id="应用程序"><a href="#应用程序" class="headerlink" title="应用程序"></a>应用程序</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108200240700.png" alt="image-20210108200240700"></p>
-<h3 id="查询"><a href="#查询" class="headerlink" title="查询"></a>查询</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108200326202.png" alt="image-20210108200326202"></p>
-<h3 id="应用程序展示查询结果"><a href="#应用程序展示查询结果" class="headerlink" title="应用程序展示查询结果"></a>应用程序展示查询结果</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108200355873.png" alt="image-20210108200355873"></p>
-<h1 id="数据库管理系统"><a href="#数据库管理系统" class="headerlink" title="数据库管理系统"></a>数据库管理系统</h1><h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><ul>
-<li><p><strong>数据定义</strong>：</p>
-<p>帮助数据库管理员创建、删除、修改数据库里的对象</p>
-</li>
-<li><p><strong>数据的组织、存储和管理</strong></p>
-</li>
-<li><p><strong>数据操纵</strong>：实现对数据库数据的查询、增加、删除和修改</p>
-</li>
-<li><p><strong>数据库的事务管理和运行控制</strong>：</p>
-<ul>
-<li>保证数据的安全性、完整性、</li>
-<li>多用户对数据的并发使用及发生故障后的系统恢复（选修课程：大型数据库技术）</li>
-</ul>
-</li>
-<li><p><strong>数据库维护</strong></p>
-</li>
-<li><p><strong>向应用软件(数据消-费者)提供数据</strong></p>
-</li>
-</ul>
-<h2 id="主流关系型数据库管理系统"><a href="#主流关系型数据库管理系统" class="headerlink" title="主流关系型数据库管理系统"></a>主流<strong>关系型</strong>数据库管理系统</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108200818142.png" alt="image-20210108200818142"></p>
-<h1 id="数据库管理技术的发展阶段"><a href="#数据库管理技术的发展阶段" class="headerlink" title="数据库管理技术的发展阶段"></a>数据库管理技术的发展阶段</h1><h2 id="人工管理阶段"><a href="#人工管理阶段" class="headerlink" title="人工管理阶段"></a>人工管理阶段</h2><ul>
-<li><p>数据不保存</p>
-</li>
-<li><p>应用程序管理数据</p>
-</li>
-<li><p>数据不共享，冗余度极大</p>
-</li>
-<li><p>数据不具有独立性</p>
-</li>
-</ul>
-<h2 id="文件系统阶段"><a href="#文件系统阶段" class="headerlink" title="文件系统阶段"></a>文件系统阶段</h2><ul>
-<li>数据可以长期保存</li>
-<li>由专门的软件—文件系统管理数据文件</li>
-<li>数据共享性差，冗余度大</li>
-<li>数据独立性差</li>
-</ul>
-<h2 id="数据库系统阶段"><a href="#数据库系统阶段" class="headerlink" title="数据库系统阶段"></a>数据库系统阶段</h2><ul>
-<li>数据结构化</li>
-<li>数据共享性高、冗余度低、易扩充</li>
-<li>数据独立性高</li>
-<li>数据由DBMS统一管理和控制</li>
-</ul>
-<h1 id="数据库用户"><a href="#数据库用户" class="headerlink" title="数据库用户"></a>数据库用户</h1><h2 id="幕前角色"><a href="#幕前角色" class="headerlink" title="幕前角色"></a>幕前角色</h2><ul>
-<li><p>数据库管理员：</p>
-<p>负责对数据库用户授权, 监控和协调数据库使用等</p>
-</li>
-<li><p>数据库设计者：</p>
-<p>识别要存储在数据库中的数据，并选择适当的结构来表示和存储这些数据</p>
-</li>
-<li><p>最终用户: 那些为了查询、更新和报表而访问数据库的用户</p>
-<ul>
-<li>偶尔访问的用户：使用复杂的数据库查询语言</li>
-<li>简单参与的用户：使用编写好的数据库应用软件</li>
-<li>资深的最终用户</li>
-<li>独立用户：个人数据库</li>
-</ul>
-</li>
-<li><p>系统分析员</p>
-</li>
-<li><p>软件工程师</p>
-</li>
-</ul>
-<h2 id="幕后工作者"><a href="#幕后工作者" class="headerlink" title="幕后工作者"></a>幕后工作者</h2><ul>
-<li>DBMS系统设计者</li>
-<li>数据库工具开发者</li>
-<li>操作员和维护人员</li>
-</ul>
-<h1 id="数据库的一般应用"><a href="#数据库的一般应用" class="headerlink" title="数据库的一般应用"></a>数据库的一般应用</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108201642076.png" alt="image-20210108201642076"></p>
-<h1 id="数据库的高级应用"><a href="#数据库的高级应用" class="headerlink" title="数据库的高级应用"></a>数据库的高级应用</h1><h2 id="数据仓库（Data-Warehousing）"><a href="#数据仓库（Data-Warehousing）" class="headerlink" title="数据仓库（Data Warehousing）"></a>数据仓库（Data Warehousing）</h2><ul>
-<li>什么是数据仓库<ul>
-<li>数据仓库是一种数据的长期存储(历史数据)，这些数据来自多数据源，是经过组织的，以便支持管理决策。</li>
-</ul>
-</li>
-<li>数据挖掘的基础</li>
-<li>BI (Business Intelligence：商务智能)</li>
-</ul>
-<h2 id="数据挖掘"><a href="#数据挖掘" class="headerlink" title="数据挖掘"></a>数据挖掘</h2><ul>
-<li><p>从海量的数据中获得有价值的信息</p>
-<ul>
-<li><p>主要是用于发现规律(知识)</p>
-</li>
-<li><p>银行利用ATM交易数据可以发现：哪个ATM机取款最繁忙，于是银行领导就此挖掘出来的信息可以做出在哪些地段增设ATM机的决定，这就叫“决策支持(Decision Support)”。</p>
-</li>
-<li><p>超市利用每天的营业数据可以发现：哪些商品销售量比较大，于是超市采购员可以利用这个信息(结合库存数据)决定下次的采购商品清单</p>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="决策支持系统（DSS：Decision-Support-System）"><a href="#决策支持系统（DSS：Decision-Support-System）" class="headerlink" title="决策支持系统（DSS：Decision Support System）"></a>决策支持系统（DSS：Decision Support System）</h2><ul>
-<li><p>利用“统计分析”、“数据挖掘”等手段得出一些推论，供领导决策参考</p>
-</li>
-<li><p>以前的决策过程</p>
-<ul>
-<li>靠领导的经验、个人智慧</li>
-</ul>
-</li>
-<li><p>现在的决策过程</p>
-<ul>
-<li>靠数据库中的数据提供决策依据</li>
-</ul>
-</li>
-</ul>
-<h2 id="数据、信息（通过SQL查询）、知识（通过数据挖掘）三者之间的关系"><a href="#数据、信息（通过SQL查询）、知识（通过数据挖掘）三者之间的关系" class="headerlink" title="数据、信息（通过SQL查询）、知识（通过数据挖掘）三者之间的关系"></a>数据、信息（通过SQL查询）、知识（通过数据挖掘）三者之间的关系</h2><ul>
-<li><p>数据：</p>
-<ul>
-<li>记录客观事实的符号</li>
-</ul>
-</li>
-<li><p>信息：</p>
-<ul>
-<li>是经过加工后的数据，它会对接受者的行为和决策产生影响，具有现实的或潜在的价值</li>
-</ul>
-</li>
-<li><p>信息与数据的关系：</p>
-<ul>
-<li>信息=数据+数据处理</li>
-</ul>
-</li>
-</ul>
-<h1 id="补充：『互联网-』战略带来的『大数据』的挑战"><a href="#补充：『互联网-』战略带来的『大数据』的挑战" class="headerlink" title="补充：『互联网+』战略带来的『大数据』的挑战"></a>补充：『互联网+』战略带来的『大数据』的挑战</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108202337590.png" alt="image-20210108202337590"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108202350569.png" alt="image-20210108202350569"></p>
-<h2 id="几个概念"><a href="#几个概念" class="headerlink" title="几个概念"></a>几个概念</h2><ul>
-<li><p>大数据：</p>
-<ul>
-<li>是指无法在可承受的时间范围内用常规软件工具进行捕捉、管理和处理的数据集合，至少要达到PB级别以上(1PB=1024TB，1TB=1024GB)</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><p>云计算：</p>
-<ul>
-<li>通过互联网来提供动态易扩展且经常是虚拟化的资源</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><p>物联网：</p>
-<ul>
-<li>通过射频识别（RFID）、红外感应器、全球定位系统、激光扫描器等信息传感设备，按约定的协议，把任何物品与互联网相连接，进行信息交换和通信，以实现智能化识别、定位、跟踪、监控和管理的一种网络概念</li>
-</ul>
-</li>
-</ul>
-<blockquote>
-<p>物联网提供了海量数据源<br>大数据无法用单台的计算机进行处理，必须采用分布式架构。它的特色在于对海量数据进行分布式数据挖掘与处理，它必须依托云计算的分布式处理、分布式数据库和云存储、虚拟化技术</p>
-</blockquote>
-<h1 id="数据模型的基本概念"><a href="#数据模型的基本概念" class="headerlink" title="数据模型的基本概念"></a>数据模型的基本概念</h1><ul>
-<li>数据模型(Data Model)：<ul>
-<li>现实世界数据特征的抽象，用来定义数据如何组织，数据之间的关系怎样</li>
-</ul>
-</li>
-<li>数据模型的层次：<ul>
-<li>概念模型(Conceptual) ：<ul>
-<li>按用户的观点来对数据和信息建模</li>
-</ul>
-</li>
-<li>逻辑/实现模型 (Logical/Implementation)<ul>
-<li>层次模型</li>
-<li>网状模型</li>
-<li>关系模型<br>…</li>
-</ul>
-</li>
-<li>物理模型 (Physical)：<ul>
-<li>数据在具体DBMS产品(IBM、Microsoft、Oracle)中的物理存储方式</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h1 id="数据建模概述"><a href="#数据建模概述" class="headerlink" title="数据建模概述"></a>数据建模概述</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108203305250.png" alt="image-20210108203305250"></p>
-<h1 id="数据模型的组成要素"><a href="#数据模型的组成要素" class="headerlink" title="数据模型的组成要素"></a>数据模型的组成要素</h1><ul>
-<li><p>数据结构：</p>
-<blockquote>
-<p>对系统静态特征的描述</p>
-</blockquote>
-</li>
-<li><p>数据操作：</p>
-<blockquote>
-<p>对系统动态特征的描述</p>
-</blockquote>
-<ul>
-<li>检索(查询)</li>
-<li>更新(插入、删除、修改：增删改)</li>
-</ul>
-</li>
-<li><p>数据的约束条件：</p>
-<blockquote>
-<p>完整性约束规则</p>
-</blockquote>
-</li>
-</ul>
-<h1 id="概念数据模型"><a href="#概念数据模型" class="headerlink" title="概念数据模型"></a>概念数据模型</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108203455619.png" alt="image-20210108203455619"></p>
-<h1 id="逻辑（实现）数据模型"><a href="#逻辑（实现）数据模型" class="headerlink" title="逻辑（实现）数据模型"></a>逻辑（实现）数据模型</h1><ul>
-<li><p>层次模型</p>
-</li>
-<li><p>网状模型</p>
-</li>
-<li><p><strong>关系模型</strong>(Relational Data Model)</p>
-<ul>
-<li>以严格的数学理论为基础：<ul>
-<li>谓词逻辑(predicate logic)、</li>
-<li>集合论(set theory)</li>
-</ul>
-</li>
-<li>目前主流的数据库系统都是基于“关系模型”的</li>
-</ul>
-</li>
-<li><p>面向对象模型</p>
-</li>
-<li><p>对象关系模型</p>
-</li>
-</ul>
-<h1 id="物理数据模型"><a href="#物理数据模型" class="headerlink" title="物理数据模型"></a>物理数据模型</h1><blockquote>
-<p>描述数据库在计算机中的存储细节</p>
-</blockquote>
-<h1 id="补充：NoSQL和NewSQL数据库"><a href="#补充：NoSQL和NewSQL数据库" class="headerlink" title="补充：NoSQL和NewSQL数据库"></a>补充：NoSQL和NewSQL数据库</h1><h2 id="NoSQL数据库"><a href="#NoSQL数据库" class="headerlink" title="NoSQL数据库"></a>NoSQL数据库</h2><ul>
-<li><p>“大数据”带来的挑战导致传统的关系型数据库难以存储、单机数据分析统计工具无法处理，需要将这些数据存放在拥有数千万台机器的大规模并行系统上。</p>
-</li>
-<li><p>NoSQL(Not Only SQL)是对关系型SQL数据系统的补充，主要优势：</p>
-<ul>
-<li><p>高吞吐量</p>
-</li>
-<li><p>高水平扩展能力和低端硬件集群</p>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="NewSQL数据库"><a href="#NewSQL数据库" class="headerlink" title="NewSQL数据库"></a>NewSQL数据库</h2><ul>
-<li><p>可扩展的、高性能的SQL数据库</p>
-<ul>
-<li><p>拥有关系型数据库产品和服务，并将关系模型的好处带到分布式架构上</p>
-</li>
-<li><p>提高关系数据库的性能，使之达到不用考虑水平扩展问题的程度</p>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="数据库系统的分类"><a href="#数据库系统的分类" class="headerlink" title="数据库系统的分类"></a>数据库系统的分类</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108204401263.png" alt="image-20210108204401263"></p>
-]]></content>
-      <categories>
-        <category>数据库原理及应用</category>
-      </categories>
-      <tags>
-        <tag>share</tag>
-        <tag>notes</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数据库第二章——数据库系统结构</title>
-    <url>/posts/95a84140/</url>
-    <content><![CDATA[<h1 id="数据库系统结构概述"><a href="#数据库系统结构概述" class="headerlink" title="数据库系统结构概述"></a>数据库系统结构概述</h1><ul>
-<li><p>数据库管理系统内部的系统结构</p>
-<ul>
-<li>三级模式结构</li>
-<li>两级映射功能</li>
-</ul>
-</li>
-<li><p>数据库系统外部的体系结构</p>
-<ul>
-<li><p>集中式体系结构</p>
-</li>
-<li><p>“客户/服务器”架构</p>
-</li>
-<li><p>“客户/应用服务器/数据库服务器”架构</p>
-</li>
-</ul>
-</li>
-</ul>
-<h1 id="数据库模式和实例的概念"><a href="#数据库模式和实例的概念" class="headerlink" title="数据库模式和实例的概念"></a>数据库模式和实例的概念</h1><ul>
-<li><p>模式(Schema)与实例(Instance)</p>
-<ul>
-<li><p><strong>模式</strong>：</p>
-<ul>
-<li>数据库的描述。包括数据库的数据结构、数据类型和约束</li>
-</ul>
-</li>
-<li><p>**实例(状态)**：某一时刻实际存储在数据库中的数据集合</p>
-</li>
-<li><p>实例是模式在某一时刻的具体化、实例化(类似于面向对象理论中Class与Object的关系)</p>
-</li>
-</ul>
-</li>
-</ul>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108205629791.png" alt="image-20210108205629791"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108205644673.png" alt="image-20210108205644673"></p>
-<ul>
-<li>数据库模式很少发生改变 <ul>
-<li>模式也被叫做内涵</li>
-</ul>
-</li>
-<li>每次进行数据库更新操作时数据库实例都会发生变化<ul>
-<li>实例(状态)也被称为外延</li>
-</ul>
-</li>
-</ul>
-<h1 id="数据库系统的三级模式结构"><a href="#数据库系统的三级模式结构" class="headerlink" title="数据库系统的三级模式结构"></a>数据库系统的三级模式结构</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108205831449.png" alt="image-20210108205831449"></p>
-<ul>
-<li><p><strong>内模式</strong>,也称存储模式 (Internal schema)：</p>
-<blockquote>
-<p>数据物理结构和存储方式的描述，是数据在数据库内部的表示方式 </p>
-</blockquote>
-<ul>
-<li>通常使用<strong>物理数据模型</strong>描述</li>
-</ul>
-</li>
-<li><p><strong>概念模式</strong>,也称全局模式，有时简称“模式” (Conceptual schema)：</p>
-<blockquote>
-<p>数据库中全体数据的逻辑结构和特征的描述</p>
-</blockquote>
-<ul>
-<li>通常使用<strong>概念或逻辑数据模型</strong>描述</li>
-</ul>
-</li>
-<li><p><strong>外模式</strong>,也称子模式或用户模式 (External schemas)：</p>
-<blockquote>
-<p>数据库用户能够看见和使用的局部数据的逻辑结构和特征的描述 </p>
-<p>使不同的用户能看到的界面不同。</p>
-</blockquote>
-<ul>
-<li><p>通常使用与<strong>概念模式相同的数据模型</strong>描述</p>
-</li>
-<li><p>模型(Model)与模式(Schema)的区别</p>
-<ul>
-<li>数据模型是描述数据的一种通用形式，模式则是用给定的数据模型描述具体数据。注意：真正的数据内容保存在数据库状态(State)中。</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="用E-R概念模型表示的概念模型"><a href="#用E-R概念模型表示的概念模型" class="headerlink" title="用E-R概念模型表示的概念模型"></a>用E-R概念模型表示的概念模型</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108210400522.png" alt="image-20210108210400522"></p>
-<h2 id="用关系逻辑模型表示的概念模型"><a href="#用关系逻辑模型表示的概念模型" class="headerlink" title="用关系逻辑模型表示的概念模型"></a>用关系逻辑模型表示的概念模型</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108210441911.png" alt="image-20210108210441911"></p>
-<h2 id="用关系逻辑模型表示的外模式及其实例"><a href="#用关系逻辑模型表示的外模式及其实例" class="headerlink" title="用关系逻辑模型表示的外模式及其实例"></a>用关系逻辑模型表示的外模式及其实例</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108210546764.png" alt="image-20210108210546764"></p>
-<ul>
-<li>外模式用于使不同用户级别看到的界面不同</li>
-</ul>
-<h1 id="数据库系统的两级映射功能"><a href="#数据库系统的两级映射功能" class="headerlink" title="数据库系统的两级映射功能"></a>数据库系统的两级映射功能</h1><ul>
-<li><p><strong>两级映射</strong>(Mapping)</p>
-<ul>
-<li>概念模式/内模式映射</li>
-<li>外模式/概念模式映射</li>
-</ul>
-</li>
-<li><p><strong>数据独立性</strong></p>
-<ul>
-<li>物理独立性(Physical Data Independence)</li>
-<li>逻辑独立性(Logical Data Independence)</li>
-</ul>
-</li>
-</ul>
-<h2 id="数据库的工作流程"><a href="#数据库的工作流程" class="headerlink" title="数据库的工作流程"></a>数据库的工作流程</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108205831449.png" alt="image-20210108205831449"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108210927057.png" alt="image-20210108210927057"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108210952255.png" alt="image-20210108210952255"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108211003467.png" alt="image-20210108211003467"></p>
-<h2 id="数据独立性"><a href="#数据独立性" class="headerlink" title="数据独立性"></a>数据独立性</h2><h3 id="数据的物理独立性"><a href="#数据的物理独立性" class="headerlink" title="数据的物理独立性"></a>数据的物理独立性</h3><blockquote>
-<p>内模式与概念模式之间的映射提供了数据的物理独立性。当数据的物理结构发生变化时，如对数据增加索引、改变数据的存储位置、改变存储设备等，不影响数据的逻辑结构。当DBA根据应用程序对数据的存取要求，对数据的物理组织进行优化后，并不需要对概念模式和外模式进行重新定义，也不需要修改应用程序，只需要修改内模式与概念模式之间的映射。</p>
-</blockquote>
-<h3 id="数据的逻辑独立性"><a href="#数据的逻辑独立性" class="headerlink" title="数据的逻辑独立性"></a>数据的逻辑独立性</h3><blockquote>
-<p>概念模式与外模式之间的映射提供了数据的逻辑独立性。当数据的整体逻辑结构发生变化时，如增加新的关系、新的属性、改变属性的数据类型等，可以通过修改各个外模式与概念模式之间的映射，从而使外模式和依据外模式编写的应用程序不受影响。</p>
-</blockquote>
-<h1 id="数据库系统外部的体系结构"><a href="#数据库系统外部的体系结构" class="headerlink" title="数据库系统外部的体系结构"></a>数据库系统外部的体系结构</h1><h2 id="集中式架构"><a href="#集中式架构" class="headerlink" title="集中式架构"></a>集中式架构</h2><ul>
-<li>将所有软硬件集中到一起：包括DBMS,硬件，应用程序，人机交互软件等</li>
-<li>用户仍然可以通过远程终端连接。然而，所有运算都集中在一个位置</li>
-</ul>
-<p><strong>一个物理集中式的架构体系</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108211551077.png" alt="image-20210108211551077"></p>
-<h2 id="客户-服务器架构"><a href="#客户-服务器架构" class="headerlink" title="客户-服务器架构"></a>客户-服务器架构</h2><ul>
-<li><strong>网络数据库系统</strong>：<ul>
-<li>数据库系统软件安装在服务器上，通过网络向外界提供数据服务</li>
-</ul>
-</li>
-<li><strong>Client/Server：</strong><ul>
-<li>需要安装专门的客户端软件</li>
-</ul>
-</li>
-<li><strong>Browser/Server：</strong><ul>
-<li>不需要安装专门的客户端软件</li>
-</ul>
-</li>
-</ul>
-<h3 id="Client-Server架构"><a href="#Client-Server架构" class="headerlink" title="Client/Server架构"></a>Client/Server架构</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108211826865.png" alt="image-20210108211826865"></p>
-<h4 id="Client-Server架构组件"><a href="#Client-Server架构组件" class="headerlink" title="Client/Server架构组件"></a>Client/Server架构组件</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108211904397.png" alt="image-20210108211904397"></p>
-<h4 id="Client-Server架构通信过程"><a href="#Client-Server架构通信过程" class="headerlink" title="Client/Server架构通信过程"></a>Client/Server架构通信过程</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108211945073.png" alt="image-20210108211945073"></p>
-<h3 id="Browser-Server架构"><a href="#Browser-Server架构" class="headerlink" title="Browser/Server架构"></a>Browser/Server架构</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212102096.png" alt="image-20210108212102096"></p>
-<h4 id="Browser-Server架构通信过程"><a href="#Browser-Server架构通信过程" class="headerlink" title="Browser/Server架构通信过程"></a>Browser/Server架构通信过程</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212145147.png" alt="image-20210108212145147"></p>
-<h2 id="三层客户-服务器逻辑结构"><a href="#三层客户-服务器逻辑结构" class="headerlink" title="三层客户-服务器逻辑结构"></a>三层客户-服务器逻辑结构</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212244213.png" alt="image-20210108212244213"></p>
-<ul>
-<li><p><strong>表现层</strong> (Presentation layer)：</p>
-<ul>
-<li>负责展示用户界面，以及与用户的交互。</li>
-</ul>
-</li>
-<li><p><strong>业务逻辑层或中间层</strong> (Business logic layer ):</p>
-<ul>
-<li> 负责接收来自表示层的请求，并根据它包含的业务逻辑给表示层返回一个结果。</li>
-</ul>
-</li>
-<li><p><strong>数据库服务层</strong> (Database services layer): </p>
-<ul>
-<li>负责存储应用程序的数据，并在接收到请求时，把这些数据发送给业务层。</li>
-</ul>
-</li>
-</ul>
-<h3 id="例：图书管理系统"><a href="#例：图书管理系统" class="headerlink" title="例：图书管理系统"></a>例：图书管理系统</h3><h4 id="图书馆信息管理系统数据库服务层"><a href="#图书馆信息管理系统数据库服务层" class="headerlink" title="图书馆信息管理系统数据库服务层"></a>图书馆信息管理系统数据库服务层</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212457459.png" alt="image-20210108212457459"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212510722.png" alt="image-20210108212510722"></p>
-<h4 id="图书馆信息管理系统业务层"><a href="#图书馆信息管理系统业务层" class="headerlink" title="图书馆信息管理系统业务层"></a>图书馆信息管理系统业务层</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212528301.png" alt="image-20210108212528301"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212536898.png" alt="image-20210108212536898"></p>
-<h4 id="图书馆信息管理系统表现层"><a href="#图书馆信息管理系统表现层" class="headerlink" title="图书馆信息管理系统表现层"></a>图书馆信息管理系统表现层</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212554829.png" alt="image-20210108212554829"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212607770.png" alt="image-20210108212607770"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212619538.png" alt="image-20210108212619538"></p>
-]]></content>
-      <categories>
-        <category>数据库原理及应用</category>
-      </categories>
-      <tags>
-        <tag>share</tag>
-        <tag>notes</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数据库第四章——关系数据库标准语言SQL（4）</title>
-    <url>/posts/91db5a28/</url>
-    <content><![CDATA[<h1 id="视图的基本概念"><a href="#视图的基本概念" class="headerlink" title="视图的基本概念"></a>视图的基本概念</h1><h2 id="SQL支持关系数据库三级模式结构"><a href="#SQL支持关系数据库三级模式结构" class="headerlink" title="SQL支持关系数据库三级模式结构"></a>SQL支持关系数据库三级模式结构</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111211444397.png" alt="image-20210111211444397"></p>
-<h2 id="数据定义"><a href="#数据定义" class="headerlink" title="数据定义"></a>数据定义</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111211521246.png" alt="image-20210111211521246"></p>
-<h2 id="视图VIEW-外模式"><a href="#视图VIEW-外模式" class="headerlink" title="视图VIEW(外模式)"></a>视图VIEW(外模式)</h2><ul>
-<li>视图是虚拟的表(a virtual table)，保存在视图中的数据并不是物理存储的数据，而是由基本表或其他视图派生的</li>
-<li>视图是一个被命名的SELECT语句，它能动态地产生一个可进行进一步操作的查询结果</li>
-</ul>
-<h1 id="视图的优点"><a href="#视图的优点" class="headerlink" title="视图的优点"></a>视图的优点</h1><ul>
-<li>提供了一定程度的逻辑独立性</li>
-<li>为用户集中数据，保证数据安全性<ul>
-<li>视图为用户提供一个受限的环境，用户只能访问允许的数据，一些不必要的、不合适的数据则不在视图中显示</li>
-</ul>
-</li>
-</ul>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111211713619.png" alt="image-20210111211713619"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111211731808.png" alt="image-20210111211731808"></p>
-<ul>
-<li>简化数据库查询</li>
-</ul>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111211808112.png" alt="image-20210111211808112"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111211818721.png" alt="image-20210111211818721"></p>
-<h1 id="创建和管理视图"><a href="#创建和管理视图" class="headerlink" title="创建和管理视图"></a>创建和管理视图</h1><h2 id="创建-定义-视图"><a href="#创建-定义-视图" class="headerlink" title="创建(定义)视图"></a>创建(定义)视图</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111212143960.png" alt="image-20210111212143960"></p>
-<h2 id="WITH-CHECK-OPTION"><a href="#WITH-CHECK-OPTION" class="headerlink" title="[WITH CHECK OPTION]"></a>[WITH CHECK OPTION]</h2><p>对视图进行UPDATE，INSERT和DELETE操作时要保证更新、插入或删除的行满足视图定义中的谓词条件(即子查询中的条件表达式)</p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111212611947.png" alt="image-20210111212611947"></p>
-<h2 id="定义视图时指定列名"><a href="#定义视图时指定列名" class="headerlink" title="定义视图时指定列名"></a>定义视图时指定列名</h2><ul>
-<li><p>某个目标列不是单纯的属性名，而是聚集函数或计算列</p>
-</li>
-<li><p>多表连接时选出了几个同名列作为视图的字段</p>
-</li>
-<li><p>需要在视图中为某个列启用新的更合适的名字</p>
-</li>
-</ul>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111213851092.png" alt="image-20210111213851092"></p>
-<h2 id="修改视图定义"><a href="#修改视图定义" class="headerlink" title="修改视图定义"></a>修改视图定义</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111213927327.png" alt="image-20210111213927327"></p>
-<h2 id="删除视图"><a href="#删除视图" class="headerlink" title="删除视图"></a>删除视图</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111214546250.png" alt="image-20210111214546250"></p>
-<h1 id="查询视图"><a href="#查询视图" class="headerlink" title="查询视图"></a>查询视图</h1><ul>
-<li>步骤<ul>
-<li>有效性检查</li>
-<li>安全性检查</li>
-<li>视图消解<ul>
-<li>从数据字典中取出视图的定义，把定义中的子查询和用户针对视图的查询结合起来，转换成等价的对基本表的查询，然后再执行修正的等价查询</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="视图消解"><a href="#视图消解" class="headerlink" title="视图消解"></a>视图消解</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111214719729.png" alt="image-20210111214719729"></p>
-<h1 id="更新视图中的数据"><a href="#更新视图中的数据" class="headerlink" title="更新视图中的数据"></a>更新视图中的数据</h1><ul>
-<li>可以通过更新视图的方式实现对表中数据的更新。视图的更新操作包括插入、修改和删除数据</li>
-<li>视图是一张虚表，所以对视图的更新，最终实际上是转换成对视图的底层表的更新</li>
-<li>更新视图中的数据：不是所有视图中的数据都是可更新的</li>
-</ul>
-<h2 id="基本判断原则"><a href="#基本判断原则" class="headerlink" title="基本判断原则"></a>基本判断原则</h2><ul>
-<li><p>视图中的每一列都必须和一个基本表中的一个源列对应</p>
-</li>
-<li><p>视图中的每一行都必须和一个基本表中的一个源行对应</p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215029333.png" alt="image-20210111215029333"></p>
-</li>
-</ul>
-<p>如果修改仅仅影响到视图参照的基表之一，则可以通过视图修改数据 (UPDATE, DELETE, INSERT)</p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215100523.png" alt="image-20210111215100523"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215134862.png" alt="image-20210111215134862"></p>
-<h2 id="可更新视图的具体判断标准"><a href="#可更新视图的具体判断标准" class="headerlink" title="可更新视图的具体判断标准"></a>可更新视图的具体判断标准</h2><ul>
-<li><p>查询语句中没有聚合函数 (AVG, COUNT, SUM, MIN, MAX, GROUPING, STDEV, STDEVP, VAR, and VARP) 或 GROUP BY, UNION, DISTINCT,或 TOP 子句 </p>
-</li>
-<li><p>查询语句中没有导出列或者计算列</p>
-</li>
-</ul>
-<h2 id="通过视图更新数据的注意事项"><a href="#通过视图更新数据的注意事项" class="headerlink" title="通过视图更新数据的注意事项"></a>通过视图更新数据的注意事项</h2><p>所有的数据修改都必须遵守在待更新基本表（甚至包括相关表）上设置的完整性约束条件</p>
-<h2 id="通过视图添加数据"><a href="#通过视图添加数据" class="headerlink" title="通过视图添加数据"></a>通过视图添加数据</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215306306.png" alt="image-20210111215306306"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215325842.png" alt="image-20210111215325842"></p>
-<h2 id="通过视图修改数据"><a href="#通过视图修改数据" class="headerlink" title="通过视图修改数据"></a>通过视图修改数据</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215350208.png" alt="image-20210111215350208"></p>
-<h2 id="通过视图删除数据"><a href="#通过视图删除数据" class="headerlink" title="通过视图删除数据"></a>通过视图删除数据</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215418754.png" alt="image-20210111215418754"></p>
-<h2 id="WITH-CHECK-OPTION的应用"><a href="#WITH-CHECK-OPTION的应用" class="headerlink" title="WITH CHECK OPTION的应用"></a>WITH CHECK OPTION的应用</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215445855.png" alt="image-20210111215445855"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215454990.png" alt="image-20210111215454990"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215503425.png" alt="image-20210111215503425"></p>
-<h2 id="为什么要通过视图更新数据"><a href="#为什么要通过视图更新数据" class="headerlink" title="为什么要通过视图更新数据"></a>为什么要通过视图更新数据</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215526975.png" alt="image-20210111215526975"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215539132.png" alt="image-20210111215539132"></p>
-<h1 id="加密视图"><a href="#加密视图" class="headerlink" title="加密视图"></a>加密视图</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215558785.png" alt="image-20210111215558785"></p>
-<h1 id="派生表"><a href="#派生表" class="headerlink" title="派生表"></a>派生表</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215611633.png" alt="image-20210111215611633"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215623354.png" alt="image-20210111215623354"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215632300.png" alt="image-20210111215632300"></p>
-<ul>
-<li><p>派生表为一个命名的查询结果，用于另一个查询的FROM子句。因为查询的结果为一张表，而FROM子句正好也需要一张表。视图也可看成派生表。但视图是命名的, 定义被持久的存储、可重用；而派生表是动态的、临时的 </p>
-</li>
-<li><p>可以通过视图进行 insert, update和 delete 操作，但派生表不能</p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>数据库原理及应用</category>
-      </categories>
-      <tags>
-        <tag>share</tag>
-        <tag>notes</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数据库第四章——关系数据库标准语言SQL（2）</title>
-    <url>/posts/b4b005f4/</url>
-    <content><![CDATA[<h1 id="SQL的功能组成"><a href="#SQL的功能组成" class="headerlink" title="SQL的功能组成"></a>SQL的功能组成</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111095419310.png" alt="image-20210111095419310"></p>
-<h2 id="SQL－-gt-DML-－-gt-DQL-数据查询"><a href="#SQL－-gt-DML-－-gt-DQL-数据查询" class="headerlink" title="SQL－&gt;DML －&gt;DQL(数据查询)"></a>SQL－&gt;DML －&gt;DQL(数据查询)</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111095619074.png" alt="image-20210111095619074"></p>
-<h1 id="内连接"><a href="#内连接" class="headerlink" title="内连接"></a>内连接</h1><p><strong>例7-1：查询所有学生所在院系信息。</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100039169.png" alt="image-20210111100039169"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100055583.png"></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> STUDENTINFO</span><br><span class="line"><span class="keyword">INNER</span> <span class="keyword">JOIN</span> DEPARTMENT <span class="keyword">ON</span> (STUDENTINFO.STUDENTDEPARTMENTIN=DEPARTMENT.DEPARTMENTID)</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-
-
-<h2 id="内连接执行过程"><a href="#内连接执行过程" class="headerlink" title="内连接执行过程"></a>内连接执行过程</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100310303.png" alt="image-20210111100310303"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111102107255.png" alt="image-20210111102107255"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100511937.png" alt="image-20210111100511937"></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> S.STUDENTNO, S.STUDENTNAME, D.DEPARTMENTNAME <span class="keyword">FROM</span> STUDENTINFO <span class="keyword">AS</span> S <span class="keyword">INNER</span> <span class="keyword">JOIN</span> DEPARTMENT <span class="keyword">AS</span> D <span class="keyword">ON</span> (S.STUDENTDEPARTIN = D.DEPARTMENTID)</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h2 id="多表查询时SELECT-表示的含义"><a href="#多表查询时SELECT-表示的含义" class="headerlink" title="多表查询时SELECT *表示的含义"></a>多表查询时SELECT *表示的含义</h2><ul>
-<li>当未使用限定符指定时，星号解析为对 FROM 子句中所指定的所有表或视图中的所有列的引用</li>
-<li>当使用表或视图名称进行限定时，星号解析为对表或视图中的所有列的引用</li>
-</ul>
-<h2 id="注意：尽量不要用以下连接方式"><a href="#注意：尽量不要用以下连接方式" class="headerlink" title="注意：尽量不要用以下连接方式"></a>注意：尽量不要用以下连接方式</h2><ul>
-<li><pre><code class="sql">SELECT * FROM STUDENTINFO, DEPARTMENT WHERE STUDENTINFO.STUDENTDEPARTID=DEPARTMENT.DEPARTMENTID
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">- 原因：无法将连接条件和针对连接后生成的“大表”的筛选条件分开</span><br><span class="line"></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">**数据挖掘例7-2：考察这家公司技术部门的男女员工比例**</span><br><span class="line"></span><br><span class="line">![image-20210111100750333](https:&#x2F;&#x2F;chasing1874.oss-cn-chengdu.aliyuncs.com&#x2F;image-20210111100750333.png)</span><br><span class="line"></span><br><span class="line">![image-20210111100805120](https:&#x2F;&#x2F;chasing1874.oss-cn-chengdu.aliyuncs.com&#x2F;image-20210111100805120.png)</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;sql</span><br><span class="line">SELECT * FROM EMPLOYEE E JOIN DEPARTMENT D ON (E.DNO &#x3D; D.DNUMBER)</span><br><span class="line"></span><br><span class="line">SELECT SEX, COUNT(*) AS 人数 FROM EMPLOYEE JOIN DEPARTMENT ON (DNO &#x3D; DNUMBER) WHERE DNAME&#x3D;&#39;RESEARCH&#39; GROUP BY SEX</span><br></pre></td></tr></table></figure>
-
-
-</code></pre>
-</li>
-</ul>
-<h2 id="多表内连接查询"><a href="#多表内连接查询" class="headerlink" title="多表内连接查询"></a>多表内连接查询</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100842785.png" alt="image-20210111100842785"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100854911.png" alt="image-20210111100854911"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100906322.png" alt="image-20210111100906322"></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> EXAMRECORD E <span class="keyword">JOIN</span> STUDENTINFO S <span class="keyword">ON</span> (E.STUDENTNO = E.STUDENTNO) <span class="keyword">JOIN</span> COURSE C <span class="keyword">ON</span> (C.COURSEID = E.COURSEID)</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<p><strong>例7-3：查询所有学生各门课程成绩</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100932313.png" alt="image-20210111100932313"></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> STUDENTNAME <span class="keyword">AS</span> 学生姓名 , COURSENAME <span class="keyword">AS</span> 课程名称, SCORE <span class="keyword">AS</span> 成绩 <span class="keyword">FROM</span> EXAMRECORD E <span class="keyword">JOIN</span> STUDENTINFO S <span class="keyword">ON</span> (E.STUDENTNO=S.STUDENTNO) <span class="keyword">JOIN</span> COUSE C <span class="keyword">ON</span> (C.COURSEID=E.COURSEID)</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<p><strong>例7-4 ：查询各门课程任课教师信息</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100959522.png" alt="image-20210111100959522"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111101013925.png" alt="image-20210111101013925"></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> COURSE <span class="keyword">ORDER</span> <span class="keyword">BY</span> TEACHERID <span class="keyword">DESC</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> TEACHER</span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> COURSE C <span class="keyword">JOIN</span> TEACHER T <span class="keyword">ON</span> (C.TEACHERID=T.TEACHERID)</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-<h1 id="外连接"><a href="#外连接" class="headerlink" title="外连接"></a>外连接</h1><h2 id="LEFT-OUTER-JOIN"><a href="#LEFT-OUTER-JOIN" class="headerlink" title="LEFT OUTER JOIN"></a>LEFT OUTER JOIN</h2><blockquote>
-<p>显示LEFT表(Course)中的全部元组，如果RIGHT表(Teacher)<br>中没有扫描到符合连接条件的元组，则用NULL代替</p>
-</blockquote>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111104650305.png" alt="image-20210111104650305"></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> COURSE C <span class="keyword">LEFT</span> <span class="keyword">OUTER</span> <span class="keyword">JOIN</span> TEACHER T <span class="keyword">ON</span> (C.TEACHERID = T.TEACHERID) <span class="keyword">ORDER</span> <span class="keyword">BY</span> T.TEACHERID <span class="keyword">DESC</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="RIGHT-OUTER-JOIN"><a href="#RIGHT-OUTER-JOIN" class="headerlink" title="RIGHT OUTER JOIN"></a>RIGHT OUTER JOIN</h2><blockquote>
-<p>显示LEFT表(Course)中的全部元组，如果RIGHT表(Teacher)<br>中没有扫描到符合连接条件的元组，则用NULL代替</p>
-</blockquote>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111104745799.png" alt="image-20210111104745799"></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> COURSE C <span class="keyword">RIGHT</span> <span class="keyword">OUTER</span> <span class="keyword">JOIN</span> TEACHER T <span class="keyword">ON</span> (C.TEACHERID=T.TEACHERID) <span class="keyword">ORDER</span> <span class="keyword">BY</span> C.COURSEID <span class="keyword">DESC</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h3 id="注意：进行左、右外连接时表的顺序非常重要"><a href="#注意：进行左、右外连接时表的顺序非常重要" class="headerlink" title="注意：进行左、右外连接时表的顺序非常重要"></a>注意：进行左、右外连接时表的顺序非常重要</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111104837990.png" alt="image-20210111104837990"></p>
-<h2 id="FULL-OUTTER-JOIN"><a href="#FULL-OUTTER-JOIN" class="headerlink" title="FULL OUTTER JOIN"></a>FULL OUTTER JOIN</h2><blockquote>
-<p>显示LEFT表(Course) 和RIGHT表(Teacher)中的全部元组，如果<br>没有扫描到符合连接条件的元组，<strong>则用NULL代替</strong></p>
-</blockquote>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111104907825.png" alt="image-20210111104907825"></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> COURSE C <span class="keyword">FULL</span> <span class="keyword">OUTER</span> <span class="keyword">JOIN</span> TEACHER T <span class="keyword">ON</span> (C.TEACHERID=T.TEACHERID) <span class="keyword">ORDER</span> <span class="keyword">BY</span> C.TEACHERID <span class="keyword">DESC</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h3 id="注意：多表外连接，表顺序很重要"><a href="#注意：多表外连接，表顺序很重要" class="headerlink" title="注意：多表外连接，表顺序很重要"></a>注意：多表外连接，表顺序很重要</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111104939651.png" alt="image-20210111104939651"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111104949775.png" alt="image-20210111104949775"></p>
-<h3 id="例7-5-："><a href="#例7-5-：" class="headerlink" title="例7-5 ："></a><strong>例7-5 ：</strong></h3><p><strong>查询所有学生选修的课程(包括未选课学生以及没有学生选修的课程信息)</strong></p>
-<ol>
-<li>连接“StudentInfo”和“ExamRecord”</li>
-</ol>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105100017.png" alt="image-20210111105100017"></p>
-<ol start="2">
-<li>把第1步生成的结果关系与“Course”连接</li>
-</ol>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105207670.png" alt="image-20210111105207670"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105222970.png" alt="image-20210111105222970"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105234460.png" alt="image-20210111105234460"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105245515.png" alt="image-20210111105245515"></p>
-<ol start="3">
-<li>按照题目要求进行适当的投影操作</li>
-</ol>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105348702.png" alt="image-20210111105348702"></p>
-<h3 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h3><blockquote>
-<p>所有用于单表的查询技术都可以用于多表查询，多表只不过是把单表按照一定连接条件(join condition)连接成一张<strong>“大表”</strong></p>
-</blockquote>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105430685.png" alt="image-20210111105430685"></p>
-<h2 id="有连接时的查询执行过程"><a href="#有连接时的查询执行过程" class="headerlink" title="有连接时的查询执行过程"></a>有连接时的查询执行过程</h2><ul>
-<li>生成结果关系(“大表”)—》在“大表”上利用WHERE指定的条件筛选元组—》按照Group by指定的属性将元组分组—》将Group by的分组用Having指定的条件筛选—》按照Order By指定的属性对元组排序(排序的属性可以不在最后投影的属性列中)—》投影或用函数、表达式计算</li>
-</ul>
-<ul>
-<li>如果没有GROUP BY和HAVING的话，上述步骤中红色的部分将不会执行</li>
-</ul>
-<h3 id="例7-6-："><a href="#例7-6-：" class="headerlink" title="例7-6 ："></a><strong>例7-6 ：</strong></h3><p><strong>查询部门男性员工数大于2的部门名称及男性员工人数，并按人数降序排列</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105654992.png" alt="image-20210111105654992"></p>
-<ol>
-<li>生成结果关系(“大表”)</li>
-</ol>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105731991.png" alt="image-20210111105731991"></p>
-<ol start="2">
-<li>在“大表”上利用WHERE指定的条件筛选元组</li>
-</ol>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105755760.png" alt="image-20210111105755760"></p>
-<ol start="3">
-<li>按照Group by指定的属性将元组分组</li>
-</ol>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105827865.png" alt="image-20210111105827865"></p>
-<ol start="4">
-<li>将Group by的分组用Having指定的条件筛选</li>
-</ol>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105850431.png" alt="image-20210111105850431"></p>
-<ol start="5">
-<li>按照Order By指定的属性对元组排序</li>
-</ol>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105914626.png" alt="image-20210111105914626"></p>
-<ol start="6">
-<li>投影或用函数、表达式计算</li>
-</ol>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105944800.png" alt="image-20210111105944800"></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> DNAME , <span class="keyword">COUNT</span>(*) <span class="keyword">FROM</span> EMPLOYEE E <span class="keyword">JOIN</span> DEPARTMENT D <span class="keyword">ON</span> (E.DNO=D.DNUMBER) <span class="keyword">WHERE</span> SEX=<span class="string">&#x27;M&#x27;</span> <span class="keyword">GROUP</span> <span class="keyword">BY</span> DNAME <span class="keyword">HAVING</span> <span class="keyword">COUNT</span>(*) &gt; <span class="number">2</span> <span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="keyword">COUNT</span>(*) <span class="keyword">DESC</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h3 id="补充：一个查询优化的例子"><a href="#补充：一个查询优化的例子" class="headerlink" title="补充：一个查询优化的例子"></a>补充：一个查询优化的例子</h3><p>在逻辑上，我们可以认为DBMS是先通过JOIN操作(关系代数)把所有的表连成一张“大表”后再来执行SELECT操作(关系代数)，但实际上DBMS在某些情况下会对查询的执行过程进行优化，比如先执行SELECT操作(从而有可能减少参与JOIN操作的关系的元组数)，再执行JOIN操作。</p>
-<h4 id="DBMS处理查询的过程"><a href="#DBMS处理查询的过程" class="headerlink" title="DBMS处理查询的过程"></a>DBMS处理查询的过程</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111110027640.png" alt="image-20210111110027640"></p>
-<h3 id="例7-7-："><a href="#例7-7-：" class="headerlink" title="例7-7 ："></a>例7-7 ：</h3><p><strong>查询女性员工的家属信息</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111110108326.png" alt="image-20210111110108326"></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> FNAME, LNAME, DEPENDRNT_NAME <span class="keyword">FROM</span> EMPLOYEE <span class="keyword">JOIN</span> DEPENDENT <span class="keyword">ON</span> (SSN = ESSN) <span class="keyword">WHERE</span> (EMPLOYEE.SEX = <span class="string">&#x27;F&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-
-
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111110136785.png" alt="image-20210111110136785"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111110146387.png" alt="image-20210111110146387"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111110159964.png" alt="image-20210111110159964"></p>
-<h1 id="交叉连接"><a href="#交叉连接" class="headerlink" title="交叉连接"></a>交叉连接</h1><blockquote>
-<p>交叉连接(CROSS JOIN)：实际就是关系代数中的“笛卡尔积”(Cartesian Product)</p>
-</blockquote>
-<h3 id="例7-8-："><a href="#例7-8-：" class="headerlink" title="例7-8 ："></a>例7-8 ：</h3><p><strong>将StudentInfo与Department表交叉连接</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111115926151.png" alt="image-20210111115926151"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111115938420.png" alt="image-20210111115938420"></p>
-<p><strong>如果添加一个 WHERE 子句，则交叉连接的作用将同内连接一样</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111120001776.png" alt="image-20210111120001776"></p>
-<h3 id="注意：-1"><a href="#注意：-1" class="headerlink" title="注意："></a>注意：</h3><p>CROSS JOIN后面不能加ON</p>
-<h3 id="CROSS-JOIN的用处"><a href="#CROSS-JOIN的用处" class="headerlink" title="CROSS JOIN的用处"></a>CROSS JOIN的用处</h3><blockquote>
-<p>CROSS JOIN的一个用途是生成样本或测试数据。例如：如果你要生成1000行3列的一个表用于测试，不必建立这样一张表并进行1000次插入操作，可以建立三张表，每张表1列10行数据，然后将这三张表进行交叉连接可得10<em>10</em>10=1000行数据。</p>
-</blockquote>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111120117583.png" alt="image-20210111120117583"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111120132062.png" alt="image-20210111120132062"></p>
-<h1 id="自连接"><a href="#自连接" class="headerlink" title="自连接"></a>自连接</h1><h3 id="例7-9-："><a href="#例7-9-：" class="headerlink" title="例7-9 ："></a>例7-9 ：</h3><p><strong>查询每个员工上级的姓名</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111120202140.png" alt="image-20210111120202140"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111120219805.png" alt="image-20210111120219805"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111120231994.png" alt="image-20210111120231994"></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> EMPLOYEE E1 <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> EMPLOYEE E2 <span class="keyword">ON</span> (E1.SUPERSSN=E2.SSN) <span class="keyword">ORDER</span> <span class="keyword">BY</span> E1.SUPERSSN <span class="keyword">DESC</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> E1.FNAME+<span class="string">&#x27;,&#x27;</span>+E1.LNAME 员工姓名, E2.FNAME+<span class="string">&#x27;,&#x27;</span>E2.LNAME 上级姓名 <span class="keyword">FROM</span> EMPLOYEE E1 <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> EMPLOYEE E2 <span class="keyword">ON</span> E1.SUPERSSN=E2.SSN <span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="number">2</span> D</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-]]></content>
-      <categories>
-        <category>数据库原理及应用</category>
-      </categories>
-      <tags>
-        <tag>share</tag>
-        <tag>notes</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数据库第四章——关系数据库标准语言SQL（5）</title>
-    <url>/posts/29673d4d/</url>
-    <content><![CDATA[<h1 id="数据定义"><a href="#数据定义" class="headerlink" title="数据定义"></a>数据定义</h1><h2 id="本讲示例数据库COMPANY"><a href="#本讲示例数据库COMPANY" class="headerlink" title="本讲示例数据库COMPANY"></a>本讲示例数据库COMPANY</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114093802527.png" alt="image-20210114093802527"></p>
-<h2 id="本讲示例数据库EDUCATION"><a href="#本讲示例数据库EDUCATION" class="headerlink" title="本讲示例数据库EDUCATION"></a>本讲示例数据库EDUCATION</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114093839006.png" alt="image-20210114093839006"></p>
-<h2 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h2><ul>
-<li><p>使用SQL语句</p>
-</li>
-<li><p>使用Management Studio</p>
-</li>
-</ul>
-<p>基本上所有的数据库操作都可用SQL语言(包括数据库<br>备份与还原等操作)完成，优点是：</p>
-<ol>
-<li>简便、快捷</li>
-<li>可保存SQL语句，供以后重用</li>
-<li>可嵌入应用程序中调用</li>
-</ol>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114094034029.png" alt="image-20210114094034029"></p>
-<h3 id="使用SQL语句-复杂版，精确控制"><a href="#使用SQL语句-复杂版，精确控制" class="headerlink" title="使用SQL语句(复杂版，精确控制)"></a>使用SQL语句(复杂版，精确控制)</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114094103313.png" alt="image-20210114094103313"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114094326878.png" alt="image-20210114094326878"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114094348279.png" alt="image-20210114094348279"></p>
-<h3 id="查看数据库详细信息"><a href="#查看数据库详细信息" class="headerlink" title="查看数据库详细信息"></a>查看数据库详细信息</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114094419417.png" alt="image-20210114094419417"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114094500307.png" alt="image-20210114094500307"></p>
-<h2 id="删除数据库"><a href="#删除数据库" class="headerlink" title="删除数据库"></a>删除数据库</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114094531627.png" alt="image-20210114094531627"></p>
-<h2 id="创建数据库表"><a href="#创建数据库表" class="headerlink" title="创建数据库表"></a>创建数据库表</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114094600325.png" alt="image-20210114094600325"></p>
-<h3 id="自增字段"><a href="#自增字段" class="headerlink" title="自增字段"></a>自增字段</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114094738807.png" alt="image-20210114094738807"></p>
-<ul>
-<li>每个表只能有一自增字段，且只能用于数值类型字段</li>
-</ul>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114095100738.png" alt="image-20210114095100738"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114095215920.png" alt="image-20210114095215920"></p>
-<h2 id="修改数据库表"><a href="#修改数据库表" class="headerlink" title="修改数据库表"></a>修改数据库表</h2><p><strong>EMPLOYEE_NEW目前的数据</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114095323523.png" alt="image-20210114095323523"></p>
-<h3 id="增加列"><a href="#增加列" class="headerlink" title="增加列"></a>增加列</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114095413280.png" alt="image-20210114095413280"></p>
-<ul>
-<li>非空的话修改了数据，会影响先前的数据</li>
-</ul>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114095424954.png" alt="image-20210114095424954"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114095436446.png" alt="image-20210114095436446"></p>
-<h3 id="修改列的属性"><a href="#修改列的属性" class="headerlink" title="修改列的属性"></a>修改列的属性</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114095543289.png" alt="image-20210114095543289"></p>
-<h3 id="修改列名"><a href="#修改列名" class="headerlink" title="修改列名"></a>修改列名</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114095601458.png" alt="image-20210114095601458"></p>
-<h3 id="删除列"><a href="#删除列" class="headerlink" title="删除列"></a>删除列</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114095615461.png" alt="image-20210114095615461"></p>
-<h2 id="删除数据库表"><a href="#删除数据库表" class="headerlink" title="删除数据库表"></a>删除数据库表</h2><ul>
-<li>被外键参照的表不能直接删除，必须先删除外键约束才能删除表</li>
-</ul>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114095646595.png" alt="image-20210114095646595"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114095658251.png" alt="image-20210114095658251"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114095710054.png" alt="image-20210114095710054"></p>
-<p><strong>解决方法1</strong></p>
-<p>可以先删除引用表(注意：不是被引用表)</p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114095750419.png" alt="image-20210114095750419"></p>
-<p><strong>解决方法2</strong></p>
-<p>可以先单独删除外键约束(见后)</p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114095820963.png" alt="image-20210114095820963"></p>
-<h1 id="完整性约束条件"><a href="#完整性约束条件" class="headerlink" title="完整性约束条件"></a>完整性约束条件</h1><p>作用对象</p>
-<ul>
-<li><p>列</p>
-</li>
-<li><p>元组</p>
-</li>
-<li><p>关系</p>
-</li>
-</ul>
-<p>状态</p>
-<ul>
-<li>静态：数据库每一确定状态时的数据对象所应满足的约束条件(重点)</li>
-<li>动态：数据库从一种状态转变为另一种状态时，新、旧值之间所应满足的约束条件</li>
-</ul>
-<h2 id="静态约束条件"><a href="#静态约束条件" class="headerlink" title="静态约束条件"></a>静态约束条件</h2><p>列级</p>
-<ul>
-<li><p>对数据类型的约束(在表定义时附加)</p>
-</li>
-<li><p>对空值的约束(在表定义时附加)</p>
-</li>
-<li><p>标识列约束(在表定义时附加)</p>
-</li>
-<li><p>默认值约束(一般在表定义后附加)</p>
-</li>
-<li><p>对数据格式的约束(一般在表定义后附加)</p>
-</li>
-<li><p>对取值范围或取值集合的约束(一般在表定义后附加)</p>
-</li>
-</ul>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114191813529.png" alt="image-20210114191813529"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114191824077.png" alt="image-20210114191824077"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114191842399.png" alt="image-20210114191842399"></p>
-<h2 id="默认值约束"><a href="#默认值约束" class="headerlink" title="默认值约束"></a>默认值约束</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114191908824.png" alt="image-20210114191908824"></p>
-<h2 id="对取值范围-集合的约束"><a href="#对取值范围-集合的约束" class="headerlink" title="对取值范围/集合的约束"></a>对取值范围/集合的约束</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114191933391.png" alt="image-20210114191933391"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114191951107.png" alt="image-20210114191951107"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114192000862.png" alt="image-20210114192000862"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114192011621.png" alt="image-20210114192011621"></p>
-<h2 id="对数据格式的约束"><a href="#对数据格式的约束" class="headerlink" title="对数据格式的约束"></a>对数据格式的约束</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114192023210.png" alt="image-20210114192023210"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114192040347.png" alt="image-20210114192040347"></p>
-<h2 id="主键约束"><a href="#主键约束" class="headerlink" title="主键约束"></a>主键约束</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114192051120.png" alt="image-20210114192051120"></p>
-<h2 id="唯一键（次要键）约束"><a href="#唯一键（次要键）约束" class="headerlink" title="唯一键（次要键）约束"></a>唯一键（次要键）约束</h2><p>![image-20210114192102644](/Users/fine/Library/Application Support/typora-user-images/image-20210114192102644.png)</p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114192115750.png" alt="image-20210114192115750"></p>
-<h2 id="参照完整性约束"><a href="#参照完整性约束" class="headerlink" title="参照完整性约束"></a>参照完整性约束</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114192146833.png" alt="image-20210114192146833"></p>
-<h2 id="管理约束"><a href="#管理约束" class="headerlink" title="管理约束"></a>管理约束</h2><h3 id="查看约束信息"><a href="#查看约束信息" class="headerlink" title="查看约束信息"></a>查看约束信息</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114192158951.png" alt="image-20210114192158951"></p>
-<h3 id="禁用某个约束"><a href="#禁用某个约束" class="headerlink" title="禁用某个约束"></a>禁用某个约束</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114192206995.png" alt="image-20210114192206995"></p>
-<h3 id="启用某个约束"><a href="#启用某个约束" class="headerlink" title="启用某个约束"></a>启用某个约束</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114192216307.png" alt="image-20210114192216307"></p>
-<h3 id="禁用某个表的所有约束"><a href="#禁用某个表的所有约束" class="headerlink" title="禁用某个表的所有约束"></a>禁用某个表的所有约束</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114192224961.png" alt="image-20210114192224961"></p>
-<h3 id="启用某个表的所有约束"><a href="#启用某个表的所有约束" class="headerlink" title="启用某个表的所有约束"></a>启用某个表的所有约束</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114192235242.png" alt="image-20210114192235242"></p>
-<h3 id="级联删除"><a href="#级联删除" class="headerlink" title="级联删除"></a>级联删除</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114192242463.png" alt="image-20210114192242463"></p>
-<h1 id="完整性控制"><a href="#完整性控制" class="headerlink" title="完整性控制"></a>完整性控制</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114192255409.png" alt="image-20210114192255409"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114192303352.png" alt="image-20210114192303352"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114192309737.png" alt="image-20210114192309737"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114192317187.png" alt="image-20210114192317187"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114192323808.png" alt="image-20210114192323808"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114192331189.png" alt="image-20210114192331189"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114192340021.png" alt="image-20210114192340021"></p>
-<h1 id="索引的机理、规划和管理"><a href="#索引的机理、规划和管理" class="headerlink" title="索引的机理、规划和管理"></a>索引的机理、规划和管理</h1><h2 id="索引的作用与结构"><a href="#索引的作用与结构" class="headerlink" title="索引的作用与结构"></a>索引的作用与结构</h2><p>什么叫索引</p>
-<ul>
-<li>数据库中的索引与书籍中的索引类似，在一本书中，利用索引可以快速查找所需信息，无须阅读整本书。在数据库中，索引使数据库程序无须对整个表进行扫描，就可以在其中找到所需数据。书中的索引是一个词语列表，其中注明了包含各个词的页码。而数据库中的索引是某个表中一列或者若干列值的集合和相应的指向表中物理标识这些值的数据页的逻辑指针清单</li>
-</ul>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114193034065.png" alt="image-20210114193034065"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114193054109.png" alt="image-20210114193054109"></p>
-<p>索引的作用</p>
-<ul>
-<li><p>通过创建唯一索引，可以保证数据记录的唯一性。</p>
-</li>
-<li><p>可以大大加快数据检索速度。</p>
-</li>
-<li><p>可以加速表与表之间的连接，这一点在实现数据的参照完整性方面有特别的意义。</p>
-</li>
-<li><p>在使用ORDER BY和GROUP BY子句进行数据检索时，可以显著减少查询中分组和排序的时间。</p>
-</li>
-<li><p>使用索引可以在检索数据的过程中使用查询优化器，提高系统性能。 </p>
-</li>
-</ul>
-<h2 id="索引类型"><a href="#索引类型" class="headerlink" title="索引类型"></a>索引类型</h2><ul>
-<li>聚集索引和非聚集索引</li>
-<li>唯一索引和非唯一索引</li>
-<li>单列索引和复合索引</li>
-<li>主键索引和非主键索引</li>
-<li></li>
-</ul>
-<h3 id="聚集索引和非聚集索引"><a href="#聚集索引和非聚集索引" class="headerlink" title="聚集索引和非聚集索引"></a>聚集索引和非聚集索引</h3><p>聚集索引：</p>
-<ul>
-<li>行的物理存储顺序与索引顺序完全相同，每个表只允许建立一个聚集索引。默认情况下，SQL Server为主键约束建立的索引为聚集索引。</li>
-</ul>
-<p>非聚集索引：</p>
-<ul>
-<li>不改变表中数据行的物理存储顺序。默认情况下， SQL Server为UNIQUE约束所建立的索引为非聚集索引。</li>
-</ul>
-<ul>
-<li>建立聚集索引随时要改变表中数据行的物理顺序，所以应在其他非聚集索引建立之前建立聚集索引，以免引起SQL Server重新构造非聚集索引。</li>
-</ul>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114193414726.png" alt="image-20210114193414726"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114193442283.png" alt="image-20210114193442283"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114193454334.png" alt="image-20210114193454334"></p>
-<h3 id="主键索引和非主键索引"><a href="#主键索引和非主键索引" class="headerlink" title="主键索引和非主键索引"></a>主键索引和非主键索引</h3><p>主键索引：</p>
-<ul>
-<li>主键创建会自动创建聚集索引。频繁更改的属性列上不适宜创建主键聚集索引，因为SQL Server要求必须按照这些属性列的值重新安排记录的物理顺序，这将导致记录的物理移动。</li>
-</ul>
-<p>非主键索引：</p>
-<ul>
-<li>在非主键的属性列上创建的索引，这些索引一般都是非聚集索引。</li>
-</ul>
-<h4 id="唯一索引和非唯一索引"><a href="#唯一索引和非唯一索引" class="headerlink" title="唯一索引和非唯一索引"></a>唯一索引和非唯一索引</h4><p>唯一索引：</p>
-<ul>
-<li>索引列中不包含重复值。只有当唯一性是数据本身特征时，指定唯一索引才有意义。使用唯一索引不能完全等同于使用主键（唯一索引允许一个空值）。如果某列包含多行NULL值，则不能在该列上创建唯一索引。数据表创建唯一索引后，SQL Server将禁止INSERT语句和UPDATE语句向表中添加重复的键值行。</li>
-</ul>
-<p>非唯一索引：</p>
-<ul>
-<li>允许索引列有重复值的索引。</li>
-</ul>
-<h3 id="单列索引和复合索引"><a href="#单列索引和复合索引" class="headerlink" title="单列索引和复合索引"></a>单列索引和复合索引</h3><p>单列索引：</p>
-<ul>
-<li>指对表中单个列建立索引。多数情况下，单列索引是创建索引首选考虑的索引，因为单列索引代价相对较小，而对数据库查询效能提高很大。</li>
-</ul>
-<p>复合索引：</p>
-<ul>
-<li>一个索引中包含了一个以上的列的索引。复合索引最多可以有16个列复合到一个索引中，并且这些列必须位于同一个表中，在使用复合索引检索时，把被索引的列作为一个单位。</li>
-</ul>
-<h2 id="规划设计索引的一般原则"><a href="#规划设计索引的一般原则" class="headerlink" title="规划设计索引的一般原则"></a>规划设计索引的一般原则</h2><h2 id="索引的创建和删除"><a href="#索引的创建和删除" class="headerlink" title="索引的创建和删除"></a>索引的创建和删除</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114193742449.png" alt="image-20210114193742449"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114193757706.png" alt="image-20210114193757706"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114193808113.png" alt="image-20210114193808113"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114193821863.png" alt="image-20210114193821863"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114193839772.png" alt="image-20210114193839772"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114193849045.png" alt="image-20210114193849045"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114193856956.png" alt="image-20210114193856956"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114193903881.png" alt="image-20210114193903881"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114193918124.png" alt="image-20210114193918124"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114193936086.png" alt="image-20210114193936086"></p>
-]]></content>
-      <categories>
-        <category>数据库原理及应用</category>
-      </categories>
-      <tags>
-        <tag>share</tag>
-        <tag>notes</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>数据库第四章——关系数据库标准语言SQL（3）</title>
     <url>/posts/c0c6291/</url>
     <content><![CDATA[<h1 id="SQL的功能组成"><a href="#SQL的功能组成" class="headerlink" title="SQL的功能组成"></a>SQL的功能组成</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111193929585.png" alt="image-20210111193929585"></p>
@@ -1606,27 +1314,291 @@
       </tags>
   </entry>
   <entry>
-    <title>线性代数第七章——方阵对角化及其应用</title>
-    <url>/posts/b60ddbe5/</url>
-    <content><![CDATA[<h1 id="规范正交化"><a href="#规范正交化" class="headerlink" title="规范正交化"></a>规范正交化</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109201509010.png" alt="image-20210109201509010"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109201809185.png" alt="image-20210109201809185"></p>
-<h1 id="求矩阵的特征值"><a href="#求矩阵的特征值" class="headerlink" title="求矩阵的特征值"></a>求矩阵的特征值</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109201906847.png" alt="image-20210109201906847"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109201934012.png" alt="image-20210109201934012"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109202023128.png" alt="image-20210109202023128"></p>
-<h1 id="求矩阵的特征向量"><a href="#求矩阵的特征向量" class="headerlink" title="求矩阵的特征向量"></a>求矩阵的特征向量</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109202047908.png" alt="image-20210109202047908"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109202211400.png" alt="image-20210109202211400"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109202307519.png" alt="image-20210109202307519"></p>
-<h1 id="判断方阵是否与对角线相似-是否满足-P-1AP-A’"><a href="#判断方阵是否与对角线相似-是否满足-P-1AP-A’" class="headerlink" title="判断方阵是否与对角线相似/是否满足$P^-1AP=A’$"></a>判断方阵是否与对角线相似/是否满足$P^-1AP=A’$</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109202550322.png"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109202606181.png" alt="image-20210109202606181"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109202624066.png" alt="image-20210109202624066"></p>
-<h1 id="求方阵对应的对角阵A’及相应变换矩阵P"><a href="#求方阵对应的对角阵A’及相应变换矩阵P" class="headerlink" title="求方阵对应的对角阵A’及相应变换矩阵P"></a>求方阵对应的对角阵A’及相应变换矩阵P</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109202720868.png" alt="image-20210109202720868"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109202956836.png" alt="image-20210109202956836"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109203004147.png" alt="image-20210109203004147"></p>
-<h1 id="已知-P-1AP-A’-，求关于A的复杂式子"><a href="#已知-P-1AP-A’-，求关于A的复杂式子" class="headerlink" title="已知$P^-1AP=A’$，求关于A的复杂式子"></a>已知$P^-1AP=A’$，求关于A的复杂式子</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109203115365.png" alt="image-20210109203115365"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109203158489.png" alt="image-20210109203158489"></p>
+    <title>数据库第四章——关系数据库标准语言SQL（4）</title>
+    <url>/posts/91db5a28/</url>
+    <content><![CDATA[<h1 id="视图的基本概念"><a href="#视图的基本概念" class="headerlink" title="视图的基本概念"></a>视图的基本概念</h1><h2 id="SQL支持关系数据库三级模式结构"><a href="#SQL支持关系数据库三级模式结构" class="headerlink" title="SQL支持关系数据库三级模式结构"></a>SQL支持关系数据库三级模式结构</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111211444397.png" alt="image-20210111211444397"></p>
+<h2 id="数据定义"><a href="#数据定义" class="headerlink" title="数据定义"></a>数据定义</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111211521246.png" alt="image-20210111211521246"></p>
+<h2 id="视图VIEW-外模式"><a href="#视图VIEW-外模式" class="headerlink" title="视图VIEW(外模式)"></a>视图VIEW(外模式)</h2><ul>
+<li>视图是虚拟的表(a virtual table)，保存在视图中的数据并不是物理存储的数据，而是由基本表或其他视图派生的</li>
+<li>视图是一个被命名的SELECT语句，它能动态地产生一个可进行进一步操作的查询结果</li>
+</ul>
+<h1 id="视图的优点"><a href="#视图的优点" class="headerlink" title="视图的优点"></a>视图的优点</h1><ul>
+<li>提供了一定程度的逻辑独立性</li>
+<li>为用户集中数据，保证数据安全性<ul>
+<li>视图为用户提供一个受限的环境，用户只能访问允许的数据，一些不必要的、不合适的数据则不在视图中显示</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111211713619.png" alt="image-20210111211713619"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111211731808.png" alt="image-20210111211731808"></p>
+<ul>
+<li>简化数据库查询</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111211808112.png" alt="image-20210111211808112"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111211818721.png" alt="image-20210111211818721"></p>
+<h1 id="创建和管理视图"><a href="#创建和管理视图" class="headerlink" title="创建和管理视图"></a>创建和管理视图</h1><h2 id="创建-定义-视图"><a href="#创建-定义-视图" class="headerlink" title="创建(定义)视图"></a>创建(定义)视图</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111212143960.png" alt="image-20210111212143960"></p>
+<h2 id="WITH-CHECK-OPTION"><a href="#WITH-CHECK-OPTION" class="headerlink" title="[WITH CHECK OPTION]"></a>[WITH CHECK OPTION]</h2><p>对视图进行UPDATE，INSERT和DELETE操作时要保证更新、插入或删除的行满足视图定义中的谓词条件(即子查询中的条件表达式)</p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111212611947.png" alt="image-20210111212611947"></p>
+<h2 id="定义视图时指定列名"><a href="#定义视图时指定列名" class="headerlink" title="定义视图时指定列名"></a>定义视图时指定列名</h2><ul>
+<li><p>某个目标列不是单纯的属性名，而是聚集函数或计算列</p>
+</li>
+<li><p>多表连接时选出了几个同名列作为视图的字段</p>
+</li>
+<li><p>需要在视图中为某个列启用新的更合适的名字</p>
+</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111213851092.png" alt="image-20210111213851092"></p>
+<h2 id="修改视图定义"><a href="#修改视图定义" class="headerlink" title="修改视图定义"></a>修改视图定义</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111213927327.png" alt="image-20210111213927327"></p>
+<h2 id="删除视图"><a href="#删除视图" class="headerlink" title="删除视图"></a>删除视图</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111214546250.png" alt="image-20210111214546250"></p>
+<h1 id="查询视图"><a href="#查询视图" class="headerlink" title="查询视图"></a>查询视图</h1><ul>
+<li>步骤<ul>
+<li>有效性检查</li>
+<li>安全性检查</li>
+<li>视图消解<ul>
+<li>从数据字典中取出视图的定义，把定义中的子查询和用户针对视图的查询结合起来，转换成等价的对基本表的查询，然后再执行修正的等价查询</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="视图消解"><a href="#视图消解" class="headerlink" title="视图消解"></a>视图消解</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111214719729.png" alt="image-20210111214719729"></p>
+<h1 id="更新视图中的数据"><a href="#更新视图中的数据" class="headerlink" title="更新视图中的数据"></a>更新视图中的数据</h1><ul>
+<li>可以通过更新视图的方式实现对表中数据的更新。视图的更新操作包括插入、修改和删除数据</li>
+<li>视图是一张虚表，所以对视图的更新，最终实际上是转换成对视图的底层表的更新</li>
+<li>更新视图中的数据：不是所有视图中的数据都是可更新的</li>
+</ul>
+<h2 id="基本判断原则"><a href="#基本判断原则" class="headerlink" title="基本判断原则"></a>基本判断原则</h2><ul>
+<li><p>视图中的每一列都必须和一个基本表中的一个源列对应</p>
+</li>
+<li><p>视图中的每一行都必须和一个基本表中的一个源行对应</p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215029333.png" alt="image-20210111215029333"></p>
+</li>
+</ul>
+<p>如果修改仅仅影响到视图参照的基表之一，则可以通过视图修改数据 (UPDATE, DELETE, INSERT)</p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215100523.png" alt="image-20210111215100523"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215134862.png" alt="image-20210111215134862"></p>
+<h2 id="可更新视图的具体判断标准"><a href="#可更新视图的具体判断标准" class="headerlink" title="可更新视图的具体判断标准"></a>可更新视图的具体判断标准</h2><ul>
+<li><p>查询语句中没有聚合函数 (AVG, COUNT, SUM, MIN, MAX, GROUPING, STDEV, STDEVP, VAR, and VARP) 或 GROUP BY, UNION, DISTINCT,或 TOP 子句 </p>
+</li>
+<li><p>查询语句中没有导出列或者计算列</p>
+</li>
+</ul>
+<h2 id="通过视图更新数据的注意事项"><a href="#通过视图更新数据的注意事项" class="headerlink" title="通过视图更新数据的注意事项"></a>通过视图更新数据的注意事项</h2><p>所有的数据修改都必须遵守在待更新基本表（甚至包括相关表）上设置的完整性约束条件</p>
+<h2 id="通过视图添加数据"><a href="#通过视图添加数据" class="headerlink" title="通过视图添加数据"></a>通过视图添加数据</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215306306.png" alt="image-20210111215306306"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215325842.png" alt="image-20210111215325842"></p>
+<h2 id="通过视图修改数据"><a href="#通过视图修改数据" class="headerlink" title="通过视图修改数据"></a>通过视图修改数据</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215350208.png" alt="image-20210111215350208"></p>
+<h2 id="通过视图删除数据"><a href="#通过视图删除数据" class="headerlink" title="通过视图删除数据"></a>通过视图删除数据</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215418754.png" alt="image-20210111215418754"></p>
+<h2 id="WITH-CHECK-OPTION的应用"><a href="#WITH-CHECK-OPTION的应用" class="headerlink" title="WITH CHECK OPTION的应用"></a>WITH CHECK OPTION的应用</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215445855.png" alt="image-20210111215445855"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215454990.png" alt="image-20210111215454990"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215503425.png" alt="image-20210111215503425"></p>
+<h2 id="为什么要通过视图更新数据"><a href="#为什么要通过视图更新数据" class="headerlink" title="为什么要通过视图更新数据"></a>为什么要通过视图更新数据</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215526975.png" alt="image-20210111215526975"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215539132.png" alt="image-20210111215539132"></p>
+<h1 id="加密视图"><a href="#加密视图" class="headerlink" title="加密视图"></a>加密视图</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215558785.png" alt="image-20210111215558785"></p>
+<h1 id="派生表"><a href="#派生表" class="headerlink" title="派生表"></a>派生表</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215611633.png" alt="image-20210111215611633"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215623354.png" alt="image-20210111215623354"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215632300.png" alt="image-20210111215632300"></p>
+<ul>
+<li><p>派生表为一个命名的查询结果，用于另一个查询的FROM子句。因为查询的结果为一张表，而FROM子句正好也需要一张表。视图也可看成派生表。但视图是命名的, 定义被持久的存储、可重用；而派生表是动态的、临时的 </p>
+</li>
+<li><p>可以通过视图进行 insert, update和 delete 操作，但派生表不能</p>
+</li>
+</ul>
 ]]></content>
       <categories>
-        <category>线性代数</category>
+        <category>数据库原理及应用</category>
+      </categories>
+      <tags>
+        <tag>share</tag>
+        <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据库第四章——关系数据库标准语言SQL（5）</title>
+    <url>/posts/29673d4d/</url>
+    <content><![CDATA[<h1 id="数据定义"><a href="#数据定义" class="headerlink" title="数据定义"></a>数据定义</h1><h2 id="本讲示例数据库COMPANY"><a href="#本讲示例数据库COMPANY" class="headerlink" title="本讲示例数据库COMPANY"></a>本讲示例数据库COMPANY</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114093802527.png" alt="image-20210114093802527"></p>
+<h2 id="本讲示例数据库EDUCATION"><a href="#本讲示例数据库EDUCATION" class="headerlink" title="本讲示例数据库EDUCATION"></a>本讲示例数据库EDUCATION</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114093839006.png" alt="image-20210114093839006"></p>
+<h2 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h2><ul>
+<li><p>使用SQL语句</p>
+</li>
+<li><p>使用Management Studio</p>
+</li>
+</ul>
+<p>基本上所有的数据库操作都可用SQL语言(包括数据库<br>备份与还原等操作)完成，优点是：</p>
+<ol>
+<li>简便、快捷</li>
+<li>可保存SQL语句，供以后重用</li>
+<li>可嵌入应用程序中调用</li>
+</ol>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114094034029.png" alt="image-20210114094034029"></p>
+<h3 id="使用SQL语句-复杂版，精确控制"><a href="#使用SQL语句-复杂版，精确控制" class="headerlink" title="使用SQL语句(复杂版，精确控制)"></a>使用SQL语句(复杂版，精确控制)</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114094103313.png" alt="image-20210114094103313"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114094326878.png" alt="image-20210114094326878"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114094348279.png" alt="image-20210114094348279"></p>
+<h3 id="查看数据库详细信息"><a href="#查看数据库详细信息" class="headerlink" title="查看数据库详细信息"></a>查看数据库详细信息</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114094419417.png" alt="image-20210114094419417"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114094500307.png" alt="image-20210114094500307"></p>
+<h2 id="删除数据库"><a href="#删除数据库" class="headerlink" title="删除数据库"></a>删除数据库</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114094531627.png" alt="image-20210114094531627"></p>
+<h2 id="创建数据库表"><a href="#创建数据库表" class="headerlink" title="创建数据库表"></a>创建数据库表</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114094600325.png" alt="image-20210114094600325"></p>
+<h3 id="自增字段"><a href="#自增字段" class="headerlink" title="自增字段"></a>自增字段</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114094738807.png" alt="image-20210114094738807"></p>
+<ul>
+<li>每个表只能有一自增字段，且只能用于数值类型字段</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114095100738.png" alt="image-20210114095100738"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114095215920.png" alt="image-20210114095215920"></p>
+<h2 id="修改数据库表"><a href="#修改数据库表" class="headerlink" title="修改数据库表"></a>修改数据库表</h2><p><strong>EMPLOYEE_NEW目前的数据</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114095323523.png" alt="image-20210114095323523"></p>
+<h3 id="增加列"><a href="#增加列" class="headerlink" title="增加列"></a>增加列</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114095413280.png" alt="image-20210114095413280"></p>
+<ul>
+<li>非空的话修改了数据，会影响先前的数据</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114095424954.png" alt="image-20210114095424954"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114095436446.png" alt="image-20210114095436446"></p>
+<h3 id="修改列的属性"><a href="#修改列的属性" class="headerlink" title="修改列的属性"></a>修改列的属性</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114095543289.png" alt="image-20210114095543289"></p>
+<h3 id="修改列名"><a href="#修改列名" class="headerlink" title="修改列名"></a>修改列名</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114095601458.png" alt="image-20210114095601458"></p>
+<h3 id="删除列"><a href="#删除列" class="headerlink" title="删除列"></a>删除列</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114095615461.png" alt="image-20210114095615461"></p>
+<h2 id="删除数据库表"><a href="#删除数据库表" class="headerlink" title="删除数据库表"></a>删除数据库表</h2><ul>
+<li>被外键参照的表不能直接删除，必须先删除外键约束才能删除表</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114095646595.png" alt="image-20210114095646595"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114095658251.png" alt="image-20210114095658251"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114095710054.png" alt="image-20210114095710054"></p>
+<p><strong>解决方法1</strong></p>
+<p>可以先删除引用表(注意：不是被引用表)</p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114095750419.png" alt="image-20210114095750419"></p>
+<p><strong>解决方法2</strong></p>
+<p>可以先单独删除外键约束(见后)</p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114095820963.png" alt="image-20210114095820963"></p>
+<h1 id="完整性约束条件"><a href="#完整性约束条件" class="headerlink" title="完整性约束条件"></a>完整性约束条件</h1><p>作用对象</p>
+<ul>
+<li><p>列</p>
+</li>
+<li><p>元组</p>
+</li>
+<li><p>关系</p>
+</li>
+</ul>
+<p>状态</p>
+<ul>
+<li>静态：数据库每一确定状态时的数据对象所应满足的约束条件(重点)</li>
+<li>动态：数据库从一种状态转变为另一种状态时，新、旧值之间所应满足的约束条件</li>
+</ul>
+<h2 id="静态约束条件"><a href="#静态约束条件" class="headerlink" title="静态约束条件"></a>静态约束条件</h2><p>列级</p>
+<ul>
+<li><p>对数据类型的约束(在表定义时附加)</p>
+</li>
+<li><p>对空值的约束(在表定义时附加)</p>
+</li>
+<li><p>标识列约束(在表定义时附加)</p>
+</li>
+<li><p>默认值约束(一般在表定义后附加)</p>
+</li>
+<li><p>对数据格式的约束(一般在表定义后附加)</p>
+</li>
+<li><p>对取值范围或取值集合的约束(一般在表定义后附加)</p>
+</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114191813529.png" alt="image-20210114191813529"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114191824077.png" alt="image-20210114191824077"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114191842399.png" alt="image-20210114191842399"></p>
+<h2 id="默认值约束"><a href="#默认值约束" class="headerlink" title="默认值约束"></a>默认值约束</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114191908824.png" alt="image-20210114191908824"></p>
+<h2 id="对取值范围-集合的约束"><a href="#对取值范围-集合的约束" class="headerlink" title="对取值范围/集合的约束"></a>对取值范围/集合的约束</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114191933391.png" alt="image-20210114191933391"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114191951107.png" alt="image-20210114191951107"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114192000862.png" alt="image-20210114192000862"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114192011621.png" alt="image-20210114192011621"></p>
+<h2 id="对数据格式的约束"><a href="#对数据格式的约束" class="headerlink" title="对数据格式的约束"></a>对数据格式的约束</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114192023210.png" alt="image-20210114192023210"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114192040347.png" alt="image-20210114192040347"></p>
+<h2 id="主键约束"><a href="#主键约束" class="headerlink" title="主键约束"></a>主键约束</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114192051120.png" alt="image-20210114192051120"></p>
+<h2 id="唯一键（次要键）约束"><a href="#唯一键（次要键）约束" class="headerlink" title="唯一键（次要键）约束"></a>唯一键（次要键）约束</h2><p>![image-20210114192102644](/Users/fine/Library/Application Support/typora-user-images/image-20210114192102644.png)</p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114192115750.png" alt="image-20210114192115750"></p>
+<h2 id="参照完整性约束"><a href="#参照完整性约束" class="headerlink" title="参照完整性约束"></a>参照完整性约束</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114192146833.png" alt="image-20210114192146833"></p>
+<h2 id="管理约束"><a href="#管理约束" class="headerlink" title="管理约束"></a>管理约束</h2><h3 id="查看约束信息"><a href="#查看约束信息" class="headerlink" title="查看约束信息"></a>查看约束信息</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114192158951.png" alt="image-20210114192158951"></p>
+<h3 id="禁用某个约束"><a href="#禁用某个约束" class="headerlink" title="禁用某个约束"></a>禁用某个约束</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114192206995.png" alt="image-20210114192206995"></p>
+<h3 id="启用某个约束"><a href="#启用某个约束" class="headerlink" title="启用某个约束"></a>启用某个约束</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114192216307.png" alt="image-20210114192216307"></p>
+<h3 id="禁用某个表的所有约束"><a href="#禁用某个表的所有约束" class="headerlink" title="禁用某个表的所有约束"></a>禁用某个表的所有约束</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114192224961.png" alt="image-20210114192224961"></p>
+<h3 id="启用某个表的所有约束"><a href="#启用某个表的所有约束" class="headerlink" title="启用某个表的所有约束"></a>启用某个表的所有约束</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114192235242.png" alt="image-20210114192235242"></p>
+<h3 id="级联删除"><a href="#级联删除" class="headerlink" title="级联删除"></a>级联删除</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114192242463.png" alt="image-20210114192242463"></p>
+<h1 id="完整性控制"><a href="#完整性控制" class="headerlink" title="完整性控制"></a>完整性控制</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114192255409.png" alt="image-20210114192255409"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114192303352.png" alt="image-20210114192303352"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114192309737.png" alt="image-20210114192309737"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114192317187.png" alt="image-20210114192317187"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114192323808.png" alt="image-20210114192323808"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114192331189.png" alt="image-20210114192331189"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114192340021.png" alt="image-20210114192340021"></p>
+<h1 id="索引的机理、规划和管理"><a href="#索引的机理、规划和管理" class="headerlink" title="索引的机理、规划和管理"></a>索引的机理、规划和管理</h1><h2 id="索引的作用与结构"><a href="#索引的作用与结构" class="headerlink" title="索引的作用与结构"></a>索引的作用与结构</h2><p>什么叫索引</p>
+<ul>
+<li>数据库中的索引与书籍中的索引类似，在一本书中，利用索引可以快速查找所需信息，无须阅读整本书。在数据库中，索引使数据库程序无须对整个表进行扫描，就可以在其中找到所需数据。书中的索引是一个词语列表，其中注明了包含各个词的页码。而数据库中的索引是某个表中一列或者若干列值的集合和相应的指向表中物理标识这些值的数据页的逻辑指针清单</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114193034065.png" alt="image-20210114193034065"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114193054109.png" alt="image-20210114193054109"></p>
+<p>索引的作用</p>
+<ul>
+<li><p>通过创建唯一索引，可以保证数据记录的唯一性。</p>
+</li>
+<li><p>可以大大加快数据检索速度。</p>
+</li>
+<li><p>可以加速表与表之间的连接，这一点在实现数据的参照完整性方面有特别的意义。</p>
+</li>
+<li><p>在使用ORDER BY和GROUP BY子句进行数据检索时，可以显著减少查询中分组和排序的时间。</p>
+</li>
+<li><p>使用索引可以在检索数据的过程中使用查询优化器，提高系统性能。 </p>
+</li>
+</ul>
+<h2 id="索引类型"><a href="#索引类型" class="headerlink" title="索引类型"></a>索引类型</h2><ul>
+<li>聚集索引和非聚集索引</li>
+<li>唯一索引和非唯一索引</li>
+<li>单列索引和复合索引</li>
+<li>主键索引和非主键索引</li>
+<li></li>
+</ul>
+<h3 id="聚集索引和非聚集索引"><a href="#聚集索引和非聚集索引" class="headerlink" title="聚集索引和非聚集索引"></a>聚集索引和非聚集索引</h3><p>聚集索引：</p>
+<ul>
+<li>行的物理存储顺序与索引顺序完全相同，每个表只允许建立一个聚集索引。默认情况下，SQL Server为主键约束建立的索引为聚集索引。</li>
+</ul>
+<p>非聚集索引：</p>
+<ul>
+<li>不改变表中数据行的物理存储顺序。默认情况下， SQL Server为UNIQUE约束所建立的索引为非聚集索引。</li>
+</ul>
+<ul>
+<li>建立聚集索引随时要改变表中数据行的物理顺序，所以应在其他非聚集索引建立之前建立聚集索引，以免引起SQL Server重新构造非聚集索引。</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114193414726.png" alt="image-20210114193414726"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114193442283.png" alt="image-20210114193442283"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114193454334.png" alt="image-20210114193454334"></p>
+<h3 id="主键索引和非主键索引"><a href="#主键索引和非主键索引" class="headerlink" title="主键索引和非主键索引"></a>主键索引和非主键索引</h3><p>主键索引：</p>
+<ul>
+<li>主键创建会自动创建聚集索引。频繁更改的属性列上不适宜创建主键聚集索引，因为SQL Server要求必须按照这些属性列的值重新安排记录的物理顺序，这将导致记录的物理移动。</li>
+</ul>
+<p>非主键索引：</p>
+<ul>
+<li>在非主键的属性列上创建的索引，这些索引一般都是非聚集索引。</li>
+</ul>
+<h4 id="唯一索引和非唯一索引"><a href="#唯一索引和非唯一索引" class="headerlink" title="唯一索引和非唯一索引"></a>唯一索引和非唯一索引</h4><p>唯一索引：</p>
+<ul>
+<li>索引列中不包含重复值。只有当唯一性是数据本身特征时，指定唯一索引才有意义。使用唯一索引不能完全等同于使用主键（唯一索引允许一个空值）。如果某列包含多行NULL值，则不能在该列上创建唯一索引。数据表创建唯一索引后，SQL Server将禁止INSERT语句和UPDATE语句向表中添加重复的键值行。</li>
+</ul>
+<p>非唯一索引：</p>
+<ul>
+<li>允许索引列有重复值的索引。</li>
+</ul>
+<h3 id="单列索引和复合索引"><a href="#单列索引和复合索引" class="headerlink" title="单列索引和复合索引"></a>单列索引和复合索引</h3><p>单列索引：</p>
+<ul>
+<li>指对表中单个列建立索引。多数情况下，单列索引是创建索引首选考虑的索引，因为单列索引代价相对较小，而对数据库查询效能提高很大。</li>
+</ul>
+<p>复合索引：</p>
+<ul>
+<li>一个索引中包含了一个以上的列的索引。复合索引最多可以有16个列复合到一个索引中，并且这些列必须位于同一个表中，在使用复合索引检索时，把被索引的列作为一个单位。</li>
+</ul>
+<h2 id="规划设计索引的一般原则"><a href="#规划设计索引的一般原则" class="headerlink" title="规划设计索引的一般原则"></a>规划设计索引的一般原则</h2><h2 id="索引的创建和删除"><a href="#索引的创建和删除" class="headerlink" title="索引的创建和删除"></a>索引的创建和删除</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114193742449.png" alt="image-20210114193742449"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114193757706.png" alt="image-20210114193757706"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114193808113.png" alt="image-20210114193808113"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114193821863.png" alt="image-20210114193821863"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114193839772.png" alt="image-20210114193839772"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114193849045.png" alt="image-20210114193849045"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114193856956.png" alt="image-20210114193856956"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114193903881.png" alt="image-20210114193903881"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114193918124.png" alt="image-20210114193918124"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210114193936086.png" alt="image-20210114193936086"></p>
+]]></content>
+      <categories>
+        <category>数据库原理及应用</category>
       </categories>
       <tags>
         <tag>share</tag>
@@ -1699,73 +1671,27 @@
       </tags>
   </entry>
   <entry>
-    <title>计网应用题</title>
-    <url>/posts/9648dc07/</url>
-    <content><![CDATA[<h1 id="冗余码计算"><a href="#冗余码计算" class="headerlink" title="冗余码计算"></a>冗余码计算</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171634481.png" alt="image-20210107171634481"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171648084.png" alt="image-20210107171648084"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171721030.png" alt="image-20210107171721030"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171740599.png" alt="image-20210107171740599"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171749408.png" alt="image-20210107171749408"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171800007.png" alt="image-20210107171800007"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171827008.png" alt="image-20210107171827008"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171852899.png" alt="image-20210107171852899"></p>
-<ul>
-<li>运算时候用异或，同0异1</li>
-</ul>
-<h1 id="数据报分片"><a href="#数据报分片" class="headerlink" title="数据报分片"></a>数据报分片</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171905980.png" alt="image-20210107171905980"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171924869.png" alt="image-20210107171924869"></p>
-<ul>
-<li>数据报长度 = 数据部分长度+首部长度</li>
-</ul>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107172025702.png" alt="image-20210107172025702"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107172151402.png" alt="image-20210107172151402"></p>
-<ul>
-<li>MTU为1500字节</li>
-</ul>
-<h1 id="码分多址通信"><a href="#码分多址通信" class="headerlink" title="码分多址通信"></a>码分多址通信</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107172232286.png" alt="image-20210107172232286"></p>
-<h1 id="地址聚合"><a href="#地址聚合" class="headerlink" title="地址聚合"></a>地址聚合</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107163635796.png" alt="image-20210107163635796"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107163701071.png" alt="image-20210107163701071"></p>
-<h1 id="路由表更新"><a href="#路由表更新" class="headerlink" title="路由表更新"></a>路由表更新</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107163748580.png" alt="image-20210107163748580"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107163856330.png" alt="image-20210107163856330"></p>
-<p>![image-20210107164031175](/Users/fine/Library/Application Support/typora-user-images/image-20210107164031175.png)</p>
-<p>![image-20210107164043213](/Users/fine/Library/Application Support/typora-user-images/image-20210107164043213.png)</p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107164148511.png" alt="image-20210107164148511"></p>
-<h1 id="路由表下一跳"><a href="#路由表下一跳" class="headerlink" title="路由表下一跳"></a>路由表下一跳</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107164521306.png" alt="image-20210107164521306"></p>
-<ul>
-<li>子网掩码，逐位相与</li>
-</ul>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107164836786.png" alt="image-20210107164836786"></p>
-<h1 id="网桥转发表"><a href="#网桥转发表" class="headerlink" title="网桥转发表"></a>网桥转发表</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107164853878.png" alt="image-20210107164853878"></p>
-<p> <img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107165539095.png" alt="image-20210107165539095"></p>
-<h1 id="子网划分"><a href="#子网划分" class="headerlink" title="子网划分"></a>子网划分</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107165606990.png" alt="image-20210107165606990"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107165617908.png" alt="image-20210107165617908"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107170011105.png" alt="image-20210107170011105"></p>
-<ul>
-<li>主机位要留5位，子网号3位</li>
-<li>子网掩码即每位都令为1</li>
-<li>网络地址即令主机位排列组合，除去全0全1情况</li>
-<li>广播地址即令主机位全为1</li>
-<li>主机地址范围即为主机号范围</li>
-</ul>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107170500451.png" alt="image-20210107170500451"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107170510635.png" alt="image-20210107170510635"></p>
-<ul>
-<li>各个子网划分不能重叠</li>
-</ul>
-<h1 id="拥塞控制算法"><a href="#拥塞控制算法" class="headerlink" title="拥塞控制算法"></a>拥塞控制算法</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107170603812.png" alt="image-20210107170603812"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107170612183.png" alt="image-20210107170612183"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107170913389.png" alt="image-20210107170913389"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171123968.png" alt="image-20210107171123968"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171202459.png" alt="image-20210107171202459"></p>
-<ul>
-<li>开始 慢开始，指数增加cwnd，第一轮为2，第0轮为1</li>
-<li>然后达到阈值，拥塞避免，加法增加cwnd</li>
-<li>遇到超时，直接重开，且阈值改变为 超时/2</li>
-<li>遇到重复ACK，报文段丢失，启动快重传，快恢复，从新阈值重新开始</li>
-</ul>
+    <title>线性代数第七章——方阵对角化及其应用</title>
+    <url>/posts/b60ddbe5/</url>
+    <content><![CDATA[<h1 id="规范正交化"><a href="#规范正交化" class="headerlink" title="规范正交化"></a>规范正交化</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109201509010.png" alt="image-20210109201509010"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109201809185.png" alt="image-20210109201809185"></p>
+<h1 id="求矩阵的特征值"><a href="#求矩阵的特征值" class="headerlink" title="求矩阵的特征值"></a>求矩阵的特征值</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109201906847.png" alt="image-20210109201906847"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109201934012.png" alt="image-20210109201934012"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109202023128.png" alt="image-20210109202023128"></p>
+<h1 id="求矩阵的特征向量"><a href="#求矩阵的特征向量" class="headerlink" title="求矩阵的特征向量"></a>求矩阵的特征向量</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109202047908.png" alt="image-20210109202047908"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109202211400.png" alt="image-20210109202211400"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109202307519.png" alt="image-20210109202307519"></p>
+<h1 id="判断方阵是否与对角线相似-是否满足-P-1AP-A’"><a href="#判断方阵是否与对角线相似-是否满足-P-1AP-A’" class="headerlink" title="判断方阵是否与对角线相似/是否满足$P^-1AP=A’$"></a>判断方阵是否与对角线相似/是否满足$P^-1AP=A’$</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109202550322.png"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109202606181.png" alt="image-20210109202606181"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109202624066.png" alt="image-20210109202624066"></p>
+<h1 id="求方阵对应的对角阵A’及相应变换矩阵P"><a href="#求方阵对应的对角阵A’及相应变换矩阵P" class="headerlink" title="求方阵对应的对角阵A’及相应变换矩阵P"></a>求方阵对应的对角阵A’及相应变换矩阵P</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109202720868.png" alt="image-20210109202720868"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109202956836.png" alt="image-20210109202956836"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109203004147.png" alt="image-20210109203004147"></p>
+<h1 id="已知-P-1AP-A’-，求关于A的复杂式子"><a href="#已知-P-1AP-A’-，求关于A的复杂式子" class="headerlink" title="已知$P^-1AP=A’$，求关于A的复杂式子"></a>已知$P^-1AP=A’$，求关于A的复杂式子</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109203115365.png" alt="image-20210109203115365"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109203158489.png" alt="image-20210109203158489"></p>
 ]]></content>
       <categories>
-        <category>计算机网络</category>
+        <category>线性代数</category>
       </categories>
       <tags>
         <tag>share</tag>
@@ -2045,140 +1971,70 @@
       </tags>
   </entry>
   <entry>
-    <title>计网第五章——传输层</title>
-    <url>/posts/bef5de24/</url>
-    <content><![CDATA[<h1 id="传输层概述"><a href="#传输层概述" class="headerlink" title="传输层概述"></a>传输层概述</h1><blockquote>
-<p>只有主机才有的层次</p>
-</blockquote>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106203651985.png" alt="image-20210106203651985"></p>
-<h2 id="传输层的功能："><a href="#传输层的功能：" class="headerlink" title="传输层的功能："></a>传输层的功能：</h2><ol>
-<li>传输层提供进程和进程之间的逻辑通信<ul>
-<li>网络层提供主机之间的逻辑通信</li>
-</ul>
-</li>
-<li>复用和分用</li>
-<li>传输层对收到的报文进行差错检测</li>
-<li>传输层的两种协议</li>
-</ol>
-<h2 id="传输层的两个协议"><a href="#传输层的两个协议" class="headerlink" title="传输层的两个协议"></a>传输层的两个协议</h2><ol>
-<li>TCP<ul>
-<li>可靠，面向连接，时延大，适用于大文件</li>
-<li><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106203957423.png" alt="image-20210106203957423"></li>
-</ul>
-</li>
-<li>UDP<ul>
-<li>不可靠，无连接，时延小，适用于小文件</li>
-<li><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106204024722.png" alt="image-20210106204024722"></li>
-</ul>
-</li>
-</ol>
-<h2 id="传输层的寻址与端口"><a href="#传输层的寻址与端口" class="headerlink" title="传输层的寻址与端口"></a>传输层的寻址与端口</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106204332134.png" alt="image-20210106204332134"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106204436327.png" alt="image-20210106204436327"></p>
-<h1 id="UDP协议"><a href="#UDP协议" class="headerlink" title="UDP协议"></a>UDP协议</h1><h2 id="用户数据报协议UDP概述"><a href="#用户数据报协议UDP概述" class="headerlink" title="用户数据报协议UDP概述"></a>用户数据报协议UDP概述</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106204939137.png" alt="image-20210106204939137"></p>
-<h2 id="UDP首部格式"><a href="#UDP首部格式" class="headerlink" title="UDP首部格式"></a>UDP首部格式</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106205119624.png" alt="image-20210106205119624"></p>
-<h2 id="UDP校验"><a href="#UDP校验" class="headerlink" title="UDP校验"></a>UDP校验</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106205245867.png" alt="image-20210106205245867"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106205457833.png" alt="image-20210106205457833"></p>
-<h1 id="TCP协议"><a href="#TCP协议" class="headerlink" title="TCP协议"></a>TCP协议</h1><h2 id="TCP协议特点"><a href="#TCP协议特点" class="headerlink" title="TCP协议特点"></a>TCP协议特点</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106205855121.png" alt="image-20210106205855121"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106205913699.png" alt="image-20210106205913699"></p>
-<h2 id="TCP报文段首部格式"><a href="#TCP报文段首部格式" class="headerlink" title="TCP报文段首部格式"></a>TCP报文段首部格式</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106210243437.png" alt="image-20210106210243437"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106210625372.png" alt="image-20210106210625372"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106210857046.png" alt="image-20210106210857046"></p>
-<h2 id="TCP连接管理"><a href="#TCP连接管理" class="headerlink" title="TCP连接管理"></a>TCP连接管理</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106211038166.png" alt="image-20210106211038166"></p>
-<h3 id="TCP连接建立"><a href="#TCP连接建立" class="headerlink" title="TCP连接建立"></a>TCP连接建立</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106211413095.png" alt="image-20210106211413095"></p>
-<h3 id="SYN洪泛攻击"><a href="#SYN洪泛攻击" class="headerlink" title="SYN洪泛攻击"></a>SYN洪泛攻击</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106211503642.png" alt="image-20210106211503642"></p>
-<h3 id="TCP的连接释放"><a href="#TCP的连接释放" class="headerlink" title="TCP的连接释放"></a>TCP的连接释放</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106211533122.png" alt="image-20210106211533122"></p>
-<p>![image-20210106211807812](/Users/fine/Library/Application Support/typora-user-images/image-20210106211807812.png)</p>
-<h2 id="TCP可靠传输"><a href="#TCP可靠传输" class="headerlink" title="TCP可靠传输"></a>TCP可靠传输</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106211922707.png" alt="image-20210106211922707"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106212223019.png" alt="image-20210106212223019"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106212411228.png" alt="image-20210106212411228"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106212517585.png" alt="image-20210106212517585"></p>
-<h2 id="TCP流量控制"><a href="#TCP流量控制" class="headerlink" title="TCP流量控制"></a>TCP流量控制</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106212811492.png" alt="image-20210106212811492"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106213238466.png" alt="image-20210106213238466"></p>
+    <title>计网应用题</title>
+    <url>/posts/9648dc07/</url>
+    <content><![CDATA[<h1 id="冗余码计算"><a href="#冗余码计算" class="headerlink" title="冗余码计算"></a>冗余码计算</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171634481.png" alt="image-20210107171634481"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171648084.png" alt="image-20210107171648084"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171721030.png" alt="image-20210107171721030"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171740599.png" alt="image-20210107171740599"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171749408.png" alt="image-20210107171749408"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171800007.png" alt="image-20210107171800007"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171827008.png" alt="image-20210107171827008"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171852899.png" alt="image-20210107171852899"></p>
 <ul>
-<li>窗口为0后，AB互相等待。B可能发了一个信息给A说可以传了，但是信息丢失了，而A又不知道丢了，就一直等。</li>
-<li>解决方法：持续计时器</li>
+<li>运算时候用异或，同0异1</li>
 </ul>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106213445309.png" alt="image-20210106213445309"></p>
-<h2 id="TCP拥塞控制"><a href="#TCP拥塞控制" class="headerlink" title="TCP拥塞控制"></a>TCP拥塞控制</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106213714802.png" alt="image-20210106213714802"></p>
-<h3 id="拥塞控制的四种算法"><a href="#拥塞控制的四种算法" class="headerlink" title="拥塞控制的四种算法"></a>拥塞控制的四种算法</h3><ul>
-<li>慢开始</li>
-<li>拥塞避免</li>
-</ul>
+<h1 id="数据报分片"><a href="#数据报分片" class="headerlink" title="数据报分片"></a>数据报分片</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171905980.png" alt="image-20210107171905980"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171924869.png" alt="image-20210107171924869"></p>
 <ul>
-<li>快重传</li>
-<li>快恢复</li>
+<li>数据报长度 = 数据部分长度+首部长度</li>
 </ul>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106213918554.png" alt="image-20210106213918554"></p>
-<h3 id="慢开始和拥塞避免"><a href="#慢开始和拥塞避免" class="headerlink" title="慢开始和拥塞避免"></a>慢开始和拥塞避免</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106214101985.png" alt="image-20210106214101985"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106214348119.png" alt="image-20210106214348119"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107172025702.png" alt="image-20210107172025702"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107172151402.png" alt="image-20210107172151402"></p>
 <ul>
-<li>新的ssthresh的初始值为原来的除以2</li>
+<li>MTU为1500字节</li>
 </ul>
-<h3 id="快重传和快恢复"><a href="#快重传和快恢复" class="headerlink" title="快重传和快恢复"></a>快重传和快恢复</h3><p>![image-20210106214652844](/Users/fine/Library/Application Support/typora-user-images/image-20210106214652844.png)</p>
-<h1 id="传输层总结"><a href="#传输层总结" class="headerlink" title="传输层总结"></a>传输层总结</h1><p>xmind</p>
-]]></content>
-      <categories>
-        <category>计算机网络</category>
-      </categories>
-      <tags>
-        <tag>share</tag>
-        <tag>notes</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>计网第六章——应用层</title>
-    <url>/posts/9c3a6023/</url>
-    <content><![CDATA[<h1 id="应用层概述"><a href="#应用层概述" class="headerlink" title="应用层概述"></a>应用层概述</h1><blockquote>
-<p>应用层对应用程序的通信提供服务。</p>
-</blockquote>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106215449349.png" alt="image-20210106215449349"></p>
-<h2 id="应用层协议定义"><a href="#应用层协议定义" class="headerlink" title="应用层协议定义"></a>应用层协议定义</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106215500877.png" alt="image-20210106215500877"></p>
-<h2 id="应用层功能"><a href="#应用层功能" class="headerlink" title="应用层功能"></a>应用层功能</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106215516080.png" alt="image-20210106215516080"></p>
-<h2 id="应用层重要协议"><a href="#应用层重要协议" class="headerlink" title="应用层重要协议"></a>应用层重要协议</h2><ul>
-<li>FTP</li>
-<li>SMTP、POP3</li>
-<li>HTTP</li>
-<li>DNS</li>
-</ul>
-<h2 id="网络应用模型"><a href="#网络应用模型" class="headerlink" title="网络应用模型"></a>网络应用模型</h2><ul>
-<li>客户/ 服务器模型（Client/Server）</li>
-<li>P2P模型（Peer-to-peer）</li>
-</ul>
-<h3 id="客户-服务器模型（Client-Server）"><a href="#客户-服务器模型（Client-Server）" class="headerlink" title="客户/ 服务器模型（Client/Server）"></a>客户/ 服务器模型（Client/Server）</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106215838884.png" alt="image-20210106215838884"></p>
-<h3 id="P2P模型"><a href="#P2P模型" class="headerlink" title="P2P模型"></a>P2P模型</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106220023192.png" alt="image-20210106220023192"></p>
-<h1 id="DNS系统"><a href="#DNS系统" class="headerlink" title="DNS系统"></a>DNS系统</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106221047582.png" alt="image-20210106221047582"></p>
-<h2 id="域名"><a href="#域名" class="headerlink" title="域名"></a>域名</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106221339816.png" alt="image-20210106221339816"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106221354211.png" alt="image-20210106221354211"></p>
-<h2 id="域名服务器"><a href="#域名服务器" class="headerlink" title="域名服务器"></a>域名服务器</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106221905213.png" alt="image-20210106221905213"></p>
-<h2 id="域名解析过程"><a href="#域名解析过程" class="headerlink" title="域名解析过程"></a>域名解析过程</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106222009482.png" alt="image-20210106222009482"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106222316434.png" alt="image-20210106222316434"></p>
-<h1 id="文件传输协议FTP"><a href="#文件传输协议FTP" class="headerlink" title="文件传输协议FTP"></a>文件传输协议FTP</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106222436541.png" alt="image-20210106222436541"></p>
-<h2 id="FTP服务器和用户端"><a href="#FTP服务器和用户端" class="headerlink" title="FTP服务器和用户端"></a>FTP服务器和用户端</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106222522785.png" alt="image-20210106222522785"></p>
-<h2 id="FTP工作原理"><a href="#FTP工作原理" class="headerlink" title="FTP工作原理"></a>FTP工作原理</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106222743640.png" alt="image-20210106222743640"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223022264.png" alt="image-20210106223022264"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223032369.png" alt="image-20210106223032369"></p>
-<h2 id="电子邮件"><a href="#电子邮件" class="headerlink" title="电子邮件"></a>电子邮件</h2><h3 id="电子邮件的信息格式"><a href="#电子邮件的信息格式" class="headerlink" title="电子邮件的信息格式"></a>电子邮件的信息格式</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223152420.png" alt="image-20210106223152420"></p>
-<h3 id="电子邮件系统组成结构"><a href="#电子邮件系统组成结构" class="headerlink" title="电子邮件系统组成结构"></a>电子邮件系统组成结构</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223422693.png" alt="image-20210106223422693"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223452512.png" alt="image-20210106223452512"></p>
-<h2 id="简单邮件传送协议SMTP"><a href="#简单邮件传送协议SMTP" class="headerlink" title="简单邮件传送协议SMTP"></a>简单邮件传送协议SMTP</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223532031.png" alt="image-20210106223532031"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223726695.png" alt="image-20210106223726695"></p>
-<p>缺点：</p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223812569.png" alt="image-20210106223812569"></p>
-<h2 id="MIME"><a href="#MIME" class="headerlink" title="MIME"></a>MIME</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223835956.png" alt="image-20210106223835956"></p>
-<h2 id="邮局协议POP3"><a href="#邮局协议POP3" class="headerlink" title="邮局协议POP3"></a>邮局协议POP3</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223938956.png" alt="image-20210106223938956"></p>
-<h2 id="网际报文存取协议IMAP"><a href="#网际报文存取协议IMAP" class="headerlink" title="网际报文存取协议IMAP"></a>网际报文存取协议IMAP</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224018876.png" alt="image-20210106224018876"></p>
-<h2 id="基于万维网的电子邮件"><a href="#基于万维网的电子邮件" class="headerlink" title="基于万维网的电子邮件"></a>基于万维网的电子邮件</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224052288.png" alt="image-20210106224052288"></p>
-<h2 id="邮件脑图"><a href="#邮件脑图" class="headerlink" title="邮件脑图"></a>邮件脑图</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224108106.png" alt="image-20210106224108106"></p>
-<h1 id="万维网"><a href="#万维网" class="headerlink" title="万维网"></a>万维网</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224309444.png" alt="image-20210106224309444"></p>
-<h1 id="超文本传输协议HTTP"><a href="#超文本传输协议HTTP" class="headerlink" title="超文本传输协议HTTP"></a>超文本传输协议HTTP</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224439705.png" alt="image-20210106224439705"></p>
-<h2 id="HTTP协议的特点"><a href="#HTTP协议的特点" class="headerlink" title="HTTP协议的特点"></a>HTTP协议的特点</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224609080.png" alt="image-20210106224609080"></p>
-<h2 id="HTTP协议的连接方式"><a href="#HTTP协议的连接方式" class="headerlink" title="HTTP协议的连接方式"></a>HTTP协议的连接方式</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224644852.png" alt="image-20210106224644852"></p>
+<h1 id="码分多址通信"><a href="#码分多址通信" class="headerlink" title="码分多址通信"></a>码分多址通信</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107172232286.png" alt="image-20210107172232286"></p>
+<h1 id="地址聚合"><a href="#地址聚合" class="headerlink" title="地址聚合"></a>地址聚合</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107163635796.png" alt="image-20210107163635796"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107163701071.png" alt="image-20210107163701071"></p>
+<h1 id="路由表更新"><a href="#路由表更新" class="headerlink" title="路由表更新"></a>路由表更新</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107163748580.png" alt="image-20210107163748580"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107163856330.png" alt="image-20210107163856330"></p>
+<p>![image-20210107164031175](/Users/fine/Library/Application Support/typora-user-images/image-20210107164031175.png)</p>
+<p>![image-20210107164043213](/Users/fine/Library/Application Support/typora-user-images/image-20210107164043213.png)</p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107164148511.png" alt="image-20210107164148511"></p>
+<h1 id="路由表下一跳"><a href="#路由表下一跳" class="headerlink" title="路由表下一跳"></a>路由表下一跳</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107164521306.png" alt="image-20210107164521306"></p>
 <ul>
-<li>非流水线式（停等）</li>
+<li>子网掩码，逐位相与</li>
 </ul>
-<h2 id="HTTP报文结构"><a href="#HTTP报文结构" class="headerlink" title="HTTP报文结构"></a>HTTP报文结构</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224848264.png" alt="image-20210106224848264"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106225020029.png" alt="image-20210106225020029"></p>
-<h1 id="应用层总结"><a href="#应用层总结" class="headerlink" title="应用层总结"></a>应用层总结</h1><p>xmid</p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107164836786.png" alt="image-20210107164836786"></p>
+<h1 id="网桥转发表"><a href="#网桥转发表" class="headerlink" title="网桥转发表"></a>网桥转发表</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107164853878.png" alt="image-20210107164853878"></p>
+<p> <img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107165539095.png" alt="image-20210107165539095"></p>
+<h1 id="子网划分"><a href="#子网划分" class="headerlink" title="子网划分"></a>子网划分</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107165606990.png" alt="image-20210107165606990"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107165617908.png" alt="image-20210107165617908"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107170011105.png" alt="image-20210107170011105"></p>
+<ul>
+<li>主机位要留5位，子网号3位</li>
+<li>子网掩码即每位都令为1</li>
+<li>网络地址即令主机位排列组合，除去全0全1情况</li>
+<li>广播地址即令主机位全为1</li>
+<li>主机地址范围即为主机号范围</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107170500451.png" alt="image-20210107170500451"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107170510635.png" alt="image-20210107170510635"></p>
+<ul>
+<li>各个子网划分不能重叠</li>
+</ul>
+<h1 id="拥塞控制算法"><a href="#拥塞控制算法" class="headerlink" title="拥塞控制算法"></a>拥塞控制算法</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107170603812.png" alt="image-20210107170603812"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107170612183.png" alt="image-20210107170612183"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107170913389.png" alt="image-20210107170913389"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171123968.png" alt="image-20210107171123968"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210107171202459.png" alt="image-20210107171202459"></p>
+<ul>
+<li>开始 慢开始，指数增加cwnd，第一轮为2，第0轮为1</li>
+<li>然后达到阈值，拥塞避免，加法增加cwnd</li>
+<li>遇到超时，直接重开，且阈值改变为 超时/2</li>
+<li>遇到重复ACK，报文段丢失，启动快重传，快恢复，从新阈值重新开始</li>
+</ul>
 ]]></content>
       <categories>
         <category>计算机网络</category>
@@ -2446,6 +2302,150 @@
 <h1 id="物理层设备"><a href="#物理层设备" class="headerlink" title="物理层设备"></a>物理层设备</h1><h2 id="中继器"><a href="#中继器" class="headerlink" title="中继器"></a>中继器</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102203530197.png" alt="image-20210102203530197"></p>
 <h2 id="集线器（多口中继器）"><a href="#集线器（多口中继器）" class="headerlink" title="集线器（多口中继器）"></a>集线器（多口中继器）</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102205012908.png" alt="image-20210102205012908"></p>
 <h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210102204904877.png"></p>
+]]></content>
+      <categories>
+        <category>计算机网络</category>
+      </categories>
+      <tags>
+        <tag>share</tag>
+        <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>计网第六章——应用层</title>
+    <url>/posts/9c3a6023/</url>
+    <content><![CDATA[<h1 id="应用层概述"><a href="#应用层概述" class="headerlink" title="应用层概述"></a>应用层概述</h1><blockquote>
+<p>应用层对应用程序的通信提供服务。</p>
+</blockquote>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106215449349.png" alt="image-20210106215449349"></p>
+<h2 id="应用层协议定义"><a href="#应用层协议定义" class="headerlink" title="应用层协议定义"></a>应用层协议定义</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106215500877.png" alt="image-20210106215500877"></p>
+<h2 id="应用层功能"><a href="#应用层功能" class="headerlink" title="应用层功能"></a>应用层功能</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106215516080.png" alt="image-20210106215516080"></p>
+<h2 id="应用层重要协议"><a href="#应用层重要协议" class="headerlink" title="应用层重要协议"></a>应用层重要协议</h2><ul>
+<li>FTP</li>
+<li>SMTP、POP3</li>
+<li>HTTP</li>
+<li>DNS</li>
+</ul>
+<h2 id="网络应用模型"><a href="#网络应用模型" class="headerlink" title="网络应用模型"></a>网络应用模型</h2><ul>
+<li>客户/ 服务器模型（Client/Server）</li>
+<li>P2P模型（Peer-to-peer）</li>
+</ul>
+<h3 id="客户-服务器模型（Client-Server）"><a href="#客户-服务器模型（Client-Server）" class="headerlink" title="客户/ 服务器模型（Client/Server）"></a>客户/ 服务器模型（Client/Server）</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106215838884.png" alt="image-20210106215838884"></p>
+<h3 id="P2P模型"><a href="#P2P模型" class="headerlink" title="P2P模型"></a>P2P模型</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106220023192.png" alt="image-20210106220023192"></p>
+<h1 id="DNS系统"><a href="#DNS系统" class="headerlink" title="DNS系统"></a>DNS系统</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106221047582.png" alt="image-20210106221047582"></p>
+<h2 id="域名"><a href="#域名" class="headerlink" title="域名"></a>域名</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106221339816.png" alt="image-20210106221339816"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106221354211.png" alt="image-20210106221354211"></p>
+<h2 id="域名服务器"><a href="#域名服务器" class="headerlink" title="域名服务器"></a>域名服务器</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106221905213.png" alt="image-20210106221905213"></p>
+<h2 id="域名解析过程"><a href="#域名解析过程" class="headerlink" title="域名解析过程"></a>域名解析过程</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106222009482.png" alt="image-20210106222009482"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106222316434.png" alt="image-20210106222316434"></p>
+<h1 id="文件传输协议FTP"><a href="#文件传输协议FTP" class="headerlink" title="文件传输协议FTP"></a>文件传输协议FTP</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106222436541.png" alt="image-20210106222436541"></p>
+<h2 id="FTP服务器和用户端"><a href="#FTP服务器和用户端" class="headerlink" title="FTP服务器和用户端"></a>FTP服务器和用户端</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106222522785.png" alt="image-20210106222522785"></p>
+<h2 id="FTP工作原理"><a href="#FTP工作原理" class="headerlink" title="FTP工作原理"></a>FTP工作原理</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106222743640.png" alt="image-20210106222743640"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223022264.png" alt="image-20210106223022264"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223032369.png" alt="image-20210106223032369"></p>
+<h2 id="电子邮件"><a href="#电子邮件" class="headerlink" title="电子邮件"></a>电子邮件</h2><h3 id="电子邮件的信息格式"><a href="#电子邮件的信息格式" class="headerlink" title="电子邮件的信息格式"></a>电子邮件的信息格式</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223152420.png" alt="image-20210106223152420"></p>
+<h3 id="电子邮件系统组成结构"><a href="#电子邮件系统组成结构" class="headerlink" title="电子邮件系统组成结构"></a>电子邮件系统组成结构</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223422693.png" alt="image-20210106223422693"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223452512.png" alt="image-20210106223452512"></p>
+<h2 id="简单邮件传送协议SMTP"><a href="#简单邮件传送协议SMTP" class="headerlink" title="简单邮件传送协议SMTP"></a>简单邮件传送协议SMTP</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223532031.png" alt="image-20210106223532031"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223726695.png" alt="image-20210106223726695"></p>
+<p>缺点：</p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223812569.png" alt="image-20210106223812569"></p>
+<h2 id="MIME"><a href="#MIME" class="headerlink" title="MIME"></a>MIME</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223835956.png" alt="image-20210106223835956"></p>
+<h2 id="邮局协议POP3"><a href="#邮局协议POP3" class="headerlink" title="邮局协议POP3"></a>邮局协议POP3</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106223938956.png" alt="image-20210106223938956"></p>
+<h2 id="网际报文存取协议IMAP"><a href="#网际报文存取协议IMAP" class="headerlink" title="网际报文存取协议IMAP"></a>网际报文存取协议IMAP</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224018876.png" alt="image-20210106224018876"></p>
+<h2 id="基于万维网的电子邮件"><a href="#基于万维网的电子邮件" class="headerlink" title="基于万维网的电子邮件"></a>基于万维网的电子邮件</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224052288.png" alt="image-20210106224052288"></p>
+<h2 id="邮件脑图"><a href="#邮件脑图" class="headerlink" title="邮件脑图"></a>邮件脑图</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224108106.png" alt="image-20210106224108106"></p>
+<h1 id="万维网"><a href="#万维网" class="headerlink" title="万维网"></a>万维网</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224309444.png" alt="image-20210106224309444"></p>
+<h1 id="超文本传输协议HTTP"><a href="#超文本传输协议HTTP" class="headerlink" title="超文本传输协议HTTP"></a>超文本传输协议HTTP</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224439705.png" alt="image-20210106224439705"></p>
+<h2 id="HTTP协议的特点"><a href="#HTTP协议的特点" class="headerlink" title="HTTP协议的特点"></a>HTTP协议的特点</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224609080.png" alt="image-20210106224609080"></p>
+<h2 id="HTTP协议的连接方式"><a href="#HTTP协议的连接方式" class="headerlink" title="HTTP协议的连接方式"></a>HTTP协议的连接方式</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224644852.png" alt="image-20210106224644852"></p>
+<ul>
+<li>非流水线式（停等）</li>
+</ul>
+<h2 id="HTTP报文结构"><a href="#HTTP报文结构" class="headerlink" title="HTTP报文结构"></a>HTTP报文结构</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106224848264.png" alt="image-20210106224848264"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106225020029.png" alt="image-20210106225020029"></p>
+<h1 id="应用层总结"><a href="#应用层总结" class="headerlink" title="应用层总结"></a>应用层总结</h1><p>xmid</p>
+]]></content>
+      <categories>
+        <category>计算机网络</category>
+      </categories>
+      <tags>
+        <tag>share</tag>
+        <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>计网第五章——传输层</title>
+    <url>/posts/bef5de24/</url>
+    <content><![CDATA[<h1 id="传输层概述"><a href="#传输层概述" class="headerlink" title="传输层概述"></a>传输层概述</h1><blockquote>
+<p>只有主机才有的层次</p>
+</blockquote>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106203651985.png" alt="image-20210106203651985"></p>
+<h2 id="传输层的功能："><a href="#传输层的功能：" class="headerlink" title="传输层的功能："></a>传输层的功能：</h2><ol>
+<li>传输层提供进程和进程之间的逻辑通信<ul>
+<li>网络层提供主机之间的逻辑通信</li>
+</ul>
+</li>
+<li>复用和分用</li>
+<li>传输层对收到的报文进行差错检测</li>
+<li>传输层的两种协议</li>
+</ol>
+<h2 id="传输层的两个协议"><a href="#传输层的两个协议" class="headerlink" title="传输层的两个协议"></a>传输层的两个协议</h2><ol>
+<li>TCP<ul>
+<li>可靠，面向连接，时延大，适用于大文件</li>
+<li><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106203957423.png" alt="image-20210106203957423"></li>
+</ul>
+</li>
+<li>UDP<ul>
+<li>不可靠，无连接，时延小，适用于小文件</li>
+<li><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106204024722.png" alt="image-20210106204024722"></li>
+</ul>
+</li>
+</ol>
+<h2 id="传输层的寻址与端口"><a href="#传输层的寻址与端口" class="headerlink" title="传输层的寻址与端口"></a>传输层的寻址与端口</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106204332134.png" alt="image-20210106204332134"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106204436327.png" alt="image-20210106204436327"></p>
+<h1 id="UDP协议"><a href="#UDP协议" class="headerlink" title="UDP协议"></a>UDP协议</h1><h2 id="用户数据报协议UDP概述"><a href="#用户数据报协议UDP概述" class="headerlink" title="用户数据报协议UDP概述"></a>用户数据报协议UDP概述</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106204939137.png" alt="image-20210106204939137"></p>
+<h2 id="UDP首部格式"><a href="#UDP首部格式" class="headerlink" title="UDP首部格式"></a>UDP首部格式</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106205119624.png" alt="image-20210106205119624"></p>
+<h2 id="UDP校验"><a href="#UDP校验" class="headerlink" title="UDP校验"></a>UDP校验</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106205245867.png" alt="image-20210106205245867"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106205457833.png" alt="image-20210106205457833"></p>
+<h1 id="TCP协议"><a href="#TCP协议" class="headerlink" title="TCP协议"></a>TCP协议</h1><h2 id="TCP协议特点"><a href="#TCP协议特点" class="headerlink" title="TCP协议特点"></a>TCP协议特点</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106205855121.png" alt="image-20210106205855121"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106205913699.png" alt="image-20210106205913699"></p>
+<h2 id="TCP报文段首部格式"><a href="#TCP报文段首部格式" class="headerlink" title="TCP报文段首部格式"></a>TCP报文段首部格式</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106210243437.png" alt="image-20210106210243437"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106210625372.png" alt="image-20210106210625372"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106210857046.png" alt="image-20210106210857046"></p>
+<h2 id="TCP连接管理"><a href="#TCP连接管理" class="headerlink" title="TCP连接管理"></a>TCP连接管理</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106211038166.png" alt="image-20210106211038166"></p>
+<h3 id="TCP连接建立"><a href="#TCP连接建立" class="headerlink" title="TCP连接建立"></a>TCP连接建立</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106211413095.png" alt="image-20210106211413095"></p>
+<h3 id="SYN洪泛攻击"><a href="#SYN洪泛攻击" class="headerlink" title="SYN洪泛攻击"></a>SYN洪泛攻击</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106211503642.png" alt="image-20210106211503642"></p>
+<h3 id="TCP的连接释放"><a href="#TCP的连接释放" class="headerlink" title="TCP的连接释放"></a>TCP的连接释放</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106211533122.png" alt="image-20210106211533122"></p>
+<p>![image-20210106211807812](/Users/fine/Library/Application Support/typora-user-images/image-20210106211807812.png)</p>
+<h2 id="TCP可靠传输"><a href="#TCP可靠传输" class="headerlink" title="TCP可靠传输"></a>TCP可靠传输</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106211922707.png" alt="image-20210106211922707"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106212223019.png" alt="image-20210106212223019"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106212411228.png" alt="image-20210106212411228"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106212517585.png" alt="image-20210106212517585"></p>
+<h2 id="TCP流量控制"><a href="#TCP流量控制" class="headerlink" title="TCP流量控制"></a>TCP流量控制</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106212811492.png" alt="image-20210106212811492"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106213238466.png" alt="image-20210106213238466"></p>
+<ul>
+<li>窗口为0后，AB互相等待。B可能发了一个信息给A说可以传了，但是信息丢失了，而A又不知道丢了，就一直等。</li>
+<li>解决方法：持续计时器</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106213445309.png" alt="image-20210106213445309"></p>
+<h2 id="TCP拥塞控制"><a href="#TCP拥塞控制" class="headerlink" title="TCP拥塞控制"></a>TCP拥塞控制</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106213714802.png" alt="image-20210106213714802"></p>
+<h3 id="拥塞控制的四种算法"><a href="#拥塞控制的四种算法" class="headerlink" title="拥塞控制的四种算法"></a>拥塞控制的四种算法</h3><ul>
+<li>慢开始</li>
+<li>拥塞避免</li>
+</ul>
+<ul>
+<li>快重传</li>
+<li>快恢复</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106213918554.png" alt="image-20210106213918554"></p>
+<h3 id="慢开始和拥塞避免"><a href="#慢开始和拥塞避免" class="headerlink" title="慢开始和拥塞避免"></a>慢开始和拥塞避免</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106214101985.png" alt="image-20210106214101985"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210106214348119.png" alt="image-20210106214348119"></p>
+<ul>
+<li>新的ssthresh的初始值为原来的除以2</li>
+</ul>
+<h3 id="快重传和快恢复"><a href="#快重传和快恢复" class="headerlink" title="快重传和快恢复"></a>快重传和快恢复</h3><p>![image-20210106214652844](/Users/fine/Library/Application Support/typora-user-images/image-20210106214652844.png)</p>
+<h1 id="传输层总结"><a href="#传输层总结" class="headerlink" title="传输层总结"></a>传输层总结</h1><p>xmind</p>
 ]]></content>
       <categories>
         <category>计算机网络</category>
