@@ -19,125 +19,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>java枚举类与注解</title>
-    <url>/posts/2b247dfd/</url>
-    <content><![CDATA[<h1 id="枚举类"><a href="#枚举类" class="headerlink" title="枚举类"></a>枚举类</h1><h2 id="枚举类的使用"><a href="#枚举类的使用" class="headerlink" title="枚举类的使用"></a>枚举类的使用</h2><p><strong>1. 枚举类的理解：类的对象只有有限个、确定的。</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210215185948689.png" alt="image-20210215185948689"></p>
-<ol start="2">
-<li><p><strong>当需要定义一组常量时，强烈建议使用枚举类</strong></p>
-</li>
-<li><p>若枚举类只有一个对象，则可以作为一种单例模式的实现方式。</p>
-</li>
-</ol>
-<h2 id="如何自定义枚举类"><a href="#如何自定义枚举类" class="headerlink" title="如何自定义枚举类"></a>如何自定义枚举类</h2><p>方式一：jdk5.0之前，自定义枚举类</p>
-<p>方式二：jdk5.0，可以使用enum关键字定义枚举类</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Season spring = Season.SPRING;</span><br><span class="line">        System.out.println(spring);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Season</span> </span>&#123;</span><br><span class="line">    <span class="comment">//1. 声明色season对象的属性：private final 修饰</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> String seasonName;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> String seasonDesc;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//2. 私有化类的构造器，并给对象赋值</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Season</span><span class="params">(String seasonName, String seasonDesc)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.seasonName = seasonName;</span><br><span class="line">        <span class="keyword">this</span>.seasonDesc = seasonDesc;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//3. 提供当前枚举类的多个对象: public static final</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Season SPRING = <span class="keyword">new</span> Season(<span class="string">&quot;春天&quot;</span>, <span class="string">&quot;春暖花开&quot;</span>);</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Season SUMMER = <span class="keyword">new</span> Season(<span class="string">&quot;夏天&quot;</span>, <span class="string">&quot;夏日炎炎&quot;</span>);</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Season AUTUMN = <span class="keyword">new</span> Season(<span class="string">&quot;秋天&quot;</span>, <span class="string">&quot;秋高气爽&quot;</span>);</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Season WINTER = <span class="keyword">new</span> Season(<span class="string">&quot;冬天&quot;</span>, <span class="string">&quot;大雪纷飞&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//4. 其他诉求1：获取枚举类对象的属性</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getSeasonName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> seasonName;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getSeasonDesc</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> seasonDesc;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//4. 其他诉求2：提供toString（）</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Season&#123;&quot;</span> +</span><br><span class="line">                <span class="string">&quot;seasonName=&#x27;&quot;</span> + seasonName + <span class="string">&#x27;\&#x27;&#x27;</span> +</span><br><span class="line">                <span class="string">&quot;, seasonDesc=&#x27;&quot;</span> + seasonDesc + <span class="string">&#x27;\&#x27;&#x27;</span> +</span><br><span class="line">                <span class="string">&#x27;&#125;&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Season1 spring = Season1.SPRING;</span><br><span class="line">        System.out.println(spring);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">enum</span> <span class="title">Season1</span> </span>&#123;</span><br><span class="line">    <span class="comment">//1. 提供当前枚举类的对象，多个对象之间用 【，】 隔开，每位对象【；】结束</span></span><br><span class="line">    SPRING(<span class="string">&quot;春天&quot;</span>, <span class="string">&quot;春暖花开&quot;</span>),</span><br><span class="line">    SUMMER(<span class="string">&quot;夏天&quot;</span>, <span class="string">&quot;夏日炎炎&quot;</span>),</span><br><span class="line">    AUTUMN(<span class="string">&quot;秋天&quot;</span>, <span class="string">&quot;秋高气爽&quot;</span>),</span><br><span class="line">    WINTER(<span class="string">&quot;冬天&quot;</span>, <span class="string">&quot;大雪纷飞&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//2. 声明色season对象的属性：private final 修饰</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> String seasonName;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> String seasonDesc;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//3. 私有化类的构造器，并给对象赋值</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Season1</span><span class="params">(String seasonName, String seasonDesc)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.seasonName = seasonName;</span><br><span class="line">        <span class="keyword">this</span>.seasonDesc = seasonDesc;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//4. 其他诉求2：提供toString（）</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Season1&#123;&quot;</span> +</span><br><span class="line">                <span class="string">&quot;seasonName=&#x27;&quot;</span> + seasonName + <span class="string">&#x27;\&#x27;&#x27;</span> +</span><br><span class="line">                <span class="string">&quot;, seasonDesc=&#x27;&quot;</span> + seasonDesc + <span class="string">&#x27;\&#x27;&#x27;</span> +</span><br><span class="line">                <span class="string">&#x27;&#125;&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="enum的主要方法"><a href="#enum的主要方法" class="headerlink" title="enum的主要方法"></a>enum的主要方法</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210215194658811.png" alt="image-20210215194658811"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210215194739223.png" alt="image-20210215194739223"></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AAA</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//values（）</span></span><br><span class="line">        Season1 [] values = Season1.values();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; values.length; i++) &#123;</span><br><span class="line">            System.out.println(values[i]);</span><br><span class="line">        &#125;</span><br><span class="line">      </span><br><span class="line">      System.out.println(<span class="string">&quot;+++++++++&quot;</span>);</span><br><span class="line">        <span class="comment">//valueOf(String objName):返回枚举类中对象名是objName的对象。字符转化为枚举类</span></span><br><span class="line">        Season1 winter = Season1.valueOf(<span class="string">&quot;WINTER&quot;</span>);</span><br><span class="line">        System.out.println(winter);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210215195858173.png" alt="image-20210215195858173"></p>
-<h2 id="使用enum关键字定义的枚举类实现接口的情况"><a href="#使用enum关键字定义的枚举类实现接口的情况" class="headerlink" title="使用enum关键字定义的枚举类实现接口的情况"></a>使用enum关键字定义的枚举类实现接口的情况</h2><p>情况一：实现接口，在enum类中实现接口方法</p>
-<p>情况二：让枚举类的对象分别实现接口中的方法</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Season1 spring = Season1.SPRING;</span><br><span class="line">        System.out.println(spring);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Info</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">enum</span> <span class="title">Season1</span> <span class="keyword">implements</span> <span class="title">Info</span> </span>&#123;</span><br><span class="line">   </span><br><span class="line">    <span class="comment">//1. 提供当前枚举类的对象，多个对象之间用 【，】 隔开，每位对象【；】结束</span></span><br><span class="line">    SPRING(<span class="string">&quot;春天&quot;</span>, <span class="string">&quot;春暖花开&quot;</span>),</span><br><span class="line">    SUMMER(<span class="string">&quot;夏天&quot;</span>, <span class="string">&quot;夏日炎炎&quot;</span>),</span><br><span class="line">    AUTUMN(<span class="string">&quot;秋天&quot;</span>, <span class="string">&quot;秋高气爽&quot;</span>),</span><br><span class="line">    WINTER(<span class="string">&quot;冬天&quot;</span>, <span class="string">&quot;大雪纷飞&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//2. 声明色season对象的属性：private final 修饰</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> String seasonName;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> String seasonDesc;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//3. 私有化类的构造器，并给对象赋值</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Season1</span><span class="params">(String seasonName, String seasonDesc)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.seasonName = seasonName;</span><br><span class="line">        <span class="keyword">this</span>.seasonDesc = seasonDesc;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="comment">//重写接口方法</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span>&#123;</span><br><span class="line">    system.out,println(<span class="string">&quot;...&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Season1 spring = Season1.SPRING;</span><br><span class="line">        System.out.println(spring);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Info</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">enum</span> <span class="title">Season1</span> <span class="keyword">implements</span> <span class="title">Info</span></span>&#123;</span><br><span class="line">    <span class="comment">//1. 提供当前枚举类的对象，多个对象之间用 【，】 隔开，每位对象【；】结束</span></span><br><span class="line">    SPRING(<span class="string">&quot;春天&quot;</span>, <span class="string">&quot;春暖花开&quot;</span>)&#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;...&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    SUMMER(<span class="string">&quot;夏天&quot;</span>, <span class="string">&quot;夏日炎炎&quot;</span>)&#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;pp&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    AUTUMN(<span class="string">&quot;秋天&quot;</span>, <span class="string">&quot;秋高气爽&quot;</span>)&#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;ss&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    WINTER(<span class="string">&quot;冬天&quot;</span>, <span class="string">&quot;大雪纷飞&quot;</span>) &#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;LL&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//2. 声明色season对象的属性：private final 修饰</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> String seasonName;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> String seasonDesc;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//3. 私有化类的构造器，并给对象赋值</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Season1</span><span class="params">(String seasonName, String seasonDesc)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.seasonName = seasonName;</span><br><span class="line">        <span class="keyword">this</span>.seasonDesc = seasonDesc;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h1 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210215212516225.png" alt="image-20210215212516225"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210215212526606.png" alt="image-20210215212526606"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210215212825335.png" alt="image-20210215212825335"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210215212849679.png" alt="image-20210215212849679"></p>
-<ol>
-<li><h2 id="理解Annotation"><a href="#理解Annotation" class="headerlink" title="理解Annotation"></a>理解Annotation</h2></li>
-</ol>
-<p>Annotation其实就是代码里的<strong>特殊标记</strong>，这些标记可以编译，类加载，运行时被读取，并执行相应的处理。可以在不改变原有逻辑的情况下，在源文件中嵌入一些补充信息。</p>
-<ol start="2">
-<li><h2 id="Annotation的使用用例"><a href="#Annotation的使用用例" class="headerlink" title="Annotation的使用用例"></a>Annotation的使用用例</h2><p>示例一：生成文档相关的注解</p>
-<p>示例二：在编译时进行格式检查</p>
-<p>​    @override</p>
-<p>​    @Deprecated</p>
-<p>​    @SuppressWarnings：抑制编译器警告</p>
-<p>实例三：跟踪代码依赖性，实现替代配置文件功能</p>
-</li>
-</ol>
-<ol start="3">
-<li><h2 id="如何自定义注解：参照suppressWarnings"><a href="#如何自定义注解：参照suppressWarnings" class="headerlink" title="如何自定义注解：参照suppressWarnings"></a>如何自定义注解：参照suppressWarnings</h2><p>①注解声明为：@interface</p>
-<p>②内部定义成员，通常用value（）表示</p>
-<p>③可以指定成员的默认值，使用default定义</p>
-<p>Ⅳ如果自定义注解没有成员，标明是一个标识作用</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> MyAnnotation &#123;</span><br><span class="line">	<span class="function">String <span class="title">value</span><span class="params">()</span> <span class="keyword">default</span> &quot;hello&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">@MyAnnotation(value = &quot;hi&quot;)</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>如果注解有成员，在使用注解时，需要指明成员的值。</p>
-</li>
-<li><p>自定义注解必须配上注解的信息处理流程（使用反射）才有意义</p>
-</li>
-<li><p>自定义注解通常都会指明两个元注解：Retention、Target</p>
-</li>
-</ul>
-</li>
-</ol>
-<ol start="4">
-<li><h2 id="jdk提供的4种元注解"><a href="#jdk提供的4种元注解" class="headerlink" title="jdk提供的4种元注解"></a>jdk提供的4种元注解</h2><blockquote>
-<p>元注解：对现有的注解修饰的注解</p>
-</blockquote>
-<p>​    Retention：生命周期source、class、runtime</p>
-<p>​        只有声明为runtime的注解才能通过反射获取</p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210215215948913.png" alt="image-20210215215948913"></p>
-<p>Target：用于指定被修饰的Annotation能用于修饰哪些程序元素</p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210215220322269.png" alt="image-20210215220322269"></p>
-<p>Documented：表示所修饰的注解在被javadoc解析时，保留下来。</p>
-<p>Inherited：被它修饰的ANnotation将具有继承性</p>
-</li>
-</ol>
-<ol start="5">
-<li><h2 id="通过反射获取注解信息"><a href="#通过反射获取注解信息" class="headerlink" title="通过反射获取注解信息"></a>通过反射获取注解信息</h2></li>
-<li><h2 id="jdk-8中注解的新特性"><a href="#jdk-8中注解的新特性" class="headerlink" title="jdk 8中注解的新特性"></a>jdk 8中注解的新特性</h2><ul>
-<li><p>可重复注解</p>
-<blockquote>
-<p>①在MyAnnotation上声明@Repeatable，成员值为MyAnnotations.class</p>
-<p>②MyAnnotation的Target和Retention要与MyAnnotation相同</p>
-</blockquote>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210215222137909.png" alt="image-20210215222137909"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210215222234606.png" alt="image-20210215222234606"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210215222307209.png" alt="image-20210215222307209"></p>
-</li>
-</ul>
-</li>
-</ol>
-<ul>
-<li><p>类型注解</p>
-<blockquote>
-<p>ElementType.TYPE_PARAMETER 表示该注解能写在类型变量的声明语句中（如：泛型声明）</p>
-<p>ElementType.TYPE_USE 表示该注解能写在使用类型的任何语句中。</p>
-</blockquote>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210215222847623.png" alt="image-20210215222847623"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210215222902202.png" alt="image-20210215222902202"></p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>share</tag>
-        <tag>notes</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>数据库第一章——数据库系统概论</title>
     <url>/posts/4efd1fa7/</url>
     <content><![CDATA[<h1 id="数据库基本概念"><a href="#数据库基本概念" class="headerlink" title="数据库基本概念"></a>数据库基本概念</h1><ul>
@@ -411,6 +292,296 @@
 </li>
 </ul>
 <h2 id="数据库系统的分类"><a href="#数据库系统的分类" class="headerlink" title="数据库系统的分类"></a>数据库系统的分类</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108204401263.png" alt="image-20210108204401263"></p>
+]]></content>
+      <categories>
+        <category>数据库原理及应用</category>
+      </categories>
+      <tags>
+        <tag>share</tag>
+        <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>java枚举类与注解</title>
+    <url>/posts/2b247dfd/</url>
+    <content><![CDATA[<h1 id="枚举类"><a href="#枚举类" class="headerlink" title="枚举类"></a>枚举类</h1><h2 id="枚举类的使用"><a href="#枚举类的使用" class="headerlink" title="枚举类的使用"></a>枚举类的使用</h2><p><strong>1. 枚举类的理解：类的对象只有有限个、确定的。</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210215185948689.png" alt="image-20210215185948689"></p>
+<ol start="2">
+<li><p><strong>当需要定义一组常量时，强烈建议使用枚举类</strong></p>
+</li>
+<li><p>若枚举类只有一个对象，则可以作为一种单例模式的实现方式。</p>
+</li>
+</ol>
+<h2 id="如何自定义枚举类"><a href="#如何自定义枚举类" class="headerlink" title="如何自定义枚举类"></a>如何自定义枚举类</h2><p>方式一：jdk5.0之前，自定义枚举类</p>
+<p>方式二：jdk5.0，可以使用enum关键字定义枚举类</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Season spring = Season.SPRING;</span><br><span class="line">        System.out.println(spring);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Season</span> </span>&#123;</span><br><span class="line">    <span class="comment">//1. 声明色season对象的属性：private final 修饰</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> String seasonName;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> String seasonDesc;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//2. 私有化类的构造器，并给对象赋值</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Season</span><span class="params">(String seasonName, String seasonDesc)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.seasonName = seasonName;</span><br><span class="line">        <span class="keyword">this</span>.seasonDesc = seasonDesc;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//3. 提供当前枚举类的多个对象: public static final</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Season SPRING = <span class="keyword">new</span> Season(<span class="string">&quot;春天&quot;</span>, <span class="string">&quot;春暖花开&quot;</span>);</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Season SUMMER = <span class="keyword">new</span> Season(<span class="string">&quot;夏天&quot;</span>, <span class="string">&quot;夏日炎炎&quot;</span>);</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Season AUTUMN = <span class="keyword">new</span> Season(<span class="string">&quot;秋天&quot;</span>, <span class="string">&quot;秋高气爽&quot;</span>);</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Season WINTER = <span class="keyword">new</span> Season(<span class="string">&quot;冬天&quot;</span>, <span class="string">&quot;大雪纷飞&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//4. 其他诉求1：获取枚举类对象的属性</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getSeasonName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> seasonName;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getSeasonDesc</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> seasonDesc;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//4. 其他诉求2：提供toString（）</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Season&#123;&quot;</span> +</span><br><span class="line">                <span class="string">&quot;seasonName=&#x27;&quot;</span> + seasonName + <span class="string">&#x27;\&#x27;&#x27;</span> +</span><br><span class="line">                <span class="string">&quot;, seasonDesc=&#x27;&quot;</span> + seasonDesc + <span class="string">&#x27;\&#x27;&#x27;</span> +</span><br><span class="line">                <span class="string">&#x27;&#125;&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Season1 spring = Season1.SPRING;</span><br><span class="line">        System.out.println(spring);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">enum</span> <span class="title">Season1</span> </span>&#123;</span><br><span class="line">    <span class="comment">//1. 提供当前枚举类的对象，多个对象之间用 【，】 隔开，每位对象【；】结束</span></span><br><span class="line">    SPRING(<span class="string">&quot;春天&quot;</span>, <span class="string">&quot;春暖花开&quot;</span>),</span><br><span class="line">    SUMMER(<span class="string">&quot;夏天&quot;</span>, <span class="string">&quot;夏日炎炎&quot;</span>),</span><br><span class="line">    AUTUMN(<span class="string">&quot;秋天&quot;</span>, <span class="string">&quot;秋高气爽&quot;</span>),</span><br><span class="line">    WINTER(<span class="string">&quot;冬天&quot;</span>, <span class="string">&quot;大雪纷飞&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//2. 声明色season对象的属性：private final 修饰</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> String seasonName;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> String seasonDesc;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//3. 私有化类的构造器，并给对象赋值</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Season1</span><span class="params">(String seasonName, String seasonDesc)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.seasonName = seasonName;</span><br><span class="line">        <span class="keyword">this</span>.seasonDesc = seasonDesc;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//4. 其他诉求2：提供toString（）</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Season1&#123;&quot;</span> +</span><br><span class="line">                <span class="string">&quot;seasonName=&#x27;&quot;</span> + seasonName + <span class="string">&#x27;\&#x27;&#x27;</span> +</span><br><span class="line">                <span class="string">&quot;, seasonDesc=&#x27;&quot;</span> + seasonDesc + <span class="string">&#x27;\&#x27;&#x27;</span> +</span><br><span class="line">                <span class="string">&#x27;&#125;&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="enum的主要方法"><a href="#enum的主要方法" class="headerlink" title="enum的主要方法"></a>enum的主要方法</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210215194658811.png" alt="image-20210215194658811"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210215194739223.png" alt="image-20210215194739223"></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AAA</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//values（）</span></span><br><span class="line">        Season1 [] values = Season1.values();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; values.length; i++) &#123;</span><br><span class="line">            System.out.println(values[i]);</span><br><span class="line">        &#125;</span><br><span class="line">      </span><br><span class="line">      System.out.println(<span class="string">&quot;+++++++++&quot;</span>);</span><br><span class="line">        <span class="comment">//valueOf(String objName):返回枚举类中对象名是objName的对象。字符转化为枚举类</span></span><br><span class="line">        Season1 winter = Season1.valueOf(<span class="string">&quot;WINTER&quot;</span>);</span><br><span class="line">        System.out.println(winter);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210215195858173.png" alt="image-20210215195858173"></p>
+<h2 id="使用enum关键字定义的枚举类实现接口的情况"><a href="#使用enum关键字定义的枚举类实现接口的情况" class="headerlink" title="使用enum关键字定义的枚举类实现接口的情况"></a>使用enum关键字定义的枚举类实现接口的情况</h2><p>情况一：实现接口，在enum类中实现接口方法</p>
+<p>情况二：让枚举类的对象分别实现接口中的方法</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Season1 spring = Season1.SPRING;</span><br><span class="line">        System.out.println(spring);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Info</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">enum</span> <span class="title">Season1</span> <span class="keyword">implements</span> <span class="title">Info</span> </span>&#123;</span><br><span class="line">   </span><br><span class="line">    <span class="comment">//1. 提供当前枚举类的对象，多个对象之间用 【，】 隔开，每位对象【；】结束</span></span><br><span class="line">    SPRING(<span class="string">&quot;春天&quot;</span>, <span class="string">&quot;春暖花开&quot;</span>),</span><br><span class="line">    SUMMER(<span class="string">&quot;夏天&quot;</span>, <span class="string">&quot;夏日炎炎&quot;</span>),</span><br><span class="line">    AUTUMN(<span class="string">&quot;秋天&quot;</span>, <span class="string">&quot;秋高气爽&quot;</span>),</span><br><span class="line">    WINTER(<span class="string">&quot;冬天&quot;</span>, <span class="string">&quot;大雪纷飞&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//2. 声明色season对象的属性：private final 修饰</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> String seasonName;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> String seasonDesc;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//3. 私有化类的构造器，并给对象赋值</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Season1</span><span class="params">(String seasonName, String seasonDesc)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.seasonName = seasonName;</span><br><span class="line">        <span class="keyword">this</span>.seasonDesc = seasonDesc;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="comment">//重写接口方法</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span>&#123;</span><br><span class="line">    system.out,println(<span class="string">&quot;...&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Season1 spring = Season1.SPRING;</span><br><span class="line">        System.out.println(spring);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Info</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">enum</span> <span class="title">Season1</span> <span class="keyword">implements</span> <span class="title">Info</span></span>&#123;</span><br><span class="line">    <span class="comment">//1. 提供当前枚举类的对象，多个对象之间用 【，】 隔开，每位对象【；】结束</span></span><br><span class="line">    SPRING(<span class="string">&quot;春天&quot;</span>, <span class="string">&quot;春暖花开&quot;</span>)&#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;...&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    SUMMER(<span class="string">&quot;夏天&quot;</span>, <span class="string">&quot;夏日炎炎&quot;</span>)&#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;pp&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    AUTUMN(<span class="string">&quot;秋天&quot;</span>, <span class="string">&quot;秋高气爽&quot;</span>)&#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;ss&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    WINTER(<span class="string">&quot;冬天&quot;</span>, <span class="string">&quot;大雪纷飞&quot;</span>) &#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;LL&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//2. 声明色season对象的属性：private final 修饰</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> String seasonName;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> String seasonDesc;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//3. 私有化类的构造器，并给对象赋值</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Season1</span><span class="params">(String seasonName, String seasonDesc)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.seasonName = seasonName;</span><br><span class="line">        <span class="keyword">this</span>.seasonDesc = seasonDesc;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h1 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210215212516225.png" alt="image-20210215212516225"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210215212526606.png" alt="image-20210215212526606"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210215212825335.png" alt="image-20210215212825335"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210215212849679.png" alt="image-20210215212849679"></p>
+<ol>
+<li><h2 id="理解Annotation"><a href="#理解Annotation" class="headerlink" title="理解Annotation"></a>理解Annotation</h2></li>
+</ol>
+<p>Annotation其实就是代码里的<strong>特殊标记</strong>，这些标记可以编译，类加载，运行时被读取，并执行相应的处理。可以在不改变原有逻辑的情况下，在源文件中嵌入一些补充信息。</p>
+<ol start="2">
+<li><h2 id="Annotation的使用用例"><a href="#Annotation的使用用例" class="headerlink" title="Annotation的使用用例"></a>Annotation的使用用例</h2><p>示例一：生成文档相关的注解</p>
+<p>示例二：在编译时进行格式检查</p>
+<p>​    @override</p>
+<p>​    @Deprecated</p>
+<p>​    @SuppressWarnings：抑制编译器警告</p>
+<p>实例三：跟踪代码依赖性，实现替代配置文件功能</p>
+</li>
+</ol>
+<ol start="3">
+<li><h2 id="如何自定义注解：参照suppressWarnings"><a href="#如何自定义注解：参照suppressWarnings" class="headerlink" title="如何自定义注解：参照suppressWarnings"></a>如何自定义注解：参照suppressWarnings</h2><p>①注解声明为：@interface</p>
+<p>②内部定义成员，通常用value（）表示</p>
+<p>③可以指定成员的默认值，使用default定义</p>
+<p>Ⅳ如果自定义注解没有成员，标明是一个标识作用</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> MyAnnotation &#123;</span><br><span class="line">	<span class="function">String <span class="title">value</span><span class="params">()</span> <span class="keyword">default</span> &quot;hello&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">@MyAnnotation(value = &quot;hi&quot;)</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>如果注解有成员，在使用注解时，需要指明成员的值。</p>
+</li>
+<li><p>自定义注解必须配上注解的信息处理流程（使用反射）才有意义</p>
+</li>
+<li><p>自定义注解通常都会指明两个元注解：Retention、Target</p>
+</li>
+</ul>
+</li>
+</ol>
+<ol start="4">
+<li><h2 id="jdk提供的4种元注解"><a href="#jdk提供的4种元注解" class="headerlink" title="jdk提供的4种元注解"></a>jdk提供的4种元注解</h2><blockquote>
+<p>元注解：对现有的注解修饰的注解</p>
+</blockquote>
+<p>​    Retention：生命周期source、class、runtime</p>
+<p>​        只有声明为runtime的注解才能通过反射获取</p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210215215948913.png" alt="image-20210215215948913"></p>
+<p>Target：用于指定被修饰的Annotation能用于修饰哪些程序元素</p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210215220322269.png" alt="image-20210215220322269"></p>
+<p>Documented：表示所修饰的注解在被javadoc解析时，保留下来。</p>
+<p>Inherited：被它修饰的ANnotation将具有继承性</p>
+</li>
+</ol>
+<ol start="5">
+<li><h2 id="通过反射获取注解信息"><a href="#通过反射获取注解信息" class="headerlink" title="通过反射获取注解信息"></a>通过反射获取注解信息</h2></li>
+<li><h2 id="jdk-8中注解的新特性"><a href="#jdk-8中注解的新特性" class="headerlink" title="jdk 8中注解的新特性"></a>jdk 8中注解的新特性</h2><ul>
+<li><p>可重复注解</p>
+<blockquote>
+<p>①在MyAnnotation上声明@Repeatable，成员值为MyAnnotations.class</p>
+<p>②MyAnnotation的Target和Retention要与MyAnnotation相同</p>
+</blockquote>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210215222137909.png" alt="image-20210215222137909"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210215222234606.png" alt="image-20210215222234606"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210215222307209.png" alt="image-20210215222307209"></p>
+</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li><p>类型注解</p>
+<blockquote>
+<p>ElementType.TYPE_PARAMETER 表示该注解能写在类型变量的声明语句中（如：泛型声明）</p>
+<p>ElementType.TYPE_USE 表示该注解能写在使用类型的任何语句中。</p>
+</blockquote>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210215222847623.png" alt="image-20210215222847623"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210215222902202.png" alt="image-20210215222902202"></p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>share</tag>
+        <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据库第二章——数据库系统结构</title>
+    <url>/posts/95a84140/</url>
+    <content><![CDATA[<h1 id="数据库系统结构概述"><a href="#数据库系统结构概述" class="headerlink" title="数据库系统结构概述"></a>数据库系统结构概述</h1><ul>
+<li><p>数据库管理系统内部的系统结构</p>
+<ul>
+<li>三级模式结构</li>
+<li>两级映射功能</li>
+</ul>
+</li>
+<li><p>数据库系统外部的体系结构</p>
+<ul>
+<li><p>集中式体系结构</p>
+</li>
+<li><p>“客户/服务器”架构</p>
+</li>
+<li><p>“客户/应用服务器/数据库服务器”架构</p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="数据库模式和实例的概念"><a href="#数据库模式和实例的概念" class="headerlink" title="数据库模式和实例的概念"></a>数据库模式和实例的概念</h1><ul>
+<li><p>模式(Schema)与实例(Instance)</p>
+<ul>
+<li><p><strong>模式</strong>：</p>
+<ul>
+<li>数据库的描述。包括数据库的数据结构、数据类型和约束</li>
+</ul>
+</li>
+<li><p>**实例(状态)**：某一时刻实际存储在数据库中的数据集合</p>
+</li>
+<li><p>实例是模式在某一时刻的具体化、实例化(类似于面向对象理论中Class与Object的关系)</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108205629791.png" alt="image-20210108205629791"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108205644673.png" alt="image-20210108205644673"></p>
+<ul>
+<li>数据库模式很少发生改变 <ul>
+<li>模式也被叫做内涵</li>
+</ul>
+</li>
+<li>每次进行数据库更新操作时数据库实例都会发生变化<ul>
+<li>实例(状态)也被称为外延</li>
+</ul>
+</li>
+</ul>
+<h1 id="数据库系统的三级模式结构"><a href="#数据库系统的三级模式结构" class="headerlink" title="数据库系统的三级模式结构"></a>数据库系统的三级模式结构</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108205831449.png" alt="image-20210108205831449"></p>
+<ul>
+<li><p><strong>内模式</strong>,也称存储模式 (Internal schema)：</p>
+<blockquote>
+<p>数据物理结构和存储方式的描述，是数据在数据库内部的表示方式 </p>
+</blockquote>
+<ul>
+<li>通常使用<strong>物理数据模型</strong>描述</li>
+</ul>
+</li>
+<li><p><strong>概念模式</strong>,也称全局模式，有时简称“模式” (Conceptual schema)：</p>
+<blockquote>
+<p>数据库中全体数据的逻辑结构和特征的描述</p>
+</blockquote>
+<ul>
+<li>通常使用<strong>概念或逻辑数据模型</strong>描述</li>
+</ul>
+</li>
+<li><p><strong>外模式</strong>,也称子模式或用户模式 (External schemas)：</p>
+<blockquote>
+<p>数据库用户能够看见和使用的局部数据的逻辑结构和特征的描述 </p>
+<p>使不同的用户能看到的界面不同。</p>
+</blockquote>
+<ul>
+<li><p>通常使用与<strong>概念模式相同的数据模型</strong>描述</p>
+</li>
+<li><p>模型(Model)与模式(Schema)的区别</p>
+<ul>
+<li>数据模型是描述数据的一种通用形式，模式则是用给定的数据模型描述具体数据。注意：真正的数据内容保存在数据库状态(State)中。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="用E-R概念模型表示的概念模型"><a href="#用E-R概念模型表示的概念模型" class="headerlink" title="用E-R概念模型表示的概念模型"></a>用E-R概念模型表示的概念模型</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108210400522.png" alt="image-20210108210400522"></p>
+<h2 id="用关系逻辑模型表示的概念模型"><a href="#用关系逻辑模型表示的概念模型" class="headerlink" title="用关系逻辑模型表示的概念模型"></a>用关系逻辑模型表示的概念模型</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108210441911.png" alt="image-20210108210441911"></p>
+<h2 id="用关系逻辑模型表示的外模式及其实例"><a href="#用关系逻辑模型表示的外模式及其实例" class="headerlink" title="用关系逻辑模型表示的外模式及其实例"></a>用关系逻辑模型表示的外模式及其实例</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108210546764.png" alt="image-20210108210546764"></p>
+<ul>
+<li>外模式用于使不同用户级别看到的界面不同</li>
+</ul>
+<h1 id="数据库系统的两级映射功能"><a href="#数据库系统的两级映射功能" class="headerlink" title="数据库系统的两级映射功能"></a>数据库系统的两级映射功能</h1><ul>
+<li><p><strong>两级映射</strong>(Mapping)</p>
+<ul>
+<li>概念模式/内模式映射</li>
+<li>外模式/概念模式映射</li>
+</ul>
+</li>
+<li><p><strong>数据独立性</strong></p>
+<ul>
+<li>物理独立性(Physical Data Independence)</li>
+<li>逻辑独立性(Logical Data Independence)</li>
+</ul>
+</li>
+</ul>
+<h2 id="数据库的工作流程"><a href="#数据库的工作流程" class="headerlink" title="数据库的工作流程"></a>数据库的工作流程</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108205831449.png" alt="image-20210108205831449"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108210927057.png" alt="image-20210108210927057"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108210952255.png" alt="image-20210108210952255"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108211003467.png" alt="image-20210108211003467"></p>
+<h2 id="数据独立性"><a href="#数据独立性" class="headerlink" title="数据独立性"></a>数据独立性</h2><h3 id="数据的物理独立性"><a href="#数据的物理独立性" class="headerlink" title="数据的物理独立性"></a>数据的物理独立性</h3><blockquote>
+<p>内模式与概念模式之间的映射提供了数据的物理独立性。当数据的物理结构发生变化时，如对数据增加索引、改变数据的存储位置、改变存储设备等，不影响数据的逻辑结构。当DBA根据应用程序对数据的存取要求，对数据的物理组织进行优化后，并不需要对概念模式和外模式进行重新定义，也不需要修改应用程序，只需要修改内模式与概念模式之间的映射。</p>
+</blockquote>
+<h3 id="数据的逻辑独立性"><a href="#数据的逻辑独立性" class="headerlink" title="数据的逻辑独立性"></a>数据的逻辑独立性</h3><blockquote>
+<p>概念模式与外模式之间的映射提供了数据的逻辑独立性。当数据的整体逻辑结构发生变化时，如增加新的关系、新的属性、改变属性的数据类型等，可以通过修改各个外模式与概念模式之间的映射，从而使外模式和依据外模式编写的应用程序不受影响。</p>
+</blockquote>
+<h1 id="数据库系统外部的体系结构"><a href="#数据库系统外部的体系结构" class="headerlink" title="数据库系统外部的体系结构"></a>数据库系统外部的体系结构</h1><h2 id="集中式架构"><a href="#集中式架构" class="headerlink" title="集中式架构"></a>集中式架构</h2><ul>
+<li>将所有软硬件集中到一起：包括DBMS,硬件，应用程序，人机交互软件等</li>
+<li>用户仍然可以通过远程终端连接。然而，所有运算都集中在一个位置</li>
+</ul>
+<p><strong>一个物理集中式的架构体系</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108211551077.png" alt="image-20210108211551077"></p>
+<h2 id="客户-服务器架构"><a href="#客户-服务器架构" class="headerlink" title="客户-服务器架构"></a>客户-服务器架构</h2><ul>
+<li><strong>网络数据库系统</strong>：<ul>
+<li>数据库系统软件安装在服务器上，通过网络向外界提供数据服务</li>
+</ul>
+</li>
+<li><strong>Client/Server：</strong><ul>
+<li>需要安装专门的客户端软件</li>
+</ul>
+</li>
+<li><strong>Browser/Server：</strong><ul>
+<li>不需要安装专门的客户端软件</li>
+</ul>
+</li>
+</ul>
+<h3 id="Client-Server架构"><a href="#Client-Server架构" class="headerlink" title="Client/Server架构"></a>Client/Server架构</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108211826865.png" alt="image-20210108211826865"></p>
+<h4 id="Client-Server架构组件"><a href="#Client-Server架构组件" class="headerlink" title="Client/Server架构组件"></a>Client/Server架构组件</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108211904397.png" alt="image-20210108211904397"></p>
+<h4 id="Client-Server架构通信过程"><a href="#Client-Server架构通信过程" class="headerlink" title="Client/Server架构通信过程"></a>Client/Server架构通信过程</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108211945073.png" alt="image-20210108211945073"></p>
+<h3 id="Browser-Server架构"><a href="#Browser-Server架构" class="headerlink" title="Browser/Server架构"></a>Browser/Server架构</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212102096.png" alt="image-20210108212102096"></p>
+<h4 id="Browser-Server架构通信过程"><a href="#Browser-Server架构通信过程" class="headerlink" title="Browser/Server架构通信过程"></a>Browser/Server架构通信过程</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212145147.png" alt="image-20210108212145147"></p>
+<h2 id="三层客户-服务器逻辑结构"><a href="#三层客户-服务器逻辑结构" class="headerlink" title="三层客户-服务器逻辑结构"></a>三层客户-服务器逻辑结构</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212244213.png" alt="image-20210108212244213"></p>
+<ul>
+<li><p><strong>表现层</strong> (Presentation layer)：</p>
+<ul>
+<li>负责展示用户界面，以及与用户的交互。</li>
+</ul>
+</li>
+<li><p><strong>业务逻辑层或中间层</strong> (Business logic layer ):</p>
+<ul>
+<li> 负责接收来自表示层的请求，并根据它包含的业务逻辑给表示层返回一个结果。</li>
+</ul>
+</li>
+<li><p><strong>数据库服务层</strong> (Database services layer): </p>
+<ul>
+<li>负责存储应用程序的数据，并在接收到请求时，把这些数据发送给业务层。</li>
+</ul>
+</li>
+</ul>
+<h3 id="例：图书管理系统"><a href="#例：图书管理系统" class="headerlink" title="例：图书管理系统"></a>例：图书管理系统</h3><h4 id="图书馆信息管理系统数据库服务层"><a href="#图书馆信息管理系统数据库服务层" class="headerlink" title="图书馆信息管理系统数据库服务层"></a>图书馆信息管理系统数据库服务层</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212457459.png" alt="image-20210108212457459"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212510722.png" alt="image-20210108212510722"></p>
+<h4 id="图书馆信息管理系统业务层"><a href="#图书馆信息管理系统业务层" class="headerlink" title="图书馆信息管理系统业务层"></a>图书馆信息管理系统业务层</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212528301.png" alt="image-20210108212528301"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212536898.png" alt="image-20210108212536898"></p>
+<h4 id="图书馆信息管理系统表现层"><a href="#图书馆信息管理系统表现层" class="headerlink" title="图书馆信息管理系统表现层"></a>图书馆信息管理系统表现层</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212554829.png" alt="image-20210108212554829"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212607770.png" alt="image-20210108212607770"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212619538.png" alt="image-20210108212619538"></p>
 ]]></content>
       <categories>
         <category>数据库原理及应用</category>
@@ -736,167 +907,203 @@
       </tags>
   </entry>
   <entry>
-    <title>数据库第二章——数据库系统结构</title>
-    <url>/posts/95a84140/</url>
-    <content><![CDATA[<h1 id="数据库系统结构概述"><a href="#数据库系统结构概述" class="headerlink" title="数据库系统结构概述"></a>数据库系统结构概述</h1><ul>
-<li><p>数据库管理系统内部的系统结构</p>
-<ul>
-<li>三级模式结构</li>
-<li>两级映射功能</li>
-</ul>
-</li>
-<li><p>数据库系统外部的体系结构</p>
-<ul>
-<li><p>集中式体系结构</p>
-</li>
-<li><p>“客户/服务器”架构</p>
-</li>
-<li><p>“客户/应用服务器/数据库服务器”架构</p>
-</li>
-</ul>
-</li>
-</ul>
-<h1 id="数据库模式和实例的概念"><a href="#数据库模式和实例的概念" class="headerlink" title="数据库模式和实例的概念"></a>数据库模式和实例的概念</h1><ul>
-<li><p>模式(Schema)与实例(Instance)</p>
-<ul>
-<li><p><strong>模式</strong>：</p>
-<ul>
-<li>数据库的描述。包括数据库的数据结构、数据类型和约束</li>
-</ul>
-</li>
-<li><p>**实例(状态)**：某一时刻实际存储在数据库中的数据集合</p>
-</li>
-<li><p>实例是模式在某一时刻的具体化、实例化(类似于面向对象理论中Class与Object的关系)</p>
-</li>
-</ul>
-</li>
-</ul>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108205629791.png" alt="image-20210108205629791"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108205644673.png" alt="image-20210108205644673"></p>
-<ul>
-<li>数据库模式很少发生改变 <ul>
-<li>模式也被叫做内涵</li>
-</ul>
-</li>
-<li>每次进行数据库更新操作时数据库实例都会发生变化<ul>
-<li>实例(状态)也被称为外延</li>
-</ul>
-</li>
-</ul>
-<h1 id="数据库系统的三级模式结构"><a href="#数据库系统的三级模式结构" class="headerlink" title="数据库系统的三级模式结构"></a>数据库系统的三级模式结构</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108205831449.png" alt="image-20210108205831449"></p>
-<ul>
-<li><p><strong>内模式</strong>,也称存储模式 (Internal schema)：</p>
-<blockquote>
-<p>数据物理结构和存储方式的描述，是数据在数据库内部的表示方式 </p>
+    <title>数据库第四章——关系数据库标准语言SQL（3）</title>
+    <url>/posts/c0c6291/</url>
+    <content><![CDATA[<h1 id="SQL的功能组成"><a href="#SQL的功能组成" class="headerlink" title="SQL的功能组成"></a>SQL的功能组成</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111193929585.png" alt="image-20210111193929585"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111193940464.png" alt="image-20210111193940464"></p>
+<h1 id="子查询（嵌套查询）"><a href="#子查询（嵌套查询）" class="headerlink" title="子查询（嵌套查询）"></a>子查询（嵌套查询）</h1><blockquote>
+<p>将一个查询块(SELECT-FROM-WHERE)嵌套在另一个查询块的WHERE子句或HAVING短语的条件中的查询</p>
 </blockquote>
+<p><strong>举例：查询“John Smith”的完成项目情况</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111194301996.png" alt="image-20210111194301996"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> WORKS_ON <span class="keyword">WHERE</span> ESSN=(<span class="keyword">SELECT</span> SSN <span class="keyword">FROM</span> EMPLOYEE <span class="keyword">WHERE</span> FNAME=<span class="string">&#x27;JOHN&#x27;</span> <span class="keyword">AND</span> LNAME=<span class="string">&#x27;Smith&#x27;</span>) <span class="keyword">ORDER</span> <span class="keyword">BY</span> PNO <span class="keyword">DESC</span>;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><ul>
+<li>SQL语言允许多层嵌套查询(建议：不要编写太复杂的嵌套查询，可以利用中间变量简化SQL语句)</li>
+<li>子查询的SELECT语句不能使用ORDER BY子句，ORDER BY子句只能对最终查询结果排序</li>
+<li>嵌套查询一般的求解方法是由里向外处理</li>
+<li><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111194414808.png" alt="image-20210111194414808"></li>
+</ul>
+<h2 id="带有IN谓词的子查询"><a href="#带有IN谓词的子查询" class="headerlink" title="带有IN谓词的子查询"></a>带有IN谓词的子查询</h2><h3 id="例8-1："><a href="#例8-1：" class="headerlink" title="例8-1："></a>例8-1：</h3><p><strong>查询参与了任何一个SSN为‘123456789’的员工参与过项目的员工SSN</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111194706997.png" alt="image-20210111194706997"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> ESSN <span class="keyword">FROM</span> WORKS_ON <span class="keyword">WHERE</span> PNO <span class="keyword">IN</span> (<span class="keyword">SELECT</span> PNO <span class="keyword">FROM</span> WORKS_ON <span class="keyword">WHERE</span> ESSN=<span class="string">&#x27;123456789&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="例8-2："><a href="#例8-2：" class="headerlink" title="例8-2："></a>例8-2：</h3><p><strong>查询参与了任何一个SSN为‘123456789’的员工参与过项目的员工姓名</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111194734490.png" alt="image-20210111194734490"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> FNAME, LNAME <span class="keyword">FROM</span> EMPLOYEE <span class="keyword">WHERE</span> SSN <span class="keyword">IN</span> (<span class="keyword">SELECT</span> ESSN <span class="keyword">FROM</span> WORKS_ON <span class="keyword">WHERE</span> PRO <span class="keyword">IN</span> (<span class="keyword">SELECT</span> PNO <span class="keyword">FROM</span> WORKS_ON <span class="keyword">WHERE</span> ESSN=<span class="string">&#x27;123456789&#x27;</span>))</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="例8-3："><a href="#例8-3：" class="headerlink" title="例8-3："></a>例8-3：</h3><p><strong>查询参与了任何一个‘John Smith’ 参与过项目的员工姓名</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111194808213.png" alt="image-20210111194808213"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> FNAME, LNAME <span class="keyword">FROM</span> EMPLOYEE <span class="keyword">WHERE</span> SSN <span class="keyword">IN</span> (<span class="keyword">SELECT</span> ESSN <span class="keyword">FROM</span> WORKS_ON <span class="keyword">WHERE</span> PNO <span class="keyword">IN</span> (<span class="keyword">SELECT</span> PNO <span class="keyword">FROM</span> WORKS_ON W <span class="keyword">JOIN</span> EMPLOYEE E <span class="keyword">ON</span> W.ESSN=E.SSN <span class="keyword">WHERE</span> FNAME=<span class="string">&#x27;JOHN&#x27;</span> <span class="keyword">AND</span> LNAME=<span class="string">&#x27;SMITH&#x27;</span>))</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="例8-4："><a href="#例8-4：" class="headerlink" title="例8-4："></a>例8-4：</h3><p><strong>查询有家属的员工的姓名</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111194836923.png" alt="image-20210111194836923"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> FNAME, LNAME <span class="keyword">FROM</span> EMPLOYEE <span class="keyword">WHERE</span> SSN <span class="keyword">IN</span> (<span class="keyword">SELECT</span> ESSN <span class="keyword">FROM</span> DEPENDENT)</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="例8-5："><a href="#例8-5：" class="headerlink" title="例8-5："></a>例8-5：</h3><p><strong>查询有家属的员工的姓名(用连接查询方式)</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111194904519.png" alt="image-20210111194904519"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> FNAME, LNAME <span class="keyword">FROM</span> EMPLOYEE E <span class="keyword">JOIN</span> DEPENDENT D <span class="keyword">ON</span> E.SSN = D.SSN;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="例8-6："><a href="#例8-6：" class="headerlink" title="例8-6："></a>例8-6：</h3><p><strong>查询没有家属的员工的姓名</strong></p>
+<p>![image-20210111194935540](/Users/fine/Library/Application Support/typora-user-images/image-20210111194935540.png)</p>
+<h3 id="例8-7："><a href="#例8-7：" class="headerlink" title="例8-7："></a>例8-7：</h3><p><strong>查询没有家属的员工的姓名(用连接查询方式)</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195033018.png" alt="image-20210111195033018"></p>
+<h2 id="带有比较运算符的子查询"><a href="#带有比较运算符的子查询" class="headerlink" title="带有比较运算符的子查询"></a>带有比较运算符的子查询</h2><h3 id="例8-8："><a href="#例8-8：" class="headerlink" title="例8-8："></a>例8-8：</h3><p><strong>查询在Research部门工作的所有员工的姓名和住址</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195110994.png" alt="image-20210111195110994"></p>
+<h3 id="使用局部变量"><a href="#使用局部变量" class="headerlink" title="使用局部变量"></a>使用局部变量</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195143756.png" alt="image-20210111195143756"></p>
+<h3 id="例8-9："><a href="#例8-9：" class="headerlink" title="例8-9："></a>例8-9：</h3><p><strong>查询所有工资大于或等于全公司平均工资的员工信息</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195212839.png" alt="image-20210111195212839"></p>
+<h3 id="使用局部变量简化程序"><a href="#使用局部变量简化程序" class="headerlink" title="使用局部变量简化程序"></a>使用局部变量简化程序</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195233039.png" alt="image-20210111195233039"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">DECLARE</span> @AVERAGESALARY <span class="built_in">DECIMAL</span>(<span class="number">7</span>,<span class="number">2</span>)</span><br><span class="line"><span class="keyword">SET</span> @AVERAGESALARY = (<span class="keyword">SELECT</span> <span class="keyword">AVG</span>(SALARY) <span class="keyword">FROM</span> EMPLOYEE) <span class="keyword">WHERE</span> SALARY &gt;= @AVERAGESALARY</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="例8-10："><a href="#例8-10：" class="headerlink" title="例8-10："></a>例8-10：</h3><p><strong>查询FNAME以JO开头员工的工作记录</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195302188.png" alt="image-20210111195302188"></p>
+<h3 id="例8-11："><a href="#例8-11：" class="headerlink" title="例8-11："></a>例8-11：</h3><p><strong>查询FNAME以JOH开头员工的工作记录</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195336814.png" alt="image-20210111195336814"></p>
+<h2 id="带有ANY或ALL谓词的子查询"><a href="#带有ANY或ALL谓词的子查询" class="headerlink" title="带有ANY或ALL谓词的子查询"></a>带有ANY或ALL谓词的子查询</h2><h3 id="例8-12："><a href="#例8-12：" class="headerlink" title="例8-12："></a>例8-12：</h3><p><strong>查询FNAME以JO开头员工的工作记录</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195409670.png" alt="image-20210111195409670"></p>
 <ul>
-<li>通常使用<strong>物理数据模型</strong>描述</li>
+<li>上例查询等价于带有IN谓词的子查询</li>
+<li><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195428757.png" alt="image-20210111195428757"></li>
 </ul>
-</li>
-<li><p><strong>概念模式</strong>,也称全局模式，有时简称“模式” (Conceptual schema)：</p>
-<blockquote>
-<p>数据库中全体数据的逻辑结构和特征的描述</p>
-</blockquote>
+<h3 id="ANY与ALL的区别"><a href="#ANY与ALL的区别" class="headerlink" title="ANY与ALL的区别"></a>ANY与ALL的区别</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195444770.png" alt="image-20210111195444770"></p>
+<h4 id="例8-13："><a href="#例8-13：" class="headerlink" title="例8-13："></a>例8-13：</h4><p><strong>查询工资大于或等于任意一个女性员工工资的男性员工信息</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195535918.png" alt="image-20210111195535918"></p>
 <ul>
-<li>通常使用<strong>概念或逻辑数据模型</strong>描述</li>
+<li>上例查询等价于使用汇总函数的子查询</li>
+<li><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195600279.png" alt="image-20210111195600279"></li>
 </ul>
-</li>
-<li><p><strong>外模式</strong>,也称子模式或用户模式 (External schemas)：</p>
-<blockquote>
-<p>数据库用户能够看见和使用的局部数据的逻辑结构和特征的描述 </p>
-<p>使不同的用户能看到的界面不同。</p>
-</blockquote>
+<h4 id="例8-14："><a href="#例8-14：" class="headerlink" title="例8-14："></a>例8-14：</h4><p><strong>查询工资大于或等于全部女性员工工资的男性员工信息</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195642862.png" alt="image-20210111195642862"></p>
 <ul>
-<li><p>通常使用与<strong>概念模式相同的数据模型</strong>描述</p>
+<li>上例查询等价于使用汇总函数的子查询</li>
+<li><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195704013.png" alt="image-20210111195704013"></li>
+</ul>
+<h3 id="与汇总函数的等价性"><a href="#与汇总函数的等价性" class="headerlink" title="与汇总函数的等价性"></a>与汇总函数的等价性</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195804138.png" alt="image-20210111195804138"></p>
+<h2 id="带有EXISTS谓词的子查询"><a href="#带有EXISTS谓词的子查询" class="headerlink" title="带有EXISTS谓词的子查询"></a>带有EXISTS谓词的子查询</h2><h3 id="“不相关子查询”与“相关子查询”"><a href="#“不相关子查询”与“相关子查询”" class="headerlink" title="“不相关子查询”与“相关子查询”"></a>“不相关子查询”与“相关子查询”</h3><ul>
+<li>不相关子查询(non-correlated subquery)<ul>
+<li>子查询只执行一次，其结果用于父查询。子查询的查询条件不依赖于父查询</li>
+</ul>
 </li>
-<li><p>模型(Model)与模式(Schema)的区别</p>
+<li>相关子查询(correlated subquery)<ul>
+<li>子查询的查询条件依赖于外层父查询的某个属性值</li>
+<li>主要是指“带有EXISTS谓词的子查询</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195930709.png" alt="image-20210111195930709"></p>
+<h3 id="例8-15："><a href="#例8-15：" class="headerlink" title="例8-15："></a>例8-15：</h3><p><strong>查询参与了项目的员工姓名</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195956155.png" alt="image-20210111195956155"></p>
+<h4 id="相关子查询的执行过程"><a href="#相关子查询的执行过程" class="headerlink" title="相关子查询的执行过程"></a>相关子查询的执行过程</h4><ul>
+<li>首先取外层查询中表的第1个元组，根据它与内层查询相关的属性值处理内层查询，若WHERE子句返回值为真，则取此元组放入结果表；然后再取外层查询中表的下一个元组，重复这一过程，直至外层表全部检查完毕为止。</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200047125.png" alt="image-20210111200047125"></p>
+<h1 id="集合查询"><a href="#集合查询" class="headerlink" title="集合查询"></a>集合查询</h1><ul>
+<li><p>SELECT语句查询的结果是元组的集合，所以多个SELECT语句的查询结果可进行集合操作</p>
+</li>
+<li><p>集合操作符</p>
 <ul>
-<li>数据模型是描述数据的一种通用形式，模式则是用给定的数据模型描述具体数据。注意：真正的数据内容保存在数据库状态(State)中。</li>
-</ul>
+<li><p>并 Union</p>
 </li>
-</ul>
+<li><p>交 Intersect(SQL SERVER 2005以上支持)</p>
 </li>
-</ul>
-<h2 id="用E-R概念模型表示的概念模型"><a href="#用E-R概念模型表示的概念模型" class="headerlink" title="用E-R概念模型表示的概念模型"></a>用E-R概念模型表示的概念模型</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108210400522.png" alt="image-20210108210400522"></p>
-<h2 id="用关系逻辑模型表示的概念模型"><a href="#用关系逻辑模型表示的概念模型" class="headerlink" title="用关系逻辑模型表示的概念模型"></a>用关系逻辑模型表示的概念模型</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108210441911.png" alt="image-20210108210441911"></p>
-<h2 id="用关系逻辑模型表示的外模式及其实例"><a href="#用关系逻辑模型表示的外模式及其实例" class="headerlink" title="用关系逻辑模型表示的外模式及其实例"></a>用关系逻辑模型表示的外模式及其实例</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108210546764.png" alt="image-20210108210546764"></p>
+<li><p>差 Except(SQL SERVER 2005以上支持)</p>
 <ul>
-<li>外模式用于使不同用户级别看到的界面不同</li>
+<li><p>Oracle：MINUS</p>
+</li>
+<li><p>DB2：EXCEPT</p>
+</li>
 </ul>
-<h1 id="数据库系统的两级映射功能"><a href="#数据库系统的两级映射功能" class="headerlink" title="数据库系统的两级映射功能"></a>数据库系统的两级映射功能</h1><ul>
-<li><p><strong>两级映射</strong>(Mapping)</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="并Union"><a href="#并Union" class="headerlink" title="并Union"></a>并Union</h2><h3 id="例8-16："><a href="#例8-16：" class="headerlink" title="例8-16："></a>例8-16：</h3><p><strong>查询在部门5工作员工或直接管理部门5员工的SSN</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200226714.png" alt="image-20210111200226714"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200243112.png" alt="image-20210111200243112"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200252714.png" alt="image-20210111200252714"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200302506.png" alt="image-20210111200302506"></p>
+<h2 id="交-Intersect-SQL-SERVER-2005以上支持"><a href="#交-Intersect-SQL-SERVER-2005以上支持" class="headerlink" title="交 Intersect(SQL SERVER 2005以上支持)"></a>交 Intersect(SQL SERVER 2005以上支持)</h2><h3 id="例8-17："><a href="#例8-17：" class="headerlink" title="例8-17："></a>例8-17：</h3><p><strong>查询“男性员工”与“工资大于30000员工”的交集</strong></p>
 <ul>
-<li>概念模式/内模式映射</li>
-<li>外模式/概念模式映射</li>
+<li>等价于：查询既是男性同时工资大于30000的员工</li>
 </ul>
-</li>
-<li><p><strong>数据独立性</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200403560.png" alt="image-20210111200403560"></p>
+<h2 id="差-Difference-SQL-SERVER-2005以上支持"><a href="#差-Difference-SQL-SERVER-2005以上支持" class="headerlink" title="差 Difference (SQL SERVER 2005以上支持)"></a>差 Difference (SQL SERVER 2005以上支持)</h2><h3 id="例8-18："><a href="#例8-18：" class="headerlink" title="例8-18："></a>例8-18：</h3><p><strong>查询“男性员工”与“工资大于30000员工”的差集</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200448169.png" alt="image-20210111200448169"></p>
 <ul>
-<li>物理独立性(Physical Data Independence)</li>
-<li>逻辑独立性(Logical Data Independence)</li>
+<li>等价于：查询工资不大于30000的男性员工</li>
 </ul>
-</li>
-</ul>
-<h2 id="数据库的工作流程"><a href="#数据库的工作流程" class="headerlink" title="数据库的工作流程"></a>数据库的工作流程</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108205831449.png" alt="image-20210108205831449"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108210927057.png" alt="image-20210108210927057"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108210952255.png" alt="image-20210108210952255"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108211003467.png" alt="image-20210108211003467"></p>
-<h2 id="数据独立性"><a href="#数据独立性" class="headerlink" title="数据独立性"></a>数据独立性</h2><h3 id="数据的物理独立性"><a href="#数据的物理独立性" class="headerlink" title="数据的物理独立性"></a>数据的物理独立性</h3><blockquote>
-<p>内模式与概念模式之间的映射提供了数据的物理独立性。当数据的物理结构发生变化时，如对数据增加索引、改变数据的存储位置、改变存储设备等，不影响数据的逻辑结构。当DBA根据应用程序对数据的存取要求，对数据的物理组织进行优化后，并不需要对概念模式和外模式进行重新定义，也不需要修改应用程序，只需要修改内模式与概念模式之间的映射。</p>
-</blockquote>
-<h3 id="数据的逻辑独立性"><a href="#数据的逻辑独立性" class="headerlink" title="数据的逻辑独立性"></a>数据的逻辑独立性</h3><blockquote>
-<p>概念模式与外模式之间的映射提供了数据的逻辑独立性。当数据的整体逻辑结构发生变化时，如增加新的关系、新的属性、改变属性的数据类型等，可以通过修改各个外模式与概念模式之间的映射，从而使外模式和依据外模式编写的应用程序不受影响。</p>
-</blockquote>
-<h1 id="数据库系统外部的体系结构"><a href="#数据库系统外部的体系结构" class="headerlink" title="数据库系统外部的体系结构"></a>数据库系统外部的体系结构</h1><h2 id="集中式架构"><a href="#集中式架构" class="headerlink" title="集中式架构"></a>集中式架构</h2><ul>
-<li>将所有软硬件集中到一起：包括DBMS,硬件，应用程序，人机交互软件等</li>
-<li>用户仍然可以通过远程终端连接。然而，所有运算都集中在一个位置</li>
-</ul>
-<p><strong>一个物理集中式的架构体系</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108211551077.png" alt="image-20210108211551077"></p>
-<h2 id="客户-服务器架构"><a href="#客户-服务器架构" class="headerlink" title="客户-服务器架构"></a>客户-服务器架构</h2><ul>
-<li><strong>网络数据库系统</strong>：<ul>
-<li>数据库系统软件安装在服务器上，通过网络向外界提供数据服务</li>
-</ul>
-</li>
-<li><strong>Client/Server：</strong><ul>
-<li>需要安装专门的客户端软件</li>
-</ul>
-</li>
-<li><strong>Browser/Server：</strong><ul>
-<li>不需要安装专门的客户端软件</li>
-</ul>
-</li>
-</ul>
-<h3 id="Client-Server架构"><a href="#Client-Server架构" class="headerlink" title="Client/Server架构"></a>Client/Server架构</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108211826865.png" alt="image-20210108211826865"></p>
-<h4 id="Client-Server架构组件"><a href="#Client-Server架构组件" class="headerlink" title="Client/Server架构组件"></a>Client/Server架构组件</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108211904397.png" alt="image-20210108211904397"></p>
-<h4 id="Client-Server架构通信过程"><a href="#Client-Server架构通信过程" class="headerlink" title="Client/Server架构通信过程"></a>Client/Server架构通信过程</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108211945073.png" alt="image-20210108211945073"></p>
-<h3 id="Browser-Server架构"><a href="#Browser-Server架构" class="headerlink" title="Browser/Server架构"></a>Browser/Server架构</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212102096.png" alt="image-20210108212102096"></p>
-<h4 id="Browser-Server架构通信过程"><a href="#Browser-Server架构通信过程" class="headerlink" title="Browser/Server架构通信过程"></a>Browser/Server架构通信过程</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212145147.png" alt="image-20210108212145147"></p>
-<h2 id="三层客户-服务器逻辑结构"><a href="#三层客户-服务器逻辑结构" class="headerlink" title="三层客户-服务器逻辑结构"></a>三层客户-服务器逻辑结构</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212244213.png" alt="image-20210108212244213"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200519554.png" alt="image-20210111200519554"></p>
+<h3 id="例8-19："><a href="#例8-19：" class="headerlink" title="例8-19："></a>例8-19：</h3><p><strong>查询“工资大于30000员工”与“男性员工”的差集</strong></p>
 <ul>
-<li><p><strong>表现层</strong> (Presentation layer)：</p>
-<ul>
-<li>负责展示用户界面，以及与用户的交互。</li>
+<li>等价于：查询工资大于30000的女性员工</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200556740.png" alt="image-20210111200556740"></p>
+<h1 id="数据的增加、删除和修改"><a href="#数据的增加、删除和修改" class="headerlink" title="数据的增加、删除和修改"></a>数据的增加、删除和修改</h1><ul>
+<li>插入数据<ul>
+<li>插入单个元组</li>
+<li>插入子查询结果</li>
 </ul>
 </li>
-<li><p><strong>业务逻辑层或中间层</strong> (Business logic layer ):</p>
-<ul>
-<li> 负责接收来自表示层的请求，并根据它包含的业务逻辑给表示层返回一个结果。</li>
+<li>修改数据<ul>
+<li>修改符合一定条件元组的值</li>
+<li>修改所有元组的值</li>
+<li>带子查询的修改语句</li>
 </ul>
 </li>
-<li><p><strong>数据库服务层</strong> (Database services layer): </p>
-<ul>
-<li>负责存储应用程序的数据，并在接收到请求时，把这些数据发送给业务层。</li>
+<li>删除数据<ul>
+<li>删除符合一定条件元组</li>
+<li>删除所有元组</li>
+<li>带子查询的删除语句</li>
 </ul>
 </li>
 </ul>
-<h3 id="例：图书管理系统"><a href="#例：图书管理系统" class="headerlink" title="例：图书管理系统"></a>例：图书管理系统</h3><h4 id="图书馆信息管理系统数据库服务层"><a href="#图书馆信息管理系统数据库服务层" class="headerlink" title="图书馆信息管理系统数据库服务层"></a>图书馆信息管理系统数据库服务层</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212457459.png" alt="image-20210108212457459"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212510722.png" alt="image-20210108212510722"></p>
-<h4 id="图书馆信息管理系统业务层"><a href="#图书馆信息管理系统业务层" class="headerlink" title="图书馆信息管理系统业务层"></a>图书馆信息管理系统业务层</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212528301.png" alt="image-20210108212528301"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212536898.png" alt="image-20210108212536898"></p>
-<h4 id="图书馆信息管理系统表现层"><a href="#图书馆信息管理系统表现层" class="headerlink" title="图书馆信息管理系统表现层"></a>图书馆信息管理系统表现层</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212554829.png" alt="image-20210108212554829"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212607770.png" alt="image-20210108212607770"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212619538.png" alt="image-20210108212619538"></p>
+<h2 id="SQL语言的动词"><a href="#SQL语言的动词" class="headerlink" title="SQL语言的动词"></a>SQL语言的动词</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200735693.png" alt="image-20210111200735693"></p>
+<h3 id="插入数据"><a href="#插入数据" class="headerlink" title="插入数据"></a>插入数据</h3><h4 id="插入单个元组"><a href="#插入单个元组" class="headerlink" title="插入单个元组"></a>插入单个元组</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200810358.png" alt="image-20210111200810358"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200826632.png" alt="image-20210111200826632"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> DEPARTMENT <span class="keyword">VALUES</span>(<span class="string">&#x27;IT&#x27;</span>,<span class="number">7</span>,NULL.<span class="string">&#x27;2004-3-2&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200837297.png" alt="image-20210111200837297"></p>
+<h4 id="插入子查询结果"><a href="#插入子查询结果" class="headerlink" title="插入子查询结果"></a>插入子查询结果</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200901877.png" alt="image-20210111200901877"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> EXAMRECORDAVG(STUDENTNAME, AVERAGESCORE) <span class="keyword">SELECT</span> S.STUDENTNAME, <span class="keyword">AVG</span>(E.SCORE) <span class="keyword">FROM</span> EXAMRECORD E <span class="keyword">INNER</span> <span class="keyword">JOIN</span> STUDENTINFO S <span class="keyword">ON</span> E.STUDENTNO=S.STUDENTNO <span class="keyword">GROUP</span> <span class="keyword">BY</span> S.STUDENTNAME</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200951443.png" alt="image-20210111200951443"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200959673.png" alt="image-20210111200959673"></p>
+<h3 id="修改数据"><a href="#修改数据" class="headerlink" title="修改数据"></a>修改数据</h3><h4 id="修改符合一定条件元组的值"><a href="#修改符合一定条件元组的值" class="headerlink" title="修改符合一定条件元组的值"></a>修改符合一定条件元组的值</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111201028765.png" alt="image-20210111201028765"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111201039450.png" alt="image-20210111201039450"></p>
+<h4 id="修改所有元组的值"><a href="#修改所有元组的值" class="headerlink" title="修改所有元组的值"></a>修改所有元组的值</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111201108420.png" alt="image-20210111201108420"></p>
+<h3 id="带子查询的修改语句"><a href="#带子查询的修改语句" class="headerlink" title="带子查询的修改语句"></a>带子查询的修改语句</h3><h5 id="例："><a href="#例：" class="headerlink" title="例："></a>例：</h5><p><strong>将‘Research’部门员工的工资提高10%</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111201125362.png" alt="image-20210111201125362"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111201135051.png" alt="image-20210111201135051"></p>
+<h3 id="删除数据"><a href="#删除数据" class="headerlink" title="删除数据"></a>删除数据</h3><h4 id="删除符合一定条件元组"><a href="#删除符合一定条件元组" class="headerlink" title="删除符合一定条件元组"></a>删除符合一定条件元组</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111201241477.png" alt="image-20210111201241477"></p>
+<h4 id="删除所有元组"><a href="#删除所有元组" class="headerlink" title="删除所有元组"></a>删除所有元组</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111201300717.png" alt="image-20210111201300717"></p>
+<h4 id="带子查询的删除语句"><a href="#带子查询的删除语句" class="headerlink" title="带子查询的删除语句"></a>带子查询的删除语句</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111201319814.png" alt="image-20210111201319814"></p>
 ]]></content>
       <categories>
         <category>数据库原理及应用</category>
@@ -1097,213 +1304,6 @@
 
 
 
-]]></content>
-      <categories>
-        <category>数据库原理及应用</category>
-      </categories>
-      <tags>
-        <tag>share</tag>
-        <tag>notes</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数据库第四章——关系数据库标准语言SQL（3）</title>
-    <url>/posts/c0c6291/</url>
-    <content><![CDATA[<h1 id="SQL的功能组成"><a href="#SQL的功能组成" class="headerlink" title="SQL的功能组成"></a>SQL的功能组成</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111193929585.png" alt="image-20210111193929585"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111193940464.png" alt="image-20210111193940464"></p>
-<h1 id="子查询（嵌套查询）"><a href="#子查询（嵌套查询）" class="headerlink" title="子查询（嵌套查询）"></a>子查询（嵌套查询）</h1><blockquote>
-<p>将一个查询块(SELECT-FROM-WHERE)嵌套在另一个查询块的WHERE子句或HAVING短语的条件中的查询</p>
-</blockquote>
-<p><strong>举例：查询“John Smith”的完成项目情况</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111194301996.png" alt="image-20210111194301996"></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> WORKS_ON <span class="keyword">WHERE</span> ESSN=(<span class="keyword">SELECT</span> SSN <span class="keyword">FROM</span> EMPLOYEE <span class="keyword">WHERE</span> FNAME=<span class="string">&#x27;JOHN&#x27;</span> <span class="keyword">AND</span> LNAME=<span class="string">&#x27;Smith&#x27;</span>) <span class="keyword">ORDER</span> <span class="keyword">BY</span> PNO <span class="keyword">DESC</span>;</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><ul>
-<li>SQL语言允许多层嵌套查询(建议：不要编写太复杂的嵌套查询，可以利用中间变量简化SQL语句)</li>
-<li>子查询的SELECT语句不能使用ORDER BY子句，ORDER BY子句只能对最终查询结果排序</li>
-<li>嵌套查询一般的求解方法是由里向外处理</li>
-<li><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111194414808.png" alt="image-20210111194414808"></li>
-</ul>
-<h2 id="带有IN谓词的子查询"><a href="#带有IN谓词的子查询" class="headerlink" title="带有IN谓词的子查询"></a>带有IN谓词的子查询</h2><h3 id="例8-1："><a href="#例8-1：" class="headerlink" title="例8-1："></a>例8-1：</h3><p><strong>查询参与了任何一个SSN为‘123456789’的员工参与过项目的员工SSN</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111194706997.png" alt="image-20210111194706997"></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> ESSN <span class="keyword">FROM</span> WORKS_ON <span class="keyword">WHERE</span> PNO <span class="keyword">IN</span> (<span class="keyword">SELECT</span> PNO <span class="keyword">FROM</span> WORKS_ON <span class="keyword">WHERE</span> ESSN=<span class="string">&#x27;123456789&#x27;</span>);</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="例8-2："><a href="#例8-2：" class="headerlink" title="例8-2："></a>例8-2：</h3><p><strong>查询参与了任何一个SSN为‘123456789’的员工参与过项目的员工姓名</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111194734490.png" alt="image-20210111194734490"></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> FNAME, LNAME <span class="keyword">FROM</span> EMPLOYEE <span class="keyword">WHERE</span> SSN <span class="keyword">IN</span> (<span class="keyword">SELECT</span> ESSN <span class="keyword">FROM</span> WORKS_ON <span class="keyword">WHERE</span> PRO <span class="keyword">IN</span> (<span class="keyword">SELECT</span> PNO <span class="keyword">FROM</span> WORKS_ON <span class="keyword">WHERE</span> ESSN=<span class="string">&#x27;123456789&#x27;</span>))</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h3 id="例8-3："><a href="#例8-3：" class="headerlink" title="例8-3："></a>例8-3：</h3><p><strong>查询参与了任何一个‘John Smith’ 参与过项目的员工姓名</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111194808213.png" alt="image-20210111194808213"></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> FNAME, LNAME <span class="keyword">FROM</span> EMPLOYEE <span class="keyword">WHERE</span> SSN <span class="keyword">IN</span> (<span class="keyword">SELECT</span> ESSN <span class="keyword">FROM</span> WORKS_ON <span class="keyword">WHERE</span> PNO <span class="keyword">IN</span> (<span class="keyword">SELECT</span> PNO <span class="keyword">FROM</span> WORKS_ON W <span class="keyword">JOIN</span> EMPLOYEE E <span class="keyword">ON</span> W.ESSN=E.SSN <span class="keyword">WHERE</span> FNAME=<span class="string">&#x27;JOHN&#x27;</span> <span class="keyword">AND</span> LNAME=<span class="string">&#x27;SMITH&#x27;</span>))</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h3 id="例8-4："><a href="#例8-4：" class="headerlink" title="例8-4："></a>例8-4：</h3><p><strong>查询有家属的员工的姓名</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111194836923.png" alt="image-20210111194836923"></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> FNAME, LNAME <span class="keyword">FROM</span> EMPLOYEE <span class="keyword">WHERE</span> SSN <span class="keyword">IN</span> (<span class="keyword">SELECT</span> ESSN <span class="keyword">FROM</span> DEPENDENT)</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="例8-5："><a href="#例8-5：" class="headerlink" title="例8-5："></a>例8-5：</h3><p><strong>查询有家属的员工的姓名(用连接查询方式)</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111194904519.png" alt="image-20210111194904519"></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> FNAME, LNAME <span class="keyword">FROM</span> EMPLOYEE E <span class="keyword">JOIN</span> DEPENDENT D <span class="keyword">ON</span> E.SSN = D.SSN;</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h3 id="例8-6："><a href="#例8-6：" class="headerlink" title="例8-6："></a>例8-6：</h3><p><strong>查询没有家属的员工的姓名</strong></p>
-<p>![image-20210111194935540](/Users/fine/Library/Application Support/typora-user-images/image-20210111194935540.png)</p>
-<h3 id="例8-7："><a href="#例8-7：" class="headerlink" title="例8-7："></a>例8-7：</h3><p><strong>查询没有家属的员工的姓名(用连接查询方式)</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195033018.png" alt="image-20210111195033018"></p>
-<h2 id="带有比较运算符的子查询"><a href="#带有比较运算符的子查询" class="headerlink" title="带有比较运算符的子查询"></a>带有比较运算符的子查询</h2><h3 id="例8-8："><a href="#例8-8：" class="headerlink" title="例8-8："></a>例8-8：</h3><p><strong>查询在Research部门工作的所有员工的姓名和住址</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195110994.png" alt="image-20210111195110994"></p>
-<h3 id="使用局部变量"><a href="#使用局部变量" class="headerlink" title="使用局部变量"></a>使用局部变量</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195143756.png" alt="image-20210111195143756"></p>
-<h3 id="例8-9："><a href="#例8-9：" class="headerlink" title="例8-9："></a>例8-9：</h3><p><strong>查询所有工资大于或等于全公司平均工资的员工信息</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195212839.png" alt="image-20210111195212839"></p>
-<h3 id="使用局部变量简化程序"><a href="#使用局部变量简化程序" class="headerlink" title="使用局部变量简化程序"></a>使用局部变量简化程序</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195233039.png" alt="image-20210111195233039"></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">DECLARE</span> @AVERAGESALARY <span class="built_in">DECIMAL</span>(<span class="number">7</span>,<span class="number">2</span>)</span><br><span class="line"><span class="keyword">SET</span> @AVERAGESALARY = (<span class="keyword">SELECT</span> <span class="keyword">AVG</span>(SALARY) <span class="keyword">FROM</span> EMPLOYEE) <span class="keyword">WHERE</span> SALARY &gt;= @AVERAGESALARY</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h3 id="例8-10："><a href="#例8-10：" class="headerlink" title="例8-10："></a>例8-10：</h3><p><strong>查询FNAME以JO开头员工的工作记录</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195302188.png" alt="image-20210111195302188"></p>
-<h3 id="例8-11："><a href="#例8-11：" class="headerlink" title="例8-11："></a>例8-11：</h3><p><strong>查询FNAME以JOH开头员工的工作记录</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195336814.png" alt="image-20210111195336814"></p>
-<h2 id="带有ANY或ALL谓词的子查询"><a href="#带有ANY或ALL谓词的子查询" class="headerlink" title="带有ANY或ALL谓词的子查询"></a>带有ANY或ALL谓词的子查询</h2><h3 id="例8-12："><a href="#例8-12：" class="headerlink" title="例8-12："></a>例8-12：</h3><p><strong>查询FNAME以JO开头员工的工作记录</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195409670.png" alt="image-20210111195409670"></p>
-<ul>
-<li>上例查询等价于带有IN谓词的子查询</li>
-<li><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195428757.png" alt="image-20210111195428757"></li>
-</ul>
-<h3 id="ANY与ALL的区别"><a href="#ANY与ALL的区别" class="headerlink" title="ANY与ALL的区别"></a>ANY与ALL的区别</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195444770.png" alt="image-20210111195444770"></p>
-<h4 id="例8-13："><a href="#例8-13：" class="headerlink" title="例8-13："></a>例8-13：</h4><p><strong>查询工资大于或等于任意一个女性员工工资的男性员工信息</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195535918.png" alt="image-20210111195535918"></p>
-<ul>
-<li>上例查询等价于使用汇总函数的子查询</li>
-<li><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195600279.png" alt="image-20210111195600279"></li>
-</ul>
-<h4 id="例8-14："><a href="#例8-14：" class="headerlink" title="例8-14："></a>例8-14：</h4><p><strong>查询工资大于或等于全部女性员工工资的男性员工信息</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195642862.png" alt="image-20210111195642862"></p>
-<ul>
-<li>上例查询等价于使用汇总函数的子查询</li>
-<li><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195704013.png" alt="image-20210111195704013"></li>
-</ul>
-<h3 id="与汇总函数的等价性"><a href="#与汇总函数的等价性" class="headerlink" title="与汇总函数的等价性"></a>与汇总函数的等价性</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195804138.png" alt="image-20210111195804138"></p>
-<h2 id="带有EXISTS谓词的子查询"><a href="#带有EXISTS谓词的子查询" class="headerlink" title="带有EXISTS谓词的子查询"></a>带有EXISTS谓词的子查询</h2><h3 id="“不相关子查询”与“相关子查询”"><a href="#“不相关子查询”与“相关子查询”" class="headerlink" title="“不相关子查询”与“相关子查询”"></a>“不相关子查询”与“相关子查询”</h3><ul>
-<li>不相关子查询(non-correlated subquery)<ul>
-<li>子查询只执行一次，其结果用于父查询。子查询的查询条件不依赖于父查询</li>
-</ul>
-</li>
-<li>相关子查询(correlated subquery)<ul>
-<li>子查询的查询条件依赖于外层父查询的某个属性值</li>
-<li>主要是指“带有EXISTS谓词的子查询</li>
-</ul>
-</li>
-</ul>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195930709.png" alt="image-20210111195930709"></p>
-<h3 id="例8-15："><a href="#例8-15：" class="headerlink" title="例8-15："></a>例8-15：</h3><p><strong>查询参与了项目的员工姓名</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195956155.png" alt="image-20210111195956155"></p>
-<h4 id="相关子查询的执行过程"><a href="#相关子查询的执行过程" class="headerlink" title="相关子查询的执行过程"></a>相关子查询的执行过程</h4><ul>
-<li>首先取外层查询中表的第1个元组，根据它与内层查询相关的属性值处理内层查询，若WHERE子句返回值为真，则取此元组放入结果表；然后再取外层查询中表的下一个元组，重复这一过程，直至外层表全部检查完毕为止。</li>
-</ul>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200047125.png" alt="image-20210111200047125"></p>
-<h1 id="集合查询"><a href="#集合查询" class="headerlink" title="集合查询"></a>集合查询</h1><ul>
-<li><p>SELECT语句查询的结果是元组的集合，所以多个SELECT语句的查询结果可进行集合操作</p>
-</li>
-<li><p>集合操作符</p>
-<ul>
-<li><p>并 Union</p>
-</li>
-<li><p>交 Intersect(SQL SERVER 2005以上支持)</p>
-</li>
-<li><p>差 Except(SQL SERVER 2005以上支持)</p>
-<ul>
-<li><p>Oracle：MINUS</p>
-</li>
-<li><p>DB2：EXCEPT</p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="并Union"><a href="#并Union" class="headerlink" title="并Union"></a>并Union</h2><h3 id="例8-16："><a href="#例8-16：" class="headerlink" title="例8-16："></a>例8-16：</h3><p><strong>查询在部门5工作员工或直接管理部门5员工的SSN</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200226714.png" alt="image-20210111200226714"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200243112.png" alt="image-20210111200243112"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200252714.png" alt="image-20210111200252714"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200302506.png" alt="image-20210111200302506"></p>
-<h2 id="交-Intersect-SQL-SERVER-2005以上支持"><a href="#交-Intersect-SQL-SERVER-2005以上支持" class="headerlink" title="交 Intersect(SQL SERVER 2005以上支持)"></a>交 Intersect(SQL SERVER 2005以上支持)</h2><h3 id="例8-17："><a href="#例8-17：" class="headerlink" title="例8-17："></a>例8-17：</h3><p><strong>查询“男性员工”与“工资大于30000员工”的交集</strong></p>
-<ul>
-<li>等价于：查询既是男性同时工资大于30000的员工</li>
-</ul>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200403560.png" alt="image-20210111200403560"></p>
-<h2 id="差-Difference-SQL-SERVER-2005以上支持"><a href="#差-Difference-SQL-SERVER-2005以上支持" class="headerlink" title="差 Difference (SQL SERVER 2005以上支持)"></a>差 Difference (SQL SERVER 2005以上支持)</h2><h3 id="例8-18："><a href="#例8-18：" class="headerlink" title="例8-18："></a>例8-18：</h3><p><strong>查询“男性员工”与“工资大于30000员工”的差集</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200448169.png" alt="image-20210111200448169"></p>
-<ul>
-<li>等价于：查询工资不大于30000的男性员工</li>
-</ul>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200519554.png" alt="image-20210111200519554"></p>
-<h3 id="例8-19："><a href="#例8-19：" class="headerlink" title="例8-19："></a>例8-19：</h3><p><strong>查询“工资大于30000员工”与“男性员工”的差集</strong></p>
-<ul>
-<li>等价于：查询工资大于30000的女性员工</li>
-</ul>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200556740.png" alt="image-20210111200556740"></p>
-<h1 id="数据的增加、删除和修改"><a href="#数据的增加、删除和修改" class="headerlink" title="数据的增加、删除和修改"></a>数据的增加、删除和修改</h1><ul>
-<li>插入数据<ul>
-<li>插入单个元组</li>
-<li>插入子查询结果</li>
-</ul>
-</li>
-<li>修改数据<ul>
-<li>修改符合一定条件元组的值</li>
-<li>修改所有元组的值</li>
-<li>带子查询的修改语句</li>
-</ul>
-</li>
-<li>删除数据<ul>
-<li>删除符合一定条件元组</li>
-<li>删除所有元组</li>
-<li>带子查询的删除语句</li>
-</ul>
-</li>
-</ul>
-<h2 id="SQL语言的动词"><a href="#SQL语言的动词" class="headerlink" title="SQL语言的动词"></a>SQL语言的动词</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200735693.png" alt="image-20210111200735693"></p>
-<h3 id="插入数据"><a href="#插入数据" class="headerlink" title="插入数据"></a>插入数据</h3><h4 id="插入单个元组"><a href="#插入单个元组" class="headerlink" title="插入单个元组"></a>插入单个元组</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200810358.png" alt="image-20210111200810358"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200826632.png" alt="image-20210111200826632"></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> DEPARTMENT <span class="keyword">VALUES</span>(<span class="string">&#x27;IT&#x27;</span>,<span class="number">7</span>,NULL.<span class="string">&#x27;2004-3-2&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-
-
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200837297.png" alt="image-20210111200837297"></p>
-<h4 id="插入子查询结果"><a href="#插入子查询结果" class="headerlink" title="插入子查询结果"></a>插入子查询结果</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200901877.png" alt="image-20210111200901877"></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> EXAMRECORDAVG(STUDENTNAME, AVERAGESCORE) <span class="keyword">SELECT</span> S.STUDENTNAME, <span class="keyword">AVG</span>(E.SCORE) <span class="keyword">FROM</span> EXAMRECORD E <span class="keyword">INNER</span> <span class="keyword">JOIN</span> STUDENTINFO S <span class="keyword">ON</span> E.STUDENTNO=S.STUDENTNO <span class="keyword">GROUP</span> <span class="keyword">BY</span> S.STUDENTNAME</span><br></pre></td></tr></table></figure>
-
-
-
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200951443.png" alt="image-20210111200951443"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200959673.png" alt="image-20210111200959673"></p>
-<h3 id="修改数据"><a href="#修改数据" class="headerlink" title="修改数据"></a>修改数据</h3><h4 id="修改符合一定条件元组的值"><a href="#修改符合一定条件元组的值" class="headerlink" title="修改符合一定条件元组的值"></a>修改符合一定条件元组的值</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111201028765.png" alt="image-20210111201028765"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111201039450.png" alt="image-20210111201039450"></p>
-<h4 id="修改所有元组的值"><a href="#修改所有元组的值" class="headerlink" title="修改所有元组的值"></a>修改所有元组的值</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111201108420.png" alt="image-20210111201108420"></p>
-<h3 id="带子查询的修改语句"><a href="#带子查询的修改语句" class="headerlink" title="带子查询的修改语句"></a>带子查询的修改语句</h3><h5 id="例："><a href="#例：" class="headerlink" title="例："></a>例：</h5><p><strong>将‘Research’部门员工的工资提高10%</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111201125362.png" alt="image-20210111201125362"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111201135051.png" alt="image-20210111201135051"></p>
-<h3 id="删除数据"><a href="#删除数据" class="headerlink" title="删除数据"></a>删除数据</h3><h4 id="删除符合一定条件元组"><a href="#删除符合一定条件元组" class="headerlink" title="删除符合一定条件元组"></a>删除符合一定条件元组</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111201241477.png" alt="image-20210111201241477"></p>
-<h4 id="删除所有元组"><a href="#删除所有元组" class="headerlink" title="删除所有元组"></a>删除所有元组</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111201300717.png" alt="image-20210111201300717"></p>
-<h4 id="带子查询的删除语句"><a href="#带子查询的删除语句" class="headerlink" title="带子查询的删除语句"></a>带子查询的删除语句</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111201319814.png" alt="image-20210111201319814"></p>
 ]]></content>
       <categories>
         <category>数据库原理及应用</category>
