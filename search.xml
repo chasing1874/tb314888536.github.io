@@ -667,6 +667,24 @@
       </tags>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/posts/4a17b156/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. <a id="more"></a>Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>java枚举类与注解</title>
     <url>/posts/2b247dfd/</url>
     <content><![CDATA[<h1 id="枚举类"><a href="#枚举类" class="headerlink" title="枚举类"></a>枚举类</h1><h2 id="枚举类的使用"><a href="#枚举类的使用" class="headerlink" title="枚举类的使用"></a>枚举类的使用</h2><p><strong>1. 枚举类的理解：类的对象只有有限个、确定的。</strong></p>
@@ -812,602 +830,6 @@
 ]]></content>
       <categories>
         <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>share</tag>
-        <tag>notes</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数据库第二章——数据库系统结构</title>
-    <url>/posts/95a84140/</url>
-    <content><![CDATA[<h1 id="数据库系统结构概述"><a href="#数据库系统结构概述" class="headerlink" title="数据库系统结构概述"></a>数据库系统结构概述</h1><ul>
-<li><p>数据库管理系统内部的系统结构</p>
-<ul>
-<li>三级模式结构</li>
-<li>两级映射功能</li>
-</ul>
-</li>
-<li><p>数据库系统外部的体系结构</p>
-<ul>
-<li><p>集中式体系结构</p>
-</li>
-<li><p>“客户/服务器”架构</p>
-</li>
-<li><p>“客户/应用服务器/数据库服务器”架构</p>
-</li>
-</ul>
-</li>
-</ul>
-<h1 id="数据库模式和实例的概念"><a href="#数据库模式和实例的概念" class="headerlink" title="数据库模式和实例的概念"></a>数据库模式和实例的概念</h1><ul>
-<li><p>模式(Schema)与实例(Instance)</p>
-<ul>
-<li><p><strong>模式</strong>：</p>
-<ul>
-<li>数据库的描述。包括数据库的数据结构、数据类型和约束</li>
-</ul>
-</li>
-<li><p>**实例(状态)**：某一时刻实际存储在数据库中的数据集合</p>
-</li>
-<li><p>实例是模式在某一时刻的具体化、实例化(类似于面向对象理论中Class与Object的关系)</p>
-</li>
-</ul>
-</li>
-</ul>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108205629791.png" alt="image-20210108205629791"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108205644673.png" alt="image-20210108205644673"></p>
-<ul>
-<li>数据库模式很少发生改变 <ul>
-<li>模式也被叫做内涵</li>
-</ul>
-</li>
-<li>每次进行数据库更新操作时数据库实例都会发生变化<ul>
-<li>实例(状态)也被称为外延</li>
-</ul>
-</li>
-</ul>
-<h1 id="数据库系统的三级模式结构"><a href="#数据库系统的三级模式结构" class="headerlink" title="数据库系统的三级模式结构"></a>数据库系统的三级模式结构</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108205831449.png" alt="image-20210108205831449"></p>
-<ul>
-<li><p><strong>内模式</strong>,也称存储模式 (Internal schema)：</p>
-<blockquote>
-<p>数据物理结构和存储方式的描述，是数据在数据库内部的表示方式 </p>
-</blockquote>
-<ul>
-<li>通常使用<strong>物理数据模型</strong>描述</li>
-</ul>
-</li>
-<li><p><strong>概念模式</strong>,也称全局模式，有时简称“模式” (Conceptual schema)：</p>
-<blockquote>
-<p>数据库中全体数据的逻辑结构和特征的描述</p>
-</blockquote>
-<ul>
-<li>通常使用<strong>概念或逻辑数据模型</strong>描述</li>
-</ul>
-</li>
-<li><p><strong>外模式</strong>,也称子模式或用户模式 (External schemas)：</p>
-<blockquote>
-<p>数据库用户能够看见和使用的局部数据的逻辑结构和特征的描述 </p>
-<p>使不同的用户能看到的界面不同。</p>
-</blockquote>
-<ul>
-<li><p>通常使用与<strong>概念模式相同的数据模型</strong>描述</p>
-</li>
-<li><p>模型(Model)与模式(Schema)的区别</p>
-<ul>
-<li>数据模型是描述数据的一种通用形式，模式则是用给定的数据模型描述具体数据。注意：真正的数据内容保存在数据库状态(State)中。</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="用E-R概念模型表示的概念模型"><a href="#用E-R概念模型表示的概念模型" class="headerlink" title="用E-R概念模型表示的概念模型"></a>用E-R概念模型表示的概念模型</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108210400522.png" alt="image-20210108210400522"></p>
-<h2 id="用关系逻辑模型表示的概念模型"><a href="#用关系逻辑模型表示的概念模型" class="headerlink" title="用关系逻辑模型表示的概念模型"></a>用关系逻辑模型表示的概念模型</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108210441911.png" alt="image-20210108210441911"></p>
-<h2 id="用关系逻辑模型表示的外模式及其实例"><a href="#用关系逻辑模型表示的外模式及其实例" class="headerlink" title="用关系逻辑模型表示的外模式及其实例"></a>用关系逻辑模型表示的外模式及其实例</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108210546764.png" alt="image-20210108210546764"></p>
-<ul>
-<li>外模式用于使不同用户级别看到的界面不同</li>
-</ul>
-<h1 id="数据库系统的两级映射功能"><a href="#数据库系统的两级映射功能" class="headerlink" title="数据库系统的两级映射功能"></a>数据库系统的两级映射功能</h1><ul>
-<li><p><strong>两级映射</strong>(Mapping)</p>
-<ul>
-<li>概念模式/内模式映射</li>
-<li>外模式/概念模式映射</li>
-</ul>
-</li>
-<li><p><strong>数据独立性</strong></p>
-<ul>
-<li>物理独立性(Physical Data Independence)</li>
-<li>逻辑独立性(Logical Data Independence)</li>
-</ul>
-</li>
-</ul>
-<h2 id="数据库的工作流程"><a href="#数据库的工作流程" class="headerlink" title="数据库的工作流程"></a>数据库的工作流程</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108205831449.png" alt="image-20210108205831449"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108210927057.png" alt="image-20210108210927057"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108210952255.png" alt="image-20210108210952255"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108211003467.png" alt="image-20210108211003467"></p>
-<h2 id="数据独立性"><a href="#数据独立性" class="headerlink" title="数据独立性"></a>数据独立性</h2><h3 id="数据的物理独立性"><a href="#数据的物理独立性" class="headerlink" title="数据的物理独立性"></a>数据的物理独立性</h3><blockquote>
-<p>内模式与概念模式之间的映射提供了数据的物理独立性。当数据的物理结构发生变化时，如对数据增加索引、改变数据的存储位置、改变存储设备等，不影响数据的逻辑结构。当DBA根据应用程序对数据的存取要求，对数据的物理组织进行优化后，并不需要对概念模式和外模式进行重新定义，也不需要修改应用程序，只需要修改内模式与概念模式之间的映射。</p>
-</blockquote>
-<h3 id="数据的逻辑独立性"><a href="#数据的逻辑独立性" class="headerlink" title="数据的逻辑独立性"></a>数据的逻辑独立性</h3><blockquote>
-<p>概念模式与外模式之间的映射提供了数据的逻辑独立性。当数据的整体逻辑结构发生变化时，如增加新的关系、新的属性、改变属性的数据类型等，可以通过修改各个外模式与概念模式之间的映射，从而使外模式和依据外模式编写的应用程序不受影响。</p>
-</blockquote>
-<h1 id="数据库系统外部的体系结构"><a href="#数据库系统外部的体系结构" class="headerlink" title="数据库系统外部的体系结构"></a>数据库系统外部的体系结构</h1><h2 id="集中式架构"><a href="#集中式架构" class="headerlink" title="集中式架构"></a>集中式架构</h2><ul>
-<li>将所有软硬件集中到一起：包括DBMS,硬件，应用程序，人机交互软件等</li>
-<li>用户仍然可以通过远程终端连接。然而，所有运算都集中在一个位置</li>
-</ul>
-<p><strong>一个物理集中式的架构体系</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108211551077.png" alt="image-20210108211551077"></p>
-<h2 id="客户-服务器架构"><a href="#客户-服务器架构" class="headerlink" title="客户-服务器架构"></a>客户-服务器架构</h2><ul>
-<li><strong>网络数据库系统</strong>：<ul>
-<li>数据库系统软件安装在服务器上，通过网络向外界提供数据服务</li>
-</ul>
-</li>
-<li><strong>Client/Server：</strong><ul>
-<li>需要安装专门的客户端软件</li>
-</ul>
-</li>
-<li><strong>Browser/Server：</strong><ul>
-<li>不需要安装专门的客户端软件</li>
-</ul>
-</li>
-</ul>
-<h3 id="Client-Server架构"><a href="#Client-Server架构" class="headerlink" title="Client/Server架构"></a>Client/Server架构</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108211826865.png" alt="image-20210108211826865"></p>
-<h4 id="Client-Server架构组件"><a href="#Client-Server架构组件" class="headerlink" title="Client/Server架构组件"></a>Client/Server架构组件</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108211904397.png" alt="image-20210108211904397"></p>
-<h4 id="Client-Server架构通信过程"><a href="#Client-Server架构通信过程" class="headerlink" title="Client/Server架构通信过程"></a>Client/Server架构通信过程</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108211945073.png" alt="image-20210108211945073"></p>
-<h3 id="Browser-Server架构"><a href="#Browser-Server架构" class="headerlink" title="Browser/Server架构"></a>Browser/Server架构</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212102096.png" alt="image-20210108212102096"></p>
-<h4 id="Browser-Server架构通信过程"><a href="#Browser-Server架构通信过程" class="headerlink" title="Browser/Server架构通信过程"></a>Browser/Server架构通信过程</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212145147.png" alt="image-20210108212145147"></p>
-<h2 id="三层客户-服务器逻辑结构"><a href="#三层客户-服务器逻辑结构" class="headerlink" title="三层客户-服务器逻辑结构"></a>三层客户-服务器逻辑结构</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212244213.png" alt="image-20210108212244213"></p>
-<ul>
-<li><p><strong>表现层</strong> (Presentation layer)：</p>
-<ul>
-<li>负责展示用户界面，以及与用户的交互。</li>
-</ul>
-</li>
-<li><p><strong>业务逻辑层或中间层</strong> (Business logic layer ):</p>
-<ul>
-<li> 负责接收来自表示层的请求，并根据它包含的业务逻辑给表示层返回一个结果。</li>
-</ul>
-</li>
-<li><p><strong>数据库服务层</strong> (Database services layer): </p>
-<ul>
-<li>负责存储应用程序的数据，并在接收到请求时，把这些数据发送给业务层。</li>
-</ul>
-</li>
-</ul>
-<h3 id="例：图书管理系统"><a href="#例：图书管理系统" class="headerlink" title="例：图书管理系统"></a>例：图书管理系统</h3><h4 id="图书馆信息管理系统数据库服务层"><a href="#图书馆信息管理系统数据库服务层" class="headerlink" title="图书馆信息管理系统数据库服务层"></a>图书馆信息管理系统数据库服务层</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212457459.png" alt="image-20210108212457459"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212510722.png" alt="image-20210108212510722"></p>
-<h4 id="图书馆信息管理系统业务层"><a href="#图书馆信息管理系统业务层" class="headerlink" title="图书馆信息管理系统业务层"></a>图书馆信息管理系统业务层</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212528301.png" alt="image-20210108212528301"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212536898.png" alt="image-20210108212536898"></p>
-<h4 id="图书馆信息管理系统表现层"><a href="#图书馆信息管理系统表现层" class="headerlink" title="图书馆信息管理系统表现层"></a>图书馆信息管理系统表现层</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212554829.png" alt="image-20210108212554829"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212607770.png" alt="image-20210108212607770"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212619538.png" alt="image-20210108212619538"></p>
-]]></content>
-      <categories>
-        <category>数据库原理及应用</category>
-      </categories>
-      <tags>
-        <tag>share</tag>
-        <tag>notes</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/posts/4a17b156/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. <a id="more"></a>Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>数据库第四章——关系数据库标准语言SQL（2）</title>
-    <url>/posts/b4b005f4/</url>
-    <content><![CDATA[<h1 id="SQL的功能组成"><a href="#SQL的功能组成" class="headerlink" title="SQL的功能组成"></a>SQL的功能组成</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111095419310.png" alt="image-20210111095419310"></p>
-<h2 id="SQL－-gt-DML-－-gt-DQL-数据查询"><a href="#SQL－-gt-DML-－-gt-DQL-数据查询" class="headerlink" title="SQL－&gt;DML －&gt;DQL(数据查询)"></a>SQL－&gt;DML －&gt;DQL(数据查询)</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111095619074.png" alt="image-20210111095619074"></p>
-<h1 id="内连接"><a href="#内连接" class="headerlink" title="内连接"></a>内连接</h1><p><strong>例7-1：查询所有学生所在院系信息。</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100039169.png" alt="image-20210111100039169"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100055583.png"></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> STUDENTINFO</span><br><span class="line"><span class="keyword">INNER</span> <span class="keyword">JOIN</span> DEPARTMENT <span class="keyword">ON</span> (STUDENTINFO.STUDENTDEPARTMENTIN=DEPARTMENT.DEPARTMENTID)</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-
-
-<h2 id="内连接执行过程"><a href="#内连接执行过程" class="headerlink" title="内连接执行过程"></a>内连接执行过程</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100310303.png" alt="image-20210111100310303"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111102107255.png" alt="image-20210111102107255"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100511937.png" alt="image-20210111100511937"></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> S.STUDENTNO, S.STUDENTNAME, D.DEPARTMENTNAME <span class="keyword">FROM</span> STUDENTINFO <span class="keyword">AS</span> S <span class="keyword">INNER</span> <span class="keyword">JOIN</span> DEPARTMENT <span class="keyword">AS</span> D <span class="keyword">ON</span> (S.STUDENTDEPARTIN = D.DEPARTMENTID)</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h2 id="多表查询时SELECT-表示的含义"><a href="#多表查询时SELECT-表示的含义" class="headerlink" title="多表查询时SELECT *表示的含义"></a>多表查询时SELECT *表示的含义</h2><ul>
-<li>当未使用限定符指定时，星号解析为对 FROM 子句中所指定的所有表或视图中的所有列的引用</li>
-<li>当使用表或视图名称进行限定时，星号解析为对表或视图中的所有列的引用</li>
-</ul>
-<h2 id="注意：尽量不要用以下连接方式"><a href="#注意：尽量不要用以下连接方式" class="headerlink" title="注意：尽量不要用以下连接方式"></a>注意：尽量不要用以下连接方式</h2><ul>
-<li><pre><code class="sql">SELECT * FROM STUDENTINFO, DEPARTMENT WHERE STUDENTINFO.STUDENTDEPARTID=DEPARTMENT.DEPARTMENTID
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">- 原因：无法将连接条件和针对连接后生成的“大表”的筛选条件分开</span><br><span class="line"></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">**数据挖掘例7-2：考察这家公司技术部门的男女员工比例**</span><br><span class="line"></span><br><span class="line">![image-20210111100750333](https:&#x2F;&#x2F;chasing1874.oss-cn-chengdu.aliyuncs.com&#x2F;image-20210111100750333.png)</span><br><span class="line"></span><br><span class="line">![image-20210111100805120](https:&#x2F;&#x2F;chasing1874.oss-cn-chengdu.aliyuncs.com&#x2F;image-20210111100805120.png)</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;sql</span><br><span class="line">SELECT * FROM EMPLOYEE E JOIN DEPARTMENT D ON (E.DNO &#x3D; D.DNUMBER)</span><br><span class="line"></span><br><span class="line">SELECT SEX, COUNT(*) AS 人数 FROM EMPLOYEE JOIN DEPARTMENT ON (DNO &#x3D; DNUMBER) WHERE DNAME&#x3D;&#39;RESEARCH&#39; GROUP BY SEX</span><br></pre></td></tr></table></figure>
-
-
-</code></pre>
-</li>
-</ul>
-<h2 id="多表内连接查询"><a href="#多表内连接查询" class="headerlink" title="多表内连接查询"></a>多表内连接查询</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100842785.png" alt="image-20210111100842785"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100854911.png" alt="image-20210111100854911"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100906322.png" alt="image-20210111100906322"></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> EXAMRECORD E <span class="keyword">JOIN</span> STUDENTINFO S <span class="keyword">ON</span> (E.STUDENTNO = E.STUDENTNO) <span class="keyword">JOIN</span> COURSE C <span class="keyword">ON</span> (C.COURSEID = E.COURSEID)</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<p><strong>例7-3：查询所有学生各门课程成绩</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100932313.png" alt="image-20210111100932313"></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> STUDENTNAME <span class="keyword">AS</span> 学生姓名 , COURSENAME <span class="keyword">AS</span> 课程名称, SCORE <span class="keyword">AS</span> 成绩 <span class="keyword">FROM</span> EXAMRECORD E <span class="keyword">JOIN</span> STUDENTINFO S <span class="keyword">ON</span> (E.STUDENTNO=S.STUDENTNO) <span class="keyword">JOIN</span> COUSE C <span class="keyword">ON</span> (C.COURSEID=E.COURSEID)</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<p><strong>例7-4 ：查询各门课程任课教师信息</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100959522.png" alt="image-20210111100959522"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111101013925.png" alt="image-20210111101013925"></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> COURSE <span class="keyword">ORDER</span> <span class="keyword">BY</span> TEACHERID <span class="keyword">DESC</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> TEACHER</span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> COURSE C <span class="keyword">JOIN</span> TEACHER T <span class="keyword">ON</span> (C.TEACHERID=T.TEACHERID)</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-<h1 id="外连接"><a href="#外连接" class="headerlink" title="外连接"></a>外连接</h1><h2 id="LEFT-OUTER-JOIN"><a href="#LEFT-OUTER-JOIN" class="headerlink" title="LEFT OUTER JOIN"></a>LEFT OUTER JOIN</h2><blockquote>
-<p>显示LEFT表(Course)中的全部元组，如果RIGHT表(Teacher)<br>中没有扫描到符合连接条件的元组，则用NULL代替</p>
-</blockquote>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111104650305.png" alt="image-20210111104650305"></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> COURSE C <span class="keyword">LEFT</span> <span class="keyword">OUTER</span> <span class="keyword">JOIN</span> TEACHER T <span class="keyword">ON</span> (C.TEACHERID = T.TEACHERID) <span class="keyword">ORDER</span> <span class="keyword">BY</span> T.TEACHERID <span class="keyword">DESC</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="RIGHT-OUTER-JOIN"><a href="#RIGHT-OUTER-JOIN" class="headerlink" title="RIGHT OUTER JOIN"></a>RIGHT OUTER JOIN</h2><blockquote>
-<p>显示LEFT表(Course)中的全部元组，如果RIGHT表(Teacher)<br>中没有扫描到符合连接条件的元组，则用NULL代替</p>
-</blockquote>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111104745799.png" alt="image-20210111104745799"></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> COURSE C <span class="keyword">RIGHT</span> <span class="keyword">OUTER</span> <span class="keyword">JOIN</span> TEACHER T <span class="keyword">ON</span> (C.TEACHERID=T.TEACHERID) <span class="keyword">ORDER</span> <span class="keyword">BY</span> C.COURSEID <span class="keyword">DESC</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h3 id="注意：进行左、右外连接时表的顺序非常重要"><a href="#注意：进行左、右外连接时表的顺序非常重要" class="headerlink" title="注意：进行左、右外连接时表的顺序非常重要"></a>注意：进行左、右外连接时表的顺序非常重要</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111104837990.png" alt="image-20210111104837990"></p>
-<h2 id="FULL-OUTTER-JOIN"><a href="#FULL-OUTTER-JOIN" class="headerlink" title="FULL OUTTER JOIN"></a>FULL OUTTER JOIN</h2><blockquote>
-<p>显示LEFT表(Course) 和RIGHT表(Teacher)中的全部元组，如果<br>没有扫描到符合连接条件的元组，<strong>则用NULL代替</strong></p>
-</blockquote>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111104907825.png" alt="image-20210111104907825"></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> COURSE C <span class="keyword">FULL</span> <span class="keyword">OUTER</span> <span class="keyword">JOIN</span> TEACHER T <span class="keyword">ON</span> (C.TEACHERID=T.TEACHERID) <span class="keyword">ORDER</span> <span class="keyword">BY</span> C.TEACHERID <span class="keyword">DESC</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h3 id="注意：多表外连接，表顺序很重要"><a href="#注意：多表外连接，表顺序很重要" class="headerlink" title="注意：多表外连接，表顺序很重要"></a>注意：多表外连接，表顺序很重要</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111104939651.png" alt="image-20210111104939651"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111104949775.png" alt="image-20210111104949775"></p>
-<h3 id="例7-5-："><a href="#例7-5-：" class="headerlink" title="例7-5 ："></a><strong>例7-5 ：</strong></h3><p><strong>查询所有学生选修的课程(包括未选课学生以及没有学生选修的课程信息)</strong></p>
-<ol>
-<li>连接“StudentInfo”和“ExamRecord”</li>
-</ol>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105100017.png" alt="image-20210111105100017"></p>
-<ol start="2">
-<li>把第1步生成的结果关系与“Course”连接</li>
-</ol>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105207670.png" alt="image-20210111105207670"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105222970.png" alt="image-20210111105222970"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105234460.png" alt="image-20210111105234460"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105245515.png" alt="image-20210111105245515"></p>
-<ol start="3">
-<li>按照题目要求进行适当的投影操作</li>
-</ol>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105348702.png" alt="image-20210111105348702"></p>
-<h3 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h3><blockquote>
-<p>所有用于单表的查询技术都可以用于多表查询，多表只不过是把单表按照一定连接条件(join condition)连接成一张<strong>“大表”</strong></p>
-</blockquote>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105430685.png" alt="image-20210111105430685"></p>
-<h2 id="有连接时的查询执行过程"><a href="#有连接时的查询执行过程" class="headerlink" title="有连接时的查询执行过程"></a>有连接时的查询执行过程</h2><ul>
-<li>生成结果关系(“大表”)—》在“大表”上利用WHERE指定的条件筛选元组—》按照Group by指定的属性将元组分组—》将Group by的分组用Having指定的条件筛选—》按照Order By指定的属性对元组排序(排序的属性可以不在最后投影的属性列中)—》投影或用函数、表达式计算</li>
-</ul>
-<ul>
-<li>如果没有GROUP BY和HAVING的话，上述步骤中红色的部分将不会执行</li>
-</ul>
-<h3 id="例7-6-："><a href="#例7-6-：" class="headerlink" title="例7-6 ："></a><strong>例7-6 ：</strong></h3><p><strong>查询部门男性员工数大于2的部门名称及男性员工人数，并按人数降序排列</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105654992.png" alt="image-20210111105654992"></p>
-<ol>
-<li>生成结果关系(“大表”)</li>
-</ol>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105731991.png" alt="image-20210111105731991"></p>
-<ol start="2">
-<li>在“大表”上利用WHERE指定的条件筛选元组</li>
-</ol>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105755760.png" alt="image-20210111105755760"></p>
-<ol start="3">
-<li>按照Group by指定的属性将元组分组</li>
-</ol>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105827865.png" alt="image-20210111105827865"></p>
-<ol start="4">
-<li>将Group by的分组用Having指定的条件筛选</li>
-</ol>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105850431.png" alt="image-20210111105850431"></p>
-<ol start="5">
-<li>按照Order By指定的属性对元组排序</li>
-</ol>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105914626.png" alt="image-20210111105914626"></p>
-<ol start="6">
-<li>投影或用函数、表达式计算</li>
-</ol>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105944800.png" alt="image-20210111105944800"></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> DNAME , <span class="keyword">COUNT</span>(*) <span class="keyword">FROM</span> EMPLOYEE E <span class="keyword">JOIN</span> DEPARTMENT D <span class="keyword">ON</span> (E.DNO=D.DNUMBER) <span class="keyword">WHERE</span> SEX=<span class="string">&#x27;M&#x27;</span> <span class="keyword">GROUP</span> <span class="keyword">BY</span> DNAME <span class="keyword">HAVING</span> <span class="keyword">COUNT</span>(*) &gt; <span class="number">2</span> <span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="keyword">COUNT</span>(*) <span class="keyword">DESC</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h3 id="补充：一个查询优化的例子"><a href="#补充：一个查询优化的例子" class="headerlink" title="补充：一个查询优化的例子"></a>补充：一个查询优化的例子</h3><p>在逻辑上，我们可以认为DBMS是先通过JOIN操作(关系代数)把所有的表连成一张“大表”后再来执行SELECT操作(关系代数)，但实际上DBMS在某些情况下会对查询的执行过程进行优化，比如先执行SELECT操作(从而有可能减少参与JOIN操作的关系的元组数)，再执行JOIN操作。</p>
-<h4 id="DBMS处理查询的过程"><a href="#DBMS处理查询的过程" class="headerlink" title="DBMS处理查询的过程"></a>DBMS处理查询的过程</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111110027640.png" alt="image-20210111110027640"></p>
-<h3 id="例7-7-："><a href="#例7-7-：" class="headerlink" title="例7-7 ："></a>例7-7 ：</h3><p><strong>查询女性员工的家属信息</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111110108326.png" alt="image-20210111110108326"></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> FNAME, LNAME, DEPENDRNT_NAME <span class="keyword">FROM</span> EMPLOYEE <span class="keyword">JOIN</span> DEPENDENT <span class="keyword">ON</span> (SSN = ESSN) <span class="keyword">WHERE</span> (EMPLOYEE.SEX = <span class="string">&#x27;F&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-
-
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111110136785.png" alt="image-20210111110136785"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111110146387.png" alt="image-20210111110146387"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111110159964.png" alt="image-20210111110159964"></p>
-<h1 id="交叉连接"><a href="#交叉连接" class="headerlink" title="交叉连接"></a>交叉连接</h1><blockquote>
-<p>交叉连接(CROSS JOIN)：实际就是关系代数中的“笛卡尔积”(Cartesian Product)</p>
-</blockquote>
-<h3 id="例7-8-："><a href="#例7-8-：" class="headerlink" title="例7-8 ："></a>例7-8 ：</h3><p><strong>将StudentInfo与Department表交叉连接</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111115926151.png" alt="image-20210111115926151"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111115938420.png" alt="image-20210111115938420"></p>
-<p><strong>如果添加一个 WHERE 子句，则交叉连接的作用将同内连接一样</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111120001776.png" alt="image-20210111120001776"></p>
-<h3 id="注意：-1"><a href="#注意：-1" class="headerlink" title="注意："></a>注意：</h3><p>CROSS JOIN后面不能加ON</p>
-<h3 id="CROSS-JOIN的用处"><a href="#CROSS-JOIN的用处" class="headerlink" title="CROSS JOIN的用处"></a>CROSS JOIN的用处</h3><blockquote>
-<p>CROSS JOIN的一个用途是生成样本或测试数据。例如：如果你要生成1000行3列的一个表用于测试，不必建立这样一张表并进行1000次插入操作，可以建立三张表，每张表1列10行数据，然后将这三张表进行交叉连接可得10<em>10</em>10=1000行数据。</p>
-</blockquote>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111120117583.png" alt="image-20210111120117583"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111120132062.png" alt="image-20210111120132062"></p>
-<h1 id="自连接"><a href="#自连接" class="headerlink" title="自连接"></a>自连接</h1><h3 id="例7-9-："><a href="#例7-9-：" class="headerlink" title="例7-9 ："></a>例7-9 ：</h3><p><strong>查询每个员工上级的姓名</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111120202140.png" alt="image-20210111120202140"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111120219805.png" alt="image-20210111120219805"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111120231994.png" alt="image-20210111120231994"></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> EMPLOYEE E1 <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> EMPLOYEE E2 <span class="keyword">ON</span> (E1.SUPERSSN=E2.SSN) <span class="keyword">ORDER</span> <span class="keyword">BY</span> E1.SUPERSSN <span class="keyword">DESC</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> E1.FNAME+<span class="string">&#x27;,&#x27;</span>+E1.LNAME 员工姓名, E2.FNAME+<span class="string">&#x27;,&#x27;</span>E2.LNAME 上级姓名 <span class="keyword">FROM</span> EMPLOYEE E1 <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> EMPLOYEE E2 <span class="keyword">ON</span> E1.SUPERSSN=E2.SSN <span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="number">2</span> D</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-]]></content>
-      <categories>
-        <category>数据库原理及应用</category>
-      </categories>
-      <tags>
-        <tag>share</tag>
-        <tag>notes</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数据库第四章——关系数据库标准语言SQL（3）</title>
-    <url>/posts/c0c6291/</url>
-    <content><![CDATA[<h1 id="SQL的功能组成"><a href="#SQL的功能组成" class="headerlink" title="SQL的功能组成"></a>SQL的功能组成</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111193929585.png" alt="image-20210111193929585"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111193940464.png" alt="image-20210111193940464"></p>
-<h1 id="子查询（嵌套查询）"><a href="#子查询（嵌套查询）" class="headerlink" title="子查询（嵌套查询）"></a>子查询（嵌套查询）</h1><blockquote>
-<p>将一个查询块(SELECT-FROM-WHERE)嵌套在另一个查询块的WHERE子句或HAVING短语的条件中的查询</p>
-</blockquote>
-<p><strong>举例：查询“John Smith”的完成项目情况</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111194301996.png" alt="image-20210111194301996"></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> WORKS_ON <span class="keyword">WHERE</span> ESSN=(<span class="keyword">SELECT</span> SSN <span class="keyword">FROM</span> EMPLOYEE <span class="keyword">WHERE</span> FNAME=<span class="string">&#x27;JOHN&#x27;</span> <span class="keyword">AND</span> LNAME=<span class="string">&#x27;Smith&#x27;</span>) <span class="keyword">ORDER</span> <span class="keyword">BY</span> PNO <span class="keyword">DESC</span>;</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><ul>
-<li>SQL语言允许多层嵌套查询(建议：不要编写太复杂的嵌套查询，可以利用中间变量简化SQL语句)</li>
-<li>子查询的SELECT语句不能使用ORDER BY子句，ORDER BY子句只能对最终查询结果排序</li>
-<li>嵌套查询一般的求解方法是由里向外处理</li>
-<li><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111194414808.png" alt="image-20210111194414808"></li>
-</ul>
-<h2 id="带有IN谓词的子查询"><a href="#带有IN谓词的子查询" class="headerlink" title="带有IN谓词的子查询"></a>带有IN谓词的子查询</h2><h3 id="例8-1："><a href="#例8-1：" class="headerlink" title="例8-1："></a>例8-1：</h3><p><strong>查询参与了任何一个SSN为‘123456789’的员工参与过项目的员工SSN</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111194706997.png" alt="image-20210111194706997"></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> ESSN <span class="keyword">FROM</span> WORKS_ON <span class="keyword">WHERE</span> PNO <span class="keyword">IN</span> (<span class="keyword">SELECT</span> PNO <span class="keyword">FROM</span> WORKS_ON <span class="keyword">WHERE</span> ESSN=<span class="string">&#x27;123456789&#x27;</span>);</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="例8-2："><a href="#例8-2：" class="headerlink" title="例8-2："></a>例8-2：</h3><p><strong>查询参与了任何一个SSN为‘123456789’的员工参与过项目的员工姓名</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111194734490.png" alt="image-20210111194734490"></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> FNAME, LNAME <span class="keyword">FROM</span> EMPLOYEE <span class="keyword">WHERE</span> SSN <span class="keyword">IN</span> (<span class="keyword">SELECT</span> ESSN <span class="keyword">FROM</span> WORKS_ON <span class="keyword">WHERE</span> PRO <span class="keyword">IN</span> (<span class="keyword">SELECT</span> PNO <span class="keyword">FROM</span> WORKS_ON <span class="keyword">WHERE</span> ESSN=<span class="string">&#x27;123456789&#x27;</span>))</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h3 id="例8-3："><a href="#例8-3：" class="headerlink" title="例8-3："></a>例8-3：</h3><p><strong>查询参与了任何一个‘John Smith’ 参与过项目的员工姓名</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111194808213.png" alt="image-20210111194808213"></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> FNAME, LNAME <span class="keyword">FROM</span> EMPLOYEE <span class="keyword">WHERE</span> SSN <span class="keyword">IN</span> (<span class="keyword">SELECT</span> ESSN <span class="keyword">FROM</span> WORKS_ON <span class="keyword">WHERE</span> PNO <span class="keyword">IN</span> (<span class="keyword">SELECT</span> PNO <span class="keyword">FROM</span> WORKS_ON W <span class="keyword">JOIN</span> EMPLOYEE E <span class="keyword">ON</span> W.ESSN=E.SSN <span class="keyword">WHERE</span> FNAME=<span class="string">&#x27;JOHN&#x27;</span> <span class="keyword">AND</span> LNAME=<span class="string">&#x27;SMITH&#x27;</span>))</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h3 id="例8-4："><a href="#例8-4：" class="headerlink" title="例8-4："></a>例8-4：</h3><p><strong>查询有家属的员工的姓名</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111194836923.png" alt="image-20210111194836923"></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> FNAME, LNAME <span class="keyword">FROM</span> EMPLOYEE <span class="keyword">WHERE</span> SSN <span class="keyword">IN</span> (<span class="keyword">SELECT</span> ESSN <span class="keyword">FROM</span> DEPENDENT)</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="例8-5："><a href="#例8-5：" class="headerlink" title="例8-5："></a>例8-5：</h3><p><strong>查询有家属的员工的姓名(用连接查询方式)</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111194904519.png" alt="image-20210111194904519"></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> FNAME, LNAME <span class="keyword">FROM</span> EMPLOYEE E <span class="keyword">JOIN</span> DEPENDENT D <span class="keyword">ON</span> E.SSN = D.SSN;</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h3 id="例8-6："><a href="#例8-6：" class="headerlink" title="例8-6："></a>例8-6：</h3><p><strong>查询没有家属的员工的姓名</strong></p>
-<p>![image-20210111194935540](/Users/fine/Library/Application Support/typora-user-images/image-20210111194935540.png)</p>
-<h3 id="例8-7："><a href="#例8-7：" class="headerlink" title="例8-7："></a>例8-7：</h3><p><strong>查询没有家属的员工的姓名(用连接查询方式)</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195033018.png" alt="image-20210111195033018"></p>
-<h2 id="带有比较运算符的子查询"><a href="#带有比较运算符的子查询" class="headerlink" title="带有比较运算符的子查询"></a>带有比较运算符的子查询</h2><h3 id="例8-8："><a href="#例8-8：" class="headerlink" title="例8-8："></a>例8-8：</h3><p><strong>查询在Research部门工作的所有员工的姓名和住址</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195110994.png" alt="image-20210111195110994"></p>
-<h3 id="使用局部变量"><a href="#使用局部变量" class="headerlink" title="使用局部变量"></a>使用局部变量</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195143756.png" alt="image-20210111195143756"></p>
-<h3 id="例8-9："><a href="#例8-9：" class="headerlink" title="例8-9："></a>例8-9：</h3><p><strong>查询所有工资大于或等于全公司平均工资的员工信息</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195212839.png" alt="image-20210111195212839"></p>
-<h3 id="使用局部变量简化程序"><a href="#使用局部变量简化程序" class="headerlink" title="使用局部变量简化程序"></a>使用局部变量简化程序</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195233039.png" alt="image-20210111195233039"></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">DECLARE</span> @AVERAGESALARY <span class="built_in">DECIMAL</span>(<span class="number">7</span>,<span class="number">2</span>)</span><br><span class="line"><span class="keyword">SET</span> @AVERAGESALARY = (<span class="keyword">SELECT</span> <span class="keyword">AVG</span>(SALARY) <span class="keyword">FROM</span> EMPLOYEE) <span class="keyword">WHERE</span> SALARY &gt;= @AVERAGESALARY</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h3 id="例8-10："><a href="#例8-10：" class="headerlink" title="例8-10："></a>例8-10：</h3><p><strong>查询FNAME以JO开头员工的工作记录</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195302188.png" alt="image-20210111195302188"></p>
-<h3 id="例8-11："><a href="#例8-11：" class="headerlink" title="例8-11："></a>例8-11：</h3><p><strong>查询FNAME以JOH开头员工的工作记录</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195336814.png" alt="image-20210111195336814"></p>
-<h2 id="带有ANY或ALL谓词的子查询"><a href="#带有ANY或ALL谓词的子查询" class="headerlink" title="带有ANY或ALL谓词的子查询"></a>带有ANY或ALL谓词的子查询</h2><h3 id="例8-12："><a href="#例8-12：" class="headerlink" title="例8-12："></a>例8-12：</h3><p><strong>查询FNAME以JO开头员工的工作记录</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195409670.png" alt="image-20210111195409670"></p>
-<ul>
-<li>上例查询等价于带有IN谓词的子查询</li>
-<li><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195428757.png" alt="image-20210111195428757"></li>
-</ul>
-<h3 id="ANY与ALL的区别"><a href="#ANY与ALL的区别" class="headerlink" title="ANY与ALL的区别"></a>ANY与ALL的区别</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195444770.png" alt="image-20210111195444770"></p>
-<h4 id="例8-13："><a href="#例8-13：" class="headerlink" title="例8-13："></a>例8-13：</h4><p><strong>查询工资大于或等于任意一个女性员工工资的男性员工信息</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195535918.png" alt="image-20210111195535918"></p>
-<ul>
-<li>上例查询等价于使用汇总函数的子查询</li>
-<li><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195600279.png" alt="image-20210111195600279"></li>
-</ul>
-<h4 id="例8-14："><a href="#例8-14：" class="headerlink" title="例8-14："></a>例8-14：</h4><p><strong>查询工资大于或等于全部女性员工工资的男性员工信息</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195642862.png" alt="image-20210111195642862"></p>
-<ul>
-<li>上例查询等价于使用汇总函数的子查询</li>
-<li><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195704013.png" alt="image-20210111195704013"></li>
-</ul>
-<h3 id="与汇总函数的等价性"><a href="#与汇总函数的等价性" class="headerlink" title="与汇总函数的等价性"></a>与汇总函数的等价性</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195804138.png" alt="image-20210111195804138"></p>
-<h2 id="带有EXISTS谓词的子查询"><a href="#带有EXISTS谓词的子查询" class="headerlink" title="带有EXISTS谓词的子查询"></a>带有EXISTS谓词的子查询</h2><h3 id="“不相关子查询”与“相关子查询”"><a href="#“不相关子查询”与“相关子查询”" class="headerlink" title="“不相关子查询”与“相关子查询”"></a>“不相关子查询”与“相关子查询”</h3><ul>
-<li>不相关子查询(non-correlated subquery)<ul>
-<li>子查询只执行一次，其结果用于父查询。子查询的查询条件不依赖于父查询</li>
-</ul>
-</li>
-<li>相关子查询(correlated subquery)<ul>
-<li>子查询的查询条件依赖于外层父查询的某个属性值</li>
-<li>主要是指“带有EXISTS谓词的子查询</li>
-</ul>
-</li>
-</ul>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195930709.png" alt="image-20210111195930709"></p>
-<h3 id="例8-15："><a href="#例8-15：" class="headerlink" title="例8-15："></a>例8-15：</h3><p><strong>查询参与了项目的员工姓名</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195956155.png" alt="image-20210111195956155"></p>
-<h4 id="相关子查询的执行过程"><a href="#相关子查询的执行过程" class="headerlink" title="相关子查询的执行过程"></a>相关子查询的执行过程</h4><ul>
-<li>首先取外层查询中表的第1个元组，根据它与内层查询相关的属性值处理内层查询，若WHERE子句返回值为真，则取此元组放入结果表；然后再取外层查询中表的下一个元组，重复这一过程，直至外层表全部检查完毕为止。</li>
-</ul>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200047125.png" alt="image-20210111200047125"></p>
-<h1 id="集合查询"><a href="#集合查询" class="headerlink" title="集合查询"></a>集合查询</h1><ul>
-<li><p>SELECT语句查询的结果是元组的集合，所以多个SELECT语句的查询结果可进行集合操作</p>
-</li>
-<li><p>集合操作符</p>
-<ul>
-<li><p>并 Union</p>
-</li>
-<li><p>交 Intersect(SQL SERVER 2005以上支持)</p>
-</li>
-<li><p>差 Except(SQL SERVER 2005以上支持)</p>
-<ul>
-<li><p>Oracle：MINUS</p>
-</li>
-<li><p>DB2：EXCEPT</p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="并Union"><a href="#并Union" class="headerlink" title="并Union"></a>并Union</h2><h3 id="例8-16："><a href="#例8-16：" class="headerlink" title="例8-16："></a>例8-16：</h3><p><strong>查询在部门5工作员工或直接管理部门5员工的SSN</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200226714.png" alt="image-20210111200226714"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200243112.png" alt="image-20210111200243112"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200252714.png" alt="image-20210111200252714"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200302506.png" alt="image-20210111200302506"></p>
-<h2 id="交-Intersect-SQL-SERVER-2005以上支持"><a href="#交-Intersect-SQL-SERVER-2005以上支持" class="headerlink" title="交 Intersect(SQL SERVER 2005以上支持)"></a>交 Intersect(SQL SERVER 2005以上支持)</h2><h3 id="例8-17："><a href="#例8-17：" class="headerlink" title="例8-17："></a>例8-17：</h3><p><strong>查询“男性员工”与“工资大于30000员工”的交集</strong></p>
-<ul>
-<li>等价于：查询既是男性同时工资大于30000的员工</li>
-</ul>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200403560.png" alt="image-20210111200403560"></p>
-<h2 id="差-Difference-SQL-SERVER-2005以上支持"><a href="#差-Difference-SQL-SERVER-2005以上支持" class="headerlink" title="差 Difference (SQL SERVER 2005以上支持)"></a>差 Difference (SQL SERVER 2005以上支持)</h2><h3 id="例8-18："><a href="#例8-18：" class="headerlink" title="例8-18："></a>例8-18：</h3><p><strong>查询“男性员工”与“工资大于30000员工”的差集</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200448169.png" alt="image-20210111200448169"></p>
-<ul>
-<li>等价于：查询工资不大于30000的男性员工</li>
-</ul>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200519554.png" alt="image-20210111200519554"></p>
-<h3 id="例8-19："><a href="#例8-19：" class="headerlink" title="例8-19："></a>例8-19：</h3><p><strong>查询“工资大于30000员工”与“男性员工”的差集</strong></p>
-<ul>
-<li>等价于：查询工资大于30000的女性员工</li>
-</ul>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200556740.png" alt="image-20210111200556740"></p>
-<h1 id="数据的增加、删除和修改"><a href="#数据的增加、删除和修改" class="headerlink" title="数据的增加、删除和修改"></a>数据的增加、删除和修改</h1><ul>
-<li>插入数据<ul>
-<li>插入单个元组</li>
-<li>插入子查询结果</li>
-</ul>
-</li>
-<li>修改数据<ul>
-<li>修改符合一定条件元组的值</li>
-<li>修改所有元组的值</li>
-<li>带子查询的修改语句</li>
-</ul>
-</li>
-<li>删除数据<ul>
-<li>删除符合一定条件元组</li>
-<li>删除所有元组</li>
-<li>带子查询的删除语句</li>
-</ul>
-</li>
-</ul>
-<h2 id="SQL语言的动词"><a href="#SQL语言的动词" class="headerlink" title="SQL语言的动词"></a>SQL语言的动词</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200735693.png" alt="image-20210111200735693"></p>
-<h3 id="插入数据"><a href="#插入数据" class="headerlink" title="插入数据"></a>插入数据</h3><h4 id="插入单个元组"><a href="#插入单个元组" class="headerlink" title="插入单个元组"></a>插入单个元组</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200810358.png" alt="image-20210111200810358"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200826632.png" alt="image-20210111200826632"></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> DEPARTMENT <span class="keyword">VALUES</span>(<span class="string">&#x27;IT&#x27;</span>,<span class="number">7</span>,NULL.<span class="string">&#x27;2004-3-2&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-
-
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200837297.png" alt="image-20210111200837297"></p>
-<h4 id="插入子查询结果"><a href="#插入子查询结果" class="headerlink" title="插入子查询结果"></a>插入子查询结果</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200901877.png" alt="image-20210111200901877"></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> EXAMRECORDAVG(STUDENTNAME, AVERAGESCORE) <span class="keyword">SELECT</span> S.STUDENTNAME, <span class="keyword">AVG</span>(E.SCORE) <span class="keyword">FROM</span> EXAMRECORD E <span class="keyword">INNER</span> <span class="keyword">JOIN</span> STUDENTINFO S <span class="keyword">ON</span> E.STUDENTNO=S.STUDENTNO <span class="keyword">GROUP</span> <span class="keyword">BY</span> S.STUDENTNAME</span><br></pre></td></tr></table></figure>
-
-
-
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200951443.png" alt="image-20210111200951443"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200959673.png" alt="image-20210111200959673"></p>
-<h3 id="修改数据"><a href="#修改数据" class="headerlink" title="修改数据"></a>修改数据</h3><h4 id="修改符合一定条件元组的值"><a href="#修改符合一定条件元组的值" class="headerlink" title="修改符合一定条件元组的值"></a>修改符合一定条件元组的值</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111201028765.png" alt="image-20210111201028765"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111201039450.png" alt="image-20210111201039450"></p>
-<h4 id="修改所有元组的值"><a href="#修改所有元组的值" class="headerlink" title="修改所有元组的值"></a>修改所有元组的值</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111201108420.png" alt="image-20210111201108420"></p>
-<h3 id="带子查询的修改语句"><a href="#带子查询的修改语句" class="headerlink" title="带子查询的修改语句"></a>带子查询的修改语句</h3><h5 id="例："><a href="#例：" class="headerlink" title="例："></a>例：</h5><p><strong>将‘Research’部门员工的工资提高10%</strong></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111201125362.png" alt="image-20210111201125362"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111201135051.png" alt="image-20210111201135051"></p>
-<h3 id="删除数据"><a href="#删除数据" class="headerlink" title="删除数据"></a>删除数据</h3><h4 id="删除符合一定条件元组"><a href="#删除符合一定条件元组" class="headerlink" title="删除符合一定条件元组"></a>删除符合一定条件元组</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111201241477.png" alt="image-20210111201241477"></p>
-<h4 id="删除所有元组"><a href="#删除所有元组" class="headerlink" title="删除所有元组"></a>删除所有元组</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111201300717.png" alt="image-20210111201300717"></p>
-<h4 id="带子查询的删除语句"><a href="#带子查询的删除语句" class="headerlink" title="带子查询的删除语句"></a>带子查询的删除语句</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111201319814.png" alt="image-20210111201319814"></p>
-]]></content>
-      <categories>
-        <category>数据库原理及应用</category>
       </categories>
       <tags>
         <tag>share</tag>
@@ -1688,6 +1110,177 @@
 </li>
 </ul>
 <h2 id="数据库系统的分类"><a href="#数据库系统的分类" class="headerlink" title="数据库系统的分类"></a>数据库系统的分类</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108204401263.png" alt="image-20210108204401263"></p>
+]]></content>
+      <categories>
+        <category>数据库原理及应用</category>
+      </categories>
+      <tags>
+        <tag>share</tag>
+        <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据库第二章——数据库系统结构</title>
+    <url>/posts/95a84140/</url>
+    <content><![CDATA[<h1 id="数据库系统结构概述"><a href="#数据库系统结构概述" class="headerlink" title="数据库系统结构概述"></a>数据库系统结构概述</h1><ul>
+<li><p>数据库管理系统内部的系统结构</p>
+<ul>
+<li>三级模式结构</li>
+<li>两级映射功能</li>
+</ul>
+</li>
+<li><p>数据库系统外部的体系结构</p>
+<ul>
+<li><p>集中式体系结构</p>
+</li>
+<li><p>“客户/服务器”架构</p>
+</li>
+<li><p>“客户/应用服务器/数据库服务器”架构</p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="数据库模式和实例的概念"><a href="#数据库模式和实例的概念" class="headerlink" title="数据库模式和实例的概念"></a>数据库模式和实例的概念</h1><ul>
+<li><p>模式(Schema)与实例(Instance)</p>
+<ul>
+<li><p><strong>模式</strong>：</p>
+<ul>
+<li>数据库的描述。包括数据库的数据结构、数据类型和约束</li>
+</ul>
+</li>
+<li><p>**实例(状态)**：某一时刻实际存储在数据库中的数据集合</p>
+</li>
+<li><p>实例是模式在某一时刻的具体化、实例化(类似于面向对象理论中Class与Object的关系)</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108205629791.png" alt="image-20210108205629791"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108205644673.png" alt="image-20210108205644673"></p>
+<ul>
+<li>数据库模式很少发生改变 <ul>
+<li>模式也被叫做内涵</li>
+</ul>
+</li>
+<li>每次进行数据库更新操作时数据库实例都会发生变化<ul>
+<li>实例(状态)也被称为外延</li>
+</ul>
+</li>
+</ul>
+<h1 id="数据库系统的三级模式结构"><a href="#数据库系统的三级模式结构" class="headerlink" title="数据库系统的三级模式结构"></a>数据库系统的三级模式结构</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108205831449.png" alt="image-20210108205831449"></p>
+<ul>
+<li><p><strong>内模式</strong>,也称存储模式 (Internal schema)：</p>
+<blockquote>
+<p>数据物理结构和存储方式的描述，是数据在数据库内部的表示方式 </p>
+</blockquote>
+<ul>
+<li>通常使用<strong>物理数据模型</strong>描述</li>
+</ul>
+</li>
+<li><p><strong>概念模式</strong>,也称全局模式，有时简称“模式” (Conceptual schema)：</p>
+<blockquote>
+<p>数据库中全体数据的逻辑结构和特征的描述</p>
+</blockquote>
+<ul>
+<li>通常使用<strong>概念或逻辑数据模型</strong>描述</li>
+</ul>
+</li>
+<li><p><strong>外模式</strong>,也称子模式或用户模式 (External schemas)：</p>
+<blockquote>
+<p>数据库用户能够看见和使用的局部数据的逻辑结构和特征的描述 </p>
+<p>使不同的用户能看到的界面不同。</p>
+</blockquote>
+<ul>
+<li><p>通常使用与<strong>概念模式相同的数据模型</strong>描述</p>
+</li>
+<li><p>模型(Model)与模式(Schema)的区别</p>
+<ul>
+<li>数据模型是描述数据的一种通用形式，模式则是用给定的数据模型描述具体数据。注意：真正的数据内容保存在数据库状态(State)中。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="用E-R概念模型表示的概念模型"><a href="#用E-R概念模型表示的概念模型" class="headerlink" title="用E-R概念模型表示的概念模型"></a>用E-R概念模型表示的概念模型</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108210400522.png" alt="image-20210108210400522"></p>
+<h2 id="用关系逻辑模型表示的概念模型"><a href="#用关系逻辑模型表示的概念模型" class="headerlink" title="用关系逻辑模型表示的概念模型"></a>用关系逻辑模型表示的概念模型</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108210441911.png" alt="image-20210108210441911"></p>
+<h2 id="用关系逻辑模型表示的外模式及其实例"><a href="#用关系逻辑模型表示的外模式及其实例" class="headerlink" title="用关系逻辑模型表示的外模式及其实例"></a>用关系逻辑模型表示的外模式及其实例</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108210546764.png" alt="image-20210108210546764"></p>
+<ul>
+<li>外模式用于使不同用户级别看到的界面不同</li>
+</ul>
+<h1 id="数据库系统的两级映射功能"><a href="#数据库系统的两级映射功能" class="headerlink" title="数据库系统的两级映射功能"></a>数据库系统的两级映射功能</h1><ul>
+<li><p><strong>两级映射</strong>(Mapping)</p>
+<ul>
+<li>概念模式/内模式映射</li>
+<li>外模式/概念模式映射</li>
+</ul>
+</li>
+<li><p><strong>数据独立性</strong></p>
+<ul>
+<li>物理独立性(Physical Data Independence)</li>
+<li>逻辑独立性(Logical Data Independence)</li>
+</ul>
+</li>
+</ul>
+<h2 id="数据库的工作流程"><a href="#数据库的工作流程" class="headerlink" title="数据库的工作流程"></a>数据库的工作流程</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108205831449.png" alt="image-20210108205831449"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108210927057.png" alt="image-20210108210927057"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108210952255.png" alt="image-20210108210952255"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108211003467.png" alt="image-20210108211003467"></p>
+<h2 id="数据独立性"><a href="#数据独立性" class="headerlink" title="数据独立性"></a>数据独立性</h2><h3 id="数据的物理独立性"><a href="#数据的物理独立性" class="headerlink" title="数据的物理独立性"></a>数据的物理独立性</h3><blockquote>
+<p>内模式与概念模式之间的映射提供了数据的物理独立性。当数据的物理结构发生变化时，如对数据增加索引、改变数据的存储位置、改变存储设备等，不影响数据的逻辑结构。当DBA根据应用程序对数据的存取要求，对数据的物理组织进行优化后，并不需要对概念模式和外模式进行重新定义，也不需要修改应用程序，只需要修改内模式与概念模式之间的映射。</p>
+</blockquote>
+<h3 id="数据的逻辑独立性"><a href="#数据的逻辑独立性" class="headerlink" title="数据的逻辑独立性"></a>数据的逻辑独立性</h3><blockquote>
+<p>概念模式与外模式之间的映射提供了数据的逻辑独立性。当数据的整体逻辑结构发生变化时，如增加新的关系、新的属性、改变属性的数据类型等，可以通过修改各个外模式与概念模式之间的映射，从而使外模式和依据外模式编写的应用程序不受影响。</p>
+</blockquote>
+<h1 id="数据库系统外部的体系结构"><a href="#数据库系统外部的体系结构" class="headerlink" title="数据库系统外部的体系结构"></a>数据库系统外部的体系结构</h1><h2 id="集中式架构"><a href="#集中式架构" class="headerlink" title="集中式架构"></a>集中式架构</h2><ul>
+<li>将所有软硬件集中到一起：包括DBMS,硬件，应用程序，人机交互软件等</li>
+<li>用户仍然可以通过远程终端连接。然而，所有运算都集中在一个位置</li>
+</ul>
+<p><strong>一个物理集中式的架构体系</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108211551077.png" alt="image-20210108211551077"></p>
+<h2 id="客户-服务器架构"><a href="#客户-服务器架构" class="headerlink" title="客户-服务器架构"></a>客户-服务器架构</h2><ul>
+<li><strong>网络数据库系统</strong>：<ul>
+<li>数据库系统软件安装在服务器上，通过网络向外界提供数据服务</li>
+</ul>
+</li>
+<li><strong>Client/Server：</strong><ul>
+<li>需要安装专门的客户端软件</li>
+</ul>
+</li>
+<li><strong>Browser/Server：</strong><ul>
+<li>不需要安装专门的客户端软件</li>
+</ul>
+</li>
+</ul>
+<h3 id="Client-Server架构"><a href="#Client-Server架构" class="headerlink" title="Client/Server架构"></a>Client/Server架构</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108211826865.png" alt="image-20210108211826865"></p>
+<h4 id="Client-Server架构组件"><a href="#Client-Server架构组件" class="headerlink" title="Client/Server架构组件"></a>Client/Server架构组件</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108211904397.png" alt="image-20210108211904397"></p>
+<h4 id="Client-Server架构通信过程"><a href="#Client-Server架构通信过程" class="headerlink" title="Client/Server架构通信过程"></a>Client/Server架构通信过程</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108211945073.png" alt="image-20210108211945073"></p>
+<h3 id="Browser-Server架构"><a href="#Browser-Server架构" class="headerlink" title="Browser/Server架构"></a>Browser/Server架构</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212102096.png" alt="image-20210108212102096"></p>
+<h4 id="Browser-Server架构通信过程"><a href="#Browser-Server架构通信过程" class="headerlink" title="Browser/Server架构通信过程"></a>Browser/Server架构通信过程</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212145147.png" alt="image-20210108212145147"></p>
+<h2 id="三层客户-服务器逻辑结构"><a href="#三层客户-服务器逻辑结构" class="headerlink" title="三层客户-服务器逻辑结构"></a>三层客户-服务器逻辑结构</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212244213.png" alt="image-20210108212244213"></p>
+<ul>
+<li><p><strong>表现层</strong> (Presentation layer)：</p>
+<ul>
+<li>负责展示用户界面，以及与用户的交互。</li>
+</ul>
+</li>
+<li><p><strong>业务逻辑层或中间层</strong> (Business logic layer ):</p>
+<ul>
+<li> 负责接收来自表示层的请求，并根据它包含的业务逻辑给表示层返回一个结果。</li>
+</ul>
+</li>
+<li><p><strong>数据库服务层</strong> (Database services layer): </p>
+<ul>
+<li>负责存储应用程序的数据，并在接收到请求时，把这些数据发送给业务层。</li>
+</ul>
+</li>
+</ul>
+<h3 id="例：图书管理系统"><a href="#例：图书管理系统" class="headerlink" title="例：图书管理系统"></a>例：图书管理系统</h3><h4 id="图书馆信息管理系统数据库服务层"><a href="#图书馆信息管理系统数据库服务层" class="headerlink" title="图书馆信息管理系统数据库服务层"></a>图书馆信息管理系统数据库服务层</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212457459.png" alt="image-20210108212457459"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212510722.png" alt="image-20210108212510722"></p>
+<h4 id="图书馆信息管理系统业务层"><a href="#图书馆信息管理系统业务层" class="headerlink" title="图书馆信息管理系统业务层"></a>图书馆信息管理系统业务层</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212528301.png" alt="image-20210108212528301"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212536898.png" alt="image-20210108212536898"></p>
+<h4 id="图书馆信息管理系统表现层"><a href="#图书馆信息管理系统表现层" class="headerlink" title="图书馆信息管理系统表现层"></a>图书馆信息管理系统表现层</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212554829.png" alt="image-20210108212554829"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212607770.png" alt="image-20210108212607770"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210108212619538.png" alt="image-20210108212619538"></p>
 ]]></content>
       <categories>
         <category>数据库原理及应用</category>
@@ -2013,91 +1606,505 @@
       </tags>
   </entry>
   <entry>
-    <title>算法__入门模拟</title>
-    <url>/posts/514df455/</url>
-    <content><![CDATA[<h1 id="入门模拟"><a href="#入门模拟" class="headerlink" title="入门模拟"></a>入门模拟</h1><h2 id="简单模拟"><a href="#简单模拟" class="headerlink" title="简单模拟"></a>简单模拟</h2><h3 id="1016-部分A-B（枚举每一位）"><a href="#1016-部分A-B（枚举每一位）" class="headerlink" title="1016 部分A+B（枚举每一位）"></a>1016 部分A+B（枚举每一位）</h3><blockquote>
-<p>正整数 <em>A</em> 的“<em>D**A</em>（为 1 位整数）部分”定义为由 <em>A</em> 中所有 <em>D**A</em> 组成的新整数 <em>P**A</em>。例如：给定 <em>A</em>=3862767，<em>D**A</em>=6，则 <em>A</em> 的“6 部分”<em>P**A</em> 是 66，因为 <em>A</em> 中有 2 个 6。</p>
-<p>现给定 <em>A</em>、<em>D**A</em>、<em>B</em>、<em>D**B</em>，请编写程序计算 <em>P**A</em>+<em>P**B</em>。</p>
+    <title>数据库第四章——关系数据库标准语言SQL（3）</title>
+    <url>/posts/c0c6291/</url>
+    <content><![CDATA[<h1 id="SQL的功能组成"><a href="#SQL的功能组成" class="headerlink" title="SQL的功能组成"></a>SQL的功能组成</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111193929585.png" alt="image-20210111193929585"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111193940464.png" alt="image-20210111193940464"></p>
+<h1 id="子查询（嵌套查询）"><a href="#子查询（嵌套查询）" class="headerlink" title="子查询（嵌套查询）"></a>子查询（嵌套查询）</h1><blockquote>
+<p>将一个查询块(SELECT-FROM-WHERE)嵌套在另一个查询块的WHERE子句或HAVING短语的条件中的查询</p>
 </blockquote>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> da, db;</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> a, b;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%lld%d%lld%d&quot;</span>, &amp;a, &amp;da, &amp;b, &amp;db);</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> pa = <span class="number">0</span>, pb = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(a) &#123;</span><br><span class="line">        <span class="keyword">if</span>(a%<span class="number">10</span> == da) pa = pa*<span class="number">10</span> + da;</span><br><span class="line">        a = a/<span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">while</span>(b)&#123;</span><br><span class="line">        <span class="keyword">if</span>(b%<span class="number">10</span> == db) pb = pb*<span class="number">10</span> + db;</span><br><span class="line">        b = b/<span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%lld&quot;</span>, pa+pb);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>举例：查询“John Smith”的完成项目情况</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111194301996.png" alt="image-20210111194301996"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> WORKS_ON <span class="keyword">WHERE</span> ESSN=(<span class="keyword">SELECT</span> SSN <span class="keyword">FROM</span> EMPLOYEE <span class="keyword">WHERE</span> FNAME=<span class="string">&#x27;JOHN&#x27;</span> <span class="keyword">AND</span> LNAME=<span class="string">&#x27;Smith&#x27;</span>) <span class="keyword">ORDER</span> <span class="keyword">BY</span> PNO <span class="keyword">DESC</span>;</span><br></pre></td></tr></table></figure>
 
 
 
-<h3 id="1026-程序运行时间（四舍五入，秒时间处理）"><a href="#1026-程序运行时间（四舍五入，秒时间处理）" class="headerlink" title="1026 程序运行时间（四舍五入，秒时间处理）"></a>1026 程序运行时间（四舍五入，秒时间处理）</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> c1, c2;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>, &amp;c1, &amp;c2);</span><br><span class="line">    <span class="keyword">int</span> ans = c2 - c1;</span><br><span class="line">    <span class="keyword">if</span>(ans % <span class="number">100</span> &gt;= <span class="number">50</span>) &#123;</span><br><span class="line">        ans = ans / <span class="number">100</span> + <span class="number">1</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        ans = ans / <span class="number">100</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%02d:%02d:%02d\n&quot;</span>, ans / <span class="number">3600</span>, ans % <span class="number">3600</span> / <span class="number">60</span>, ans % <span class="number">60</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><ul>
+<li>SQL语言允许多层嵌套查询(建议：不要编写太复杂的嵌套查询，可以利用中间变量简化SQL语句)</li>
+<li>子查询的SELECT语句不能使用ORDER BY子句，ORDER BY子句只能对最终查询结果排序</li>
+<li>嵌套查询一般的求解方法是由里向外处理</li>
+<li><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111194414808.png" alt="image-20210111194414808"></li>
+</ul>
+<h2 id="带有IN谓词的子查询"><a href="#带有IN谓词的子查询" class="headerlink" title="带有IN谓词的子查询"></a>带有IN谓词的子查询</h2><h3 id="例8-1："><a href="#例8-1：" class="headerlink" title="例8-1："></a>例8-1：</h3><p><strong>查询参与了任何一个SSN为‘123456789’的员工参与过项目的员工SSN</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111194706997.png" alt="image-20210111194706997"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> ESSN <span class="keyword">FROM</span> WORKS_ON <span class="keyword">WHERE</span> PNO <span class="keyword">IN</span> (<span class="keyword">SELECT</span> PNO <span class="keyword">FROM</span> WORKS_ON <span class="keyword">WHERE</span> ESSN=<span class="string">&#x27;123456789&#x27;</span>);</span><br></pre></td></tr></table></figure>
 
 
 
-
-
-<p>1008 <strong>数组元素循环右移问题</strong>（跳过限制，直接结果）</p>
-<blockquote>
-<p>一个数组<em>A</em>中存有<em>N</em>（&gt;0）个整数，在不允许使用另外数组的前提下，将每个整数循环向右移<em>M</em>（≥0）个位置，即将<em>A</em>中的数据由（<em>A</em>0<em>A</em>1⋯<em>A**N</em>−1）变换为（<em>A**N</em>−<em>M</em>⋯<em>A**N</em>−1<em>A</em>0<em>A</em>1⋯<em>A**N</em>−<em>M</em>−1）（最后<em>M</em>个数循环移至最前面的<em>M</em>个位置）。如果需要考虑程序移动数据的次数尽量少，要如何设计移动的方法？</p>
-<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>每个输入包含一个测试用例，第1行输入<em>N</em>（1≤<em>N</em>≤100）和<em>M</em>（≥0）；第2行输入<em>N</em>个整数，之间用空格分隔。</p>
-<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>在一行中输出循环右移<em>M</em>位以后的整数序列，之间用空格分隔，序列结尾不能有多余空格。</p>
-<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">6 2</span><br><span class="line">1 2 3 4 5 6</span><br></pre></td></tr></table></figure>
-
-<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">5 6 1 2 3 4</span><br></pre></td></tr></table></figure>
-</blockquote>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//并没有对原有数组进行修改</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"> <span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"> </span>&#123;</span><br><span class="line">     <span class="keyword">int</span> n, m;</span><br><span class="line">     <span class="keyword">int</span> a[<span class="number">110</span>];</span><br><span class="line">     <span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>, &amp;n, &amp;m);</span><br><span class="line">     <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;a[i]);</span><br><span class="line">     &#125;</span><br><span class="line">     m = m%n;</span><br><span class="line">     <span class="keyword">int</span> cnt = <span class="number">0</span>;</span><br><span class="line">     <span class="keyword">for</span>(<span class="keyword">int</span> i = n-m; i &lt; n; i++) &#123;</span><br><span class="line">         <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, a[i]);</span><br><span class="line">         <span class="keyword">if</span>(cnt &lt; n<span class="number">-1</span>) &#123;</span><br><span class="line">             <span class="built_in">printf</span>(<span class="string">&quot; &quot;</span>);</span><br><span class="line">             cnt++;</span><br><span class="line">         &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">             <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">         &#125;</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n-m; i++)&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, a[i]);</span><br><span class="line">         <span class="keyword">if</span>(cnt &lt; n<span class="number">-1</span>) &#123;</span><br><span class="line">             <span class="built_in">printf</span>(<span class="string">&quot; &quot;</span>);</span><br><span class="line">             cnt++;</span><br><span class="line">         &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">             <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">         &#125;</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h3 id="1018-锤子剪刀布（元素转换为数值简化操作）"><a href="#1018-锤子剪刀布（元素转换为数值简化操作）" class="headerlink" title="1018 锤子剪刀布（元素转换为数值简化操作）"></a>1018 锤子剪刀布（元素转换为数值简化操作）</h3><blockquote>
-<p>大家应该都会玩“锤子剪刀布”的游戏：两人同时给出手势，胜负规则如图所示：</p>
-<p><img src="https://images.ptausercontent.com/724da598-b37f-4f1f-99b4-71459654ce3a.jpg" alt="FigCJB.jpg"></p>
-<p>现给出两人的交锋记录，请统计双方的胜、平、负次数，并且给出双方分别出什么手势的胜算最大。</p>
-<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入第 1 行给出正整数 <em>N</em>（≤105），即双方交锋的次数。随后 <em>N</em> 行，每行给出一次交锋的信息，即甲、乙双方同时给出的的手势。<code>C</code> 代表“锤子”、<code>J</code> 代表“剪刀”、<code>B</code> 代表“布”，第 1 个字母代表甲方，第 2 个代表乙方，中间有 1 个空格。</p>
-<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>输出第 1、2 行分别给出甲、乙的胜、平、负次数，数字间以 1 个空格分隔。第 3 行给出两个字母，分别代表甲、乙获胜次数最多的手势，中间有 1 个空格。如果解不唯一，则输出按字母序最小的解。</p>
-<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">10</span><br><span class="line">C J</span><br><span class="line">J B</span><br><span class="line">C B</span><br><span class="line">B B</span><br><span class="line">B C</span><br><span class="line">C C</span><br><span class="line">C B</span><br><span class="line">J B</span><br><span class="line">B C</span><br><span class="line">J J</span><br></pre></td></tr></table></figure>
-
-<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">5 3 2</span><br><span class="line">2 3 5</span><br><span class="line">B B</span><br></pre></td></tr></table></figure>
-
-
-</blockquote>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">change</span><span class="params">(<span class="keyword">char</span> a)</span> </span>&#123; <span class="comment">//循环相克，字典增序</span></span><br><span class="line">    <span class="keyword">if</span>(a == <span class="string">&#x27;B&#x27;</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span>(a == <span class="string">&#x27;C&#x27;</span>) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span>(a == <span class="string">&#x27;J&#x27;</span>) <span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> mp[<span class="number">3</span>] = &#123;<span class="string">&#x27;B&#x27;</span>, <span class="string">&#x27;C&#x27;</span>, <span class="string">&#x27;J&#x27;</span>&#125;;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">char</span> aa, bb;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    <span class="keyword">int</span> a[<span class="number">3</span>] = &#123;<span class="number">0</span>&#125;,  b[<span class="number">3</span>] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line">    <span class="keyword">int</span> ha[<span class="number">3</span>] = &#123;<span class="number">0</span>&#125;,  hb[<span class="number">3</span>] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line">    <span class="keyword">int</span> k1, k2;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        getchar();</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%c %c&quot;</span>, &amp;aa, &amp;bb);</span><br><span class="line">        k1 = change(aa);</span><br><span class="line">        k2 = change(bb);</span><br><span class="line">        <span class="keyword">if</span>((k1 + <span class="number">1</span>) % <span class="number">3</span> == k2) &#123;</span><br><span class="line">            a[<span class="number">0</span>]++;</span><br><span class="line">            b[<span class="number">2</span>]++;</span><br><span class="line">            ha[k1]++;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span>(k1 == k2) &#123;</span><br><span class="line">            a[<span class="number">1</span>]++;</span><br><span class="line">            b[<span class="number">1</span>]++;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            a[<span class="number">2</span>]++;</span><br><span class="line">            b[<span class="number">0</span>]++;</span><br><span class="line">            hb[k2]++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d %d %d\n&quot;</span>, a[<span class="number">0</span>], a[<span class="number">1</span>], a[<span class="number">2</span>]);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d %d %d\n&quot;</span>, b[<span class="number">0</span>], b[<span class="number">1</span>], b[<span class="number">2</span>]);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">int</span> m1 = <span class="number">0</span>, m2 = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span>(ha[i] &gt; ha[m1]) m1 = i;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span>(hb[i] &gt; hb[m2]) m2 = i;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%c %c\n&quot;</span>, mp[m1], mp[m2]);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="1010-一元多项式求导（while…EOF）"><a href="#1010-一元多项式求导（while…EOF）" class="headerlink" title="1010 一元多项式求导（while…EOF）"></a>1010 一元多项式求导（while…EOF）</h3><blockquote>
-<p>设计函数求一元多项式的导数。（注：<em>x**n</em>（<em>n</em>为整数）的一阶导数为<em>n<strong>x</strong>n</em>−1。）</p>
-<h3 id="输入格式-1"><a href="#输入格式-1" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>以指数递降方式输入多项式非零项系数和指数（绝对值均为不超过 1000 的整数）。数字间以空格分隔。</p>
-<h3 id="输出格式-1"><a href="#输出格式-1" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>以与输入相同的格式输出导数多项式非零项的系数和指数。数字间以空格分隔，但结尾不能有多余空格。注意“零多项式”的指数和系数都是 0，但是表示为 <code>0 0</code>。</p>
-<h3 id="输入样例-1"><a href="#输入样例-1" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">3 4 -5 2 6 1 -2 0</span><br></pre></td></tr></table></figure>
-
-<h3 id="输出样例-1"><a href="#输出样例-1" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">12 3 -10 1 6 0</span><br></pre></td></tr></table></figure>
-</blockquote>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> k, e, cnt = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> a[<span class="number">1010</span>] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">&quot;%d %d&quot;</span>, &amp;k, &amp;e) != EOF) &#123;</span><br><span class="line">        a[e] = k;</span><br><span class="line">    &#125;</span><br><span class="line">  	a[<span class="number">0</span>] = <span class="number">0</span>;<span class="comment">//对0次项求导直接判断为0</span></span><br><span class="line">		<span class="comment">//从低位求导，只用开一个数组，操作原有数组</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">1000</span>; i++) &#123;</span><br><span class="line">        a[i<span class="number">-1</span>] = i * a[i];</span><br><span class="line">        a[i] = <span class="number">0</span>;<span class="comment">//必须清空系数，不然数据不会覆盖</span></span><br><span class="line">        <span class="keyword">if</span>(a[i<span class="number">-1</span>] != <span class="number">0</span>) cnt++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(cnt == <span class="number">0</span>) <span class="built_in">printf</span>(<span class="string">&quot;0 0&quot;</span>);</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1000</span>; i &gt;= <span class="number">0</span>; i--) &#123;<span class="comment">//高位输出</span></span><br><span class="line">            <span class="keyword">if</span>(a[i] != <span class="number">0</span>) &#123;<span class="comment">//前面呼应</span></span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">&quot;%d %d&quot;</span>, a[i], i);</span><br><span class="line">                cnt--;</span><br><span class="line">                <span class="keyword">if</span>(cnt != <span class="number">0</span>) <span class="built_in">printf</span>(<span class="string">&quot; &quot;</span>);</span><br><span class="line">                <span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="例8-2："><a href="#例8-2：" class="headerlink" title="例8-2："></a>例8-2：</h3><p><strong>查询参与了任何一个SSN为‘123456789’的员工参与过项目的员工姓名</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111194734490.png" alt="image-20210111194734490"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> FNAME, LNAME <span class="keyword">FROM</span> EMPLOYEE <span class="keyword">WHERE</span> SSN <span class="keyword">IN</span> (<span class="keyword">SELECT</span> ESSN <span class="keyword">FROM</span> WORKS_ON <span class="keyword">WHERE</span> PRO <span class="keyword">IN</span> (<span class="keyword">SELECT</span> PNO <span class="keyword">FROM</span> WORKS_ON <span class="keyword">WHERE</span> ESSN=<span class="string">&#x27;123456789&#x27;</span>))</span><br></pre></td></tr></table></figure>
 
 
 
 
 
-<h2 id="查找元素"><a href="#查找元素" class="headerlink" title="查找元素"></a>查找元素</h2><h3 id="1010-人口普查（结构体的运用）"><a href="#1010-人口普查（结构体的运用）" class="headerlink" title="1010 人口普查（结构体的运用）"></a>1010 人口普查（结构体的运用）</h3><blockquote>
-<p> 某城镇进行人口普查，得到了全体居民的生日。现请你写个程序，找出镇上最年长和最年轻的人。</p>
-<p>这里确保每个输入的日期都是合法的，但不一定是合理的——假设已知镇上没有超过 200 岁的老人，而今天是 2014 年 9 月 6 日，所以超过 200 岁的生日和未出生的生日都是不合理的，应该被过滤掉。</p>
-<h3 id="输入格式：-1"><a href="#输入格式：-1" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在第一行给出正整数 <em>N</em>，取值在(0,105]；随后 <em>N</em> 行，每行给出 1 个人的姓名（由不超过 5 个英文字母组成的字符串）、以及按 <code>yyyy/mm/dd</code>（即年/月/日）格式给出的生日。题目保证最年长和最年轻的人没有并列。</p>
-<h3 id="输出格式：-1"><a href="#输出格式：-1" class="headerlink" title="输出格式："></a>输出格式：</h3><p>在一行中顺序输出有效生日的个数、最年长人和最年轻人的姓名，其间以空格分隔。</p>
-<h3 id="输入样例：-1"><a href="#输入样例：-1" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">5</span><br><span class="line">John 2001&#x2F;05&#x2F;12</span><br><span class="line">Tom 1814&#x2F;09&#x2F;06</span><br><span class="line">Ann 2121&#x2F;01&#x2F;30</span><br><span class="line">James 1814&#x2F;09&#x2F;05</span><br><span class="line">Steve 1967&#x2F;11&#x2F;20</span><br></pre></td></tr></table></figure>
-
-<h3 id="输出样例：-1"><a href="#输出样例：-1" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">3 Tom John</span><br></pre></td></tr></table></figure>
-
-
-</blockquote>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">student</span> &#123;</span></span><br><span class="line">    <span class="keyword">char</span> name[<span class="number">10</span>];</span><br><span class="line">    <span class="keyword">int</span> yy, mm, dd;</span><br><span class="line">&#125;oldest, youngest, left, right, temp;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    youngest.yy = left.yy = <span class="number">1814</span>;</span><br><span class="line">    oldest.yy = right.yy = <span class="number">2014</span>;</span><br><span class="line">    youngest.mm = left.mm = <span class="number">9</span>;</span><br><span class="line">    oldest.mm = right.mm = <span class="number">9</span>;</span><br><span class="line">    youngest.dd = left.dd = <span class="number">6</span>;</span><br><span class="line">    right.dd = right.dd = <span class="number">6</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">lessEqu</span><span class="params">(struct student a,struct student b)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(a.yy != b.yy) <span class="keyword">return</span> a.yy &lt;= b.yy;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(a.mm != b.mm) <span class="keyword">return</span> a.mm &lt;= b.mm;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> a.dd &lt;= b.dd;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">MoreEqu</span><span class="params">(struct student a,struct student b)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(a.yy != b.yy) <span class="keyword">return</span> a.yy &gt;= b.yy;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(a.mm != b.mm) <span class="keyword">return</span> a.mm &gt;= b.mm;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> a.dd &gt;= b.dd;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n, cnt = <span class="number">0</span>;</span><br><span class="line">    init();</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%s %d/%d/%d&quot;</span>, temp.name, &amp;temp.yy, &amp;temp.mm, &amp;temp.dd);</span><br><span class="line">        <span class="keyword">if</span>(MoreEqu(temp, left) &amp;&amp; lessEqu(temp, right)) &#123;</span><br><span class="line">            cnt++;</span><br><span class="line">            <span class="keyword">if</span>(lessEqu(temp, oldest)) oldest = temp; <span class="comment">//越小越老</span></span><br><span class="line">            <span class="keyword">if</span>(MoreEqu(temp, youngest)) youngest = temp;<span class="comment">//越大越年轻</span></span><br><span class="line">        &#125; </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(cnt == <span class="number">0</span>) <span class="built_in">printf</span>(<span class="string">&quot;0\n&quot;</span>);</span><br><span class="line">    <span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">&quot;%d %s %s\n&quot;</span>, cnt, oldest.name, youngest.name);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="例8-3："><a href="#例8-3：" class="headerlink" title="例8-3："></a>例8-3：</h3><p><strong>查询参与了任何一个‘John Smith’ 参与过项目的员工姓名</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111194808213.png" alt="image-20210111194808213"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> FNAME, LNAME <span class="keyword">FROM</span> EMPLOYEE <span class="keyword">WHERE</span> SSN <span class="keyword">IN</span> (<span class="keyword">SELECT</span> ESSN <span class="keyword">FROM</span> WORKS_ON <span class="keyword">WHERE</span> PNO <span class="keyword">IN</span> (<span class="keyword">SELECT</span> PNO <span class="keyword">FROM</span> WORKS_ON W <span class="keyword">JOIN</span> EMPLOYEE E <span class="keyword">ON</span> W.ESSN=E.SSN <span class="keyword">WHERE</span> FNAME=<span class="string">&#x27;JOHN&#x27;</span> <span class="keyword">AND</span> LNAME=<span class="string">&#x27;SMITH&#x27;</span>))</span><br></pre></td></tr></table></figure>
 
 
 
 
 
-<h2 id="图形输出"><a href="#图形输出" class="headerlink" title="图形输出"></a>图形输出</h2><ol>
-<li>通过规律，直接进行输出</li>
-<li>定义一个二维字符数组，通过规律填充之，然后输出整个二维数组。</li>
-</ol>
+<h3 id="例8-4："><a href="#例8-4：" class="headerlink" title="例8-4："></a>例8-4：</h3><p><strong>查询有家属的员工的姓名</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111194836923.png" alt="image-20210111194836923"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> FNAME, LNAME <span class="keyword">FROM</span> EMPLOYEE <span class="keyword">WHERE</span> SSN <span class="keyword">IN</span> (<span class="keyword">SELECT</span> ESSN <span class="keyword">FROM</span> DEPENDENT)</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="例8-5："><a href="#例8-5：" class="headerlink" title="例8-5："></a>例8-5：</h3><p><strong>查询有家属的员工的姓名(用连接查询方式)</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111194904519.png" alt="image-20210111194904519"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> FNAME, LNAME <span class="keyword">FROM</span> EMPLOYEE E <span class="keyword">JOIN</span> DEPENDENT D <span class="keyword">ON</span> E.SSN = D.SSN;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="例8-6："><a href="#例8-6：" class="headerlink" title="例8-6："></a>例8-6：</h3><p><strong>查询没有家属的员工的姓名</strong></p>
+<p>![image-20210111194935540](/Users/fine/Library/Application Support/typora-user-images/image-20210111194935540.png)</p>
+<h3 id="例8-7："><a href="#例8-7：" class="headerlink" title="例8-7："></a>例8-7：</h3><p><strong>查询没有家属的员工的姓名(用连接查询方式)</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195033018.png" alt="image-20210111195033018"></p>
+<h2 id="带有比较运算符的子查询"><a href="#带有比较运算符的子查询" class="headerlink" title="带有比较运算符的子查询"></a>带有比较运算符的子查询</h2><h3 id="例8-8："><a href="#例8-8：" class="headerlink" title="例8-8："></a>例8-8：</h3><p><strong>查询在Research部门工作的所有员工的姓名和住址</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195110994.png" alt="image-20210111195110994"></p>
+<h3 id="使用局部变量"><a href="#使用局部变量" class="headerlink" title="使用局部变量"></a>使用局部变量</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195143756.png" alt="image-20210111195143756"></p>
+<h3 id="例8-9："><a href="#例8-9：" class="headerlink" title="例8-9："></a>例8-9：</h3><p><strong>查询所有工资大于或等于全公司平均工资的员工信息</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195212839.png" alt="image-20210111195212839"></p>
+<h3 id="使用局部变量简化程序"><a href="#使用局部变量简化程序" class="headerlink" title="使用局部变量简化程序"></a>使用局部变量简化程序</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195233039.png" alt="image-20210111195233039"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">DECLARE</span> @AVERAGESALARY <span class="built_in">DECIMAL</span>(<span class="number">7</span>,<span class="number">2</span>)</span><br><span class="line"><span class="keyword">SET</span> @AVERAGESALARY = (<span class="keyword">SELECT</span> <span class="keyword">AVG</span>(SALARY) <span class="keyword">FROM</span> EMPLOYEE) <span class="keyword">WHERE</span> SALARY &gt;= @AVERAGESALARY</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="例8-10："><a href="#例8-10：" class="headerlink" title="例8-10："></a>例8-10：</h3><p><strong>查询FNAME以JO开头员工的工作记录</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195302188.png" alt="image-20210111195302188"></p>
+<h3 id="例8-11："><a href="#例8-11：" class="headerlink" title="例8-11："></a>例8-11：</h3><p><strong>查询FNAME以JOH开头员工的工作记录</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195336814.png" alt="image-20210111195336814"></p>
+<h2 id="带有ANY或ALL谓词的子查询"><a href="#带有ANY或ALL谓词的子查询" class="headerlink" title="带有ANY或ALL谓词的子查询"></a>带有ANY或ALL谓词的子查询</h2><h3 id="例8-12："><a href="#例8-12：" class="headerlink" title="例8-12："></a>例8-12：</h3><p><strong>查询FNAME以JO开头员工的工作记录</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195409670.png" alt="image-20210111195409670"></p>
+<ul>
+<li>上例查询等价于带有IN谓词的子查询</li>
+<li><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195428757.png" alt="image-20210111195428757"></li>
+</ul>
+<h3 id="ANY与ALL的区别"><a href="#ANY与ALL的区别" class="headerlink" title="ANY与ALL的区别"></a>ANY与ALL的区别</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195444770.png" alt="image-20210111195444770"></p>
+<h4 id="例8-13："><a href="#例8-13：" class="headerlink" title="例8-13："></a>例8-13：</h4><p><strong>查询工资大于或等于任意一个女性员工工资的男性员工信息</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195535918.png" alt="image-20210111195535918"></p>
+<ul>
+<li>上例查询等价于使用汇总函数的子查询</li>
+<li><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195600279.png" alt="image-20210111195600279"></li>
+</ul>
+<h4 id="例8-14："><a href="#例8-14：" class="headerlink" title="例8-14："></a>例8-14：</h4><p><strong>查询工资大于或等于全部女性员工工资的男性员工信息</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195642862.png" alt="image-20210111195642862"></p>
+<ul>
+<li>上例查询等价于使用汇总函数的子查询</li>
+<li><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195704013.png" alt="image-20210111195704013"></li>
+</ul>
+<h3 id="与汇总函数的等价性"><a href="#与汇总函数的等价性" class="headerlink" title="与汇总函数的等价性"></a>与汇总函数的等价性</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195804138.png" alt="image-20210111195804138"></p>
+<h2 id="带有EXISTS谓词的子查询"><a href="#带有EXISTS谓词的子查询" class="headerlink" title="带有EXISTS谓词的子查询"></a>带有EXISTS谓词的子查询</h2><h3 id="“不相关子查询”与“相关子查询”"><a href="#“不相关子查询”与“相关子查询”" class="headerlink" title="“不相关子查询”与“相关子查询”"></a>“不相关子查询”与“相关子查询”</h3><ul>
+<li>不相关子查询(non-correlated subquery)<ul>
+<li>子查询只执行一次，其结果用于父查询。子查询的查询条件不依赖于父查询</li>
+</ul>
+</li>
+<li>相关子查询(correlated subquery)<ul>
+<li>子查询的查询条件依赖于外层父查询的某个属性值</li>
+<li>主要是指“带有EXISTS谓词的子查询</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195930709.png" alt="image-20210111195930709"></p>
+<h3 id="例8-15："><a href="#例8-15：" class="headerlink" title="例8-15："></a>例8-15：</h3><p><strong>查询参与了项目的员工姓名</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111195956155.png" alt="image-20210111195956155"></p>
+<h4 id="相关子查询的执行过程"><a href="#相关子查询的执行过程" class="headerlink" title="相关子查询的执行过程"></a>相关子查询的执行过程</h4><ul>
+<li>首先取外层查询中表的第1个元组，根据它与内层查询相关的属性值处理内层查询，若WHERE子句返回值为真，则取此元组放入结果表；然后再取外层查询中表的下一个元组，重复这一过程，直至外层表全部检查完毕为止。</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200047125.png" alt="image-20210111200047125"></p>
+<h1 id="集合查询"><a href="#集合查询" class="headerlink" title="集合查询"></a>集合查询</h1><ul>
+<li><p>SELECT语句查询的结果是元组的集合，所以多个SELECT语句的查询结果可进行集合操作</p>
+</li>
+<li><p>集合操作符</p>
+<ul>
+<li><p>并 Union</p>
+</li>
+<li><p>交 Intersect(SQL SERVER 2005以上支持)</p>
+</li>
+<li><p>差 Except(SQL SERVER 2005以上支持)</p>
+<ul>
+<li><p>Oracle：MINUS</p>
+</li>
+<li><p>DB2：EXCEPT</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="并Union"><a href="#并Union" class="headerlink" title="并Union"></a>并Union</h2><h3 id="例8-16："><a href="#例8-16：" class="headerlink" title="例8-16："></a>例8-16：</h3><p><strong>查询在部门5工作员工或直接管理部门5员工的SSN</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200226714.png" alt="image-20210111200226714"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200243112.png" alt="image-20210111200243112"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200252714.png" alt="image-20210111200252714"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200302506.png" alt="image-20210111200302506"></p>
+<h2 id="交-Intersect-SQL-SERVER-2005以上支持"><a href="#交-Intersect-SQL-SERVER-2005以上支持" class="headerlink" title="交 Intersect(SQL SERVER 2005以上支持)"></a>交 Intersect(SQL SERVER 2005以上支持)</h2><h3 id="例8-17："><a href="#例8-17：" class="headerlink" title="例8-17："></a>例8-17：</h3><p><strong>查询“男性员工”与“工资大于30000员工”的交集</strong></p>
+<ul>
+<li>等价于：查询既是男性同时工资大于30000的员工</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200403560.png" alt="image-20210111200403560"></p>
+<h2 id="差-Difference-SQL-SERVER-2005以上支持"><a href="#差-Difference-SQL-SERVER-2005以上支持" class="headerlink" title="差 Difference (SQL SERVER 2005以上支持)"></a>差 Difference (SQL SERVER 2005以上支持)</h2><h3 id="例8-18："><a href="#例8-18：" class="headerlink" title="例8-18："></a>例8-18：</h3><p><strong>查询“男性员工”与“工资大于30000员工”的差集</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200448169.png" alt="image-20210111200448169"></p>
+<ul>
+<li>等价于：查询工资不大于30000的男性员工</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200519554.png" alt="image-20210111200519554"></p>
+<h3 id="例8-19："><a href="#例8-19：" class="headerlink" title="例8-19："></a>例8-19：</h3><p><strong>查询“工资大于30000员工”与“男性员工”的差集</strong></p>
+<ul>
+<li>等价于：查询工资大于30000的女性员工</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200556740.png" alt="image-20210111200556740"></p>
+<h1 id="数据的增加、删除和修改"><a href="#数据的增加、删除和修改" class="headerlink" title="数据的增加、删除和修改"></a>数据的增加、删除和修改</h1><ul>
+<li>插入数据<ul>
+<li>插入单个元组</li>
+<li>插入子查询结果</li>
+</ul>
+</li>
+<li>修改数据<ul>
+<li>修改符合一定条件元组的值</li>
+<li>修改所有元组的值</li>
+<li>带子查询的修改语句</li>
+</ul>
+</li>
+<li>删除数据<ul>
+<li>删除符合一定条件元组</li>
+<li>删除所有元组</li>
+<li>带子查询的删除语句</li>
+</ul>
+</li>
+</ul>
+<h2 id="SQL语言的动词"><a href="#SQL语言的动词" class="headerlink" title="SQL语言的动词"></a>SQL语言的动词</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200735693.png" alt="image-20210111200735693"></p>
+<h3 id="插入数据"><a href="#插入数据" class="headerlink" title="插入数据"></a>插入数据</h3><h4 id="插入单个元组"><a href="#插入单个元组" class="headerlink" title="插入单个元组"></a>插入单个元组</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200810358.png" alt="image-20210111200810358"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200826632.png" alt="image-20210111200826632"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> DEPARTMENT <span class="keyword">VALUES</span>(<span class="string">&#x27;IT&#x27;</span>,<span class="number">7</span>,NULL.<span class="string">&#x27;2004-3-2&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200837297.png" alt="image-20210111200837297"></p>
+<h4 id="插入子查询结果"><a href="#插入子查询结果" class="headerlink" title="插入子查询结果"></a>插入子查询结果</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200901877.png" alt="image-20210111200901877"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> EXAMRECORDAVG(STUDENTNAME, AVERAGESCORE) <span class="keyword">SELECT</span> S.STUDENTNAME, <span class="keyword">AVG</span>(E.SCORE) <span class="keyword">FROM</span> EXAMRECORD E <span class="keyword">INNER</span> <span class="keyword">JOIN</span> STUDENTINFO S <span class="keyword">ON</span> E.STUDENTNO=S.STUDENTNO <span class="keyword">GROUP</span> <span class="keyword">BY</span> S.STUDENTNAME</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200951443.png" alt="image-20210111200951443"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111200959673.png" alt="image-20210111200959673"></p>
+<h3 id="修改数据"><a href="#修改数据" class="headerlink" title="修改数据"></a>修改数据</h3><h4 id="修改符合一定条件元组的值"><a href="#修改符合一定条件元组的值" class="headerlink" title="修改符合一定条件元组的值"></a>修改符合一定条件元组的值</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111201028765.png" alt="image-20210111201028765"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111201039450.png" alt="image-20210111201039450"></p>
+<h4 id="修改所有元组的值"><a href="#修改所有元组的值" class="headerlink" title="修改所有元组的值"></a>修改所有元组的值</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111201108420.png" alt="image-20210111201108420"></p>
+<h3 id="带子查询的修改语句"><a href="#带子查询的修改语句" class="headerlink" title="带子查询的修改语句"></a>带子查询的修改语句</h3><h5 id="例："><a href="#例：" class="headerlink" title="例："></a>例：</h5><p><strong>将‘Research’部门员工的工资提高10%</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111201125362.png" alt="image-20210111201125362"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111201135051.png" alt="image-20210111201135051"></p>
+<h3 id="删除数据"><a href="#删除数据" class="headerlink" title="删除数据"></a>删除数据</h3><h4 id="删除符合一定条件元组"><a href="#删除符合一定条件元组" class="headerlink" title="删除符合一定条件元组"></a>删除符合一定条件元组</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111201241477.png" alt="image-20210111201241477"></p>
+<h4 id="删除所有元组"><a href="#删除所有元组" class="headerlink" title="删除所有元组"></a>删除所有元组</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111201300717.png" alt="image-20210111201300717"></p>
+<h4 id="带子查询的删除语句"><a href="#带子查询的删除语句" class="headerlink" title="带子查询的删除语句"></a>带子查询的删除语句</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111201319814.png" alt="image-20210111201319814"></p>
 ]]></content>
       <categories>
-        <category>Algorithm</category>
+        <category>数据库原理及应用</category>
+      </categories>
+      <tags>
+        <tag>share</tag>
+        <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据库第四章——关系数据库标准语言SQL（2）</title>
+    <url>/posts/b4b005f4/</url>
+    <content><![CDATA[<h1 id="SQL的功能组成"><a href="#SQL的功能组成" class="headerlink" title="SQL的功能组成"></a>SQL的功能组成</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111095419310.png" alt="image-20210111095419310"></p>
+<h2 id="SQL－-gt-DML-－-gt-DQL-数据查询"><a href="#SQL－-gt-DML-－-gt-DQL-数据查询" class="headerlink" title="SQL－&gt;DML －&gt;DQL(数据查询)"></a>SQL－&gt;DML －&gt;DQL(数据查询)</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111095619074.png" alt="image-20210111095619074"></p>
+<h1 id="内连接"><a href="#内连接" class="headerlink" title="内连接"></a>内连接</h1><p><strong>例7-1：查询所有学生所在院系信息。</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100039169.png" alt="image-20210111100039169"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100055583.png"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> STUDENTINFO</span><br><span class="line"><span class="keyword">INNER</span> <span class="keyword">JOIN</span> DEPARTMENT <span class="keyword">ON</span> (STUDENTINFO.STUDENTDEPARTMENTIN=DEPARTMENT.DEPARTMENTID)</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+<h2 id="内连接执行过程"><a href="#内连接执行过程" class="headerlink" title="内连接执行过程"></a>内连接执行过程</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100310303.png" alt="image-20210111100310303"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111102107255.png" alt="image-20210111102107255"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100511937.png" alt="image-20210111100511937"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> S.STUDENTNO, S.STUDENTNAME, D.DEPARTMENTNAME <span class="keyword">FROM</span> STUDENTINFO <span class="keyword">AS</span> S <span class="keyword">INNER</span> <span class="keyword">JOIN</span> DEPARTMENT <span class="keyword">AS</span> D <span class="keyword">ON</span> (S.STUDENTDEPARTIN = D.DEPARTMENTID)</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="多表查询时SELECT-表示的含义"><a href="#多表查询时SELECT-表示的含义" class="headerlink" title="多表查询时SELECT *表示的含义"></a>多表查询时SELECT *表示的含义</h2><ul>
+<li>当未使用限定符指定时，星号解析为对 FROM 子句中所指定的所有表或视图中的所有列的引用</li>
+<li>当使用表或视图名称进行限定时，星号解析为对表或视图中的所有列的引用</li>
+</ul>
+<h2 id="注意：尽量不要用以下连接方式"><a href="#注意：尽量不要用以下连接方式" class="headerlink" title="注意：尽量不要用以下连接方式"></a>注意：尽量不要用以下连接方式</h2><ul>
+<li><pre><code class="sql">SELECT * FROM STUDENTINFO, DEPARTMENT WHERE STUDENTINFO.STUDENTDEPARTID=DEPARTMENT.DEPARTMENTID
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">- 原因：无法将连接条件和针对连接后生成的“大表”的筛选条件分开</span><br><span class="line"></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">**数据挖掘例7-2：考察这家公司技术部门的男女员工比例**</span><br><span class="line"></span><br><span class="line">![image-20210111100750333](https:&#x2F;&#x2F;chasing1874.oss-cn-chengdu.aliyuncs.com&#x2F;image-20210111100750333.png)</span><br><span class="line"></span><br><span class="line">![image-20210111100805120](https:&#x2F;&#x2F;chasing1874.oss-cn-chengdu.aliyuncs.com&#x2F;image-20210111100805120.png)</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;sql</span><br><span class="line">SELECT * FROM EMPLOYEE E JOIN DEPARTMENT D ON (E.DNO &#x3D; D.DNUMBER)</span><br><span class="line"></span><br><span class="line">SELECT SEX, COUNT(*) AS 人数 FROM EMPLOYEE JOIN DEPARTMENT ON (DNO &#x3D; DNUMBER) WHERE DNAME&#x3D;&#39;RESEARCH&#39; GROUP BY SEX</span><br></pre></td></tr></table></figure>
+
+
+</code></pre>
+</li>
+</ul>
+<h2 id="多表内连接查询"><a href="#多表内连接查询" class="headerlink" title="多表内连接查询"></a>多表内连接查询</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100842785.png" alt="image-20210111100842785"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100854911.png" alt="image-20210111100854911"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100906322.png" alt="image-20210111100906322"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> EXAMRECORD E <span class="keyword">JOIN</span> STUDENTINFO S <span class="keyword">ON</span> (E.STUDENTNO = E.STUDENTNO) <span class="keyword">JOIN</span> COURSE C <span class="keyword">ON</span> (C.COURSEID = E.COURSEID)</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p><strong>例7-3：查询所有学生各门课程成绩</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100932313.png" alt="image-20210111100932313"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> STUDENTNAME <span class="keyword">AS</span> 学生姓名 , COURSENAME <span class="keyword">AS</span> 课程名称, SCORE <span class="keyword">AS</span> 成绩 <span class="keyword">FROM</span> EXAMRECORD E <span class="keyword">JOIN</span> STUDENTINFO S <span class="keyword">ON</span> (E.STUDENTNO=S.STUDENTNO) <span class="keyword">JOIN</span> COUSE C <span class="keyword">ON</span> (C.COURSEID=E.COURSEID)</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p><strong>例7-4 ：查询各门课程任课教师信息</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111100959522.png" alt="image-20210111100959522"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111101013925.png" alt="image-20210111101013925"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> COURSE <span class="keyword">ORDER</span> <span class="keyword">BY</span> TEACHERID <span class="keyword">DESC</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> TEACHER</span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> COURSE C <span class="keyword">JOIN</span> TEACHER T <span class="keyword">ON</span> (C.TEACHERID=T.TEACHERID)</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<h1 id="外连接"><a href="#外连接" class="headerlink" title="外连接"></a>外连接</h1><h2 id="LEFT-OUTER-JOIN"><a href="#LEFT-OUTER-JOIN" class="headerlink" title="LEFT OUTER JOIN"></a>LEFT OUTER JOIN</h2><blockquote>
+<p>显示LEFT表(Course)中的全部元组，如果RIGHT表(Teacher)<br>中没有扫描到符合连接条件的元组，则用NULL代替</p>
+</blockquote>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111104650305.png" alt="image-20210111104650305"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> COURSE C <span class="keyword">LEFT</span> <span class="keyword">OUTER</span> <span class="keyword">JOIN</span> TEACHER T <span class="keyword">ON</span> (C.TEACHERID = T.TEACHERID) <span class="keyword">ORDER</span> <span class="keyword">BY</span> T.TEACHERID <span class="keyword">DESC</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="RIGHT-OUTER-JOIN"><a href="#RIGHT-OUTER-JOIN" class="headerlink" title="RIGHT OUTER JOIN"></a>RIGHT OUTER JOIN</h2><blockquote>
+<p>显示LEFT表(Course)中的全部元组，如果RIGHT表(Teacher)<br>中没有扫描到符合连接条件的元组，则用NULL代替</p>
+</blockquote>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111104745799.png" alt="image-20210111104745799"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> COURSE C <span class="keyword">RIGHT</span> <span class="keyword">OUTER</span> <span class="keyword">JOIN</span> TEACHER T <span class="keyword">ON</span> (C.TEACHERID=T.TEACHERID) <span class="keyword">ORDER</span> <span class="keyword">BY</span> C.COURSEID <span class="keyword">DESC</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="注意：进行左、右外连接时表的顺序非常重要"><a href="#注意：进行左、右外连接时表的顺序非常重要" class="headerlink" title="注意：进行左、右外连接时表的顺序非常重要"></a>注意：进行左、右外连接时表的顺序非常重要</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111104837990.png" alt="image-20210111104837990"></p>
+<h2 id="FULL-OUTTER-JOIN"><a href="#FULL-OUTTER-JOIN" class="headerlink" title="FULL OUTTER JOIN"></a>FULL OUTTER JOIN</h2><blockquote>
+<p>显示LEFT表(Course) 和RIGHT表(Teacher)中的全部元组，如果<br>没有扫描到符合连接条件的元组，<strong>则用NULL代替</strong></p>
+</blockquote>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111104907825.png" alt="image-20210111104907825"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> COURSE C <span class="keyword">FULL</span> <span class="keyword">OUTER</span> <span class="keyword">JOIN</span> TEACHER T <span class="keyword">ON</span> (C.TEACHERID=T.TEACHERID) <span class="keyword">ORDER</span> <span class="keyword">BY</span> C.TEACHERID <span class="keyword">DESC</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="注意：多表外连接，表顺序很重要"><a href="#注意：多表外连接，表顺序很重要" class="headerlink" title="注意：多表外连接，表顺序很重要"></a>注意：多表外连接，表顺序很重要</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111104939651.png" alt="image-20210111104939651"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111104949775.png" alt="image-20210111104949775"></p>
+<h3 id="例7-5-："><a href="#例7-5-：" class="headerlink" title="例7-5 ："></a><strong>例7-5 ：</strong></h3><p><strong>查询所有学生选修的课程(包括未选课学生以及没有学生选修的课程信息)</strong></p>
+<ol>
+<li>连接“StudentInfo”和“ExamRecord”</li>
+</ol>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105100017.png" alt="image-20210111105100017"></p>
+<ol start="2">
+<li>把第1步生成的结果关系与“Course”连接</li>
+</ol>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105207670.png" alt="image-20210111105207670"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105222970.png" alt="image-20210111105222970"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105234460.png" alt="image-20210111105234460"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105245515.png" alt="image-20210111105245515"></p>
+<ol start="3">
+<li>按照题目要求进行适当的投影操作</li>
+</ol>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105348702.png" alt="image-20210111105348702"></p>
+<h3 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h3><blockquote>
+<p>所有用于单表的查询技术都可以用于多表查询，多表只不过是把单表按照一定连接条件(join condition)连接成一张<strong>“大表”</strong></p>
+</blockquote>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105430685.png" alt="image-20210111105430685"></p>
+<h2 id="有连接时的查询执行过程"><a href="#有连接时的查询执行过程" class="headerlink" title="有连接时的查询执行过程"></a>有连接时的查询执行过程</h2><ul>
+<li>生成结果关系(“大表”)—》在“大表”上利用WHERE指定的条件筛选元组—》按照Group by指定的属性将元组分组—》将Group by的分组用Having指定的条件筛选—》按照Order By指定的属性对元组排序(排序的属性可以不在最后投影的属性列中)—》投影或用函数、表达式计算</li>
+</ul>
+<ul>
+<li>如果没有GROUP BY和HAVING的话，上述步骤中红色的部分将不会执行</li>
+</ul>
+<h3 id="例7-6-："><a href="#例7-6-：" class="headerlink" title="例7-6 ："></a><strong>例7-6 ：</strong></h3><p><strong>查询部门男性员工数大于2的部门名称及男性员工人数，并按人数降序排列</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105654992.png" alt="image-20210111105654992"></p>
+<ol>
+<li>生成结果关系(“大表”)</li>
+</ol>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105731991.png" alt="image-20210111105731991"></p>
+<ol start="2">
+<li>在“大表”上利用WHERE指定的条件筛选元组</li>
+</ol>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105755760.png" alt="image-20210111105755760"></p>
+<ol start="3">
+<li>按照Group by指定的属性将元组分组</li>
+</ol>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105827865.png" alt="image-20210111105827865"></p>
+<ol start="4">
+<li>将Group by的分组用Having指定的条件筛选</li>
+</ol>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105850431.png" alt="image-20210111105850431"></p>
+<ol start="5">
+<li>按照Order By指定的属性对元组排序</li>
+</ol>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105914626.png" alt="image-20210111105914626"></p>
+<ol start="6">
+<li>投影或用函数、表达式计算</li>
+</ol>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111105944800.png" alt="image-20210111105944800"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> DNAME , <span class="keyword">COUNT</span>(*) <span class="keyword">FROM</span> EMPLOYEE E <span class="keyword">JOIN</span> DEPARTMENT D <span class="keyword">ON</span> (E.DNO=D.DNUMBER) <span class="keyword">WHERE</span> SEX=<span class="string">&#x27;M&#x27;</span> <span class="keyword">GROUP</span> <span class="keyword">BY</span> DNAME <span class="keyword">HAVING</span> <span class="keyword">COUNT</span>(*) &gt; <span class="number">2</span> <span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="keyword">COUNT</span>(*) <span class="keyword">DESC</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="补充：一个查询优化的例子"><a href="#补充：一个查询优化的例子" class="headerlink" title="补充：一个查询优化的例子"></a>补充：一个查询优化的例子</h3><p>在逻辑上，我们可以认为DBMS是先通过JOIN操作(关系代数)把所有的表连成一张“大表”后再来执行SELECT操作(关系代数)，但实际上DBMS在某些情况下会对查询的执行过程进行优化，比如先执行SELECT操作(从而有可能减少参与JOIN操作的关系的元组数)，再执行JOIN操作。</p>
+<h4 id="DBMS处理查询的过程"><a href="#DBMS处理查询的过程" class="headerlink" title="DBMS处理查询的过程"></a>DBMS处理查询的过程</h4><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111110027640.png" alt="image-20210111110027640"></p>
+<h3 id="例7-7-："><a href="#例7-7-：" class="headerlink" title="例7-7 ："></a>例7-7 ：</h3><p><strong>查询女性员工的家属信息</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111110108326.png" alt="image-20210111110108326"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> FNAME, LNAME, DEPENDRNT_NAME <span class="keyword">FROM</span> EMPLOYEE <span class="keyword">JOIN</span> DEPENDENT <span class="keyword">ON</span> (SSN = ESSN) <span class="keyword">WHERE</span> (EMPLOYEE.SEX = <span class="string">&#x27;F&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111110136785.png" alt="image-20210111110136785"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111110146387.png" alt="image-20210111110146387"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111110159964.png" alt="image-20210111110159964"></p>
+<h1 id="交叉连接"><a href="#交叉连接" class="headerlink" title="交叉连接"></a>交叉连接</h1><blockquote>
+<p>交叉连接(CROSS JOIN)：实际就是关系代数中的“笛卡尔积”(Cartesian Product)</p>
+</blockquote>
+<h3 id="例7-8-："><a href="#例7-8-：" class="headerlink" title="例7-8 ："></a>例7-8 ：</h3><p><strong>将StudentInfo与Department表交叉连接</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111115926151.png" alt="image-20210111115926151"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111115938420.png" alt="image-20210111115938420"></p>
+<p><strong>如果添加一个 WHERE 子句，则交叉连接的作用将同内连接一样</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111120001776.png" alt="image-20210111120001776"></p>
+<h3 id="注意：-1"><a href="#注意：-1" class="headerlink" title="注意："></a>注意：</h3><p>CROSS JOIN后面不能加ON</p>
+<h3 id="CROSS-JOIN的用处"><a href="#CROSS-JOIN的用处" class="headerlink" title="CROSS JOIN的用处"></a>CROSS JOIN的用处</h3><blockquote>
+<p>CROSS JOIN的一个用途是生成样本或测试数据。例如：如果你要生成1000行3列的一个表用于测试，不必建立这样一张表并进行1000次插入操作，可以建立三张表，每张表1列10行数据，然后将这三张表进行交叉连接可得10<em>10</em>10=1000行数据。</p>
+</blockquote>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111120117583.png" alt="image-20210111120117583"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111120132062.png" alt="image-20210111120132062"></p>
+<h1 id="自连接"><a href="#自连接" class="headerlink" title="自连接"></a>自连接</h1><h3 id="例7-9-："><a href="#例7-9-：" class="headerlink" title="例7-9 ："></a>例7-9 ：</h3><p><strong>查询每个员工上级的姓名</strong></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111120202140.png" alt="image-20210111120202140"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111120219805.png" alt="image-20210111120219805"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111120231994.png" alt="image-20210111120231994"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> EMPLOYEE E1 <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> EMPLOYEE E2 <span class="keyword">ON</span> (E1.SUPERSSN=E2.SSN) <span class="keyword">ORDER</span> <span class="keyword">BY</span> E1.SUPERSSN <span class="keyword">DESC</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> E1.FNAME+<span class="string">&#x27;,&#x27;</span>+E1.LNAME 员工姓名, E2.FNAME+<span class="string">&#x27;,&#x27;</span>E2.LNAME 上级姓名 <span class="keyword">FROM</span> EMPLOYEE E1 <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> EMPLOYEE E2 <span class="keyword">ON</span> E1.SUPERSSN=E2.SSN <span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="number">2</span> D</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+]]></content>
+      <categories>
+        <category>数据库原理及应用</category>
+      </categories>
+      <tags>
+        <tag>share</tag>
+        <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据库第四章——关系数据库标准语言SQL（4）</title>
+    <url>/posts/91db5a28/</url>
+    <content><![CDATA[<h1 id="视图的基本概念"><a href="#视图的基本概念" class="headerlink" title="视图的基本概念"></a>视图的基本概念</h1><h2 id="SQL支持关系数据库三级模式结构"><a href="#SQL支持关系数据库三级模式结构" class="headerlink" title="SQL支持关系数据库三级模式结构"></a>SQL支持关系数据库三级模式结构</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111211444397.png" alt="image-20210111211444397"></p>
+<h2 id="数据定义"><a href="#数据定义" class="headerlink" title="数据定义"></a>数据定义</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111211521246.png" alt="image-20210111211521246"></p>
+<h2 id="视图VIEW-外模式"><a href="#视图VIEW-外模式" class="headerlink" title="视图VIEW(外模式)"></a>视图VIEW(外模式)</h2><ul>
+<li>视图是虚拟的表(a virtual table)，保存在视图中的数据并不是物理存储的数据，而是由基本表或其他视图派生的</li>
+<li>视图是一个被命名的SELECT语句，它能动态地产生一个可进行进一步操作的查询结果</li>
+</ul>
+<h1 id="视图的优点"><a href="#视图的优点" class="headerlink" title="视图的优点"></a>视图的优点</h1><ul>
+<li>提供了一定程度的逻辑独立性</li>
+<li>为用户集中数据，保证数据安全性<ul>
+<li>视图为用户提供一个受限的环境，用户只能访问允许的数据，一些不必要的、不合适的数据则不在视图中显示</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111211713619.png" alt="image-20210111211713619"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111211731808.png" alt="image-20210111211731808"></p>
+<ul>
+<li>简化数据库查询</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111211808112.png" alt="image-20210111211808112"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111211818721.png" alt="image-20210111211818721"></p>
+<h1 id="创建和管理视图"><a href="#创建和管理视图" class="headerlink" title="创建和管理视图"></a>创建和管理视图</h1><h2 id="创建-定义-视图"><a href="#创建-定义-视图" class="headerlink" title="创建(定义)视图"></a>创建(定义)视图</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111212143960.png" alt="image-20210111212143960"></p>
+<h2 id="WITH-CHECK-OPTION"><a href="#WITH-CHECK-OPTION" class="headerlink" title="[WITH CHECK OPTION]"></a>[WITH CHECK OPTION]</h2><p>对视图进行UPDATE，INSERT和DELETE操作时要保证更新、插入或删除的行满足视图定义中的谓词条件(即子查询中的条件表达式)</p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111212611947.png" alt="image-20210111212611947"></p>
+<h2 id="定义视图时指定列名"><a href="#定义视图时指定列名" class="headerlink" title="定义视图时指定列名"></a>定义视图时指定列名</h2><ul>
+<li><p>某个目标列不是单纯的属性名，而是聚集函数或计算列</p>
+</li>
+<li><p>多表连接时选出了几个同名列作为视图的字段</p>
+</li>
+<li><p>需要在视图中为某个列启用新的更合适的名字</p>
+</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111213851092.png" alt="image-20210111213851092"></p>
+<h2 id="修改视图定义"><a href="#修改视图定义" class="headerlink" title="修改视图定义"></a>修改视图定义</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111213927327.png" alt="image-20210111213927327"></p>
+<h2 id="删除视图"><a href="#删除视图" class="headerlink" title="删除视图"></a>删除视图</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111214546250.png" alt="image-20210111214546250"></p>
+<h1 id="查询视图"><a href="#查询视图" class="headerlink" title="查询视图"></a>查询视图</h1><ul>
+<li>步骤<ul>
+<li>有效性检查</li>
+<li>安全性检查</li>
+<li>视图消解<ul>
+<li>从数据字典中取出视图的定义，把定义中的子查询和用户针对视图的查询结合起来，转换成等价的对基本表的查询，然后再执行修正的等价查询</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="视图消解"><a href="#视图消解" class="headerlink" title="视图消解"></a>视图消解</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111214719729.png" alt="image-20210111214719729"></p>
+<h1 id="更新视图中的数据"><a href="#更新视图中的数据" class="headerlink" title="更新视图中的数据"></a>更新视图中的数据</h1><ul>
+<li>可以通过更新视图的方式实现对表中数据的更新。视图的更新操作包括插入、修改和删除数据</li>
+<li>视图是一张虚表，所以对视图的更新，最终实际上是转换成对视图的底层表的更新</li>
+<li>更新视图中的数据：不是所有视图中的数据都是可更新的</li>
+</ul>
+<h2 id="基本判断原则"><a href="#基本判断原则" class="headerlink" title="基本判断原则"></a>基本判断原则</h2><ul>
+<li><p>视图中的每一列都必须和一个基本表中的一个源列对应</p>
+</li>
+<li><p>视图中的每一行都必须和一个基本表中的一个源行对应</p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215029333.png" alt="image-20210111215029333"></p>
+</li>
+</ul>
+<p>如果修改仅仅影响到视图参照的基表之一，则可以通过视图修改数据 (UPDATE, DELETE, INSERT)</p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215100523.png" alt="image-20210111215100523"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215134862.png" alt="image-20210111215134862"></p>
+<h2 id="可更新视图的具体判断标准"><a href="#可更新视图的具体判断标准" class="headerlink" title="可更新视图的具体判断标准"></a>可更新视图的具体判断标准</h2><ul>
+<li><p>查询语句中没有聚合函数 (AVG, COUNT, SUM, MIN, MAX, GROUPING, STDEV, STDEVP, VAR, and VARP) 或 GROUP BY, UNION, DISTINCT,或 TOP 子句 </p>
+</li>
+<li><p>查询语句中没有导出列或者计算列</p>
+</li>
+</ul>
+<h2 id="通过视图更新数据的注意事项"><a href="#通过视图更新数据的注意事项" class="headerlink" title="通过视图更新数据的注意事项"></a>通过视图更新数据的注意事项</h2><p>所有的数据修改都必须遵守在待更新基本表（甚至包括相关表）上设置的完整性约束条件</p>
+<h2 id="通过视图添加数据"><a href="#通过视图添加数据" class="headerlink" title="通过视图添加数据"></a>通过视图添加数据</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215306306.png" alt="image-20210111215306306"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215325842.png" alt="image-20210111215325842"></p>
+<h2 id="通过视图修改数据"><a href="#通过视图修改数据" class="headerlink" title="通过视图修改数据"></a>通过视图修改数据</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215350208.png" alt="image-20210111215350208"></p>
+<h2 id="通过视图删除数据"><a href="#通过视图删除数据" class="headerlink" title="通过视图删除数据"></a>通过视图删除数据</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215418754.png" alt="image-20210111215418754"></p>
+<h2 id="WITH-CHECK-OPTION的应用"><a href="#WITH-CHECK-OPTION的应用" class="headerlink" title="WITH CHECK OPTION的应用"></a>WITH CHECK OPTION的应用</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215445855.png" alt="image-20210111215445855"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215454990.png" alt="image-20210111215454990"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215503425.png" alt="image-20210111215503425"></p>
+<h2 id="为什么要通过视图更新数据"><a href="#为什么要通过视图更新数据" class="headerlink" title="为什么要通过视图更新数据"></a>为什么要通过视图更新数据</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215526975.png" alt="image-20210111215526975"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215539132.png" alt="image-20210111215539132"></p>
+<h1 id="加密视图"><a href="#加密视图" class="headerlink" title="加密视图"></a>加密视图</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215558785.png" alt="image-20210111215558785"></p>
+<h1 id="派生表"><a href="#派生表" class="headerlink" title="派生表"></a>派生表</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215611633.png" alt="image-20210111215611633"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215623354.png" alt="image-20210111215623354"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215632300.png" alt="image-20210111215632300"></p>
+<ul>
+<li><p>派生表为一个命名的查询结果，用于另一个查询的FROM子句。因为查询的结果为一张表，而FROM子句正好也需要一张表。视图也可看成派生表。但视图是命名的, 定义被持久的存储、可重用；而派生表是动态的、临时的 </p>
+</li>
+<li><p>可以通过视图进行 insert, update和 delete 操作，但派生表不能</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>数据库原理及应用</category>
       </categories>
       <tags>
         <tag>share</tag>
@@ -2298,98 +2305,91 @@
       </tags>
   </entry>
   <entry>
-    <title>数据库第四章——关系数据库标准语言SQL（4）</title>
-    <url>/posts/91db5a28/</url>
-    <content><![CDATA[<h1 id="视图的基本概念"><a href="#视图的基本概念" class="headerlink" title="视图的基本概念"></a>视图的基本概念</h1><h2 id="SQL支持关系数据库三级模式结构"><a href="#SQL支持关系数据库三级模式结构" class="headerlink" title="SQL支持关系数据库三级模式结构"></a>SQL支持关系数据库三级模式结构</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111211444397.png" alt="image-20210111211444397"></p>
-<h2 id="数据定义"><a href="#数据定义" class="headerlink" title="数据定义"></a>数据定义</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111211521246.png" alt="image-20210111211521246"></p>
-<h2 id="视图VIEW-外模式"><a href="#视图VIEW-外模式" class="headerlink" title="视图VIEW(外模式)"></a>视图VIEW(外模式)</h2><ul>
-<li>视图是虚拟的表(a virtual table)，保存在视图中的数据并不是物理存储的数据，而是由基本表或其他视图派生的</li>
-<li>视图是一个被命名的SELECT语句，它能动态地产生一个可进行进一步操作的查询结果</li>
-</ul>
-<h1 id="视图的优点"><a href="#视图的优点" class="headerlink" title="视图的优点"></a>视图的优点</h1><ul>
-<li>提供了一定程度的逻辑独立性</li>
-<li>为用户集中数据，保证数据安全性<ul>
-<li>视图为用户提供一个受限的环境，用户只能访问允许的数据，一些不必要的、不合适的数据则不在视图中显示</li>
-</ul>
-</li>
-</ul>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111211713619.png" alt="image-20210111211713619"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111211731808.png" alt="image-20210111211731808"></p>
-<ul>
-<li>简化数据库查询</li>
-</ul>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111211808112.png" alt="image-20210111211808112"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111211818721.png" alt="image-20210111211818721"></p>
-<h1 id="创建和管理视图"><a href="#创建和管理视图" class="headerlink" title="创建和管理视图"></a>创建和管理视图</h1><h2 id="创建-定义-视图"><a href="#创建-定义-视图" class="headerlink" title="创建(定义)视图"></a>创建(定义)视图</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111212143960.png" alt="image-20210111212143960"></p>
-<h2 id="WITH-CHECK-OPTION"><a href="#WITH-CHECK-OPTION" class="headerlink" title="[WITH CHECK OPTION]"></a>[WITH CHECK OPTION]</h2><p>对视图进行UPDATE，INSERT和DELETE操作时要保证更新、插入或删除的行满足视图定义中的谓词条件(即子查询中的条件表达式)</p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111212611947.png" alt="image-20210111212611947"></p>
-<h2 id="定义视图时指定列名"><a href="#定义视图时指定列名" class="headerlink" title="定义视图时指定列名"></a>定义视图时指定列名</h2><ul>
-<li><p>某个目标列不是单纯的属性名，而是聚集函数或计算列</p>
-</li>
-<li><p>多表连接时选出了几个同名列作为视图的字段</p>
-</li>
-<li><p>需要在视图中为某个列启用新的更合适的名字</p>
-</li>
-</ul>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111213851092.png" alt="image-20210111213851092"></p>
-<h2 id="修改视图定义"><a href="#修改视图定义" class="headerlink" title="修改视图定义"></a>修改视图定义</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111213927327.png" alt="image-20210111213927327"></p>
-<h2 id="删除视图"><a href="#删除视图" class="headerlink" title="删除视图"></a>删除视图</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111214546250.png" alt="image-20210111214546250"></p>
-<h1 id="查询视图"><a href="#查询视图" class="headerlink" title="查询视图"></a>查询视图</h1><ul>
-<li>步骤<ul>
-<li>有效性检查</li>
-<li>安全性检查</li>
-<li>视图消解<ul>
-<li>从数据字典中取出视图的定义，把定义中的子查询和用户针对视图的查询结合起来，转换成等价的对基本表的查询，然后再执行修正的等价查询</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="视图消解"><a href="#视图消解" class="headerlink" title="视图消解"></a>视图消解</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111214719729.png" alt="image-20210111214719729"></p>
-<h1 id="更新视图中的数据"><a href="#更新视图中的数据" class="headerlink" title="更新视图中的数据"></a>更新视图中的数据</h1><ul>
-<li>可以通过更新视图的方式实现对表中数据的更新。视图的更新操作包括插入、修改和删除数据</li>
-<li>视图是一张虚表，所以对视图的更新，最终实际上是转换成对视图的底层表的更新</li>
-<li>更新视图中的数据：不是所有视图中的数据都是可更新的</li>
-</ul>
-<h2 id="基本判断原则"><a href="#基本判断原则" class="headerlink" title="基本判断原则"></a>基本判断原则</h2><ul>
-<li><p>视图中的每一列都必须和一个基本表中的一个源列对应</p>
-</li>
-<li><p>视图中的每一行都必须和一个基本表中的一个源行对应</p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215029333.png" alt="image-20210111215029333"></p>
-</li>
-</ul>
-<p>如果修改仅仅影响到视图参照的基表之一，则可以通过视图修改数据 (UPDATE, DELETE, INSERT)</p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215100523.png" alt="image-20210111215100523"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215134862.png" alt="image-20210111215134862"></p>
-<h2 id="可更新视图的具体判断标准"><a href="#可更新视图的具体判断标准" class="headerlink" title="可更新视图的具体判断标准"></a>可更新视图的具体判断标准</h2><ul>
-<li><p>查询语句中没有聚合函数 (AVG, COUNT, SUM, MIN, MAX, GROUPING, STDEV, STDEVP, VAR, and VARP) 或 GROUP BY, UNION, DISTINCT,或 TOP 子句 </p>
-</li>
-<li><p>查询语句中没有导出列或者计算列</p>
-</li>
-</ul>
-<h2 id="通过视图更新数据的注意事项"><a href="#通过视图更新数据的注意事项" class="headerlink" title="通过视图更新数据的注意事项"></a>通过视图更新数据的注意事项</h2><p>所有的数据修改都必须遵守在待更新基本表（甚至包括相关表）上设置的完整性约束条件</p>
-<h2 id="通过视图添加数据"><a href="#通过视图添加数据" class="headerlink" title="通过视图添加数据"></a>通过视图添加数据</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215306306.png" alt="image-20210111215306306"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215325842.png" alt="image-20210111215325842"></p>
-<h2 id="通过视图修改数据"><a href="#通过视图修改数据" class="headerlink" title="通过视图修改数据"></a>通过视图修改数据</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215350208.png" alt="image-20210111215350208"></p>
-<h2 id="通过视图删除数据"><a href="#通过视图删除数据" class="headerlink" title="通过视图删除数据"></a>通过视图删除数据</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215418754.png" alt="image-20210111215418754"></p>
-<h2 id="WITH-CHECK-OPTION的应用"><a href="#WITH-CHECK-OPTION的应用" class="headerlink" title="WITH CHECK OPTION的应用"></a>WITH CHECK OPTION的应用</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215445855.png" alt="image-20210111215445855"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215454990.png" alt="image-20210111215454990"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215503425.png" alt="image-20210111215503425"></p>
-<h2 id="为什么要通过视图更新数据"><a href="#为什么要通过视图更新数据" class="headerlink" title="为什么要通过视图更新数据"></a>为什么要通过视图更新数据</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215526975.png" alt="image-20210111215526975"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215539132.png" alt="image-20210111215539132"></p>
-<h1 id="加密视图"><a href="#加密视图" class="headerlink" title="加密视图"></a>加密视图</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215558785.png" alt="image-20210111215558785"></p>
-<h1 id="派生表"><a href="#派生表" class="headerlink" title="派生表"></a>派生表</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215611633.png" alt="image-20210111215611633"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215623354.png" alt="image-20210111215623354"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210111215632300.png" alt="image-20210111215632300"></p>
-<ul>
-<li><p>派生表为一个命名的查询结果，用于另一个查询的FROM子句。因为查询的结果为一张表，而FROM子句正好也需要一张表。视图也可看成派生表。但视图是命名的, 定义被持久的存储、可重用；而派生表是动态的、临时的 </p>
-</li>
-<li><p>可以通过视图进行 insert, update和 delete 操作，但派生表不能</p>
-</li>
-</ul>
+    <title>算法__入门模拟</title>
+    <url>/posts/514df455/</url>
+    <content><![CDATA[<h1 id="入门模拟"><a href="#入门模拟" class="headerlink" title="入门模拟"></a>入门模拟</h1><h2 id="简单模拟"><a href="#简单模拟" class="headerlink" title="简单模拟"></a>简单模拟</h2><h3 id="1016-部分A-B（枚举每一位）"><a href="#1016-部分A-B（枚举每一位）" class="headerlink" title="1016 部分A+B（枚举每一位）"></a>1016 部分A+B（枚举每一位）</h3><blockquote>
+<p>正整数 <em>A</em> 的“<em>D**A</em>（为 1 位整数）部分”定义为由 <em>A</em> 中所有 <em>D**A</em> 组成的新整数 <em>P**A</em>。例如：给定 <em>A</em>=3862767，<em>D**A</em>=6，则 <em>A</em> 的“6 部分”<em>P**A</em> 是 66，因为 <em>A</em> 中有 2 个 6。</p>
+<p>现给定 <em>A</em>、<em>D**A</em>、<em>B</em>、<em>D**B</em>，请编写程序计算 <em>P**A</em>+<em>P**B</em>。</p>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> da, db;</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> a, b;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%lld%d%lld%d&quot;</span>, &amp;a, &amp;da, &amp;b, &amp;db);</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> pa = <span class="number">0</span>, pb = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(a) &#123;</span><br><span class="line">        <span class="keyword">if</span>(a%<span class="number">10</span> == da) pa = pa*<span class="number">10</span> + da;</span><br><span class="line">        a = a/<span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">while</span>(b)&#123;</span><br><span class="line">        <span class="keyword">if</span>(b%<span class="number">10</span> == db) pb = pb*<span class="number">10</span> + db;</span><br><span class="line">        b = b/<span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%lld&quot;</span>, pa+pb);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="1026-程序运行时间（四舍五入，秒时间处理）"><a href="#1026-程序运行时间（四舍五入，秒时间处理）" class="headerlink" title="1026 程序运行时间（四舍五入，秒时间处理）"></a>1026 程序运行时间（四舍五入，秒时间处理）</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> c1, c2;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>, &amp;c1, &amp;c2);</span><br><span class="line">    <span class="keyword">int</span> ans = c2 - c1;</span><br><span class="line">    <span class="keyword">if</span>(ans % <span class="number">100</span> &gt;= <span class="number">50</span>) &#123;</span><br><span class="line">        ans = ans / <span class="number">100</span> + <span class="number">1</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        ans = ans / <span class="number">100</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%02d:%02d:%02d\n&quot;</span>, ans / <span class="number">3600</span>, ans % <span class="number">3600</span> / <span class="number">60</span>, ans % <span class="number">60</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p>1008 <strong>数组元素循环右移问题</strong>（跳过限制，直接结果）</p>
+<blockquote>
+<p>一个数组<em>A</em>中存有<em>N</em>（&gt;0）个整数，在不允许使用另外数组的前提下，将每个整数循环向右移<em>M</em>（≥0）个位置，即将<em>A</em>中的数据由（<em>A</em>0<em>A</em>1⋯<em>A**N</em>−1）变换为（<em>A**N</em>−<em>M</em>⋯<em>A**N</em>−1<em>A</em>0<em>A</em>1⋯<em>A**N</em>−<em>M</em>−1）（最后<em>M</em>个数循环移至最前面的<em>M</em>个位置）。如果需要考虑程序移动数据的次数尽量少，要如何设计移动的方法？</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>每个输入包含一个测试用例，第1行输入<em>N</em>（1≤<em>N</em>≤100）和<em>M</em>（≥0）；第2行输入<em>N</em>个整数，之间用空格分隔。</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>在一行中输出循环右移<em>M</em>位以后的整数序列，之间用空格分隔，序列结尾不能有多余空格。</p>
+<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">6 2</span><br><span class="line">1 2 3 4 5 6</span><br></pre></td></tr></table></figure>
+
+<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">5 6 1 2 3 4</span><br></pre></td></tr></table></figure>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//并没有对原有数组进行修改</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"> <span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"> </span>&#123;</span><br><span class="line">     <span class="keyword">int</span> n, m;</span><br><span class="line">     <span class="keyword">int</span> a[<span class="number">110</span>];</span><br><span class="line">     <span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>, &amp;n, &amp;m);</span><br><span class="line">     <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;a[i]);</span><br><span class="line">     &#125;</span><br><span class="line">     m = m%n;</span><br><span class="line">     <span class="keyword">int</span> cnt = <span class="number">0</span>;</span><br><span class="line">     <span class="keyword">for</span>(<span class="keyword">int</span> i = n-m; i &lt; n; i++) &#123;</span><br><span class="line">         <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, a[i]);</span><br><span class="line">         <span class="keyword">if</span>(cnt &lt; n<span class="number">-1</span>) &#123;</span><br><span class="line">             <span class="built_in">printf</span>(<span class="string">&quot; &quot;</span>);</span><br><span class="line">             cnt++;</span><br><span class="line">         &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">             <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">         &#125;</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n-m; i++)&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, a[i]);</span><br><span class="line">         <span class="keyword">if</span>(cnt &lt; n<span class="number">-1</span>) &#123;</span><br><span class="line">             <span class="built_in">printf</span>(<span class="string">&quot; &quot;</span>);</span><br><span class="line">             cnt++;</span><br><span class="line">         &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">             <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">         &#125;</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="1018-锤子剪刀布（元素转换为数值简化操作）"><a href="#1018-锤子剪刀布（元素转换为数值简化操作）" class="headerlink" title="1018 锤子剪刀布（元素转换为数值简化操作）"></a>1018 锤子剪刀布（元素转换为数值简化操作）</h3><blockquote>
+<p>大家应该都会玩“锤子剪刀布”的游戏：两人同时给出手势，胜负规则如图所示：</p>
+<p><img src="https://images.ptausercontent.com/724da598-b37f-4f1f-99b4-71459654ce3a.jpg" alt="FigCJB.jpg"></p>
+<p>现给出两人的交锋记录，请统计双方的胜、平、负次数，并且给出双方分别出什么手势的胜算最大。</p>
+<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入第 1 行给出正整数 <em>N</em>（≤105），即双方交锋的次数。随后 <em>N</em> 行，每行给出一次交锋的信息，即甲、乙双方同时给出的的手势。<code>C</code> 代表“锤子”、<code>J</code> 代表“剪刀”、<code>B</code> 代表“布”，第 1 个字母代表甲方，第 2 个代表乙方，中间有 1 个空格。</p>
+<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>输出第 1、2 行分别给出甲、乙的胜、平、负次数，数字间以 1 个空格分隔。第 3 行给出两个字母，分别代表甲、乙获胜次数最多的手势，中间有 1 个空格。如果解不唯一，则输出按字母序最小的解。</p>
+<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">10</span><br><span class="line">C J</span><br><span class="line">J B</span><br><span class="line">C B</span><br><span class="line">B B</span><br><span class="line">B C</span><br><span class="line">C C</span><br><span class="line">C B</span><br><span class="line">J B</span><br><span class="line">B C</span><br><span class="line">J J</span><br></pre></td></tr></table></figure>
+
+<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">5 3 2</span><br><span class="line">2 3 5</span><br><span class="line">B B</span><br></pre></td></tr></table></figure>
+
+
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">change</span><span class="params">(<span class="keyword">char</span> a)</span> </span>&#123; <span class="comment">//循环相克，字典增序</span></span><br><span class="line">    <span class="keyword">if</span>(a == <span class="string">&#x27;B&#x27;</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span>(a == <span class="string">&#x27;C&#x27;</span>) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span>(a == <span class="string">&#x27;J&#x27;</span>) <span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> mp[<span class="number">3</span>] = &#123;<span class="string">&#x27;B&#x27;</span>, <span class="string">&#x27;C&#x27;</span>, <span class="string">&#x27;J&#x27;</span>&#125;;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">char</span> aa, bb;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    <span class="keyword">int</span> a[<span class="number">3</span>] = &#123;<span class="number">0</span>&#125;,  b[<span class="number">3</span>] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line">    <span class="keyword">int</span> ha[<span class="number">3</span>] = &#123;<span class="number">0</span>&#125;,  hb[<span class="number">3</span>] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line">    <span class="keyword">int</span> k1, k2;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        getchar();</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%c %c&quot;</span>, &amp;aa, &amp;bb);</span><br><span class="line">        k1 = change(aa);</span><br><span class="line">        k2 = change(bb);</span><br><span class="line">        <span class="keyword">if</span>((k1 + <span class="number">1</span>) % <span class="number">3</span> == k2) &#123;</span><br><span class="line">            a[<span class="number">0</span>]++;</span><br><span class="line">            b[<span class="number">2</span>]++;</span><br><span class="line">            ha[k1]++;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span>(k1 == k2) &#123;</span><br><span class="line">            a[<span class="number">1</span>]++;</span><br><span class="line">            b[<span class="number">1</span>]++;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            a[<span class="number">2</span>]++;</span><br><span class="line">            b[<span class="number">0</span>]++;</span><br><span class="line">            hb[k2]++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d %d %d\n&quot;</span>, a[<span class="number">0</span>], a[<span class="number">1</span>], a[<span class="number">2</span>]);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d %d %d\n&quot;</span>, b[<span class="number">0</span>], b[<span class="number">1</span>], b[<span class="number">2</span>]);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">int</span> m1 = <span class="number">0</span>, m2 = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span>(ha[i] &gt; ha[m1]) m1 = i;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span>(hb[i] &gt; hb[m2]) m2 = i;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%c %c\n&quot;</span>, mp[m1], mp[m2]);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="1010-一元多项式求导（while…EOF）"><a href="#1010-一元多项式求导（while…EOF）" class="headerlink" title="1010 一元多项式求导（while…EOF）"></a>1010 一元多项式求导（while…EOF）</h3><blockquote>
+<p>设计函数求一元多项式的导数。（注：<em>x**n</em>（<em>n</em>为整数）的一阶导数为<em>n<strong>x</strong>n</em>−1。）</p>
+<h3 id="输入格式-1"><a href="#输入格式-1" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>以指数递降方式输入多项式非零项系数和指数（绝对值均为不超过 1000 的整数）。数字间以空格分隔。</p>
+<h3 id="输出格式-1"><a href="#输出格式-1" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>以与输入相同的格式输出导数多项式非零项的系数和指数。数字间以空格分隔，但结尾不能有多余空格。注意“零多项式”的指数和系数都是 0，但是表示为 <code>0 0</code>。</p>
+<h3 id="输入样例-1"><a href="#输入样例-1" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">3 4 -5 2 6 1 -2 0</span><br></pre></td></tr></table></figure>
+
+<h3 id="输出样例-1"><a href="#输出样例-1" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">12 3 -10 1 6 0</span><br></pre></td></tr></table></figure>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> k, e, cnt = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> a[<span class="number">1010</span>] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">&quot;%d %d&quot;</span>, &amp;k, &amp;e) != EOF) &#123;</span><br><span class="line">        a[e] = k;</span><br><span class="line">    &#125;</span><br><span class="line">  	a[<span class="number">0</span>] = <span class="number">0</span>;<span class="comment">//对0次项求导直接判断为0</span></span><br><span class="line">		<span class="comment">//从低位求导，只用开一个数组，操作原有数组</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">1000</span>; i++) &#123;</span><br><span class="line">        a[i<span class="number">-1</span>] = i * a[i];</span><br><span class="line">        a[i] = <span class="number">0</span>;<span class="comment">//必须清空系数，不然数据不会覆盖</span></span><br><span class="line">        <span class="keyword">if</span>(a[i<span class="number">-1</span>] != <span class="number">0</span>) cnt++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(cnt == <span class="number">0</span>) <span class="built_in">printf</span>(<span class="string">&quot;0 0&quot;</span>);</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1000</span>; i &gt;= <span class="number">0</span>; i--) &#123;<span class="comment">//高位输出</span></span><br><span class="line">            <span class="keyword">if</span>(a[i] != <span class="number">0</span>) &#123;<span class="comment">//前面呼应</span></span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">&quot;%d %d&quot;</span>, a[i], i);</span><br><span class="line">                cnt--;</span><br><span class="line">                <span class="keyword">if</span>(cnt != <span class="number">0</span>) <span class="built_in">printf</span>(<span class="string">&quot; &quot;</span>);</span><br><span class="line">                <span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="查找元素"><a href="#查找元素" class="headerlink" title="查找元素"></a>查找元素</h2><h3 id="1010-人口普查（结构体的运用）"><a href="#1010-人口普查（结构体的运用）" class="headerlink" title="1010 人口普查（结构体的运用）"></a>1010 人口普查（结构体的运用）</h3><blockquote>
+<p> 某城镇进行人口普查，得到了全体居民的生日。现请你写个程序，找出镇上最年长和最年轻的人。</p>
+<p>这里确保每个输入的日期都是合法的，但不一定是合理的——假设已知镇上没有超过 200 岁的老人，而今天是 2014 年 9 月 6 日，所以超过 200 岁的生日和未出生的生日都是不合理的，应该被过滤掉。</p>
+<h3 id="输入格式：-1"><a href="#输入格式：-1" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在第一行给出正整数 <em>N</em>，取值在(0,105]；随后 <em>N</em> 行，每行给出 1 个人的姓名（由不超过 5 个英文字母组成的字符串）、以及按 <code>yyyy/mm/dd</code>（即年/月/日）格式给出的生日。题目保证最年长和最年轻的人没有并列。</p>
+<h3 id="输出格式：-1"><a href="#输出格式：-1" class="headerlink" title="输出格式："></a>输出格式：</h3><p>在一行中顺序输出有效生日的个数、最年长人和最年轻人的姓名，其间以空格分隔。</p>
+<h3 id="输入样例：-1"><a href="#输入样例：-1" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">5</span><br><span class="line">John 2001&#x2F;05&#x2F;12</span><br><span class="line">Tom 1814&#x2F;09&#x2F;06</span><br><span class="line">Ann 2121&#x2F;01&#x2F;30</span><br><span class="line">James 1814&#x2F;09&#x2F;05</span><br><span class="line">Steve 1967&#x2F;11&#x2F;20</span><br></pre></td></tr></table></figure>
+
+<h3 id="输出样例：-1"><a href="#输出样例：-1" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">3 Tom John</span><br></pre></td></tr></table></figure>
+
+
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">student</span> &#123;</span></span><br><span class="line">    <span class="keyword">char</span> name[<span class="number">10</span>];</span><br><span class="line">    <span class="keyword">int</span> yy, mm, dd;</span><br><span class="line">&#125;oldest, youngest, left, right, temp;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    youngest.yy = left.yy = <span class="number">1814</span>;</span><br><span class="line">    oldest.yy = right.yy = <span class="number">2014</span>;</span><br><span class="line">    youngest.mm = left.mm = <span class="number">9</span>;</span><br><span class="line">    oldest.mm = right.mm = <span class="number">9</span>;</span><br><span class="line">    youngest.dd = left.dd = <span class="number">6</span>;</span><br><span class="line">    right.dd = right.dd = <span class="number">6</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">lessEqu</span><span class="params">(struct student a,struct student b)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(a.yy != b.yy) <span class="keyword">return</span> a.yy &lt;= b.yy;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(a.mm != b.mm) <span class="keyword">return</span> a.mm &lt;= b.mm;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> a.dd &lt;= b.dd;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">MoreEqu</span><span class="params">(struct student a,struct student b)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(a.yy != b.yy) <span class="keyword">return</span> a.yy &gt;= b.yy;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(a.mm != b.mm) <span class="keyword">return</span> a.mm &gt;= b.mm;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> a.dd &gt;= b.dd;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n, cnt = <span class="number">0</span>;</span><br><span class="line">    init();</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%s %d/%d/%d&quot;</span>, temp.name, &amp;temp.yy, &amp;temp.mm, &amp;temp.dd);</span><br><span class="line">        <span class="keyword">if</span>(MoreEqu(temp, left) &amp;&amp; lessEqu(temp, right)) &#123;</span><br><span class="line">            cnt++;</span><br><span class="line">            <span class="keyword">if</span>(lessEqu(temp, oldest)) oldest = temp; <span class="comment">//越小越老</span></span><br><span class="line">            <span class="keyword">if</span>(MoreEqu(temp, youngest)) youngest = temp;<span class="comment">//越大越年轻</span></span><br><span class="line">        &#125; </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(cnt == <span class="number">0</span>) <span class="built_in">printf</span>(<span class="string">&quot;0\n&quot;</span>);</span><br><span class="line">    <span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">&quot;%d %s %s\n&quot;</span>, cnt, oldest.name, youngest.name);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="图形输出"><a href="#图形输出" class="headerlink" title="图形输出"></a>图形输出</h2><ol>
+<li>通过规律，直接进行输出</li>
+<li>定义一个二维字符数组，通过规律填充之，然后输出整个二维数组。</li>
+</ol>
 ]]></content>
       <categories>
-        <category>数据库原理及应用</category>
+        <category>Algorithm</category>
       </categories>
       <tags>
         <tag>share</tag>
@@ -2462,6 +2462,34 @@
       </tags>
   </entry>
   <entry>
+    <title>线性代数第七章——方阵对角化及其应用</title>
+    <url>/posts/b60ddbe5/</url>
+    <content><![CDATA[<h1 id="规范正交化"><a href="#规范正交化" class="headerlink" title="规范正交化"></a>规范正交化</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109201509010.png" alt="image-20210109201509010"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109201809185.png" alt="image-20210109201809185"></p>
+<h1 id="求矩阵的特征值"><a href="#求矩阵的特征值" class="headerlink" title="求矩阵的特征值"></a>求矩阵的特征值</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109201906847.png" alt="image-20210109201906847"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109201934012.png" alt="image-20210109201934012"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109202023128.png" alt="image-20210109202023128"></p>
+<h1 id="求矩阵的特征向量"><a href="#求矩阵的特征向量" class="headerlink" title="求矩阵的特征向量"></a>求矩阵的特征向量</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109202047908.png" alt="image-20210109202047908"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109202211400.png" alt="image-20210109202211400"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109202307519.png" alt="image-20210109202307519"></p>
+<h1 id="判断方阵是否与对角线相似-是否满足-P-1AP-A’"><a href="#判断方阵是否与对角线相似-是否满足-P-1AP-A’" class="headerlink" title="判断方阵是否与对角线相似/是否满足$P^-1AP=A’$"></a>判断方阵是否与对角线相似/是否满足$P^-1AP=A’$</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109202550322.png"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109202606181.png" alt="image-20210109202606181"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109202624066.png" alt="image-20210109202624066"></p>
+<h1 id="求方阵对应的对角阵A’及相应变换矩阵P"><a href="#求方阵对应的对角阵A’及相应变换矩阵P" class="headerlink" title="求方阵对应的对角阵A’及相应变换矩阵P"></a>求方阵对应的对角阵A’及相应变换矩阵P</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109202720868.png" alt="image-20210109202720868"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109202956836.png" alt="image-20210109202956836"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109203004147.png" alt="image-20210109203004147"></p>
+<h1 id="已知-P-1AP-A’-，求关于A的复杂式子"><a href="#已知-P-1AP-A’-，求关于A的复杂式子" class="headerlink" title="已知$P^-1AP=A’$，求关于A的复杂式子"></a>已知$P^-1AP=A’$，求关于A的复杂式子</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109203115365.png" alt="image-20210109203115365"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109203158489.png" alt="image-20210109203158489"></p>
+]]></content>
+      <categories>
+        <category>线性代数</category>
+      </categories>
+      <tags>
+        <tag>share</tag>
+        <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>线性代数第八章——二次型</title>
     <url>/posts/d4c1f1bf/</url>
     <content><![CDATA[<h1 id="求二次型对应的系数矩阵"><a href="#求二次型对应的系数矩阵" class="headerlink" title="求二次型对应的系数矩阵"></a>求二次型对应的系数矩阵</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109204019812.png" alt="image-20210109204019812"></p>
@@ -2478,6 +2506,255 @@
 ]]></content>
       <categories>
         <category>线性代数</category>
+      </categories>
+      <tags>
+        <tag>share</tag>
+        <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>计网第一章——概述</title>
+    <url>/posts/997666ff/</url>
+    <content><![CDATA[<p>计算机网络的概念、组成、功能和分类…</p>
+<a id="more"></a>
+
+<h1 id="1-1-1-概念、组成、功能和分类"><a href="#1-1-1-概念、组成、功能和分类" class="headerlink" title="1.1.1 概念、组成、功能和分类"></a>1.1.1 概念、组成、功能和分类</h1><h2 id="计算机网络的概念"><a href="#计算机网络的概念" class="headerlink" title="计算机网络的概念"></a>计算机网络的概念</h2><blockquote>
+<p>是一个将分散的、具有独立功能的计算机系统，通过通信设备与线路连接起来，由功能完善的软件实现 资源共享和信息传递的系统</p>
+</blockquote>
+<p>计算机网络是互联的、自治的计算机集合</p>
+<ul>
+<li><p>互联 – 互联互通  通信链路</p>
+</li>
+<li><p>自治 – 无主从关系</p>
+</li>
+</ul>
+<h2 id="计算机网络的功能"><a href="#计算机网络的功能" class="headerlink" title="计算机网络的功能"></a>计算机网络的功能</h2><ol>
+<li><p>数据通信（连通性）</p>
+</li>
+<li><p>资源共享：硬件、软件、数据</p>
+</li>
+<li><p>分布式处理：多台计算机共同承担同一任务不同步分（Hadoop平台）</p>
+</li>
+<li><p>提高可靠性（替代机）</p>
+</li>
+<li><p>负载均衡（各计算机之间更亲密）</p>
+</li>
+</ol>
+<h2 id="计算机网络的组成"><a href="#计算机网络的组成" class="headerlink" title="计算机网络的组成"></a>计算机网络的组成</h2><h3 id="1、组成部分"><a href="#1、组成部分" class="headerlink" title="1、组成部分"></a>1、组成部分</h3><p>硬件、软件、协议</p>
+<h3 id="2、工作方式"><a href="#2、工作方式" class="headerlink" title="2、工作方式"></a>2、工作方式</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101194117425.png" alt="image-20210101194117425"></p>
+<h3 id="3、功能组成"><a href="#3、功能组成" class="headerlink" title="3、功能组成"></a>3、功能组成</h3><ul>
+<li><p>通信子网：实现数据通信</p>
+</li>
+<li><p>资源子网：实现资源共享、数据处理</p>
+</li>
+</ul>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101195109924.png" alt="image-20210101195109924"></p>
+<h2 id="计算机网络的分类"><a href="#计算机网络的分类" class="headerlink" title="计算机网络的分类"></a>计算机网络的分类</h2><h3 id="1-按分布范围分"><a href="#1-按分布范围分" class="headerlink" title="1.按分布范围分"></a>1.按分布范围分</h3><p>广域网WAN、城域网MAN、局域网WAN、个人区域网PAN</p>
+<h3 id="2、按使用者分"><a href="#2、按使用者分" class="headerlink" title="2、按使用者分"></a>2、按使用者分</h3><p>公用网、专用网</p>
+<h3 id="3、按交换技术分"><a href="#3、按交换技术分" class="headerlink" title="3、按交换技术分"></a>3、按交换技术分</h3><p>电路交换 、报文交换、分组交换</p>
+<h3 id="4、按拓扑类型分"><a href="#4、按拓扑类型分" class="headerlink" title="4、按拓扑类型分"></a>4、按拓扑类型分</h3><p>总线型、星型、环型、网状型</p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101195439213.png" alt="image-20210101195439213"></p>
+<h2 id="脑图"><a href="#脑图" class="headerlink" title="脑图"></a>脑图</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101195516966.png" alt="image-20210101195516966"></p>
+<h1 id="1-1-2-标准化工作及相关组织"><a href="#1-1-2-标准化工作及相关组织" class="headerlink" title="1.1.2 标准化工作及相关组织"></a>1.1.2 标准化工作及相关组织</h1><h2 id="标准化工作"><a href="#标准化工作" class="headerlink" title="标准化工作"></a>标准化工作</h2><blockquote>
+<p>为实现不同厂商硬件软件的相互联通</p>
+</blockquote>
+<h3 id="标准的分类"><a href="#标准的分类" class="headerlink" title="标准的分类"></a>标准的分类</h3><ul>
+<li><p>法定标准：由权威机构制定的正式的、合法的标准  OSI</p>
+</li>
+<li><p>事实标准：某些公式产品占据了主流  TCP/IP</p>
+</li>
+</ul>
+<h3 id="RFC-Request-For-Comments-–-因特网标准的形式"><a href="#RFC-Request-For-Comments-–-因特网标准的形式" class="headerlink" title="RFC(Request For Comments)  – 因特网标准的形式"></a>RFC(Request For Comments)  – 因特网标准的形式</h3><p>RFC上升为因特网正式标准：</p>
+<ol>
+<li><p>因特网草案：非RFC</p>
+</li>
+<li><p>建议标准：成为RFC</p>
+</li>
+<li><p>草案标准</p>
+</li>
+<li><p>因特网标准</p>
+</li>
+</ol>
+<h3 id="标准化工作的相关组织"><a href="#标准化工作的相关组织" class="headerlink" title="标准化工作的相关组织"></a>标准化工作的相关组织</h3><ul>
+<li>国际标准化组织ISO  （OSI参考模型、HDLC协议）</li>
+<li>国际电信联盟    （制定通信规则）</li>
+<li>国际电气电子工程师协会IEEE  （学术机构、5G、IEEE802系列标准）</li>
+<li>Internet工程任务组IETF （负责因特网相关标准的制定，RFCxxxx）</li>
+</ul>
+<h2 id="脑图-1"><a href="#脑图-1" class="headerlink" title="脑图"></a>脑图</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101200543997.png" alt="image-20210101200543997"></p>
+<h1 id="1-1-3-速率相关的性能指标"><a href="#1-1-3-速率相关的性能指标" class="headerlink" title="1.1.3 速率相关的性能指标"></a>1.1.3 速率相关的性能指标</h1><h2 id="速率"><a href="#速率" class="headerlink" title="速率"></a>速率</h2><blockquote>
+<p>速率即==数据率==或者称==数据传输率==或==比特率==</p>
+</blockquote>
+<p>连接再计算机网络上的主机在数字信道上传输数据位数的速率</p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101200906350.png" alt="image-20210101200906350"></p>
+<h2 id="带宽"><a href="#带宽" class="headerlink" title="带宽"></a>带宽</h2><ol>
+<li><p>原本指某个信号具有的频带宽度，即最高频率与最低频率之差，单位赫兹</p>
+</li>
+<li><p>计算机网络中，带宽用来表示网络的通信线路传送数据的能力，单位时间从网络某一点到另一个点能通过的==最高数据率==。</p>
+</li>
+</ol>
+<p>==网络所支持的最高速度==</p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101201354323.png" alt="image-20210101201354323"></p>
+<h2 id="吞吐量"><a href="#吞吐量" class="headerlink" title="吞吐量"></a>吞吐量</h2><blockquote>
+<p>==单位时间==通过==某个网络（信道、接口）==数据量。</p>
+</blockquote>
+<p>吞吐量受网络带宽或网络的额定速率的限制。</p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101201707066.png" alt="image-20210101201707066"></p>
+<h1 id="1-1-4-时延、时延带宽积、RTT和利用率"><a href="#1-1-4-时延、时延带宽积、RTT和利用率" class="headerlink" title="1.1.4 时延、时延带宽积、RTT和利用率"></a>1.1.4 时延、时延带宽积、RTT和利用率</h1><h2 id="时延"><a href="#时延" class="headerlink" title="时延"></a>时延</h2><blockquote>
+<p>数据（报文、分组、比特流）从网络（或链路）的一端传送到另一端所需的时间。==延迟==或==迟延==。单位s。</p>
+</blockquote>
+<p>发送时延（传输时延）、传播时延、排队时延、处理时延</p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101202304640.png" alt="image-20210101202304640"></p>
+<h2 id="时延带宽积"><a href="#时延带宽积" class="headerlink" title="时延带宽积"></a>时延带宽积</h2><blockquote>
+<p>时延带宽积又称为以==比特为单位的链路长度==，某段链路有多少比特（容量）</p>
+</blockquote>
+<p>时延带宽积 = 传播时延 x 带宽</p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101202849818.png" alt="image-20210101202849818"></p>
+<h2 id="往返时延RTT"><a href="#往返时延RTT" class="headerlink" title="往返时延RTT"></a>往返时延RTT</h2><blockquote>
+<p>从发送方发送数据开始，到发送方收到的接收方的确认（接收方收到数据后立即发送确认）总共经历的时延。</p>
+</blockquote>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101203049556.png" alt="image-20210101203049556"></p>
+<h2 id="利用率"><a href="#利用率" class="headerlink" title="利用率"></a>利用率</h2><ol>
+<li><p>信道利用率</p>
+</li>
+<li><p>网络利用率</p>
+</li>
+</ol>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101203146929.png" alt="image-20210101203146929"></p>
+<h2 id="脑图-2"><a href="#脑图-2" class="headerlink" title="脑图"></a>脑图</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101203242040.png" alt="image-20210101203242040"></p>
+<h1 id="1-2-1-分层结构、协议、接口、服务"><a href="#1-2-1-分层结构、协议、接口、服务" class="headerlink" title="1.2.1 分层结构、协议、接口、服务"></a>1.2.1 分层结构、协议、接口、服务</h1><h2 id="为什么要分层"><a href="#为什么要分层" class="headerlink" title="为什么要分层"></a>为什么要分层</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101203457764.png" alt="image-20210101203457764"></p>
+<h2 id="怎么分层"><a href="#怎么分层" class="headerlink" title="怎么分层"></a>怎么分层</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101203743153.png" alt="image-20210101203743153"></p>
+<h2 id="分层结构"><a href="#分层结构" class="headerlink" title="分层结构"></a>分层结构</h2><ol>
+<li><p>实体：n层实体。对等实体</p>
+</li>
+<li><p>协议：为==对等实体==数据交换建立的标准</p>
+</li>
+</ol>
+<ul>
+<li>语法：格式</li>
+<li>语义：功能</li>
+<li>同步：顺序</li>
+</ul>
+<ol start="3">
+<li><p>接口（访问服务点SAP）：上层使用下层服务的入口</p>
+</li>
+<li><p>服务：下为相邻上提供功能调用</p>
+</li>
+</ol>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101204321769.png" alt="image-20210101204321769"></p>
+<h2 id="概念总结"><a href="#概念总结" class="headerlink" title="概念总结"></a>概念总结</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101213808016.png" alt="image-20210101213808016"></p>
+<h2 id="脑图-3"><a href="#脑图-3" class="headerlink" title="脑图"></a>脑图</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101204558820.png" alt="image-20210101204558820"></p>
+<h1 id="1-2-2-OSI参考模型"><a href="#1-2-2-OSI参考模型" class="headerlink" title="1.2.2 OSI参考模型"></a>1.2.2 OSI参考模型</h1><h2 id="计算机网络分层结构"><a href="#计算机网络分层结构" class="headerlink" title="计算机网络分层结构"></a>计算机网络分层结构</h2><ol>
+<li>7层OSI参考模型（法定标准）</li>
+<li>4层TCP/IP参考模型（事实标准）</li>
+<li>5层的体系结构</li>
+</ol>
+<h2 id="ISO-OSI参考模型"><a href="#ISO-OSI参考模型" class="headerlink" title="ISO/OSI参考模型"></a>ISO/OSI参考模型</h2><h3 id="七层结构"><a href="#七层结构" class="headerlink" title="七层结构"></a>七层结构</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101205417032.png" alt="image-20210101205417032"></p>
+<h3 id="解释通信过程"><a href="#解释通信过程" class="headerlink" title="解释通信过程"></a>解释通信过程</h3><p>A给B写信，经过邮局</p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101205747080.png" alt="image-20210101205747080"></p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101205937471.png" alt="image-20210101205937471"></p>
+<h2 id="OSI各层"><a href="#OSI各层" class="headerlink" title="OSI各层"></a>OSI各层</h2><h3 id="应用层"><a href="#应用层" class="headerlink" title="应用层"></a>应用层</h3><blockquote>
+<p>所有能和用户交互产生网络流量的程序</p>
+</blockquote>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101210111104.png" alt="image-20210101210111104"></p>
+<h3 id="表示层"><a href="#表示层" class="headerlink" title="表示层"></a>表示层</h3><blockquote>
+<p>用于处理在两个通信系统中交换信息的表示方式（语义和语法）</p>
+</blockquote>
+<ol>
+<li>数据格式变换（二进制转换）</li>
+<li>数据加密解密（聊天记录）</li>
+<li>数据压缩和恢复（视频）</li>
+</ol>
+<h3 id="会话层"><a href="#会话层" class="headerlink" title="会话层"></a>会话层</h3><blockquote>
+<p>向表示层实体/用户进程提供==建立连接==并在连接上==有序==地传输数据。这是会话，也是==建立同步==。</p>
+</blockquote>
+<ol>
+<li>建立、管理、终止会话</li>
+<li>使用校验点可使会话在通信失效时从==校验点/同步点==继续恢复通信，实现数据同步。（文件传输中断）</li>
+</ol>
+<h3 id="传输层"><a href="#传输层" class="headerlink" title="传输层"></a>传输层</h3><blockquote>
+<p>负责主机中==两个进程==的通信，即==端到端==的通信。传输单位：报文段、数据报。</p>
+</blockquote>
+<ol>
+<li>可靠传输、不可靠传输</li>
+<li>差错传输</li>
+<li>流量控制</li>
+<li>复用分用<ul>
+<li>复用：多个应用层可同时使用下面运输层的服务（QQ、微信同时发消息）</li>
+<li>分用：运输层把收到的信息分别交付给上面应用层的进程（收消息）</li>
+</ul>
+</li>
+</ol>
+<p>==可差留用==</p>
+<h3 id="网络层"><a href="#网络层" class="headerlink" title="网络层"></a>网络层</h3><blockquote>
+<p>把==分组==从源端传到目的端，为分组交换网上的不同主机提供通信服务。传输单位：数据报（分组的集合）</p>
+</blockquote>
+<ol>
+<li><p>路由选择（最佳路径）</p>
+</li>
+<li><p>流量控制</p>
+</li>
+<li><p>差错控制</p>
+</li>
+<li><p>拥塞控制</p>
+<p>若所有结点都来不及接受分组，而要丢弃大量分组的话，网络就处于==拥塞==状态。因此要采取一定措施，缓解这种拥塞。</p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101211403455.png" alt="image-20210101211403455"></p>
+</li>
+</ol>
+<h3 id="数据链路层"><a href="#数据链路层" class="headerlink" title="数据链路层"></a>数据链路层</h3><blockquote>
+<p>把网络层传下来的数据报==组装成帧==。传输单位：帧</p>
+</blockquote>
+<ol>
+<li><p>成帧(定义帧的开始和结束)</p>
+</li>
+<li><p>差错控制（帧错+位错）</p>
+</li>
+<li><p>流量控制</p>
+</li>
+<li><p>访问（介入）控制 （控制对信道的访问）</p>
+<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101213733835.png" alt="image-20210101213733835"></p>
+</li>
+</ol>
+<h3 id="物理层"><a href="#物理层" class="headerlink" title="物理层"></a>物理层</h3><blockquote>
+<p>在==物理媒体==上实现比特流的==透明传输==。传输单位：比特</p>
+</blockquote>
+<p>透明传输：不管所传数据是什么样的的比特组合，都可在链路上传送</p>
+<ol>
+<li>定义接口特性</li>
+<li>定义传输模式<ul>
+<li>单工</li>
+<li>半双工（对讲机）</li>
+<li>双工</li>
+</ul>
+</li>
+<li>定义传输速率</li>
+<li>比特同步</li>
+<li>比特编码</li>
+</ol>
+<h2 id="脑图-4"><a href="#脑图-4" class="headerlink" title="脑图"></a>脑图</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101212032611.png" alt="image-20210101212032611"></p>
+<h1 id="1-2-4-TCP-IP-参考模型和5层参考模型"><a href="#1-2-4-TCP-IP-参考模型和5层参考模型" class="headerlink" title="1.2.4 TCP/IP 参考模型和5层参考模型"></a>1.2.4 TCP/IP 参考模型和5层参考模型</h1><h2 id="OSI参考模型和TCP-IP参考模型"><a href="#OSI参考模型和TCP-IP参考模型" class="headerlink" title="OSI参考模型和TCP/IP参考模型"></a>OSI参考模型和TCP/IP参考模型</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101212350890.png" alt="image-20210101212350890"></p>
+<h2 id="OSI参考模型和TCP-IP参考模型异同"><a href="#OSI参考模型和TCP-IP参考模型异同" class="headerlink" title="OSI参考模型和TCP/IP参考模型异同"></a>OSI参考模型和TCP/IP参考模型异同</h2><h3 id="相同点："><a href="#相同点：" class="headerlink" title="相同点："></a>相同点：</h3><ol>
+<li>都分层</li>
+<li>基于独立的协议栈的概念</li>
+<li>可以实现异构网络互联（不同厂商）</li>
+</ol>
+<h3 id="不同点："><a href="#不同点：" class="headerlink" title="不同点："></a>不同点：</h3><ol>
+<li>OSI定义三点：<ul>
+<li>服务</li>
+<li>协议</li>
+<li>接口</li>
+</ul>
+</li>
+<li>OSI先出现，参考模型先于协议发明，不偏向特定协议</li>
+<li>TCP/IP设计之初就考虑到异构网互联问题，将IP作为重要层次</li>
+<li><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101213648823.png" alt="image-20210101213648823"></li>
+</ol>
+<h2 id="5层参考模型"><a href="#5层参考模型" class="headerlink" title="5层参考模型"></a>5层参考模型</h2><h3 id="模型图"><a href="#模型图" class="headerlink" title="模型图"></a>模型图</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101213028676.png" alt="image-20210101213028676"></p>
+<h3 id="数据封装与解封装"><a href="#数据封装与解封装" class="headerlink" title="数据封装与解封装"></a>数据封装与解封装</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101213225550.png" alt="image-20210101213225550"></p>
+<h1 id="1-3-第一章知识总结"><a href="#1-3-第一章知识总结" class="headerlink" title="1.3 第一章知识总结"></a>1.3 第一章知识总结</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101213405540.png" alt="image-20210101213405540"></p>
+]]></content>
+      <categories>
+        <category>计算机网络</category>
       </categories>
       <tags>
         <tag>share</tag>
@@ -2819,283 +3096,6 @@
 ]]></content>
       <categories>
         <category>计算机网络</category>
-      </categories>
-      <tags>
-        <tag>share</tag>
-        <tag>notes</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>计网第一章——概述</title>
-    <url>/posts/997666ff/</url>
-    <content><![CDATA[<p>计算机网络的概念、组成、功能和分类…</p>
-<a id="more"></a>
-
-<h1 id="1-1-1-概念、组成、功能和分类"><a href="#1-1-1-概念、组成、功能和分类" class="headerlink" title="1.1.1 概念、组成、功能和分类"></a>1.1.1 概念、组成、功能和分类</h1><h2 id="计算机网络的概念"><a href="#计算机网络的概念" class="headerlink" title="计算机网络的概念"></a>计算机网络的概念</h2><blockquote>
-<p>是一个将分散的、具有独立功能的计算机系统，通过通信设备与线路连接起来，由功能完善的软件实现 资源共享和信息传递的系统</p>
-</blockquote>
-<p>计算机网络是互联的、自治的计算机集合</p>
-<ul>
-<li><p>互联 – 互联互通  通信链路</p>
-</li>
-<li><p>自治 – 无主从关系</p>
-</li>
-</ul>
-<h2 id="计算机网络的功能"><a href="#计算机网络的功能" class="headerlink" title="计算机网络的功能"></a>计算机网络的功能</h2><ol>
-<li><p>数据通信（连通性）</p>
-</li>
-<li><p>资源共享：硬件、软件、数据</p>
-</li>
-<li><p>分布式处理：多台计算机共同承担同一任务不同步分（Hadoop平台）</p>
-</li>
-<li><p>提高可靠性（替代机）</p>
-</li>
-<li><p>负载均衡（各计算机之间更亲密）</p>
-</li>
-</ol>
-<h2 id="计算机网络的组成"><a href="#计算机网络的组成" class="headerlink" title="计算机网络的组成"></a>计算机网络的组成</h2><h3 id="1、组成部分"><a href="#1、组成部分" class="headerlink" title="1、组成部分"></a>1、组成部分</h3><p>硬件、软件、协议</p>
-<h3 id="2、工作方式"><a href="#2、工作方式" class="headerlink" title="2、工作方式"></a>2、工作方式</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101194117425.png" alt="image-20210101194117425"></p>
-<h3 id="3、功能组成"><a href="#3、功能组成" class="headerlink" title="3、功能组成"></a>3、功能组成</h3><ul>
-<li><p>通信子网：实现数据通信</p>
-</li>
-<li><p>资源子网：实现资源共享、数据处理</p>
-</li>
-</ul>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101195109924.png" alt="image-20210101195109924"></p>
-<h2 id="计算机网络的分类"><a href="#计算机网络的分类" class="headerlink" title="计算机网络的分类"></a>计算机网络的分类</h2><h3 id="1-按分布范围分"><a href="#1-按分布范围分" class="headerlink" title="1.按分布范围分"></a>1.按分布范围分</h3><p>广域网WAN、城域网MAN、局域网WAN、个人区域网PAN</p>
-<h3 id="2、按使用者分"><a href="#2、按使用者分" class="headerlink" title="2、按使用者分"></a>2、按使用者分</h3><p>公用网、专用网</p>
-<h3 id="3、按交换技术分"><a href="#3、按交换技术分" class="headerlink" title="3、按交换技术分"></a>3、按交换技术分</h3><p>电路交换 、报文交换、分组交换</p>
-<h3 id="4、按拓扑类型分"><a href="#4、按拓扑类型分" class="headerlink" title="4、按拓扑类型分"></a>4、按拓扑类型分</h3><p>总线型、星型、环型、网状型</p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101195439213.png" alt="image-20210101195439213"></p>
-<h2 id="脑图"><a href="#脑图" class="headerlink" title="脑图"></a>脑图</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101195516966.png" alt="image-20210101195516966"></p>
-<h1 id="1-1-2-标准化工作及相关组织"><a href="#1-1-2-标准化工作及相关组织" class="headerlink" title="1.1.2 标准化工作及相关组织"></a>1.1.2 标准化工作及相关组织</h1><h2 id="标准化工作"><a href="#标准化工作" class="headerlink" title="标准化工作"></a>标准化工作</h2><blockquote>
-<p>为实现不同厂商硬件软件的相互联通</p>
-</blockquote>
-<h3 id="标准的分类"><a href="#标准的分类" class="headerlink" title="标准的分类"></a>标准的分类</h3><ul>
-<li><p>法定标准：由权威机构制定的正式的、合法的标准  OSI</p>
-</li>
-<li><p>事实标准：某些公式产品占据了主流  TCP/IP</p>
-</li>
-</ul>
-<h3 id="RFC-Request-For-Comments-–-因特网标准的形式"><a href="#RFC-Request-For-Comments-–-因特网标准的形式" class="headerlink" title="RFC(Request For Comments)  – 因特网标准的形式"></a>RFC(Request For Comments)  – 因特网标准的形式</h3><p>RFC上升为因特网正式标准：</p>
-<ol>
-<li><p>因特网草案：非RFC</p>
-</li>
-<li><p>建议标准：成为RFC</p>
-</li>
-<li><p>草案标准</p>
-</li>
-<li><p>因特网标准</p>
-</li>
-</ol>
-<h3 id="标准化工作的相关组织"><a href="#标准化工作的相关组织" class="headerlink" title="标准化工作的相关组织"></a>标准化工作的相关组织</h3><ul>
-<li>国际标准化组织ISO  （OSI参考模型、HDLC协议）</li>
-<li>国际电信联盟    （制定通信规则）</li>
-<li>国际电气电子工程师协会IEEE  （学术机构、5G、IEEE802系列标准）</li>
-<li>Internet工程任务组IETF （负责因特网相关标准的制定，RFCxxxx）</li>
-</ul>
-<h2 id="脑图-1"><a href="#脑图-1" class="headerlink" title="脑图"></a>脑图</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101200543997.png" alt="image-20210101200543997"></p>
-<h1 id="1-1-3-速率相关的性能指标"><a href="#1-1-3-速率相关的性能指标" class="headerlink" title="1.1.3 速率相关的性能指标"></a>1.1.3 速率相关的性能指标</h1><h2 id="速率"><a href="#速率" class="headerlink" title="速率"></a>速率</h2><blockquote>
-<p>速率即==数据率==或者称==数据传输率==或==比特率==</p>
-</blockquote>
-<p>连接再计算机网络上的主机在数字信道上传输数据位数的速率</p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101200906350.png" alt="image-20210101200906350"></p>
-<h2 id="带宽"><a href="#带宽" class="headerlink" title="带宽"></a>带宽</h2><ol>
-<li><p>原本指某个信号具有的频带宽度，即最高频率与最低频率之差，单位赫兹</p>
-</li>
-<li><p>计算机网络中，带宽用来表示网络的通信线路传送数据的能力，单位时间从网络某一点到另一个点能通过的==最高数据率==。</p>
-</li>
-</ol>
-<p>==网络所支持的最高速度==</p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101201354323.png" alt="image-20210101201354323"></p>
-<h2 id="吞吐量"><a href="#吞吐量" class="headerlink" title="吞吐量"></a>吞吐量</h2><blockquote>
-<p>==单位时间==通过==某个网络（信道、接口）==数据量。</p>
-</blockquote>
-<p>吞吐量受网络带宽或网络的额定速率的限制。</p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101201707066.png" alt="image-20210101201707066"></p>
-<h1 id="1-1-4-时延、时延带宽积、RTT和利用率"><a href="#1-1-4-时延、时延带宽积、RTT和利用率" class="headerlink" title="1.1.4 时延、时延带宽积、RTT和利用率"></a>1.1.4 时延、时延带宽积、RTT和利用率</h1><h2 id="时延"><a href="#时延" class="headerlink" title="时延"></a>时延</h2><blockquote>
-<p>数据（报文、分组、比特流）从网络（或链路）的一端传送到另一端所需的时间。==延迟==或==迟延==。单位s。</p>
-</blockquote>
-<p>发送时延（传输时延）、传播时延、排队时延、处理时延</p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101202304640.png" alt="image-20210101202304640"></p>
-<h2 id="时延带宽积"><a href="#时延带宽积" class="headerlink" title="时延带宽积"></a>时延带宽积</h2><blockquote>
-<p>时延带宽积又称为以==比特为单位的链路长度==，某段链路有多少比特（容量）</p>
-</blockquote>
-<p>时延带宽积 = 传播时延 x 带宽</p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101202849818.png" alt="image-20210101202849818"></p>
-<h2 id="往返时延RTT"><a href="#往返时延RTT" class="headerlink" title="往返时延RTT"></a>往返时延RTT</h2><blockquote>
-<p>从发送方发送数据开始，到发送方收到的接收方的确认（接收方收到数据后立即发送确认）总共经历的时延。</p>
-</blockquote>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101203049556.png" alt="image-20210101203049556"></p>
-<h2 id="利用率"><a href="#利用率" class="headerlink" title="利用率"></a>利用率</h2><ol>
-<li><p>信道利用率</p>
-</li>
-<li><p>网络利用率</p>
-</li>
-</ol>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101203146929.png" alt="image-20210101203146929"></p>
-<h2 id="脑图-2"><a href="#脑图-2" class="headerlink" title="脑图"></a>脑图</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101203242040.png" alt="image-20210101203242040"></p>
-<h1 id="1-2-1-分层结构、协议、接口、服务"><a href="#1-2-1-分层结构、协议、接口、服务" class="headerlink" title="1.2.1 分层结构、协议、接口、服务"></a>1.2.1 分层结构、协议、接口、服务</h1><h2 id="为什么要分层"><a href="#为什么要分层" class="headerlink" title="为什么要分层"></a>为什么要分层</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101203457764.png" alt="image-20210101203457764"></p>
-<h2 id="怎么分层"><a href="#怎么分层" class="headerlink" title="怎么分层"></a>怎么分层</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101203743153.png" alt="image-20210101203743153"></p>
-<h2 id="分层结构"><a href="#分层结构" class="headerlink" title="分层结构"></a>分层结构</h2><ol>
-<li><p>实体：n层实体。对等实体</p>
-</li>
-<li><p>协议：为==对等实体==数据交换建立的标准</p>
-</li>
-</ol>
-<ul>
-<li>语法：格式</li>
-<li>语义：功能</li>
-<li>同步：顺序</li>
-</ul>
-<ol start="3">
-<li><p>接口（访问服务点SAP）：上层使用下层服务的入口</p>
-</li>
-<li><p>服务：下为相邻上提供功能调用</p>
-</li>
-</ol>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101204321769.png" alt="image-20210101204321769"></p>
-<h2 id="概念总结"><a href="#概念总结" class="headerlink" title="概念总结"></a>概念总结</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101213808016.png" alt="image-20210101213808016"></p>
-<h2 id="脑图-3"><a href="#脑图-3" class="headerlink" title="脑图"></a>脑图</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101204558820.png" alt="image-20210101204558820"></p>
-<h1 id="1-2-2-OSI参考模型"><a href="#1-2-2-OSI参考模型" class="headerlink" title="1.2.2 OSI参考模型"></a>1.2.2 OSI参考模型</h1><h2 id="计算机网络分层结构"><a href="#计算机网络分层结构" class="headerlink" title="计算机网络分层结构"></a>计算机网络分层结构</h2><ol>
-<li>7层OSI参考模型（法定标准）</li>
-<li>4层TCP/IP参考模型（事实标准）</li>
-<li>5层的体系结构</li>
-</ol>
-<h2 id="ISO-OSI参考模型"><a href="#ISO-OSI参考模型" class="headerlink" title="ISO/OSI参考模型"></a>ISO/OSI参考模型</h2><h3 id="七层结构"><a href="#七层结构" class="headerlink" title="七层结构"></a>七层结构</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101205417032.png" alt="image-20210101205417032"></p>
-<h3 id="解释通信过程"><a href="#解释通信过程" class="headerlink" title="解释通信过程"></a>解释通信过程</h3><p>A给B写信，经过邮局</p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101205747080.png" alt="image-20210101205747080"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101205937471.png" alt="image-20210101205937471"></p>
-<h2 id="OSI各层"><a href="#OSI各层" class="headerlink" title="OSI各层"></a>OSI各层</h2><h3 id="应用层"><a href="#应用层" class="headerlink" title="应用层"></a>应用层</h3><blockquote>
-<p>所有能和用户交互产生网络流量的程序</p>
-</blockquote>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101210111104.png" alt="image-20210101210111104"></p>
-<h3 id="表示层"><a href="#表示层" class="headerlink" title="表示层"></a>表示层</h3><blockquote>
-<p>用于处理在两个通信系统中交换信息的表示方式（语义和语法）</p>
-</blockquote>
-<ol>
-<li>数据格式变换（二进制转换）</li>
-<li>数据加密解密（聊天记录）</li>
-<li>数据压缩和恢复（视频）</li>
-</ol>
-<h3 id="会话层"><a href="#会话层" class="headerlink" title="会话层"></a>会话层</h3><blockquote>
-<p>向表示层实体/用户进程提供==建立连接==并在连接上==有序==地传输数据。这是会话，也是==建立同步==。</p>
-</blockquote>
-<ol>
-<li>建立、管理、终止会话</li>
-<li>使用校验点可使会话在通信失效时从==校验点/同步点==继续恢复通信，实现数据同步。（文件传输中断）</li>
-</ol>
-<h3 id="传输层"><a href="#传输层" class="headerlink" title="传输层"></a>传输层</h3><blockquote>
-<p>负责主机中==两个进程==的通信，即==端到端==的通信。传输单位：报文段、数据报。</p>
-</blockquote>
-<ol>
-<li>可靠传输、不可靠传输</li>
-<li>差错传输</li>
-<li>流量控制</li>
-<li>复用分用<ul>
-<li>复用：多个应用层可同时使用下面运输层的服务（QQ、微信同时发消息）</li>
-<li>分用：运输层把收到的信息分别交付给上面应用层的进程（收消息）</li>
-</ul>
-</li>
-</ol>
-<p>==可差留用==</p>
-<h3 id="网络层"><a href="#网络层" class="headerlink" title="网络层"></a>网络层</h3><blockquote>
-<p>把==分组==从源端传到目的端，为分组交换网上的不同主机提供通信服务。传输单位：数据报（分组的集合）</p>
-</blockquote>
-<ol>
-<li><p>路由选择（最佳路径）</p>
-</li>
-<li><p>流量控制</p>
-</li>
-<li><p>差错控制</p>
-</li>
-<li><p>拥塞控制</p>
-<p>若所有结点都来不及接受分组，而要丢弃大量分组的话，网络就处于==拥塞==状态。因此要采取一定措施，缓解这种拥塞。</p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101211403455.png" alt="image-20210101211403455"></p>
-</li>
-</ol>
-<h3 id="数据链路层"><a href="#数据链路层" class="headerlink" title="数据链路层"></a>数据链路层</h3><blockquote>
-<p>把网络层传下来的数据报==组装成帧==。传输单位：帧</p>
-</blockquote>
-<ol>
-<li><p>成帧(定义帧的开始和结束)</p>
-</li>
-<li><p>差错控制（帧错+位错）</p>
-</li>
-<li><p>流量控制</p>
-</li>
-<li><p>访问（介入）控制 （控制对信道的访问）</p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101213733835.png" alt="image-20210101213733835"></p>
-</li>
-</ol>
-<h3 id="物理层"><a href="#物理层" class="headerlink" title="物理层"></a>物理层</h3><blockquote>
-<p>在==物理媒体==上实现比特流的==透明传输==。传输单位：比特</p>
-</blockquote>
-<p>透明传输：不管所传数据是什么样的的比特组合，都可在链路上传送</p>
-<ol>
-<li>定义接口特性</li>
-<li>定义传输模式<ul>
-<li>单工</li>
-<li>半双工（对讲机）</li>
-<li>双工</li>
-</ul>
-</li>
-<li>定义传输速率</li>
-<li>比特同步</li>
-<li>比特编码</li>
-</ol>
-<h2 id="脑图-4"><a href="#脑图-4" class="headerlink" title="脑图"></a>脑图</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101212032611.png" alt="image-20210101212032611"></p>
-<h1 id="1-2-4-TCP-IP-参考模型和5层参考模型"><a href="#1-2-4-TCP-IP-参考模型和5层参考模型" class="headerlink" title="1.2.4 TCP/IP 参考模型和5层参考模型"></a>1.2.4 TCP/IP 参考模型和5层参考模型</h1><h2 id="OSI参考模型和TCP-IP参考模型"><a href="#OSI参考模型和TCP-IP参考模型" class="headerlink" title="OSI参考模型和TCP/IP参考模型"></a>OSI参考模型和TCP/IP参考模型</h2><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101212350890.png" alt="image-20210101212350890"></p>
-<h2 id="OSI参考模型和TCP-IP参考模型异同"><a href="#OSI参考模型和TCP-IP参考模型异同" class="headerlink" title="OSI参考模型和TCP/IP参考模型异同"></a>OSI参考模型和TCP/IP参考模型异同</h2><h3 id="相同点："><a href="#相同点：" class="headerlink" title="相同点："></a>相同点：</h3><ol>
-<li>都分层</li>
-<li>基于独立的协议栈的概念</li>
-<li>可以实现异构网络互联（不同厂商）</li>
-</ol>
-<h3 id="不同点："><a href="#不同点：" class="headerlink" title="不同点："></a>不同点：</h3><ol>
-<li>OSI定义三点：<ul>
-<li>服务</li>
-<li>协议</li>
-<li>接口</li>
-</ul>
-</li>
-<li>OSI先出现，参考模型先于协议发明，不偏向特定协议</li>
-<li>TCP/IP设计之初就考虑到异构网互联问题，将IP作为重要层次</li>
-<li><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101213648823.png" alt="image-20210101213648823"></li>
-</ol>
-<h2 id="5层参考模型"><a href="#5层参考模型" class="headerlink" title="5层参考模型"></a>5层参考模型</h2><h3 id="模型图"><a href="#模型图" class="headerlink" title="模型图"></a>模型图</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101213028676.png" alt="image-20210101213028676"></p>
-<h3 id="数据封装与解封装"><a href="#数据封装与解封装" class="headerlink" title="数据封装与解封装"></a>数据封装与解封装</h3><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101213225550.png" alt="image-20210101213225550"></p>
-<h1 id="1-3-第一章知识总结"><a href="#1-3-第一章知识总结" class="headerlink" title="1.3 第一章知识总结"></a>1.3 第一章知识总结</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210101213405540.png" alt="image-20210101213405540"></p>
-]]></content>
-      <categories>
-        <category>计算机网络</category>
-      </categories>
-      <tags>
-        <tag>share</tag>
-        <tag>notes</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>线性代数第七章——方阵对角化及其应用</title>
-    <url>/posts/b60ddbe5/</url>
-    <content><![CDATA[<h1 id="规范正交化"><a href="#规范正交化" class="headerlink" title="规范正交化"></a>规范正交化</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109201509010.png" alt="image-20210109201509010"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109201809185.png" alt="image-20210109201809185"></p>
-<h1 id="求矩阵的特征值"><a href="#求矩阵的特征值" class="headerlink" title="求矩阵的特征值"></a>求矩阵的特征值</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109201906847.png" alt="image-20210109201906847"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109201934012.png" alt="image-20210109201934012"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109202023128.png" alt="image-20210109202023128"></p>
-<h1 id="求矩阵的特征向量"><a href="#求矩阵的特征向量" class="headerlink" title="求矩阵的特征向量"></a>求矩阵的特征向量</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109202047908.png" alt="image-20210109202047908"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109202211400.png" alt="image-20210109202211400"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109202307519.png" alt="image-20210109202307519"></p>
-<h1 id="判断方阵是否与对角线相似-是否满足-P-1AP-A’"><a href="#判断方阵是否与对角线相似-是否满足-P-1AP-A’" class="headerlink" title="判断方阵是否与对角线相似/是否满足$P^-1AP=A’$"></a>判断方阵是否与对角线相似/是否满足$P^-1AP=A’$</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109202550322.png"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109202606181.png" alt="image-20210109202606181"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109202624066.png" alt="image-20210109202624066"></p>
-<h1 id="求方阵对应的对角阵A’及相应变换矩阵P"><a href="#求方阵对应的对角阵A’及相应变换矩阵P" class="headerlink" title="求方阵对应的对角阵A’及相应变换矩阵P"></a>求方阵对应的对角阵A’及相应变换矩阵P</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109202720868.png" alt="image-20210109202720868"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109202956836.png" alt="image-20210109202956836"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109203004147.png" alt="image-20210109203004147"></p>
-<h1 id="已知-P-1AP-A’-，求关于A的复杂式子"><a href="#已知-P-1AP-A’-，求关于A的复杂式子" class="headerlink" title="已知$P^-1AP=A’$，求关于A的复杂式子"></a>已知$P^-1AP=A’$，求关于A的复杂式子</h1><p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109203115365.png" alt="image-20210109203115365"></p>
-<p><img src="https://chasing1874.oss-cn-chengdu.aliyuncs.com/image-20210109203158489.png" alt="image-20210109203158489"></p>
-]]></content>
-      <categories>
-        <category>线性代数</category>
       </categories>
       <tags>
         <tag>share</tag>
